@@ -1,6 +1,6 @@
 ![BeyondQuantum Banner for Research Projects](../BeyondQuantum_Banner_Research_Projects_2026.png)
 
-# State Your Project Title Here With Capitalised Letters as Shown
+# QBER STABILITY IN MDI-QKD UNDER QUANTUM NOISE AND EAVESDROPPING 
 
 ***Provide a description of your project including*** 
 
