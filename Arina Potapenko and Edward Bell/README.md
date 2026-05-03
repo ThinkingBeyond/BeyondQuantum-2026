@@ -32,7 +32,7 @@ The implementation is written in Python using the Qiskit framework. All required
 │   └── complexity_graph.png       # Visualization of search scaling
 ├── dataset/
 │   └── molecular_library.csv     # The 16-molecule dataset with chemical properties
-└── README.md
+└── README.md                     # Project overview and research abstract
 
 ## Future Work
 
