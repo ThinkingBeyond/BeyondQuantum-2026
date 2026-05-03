@@ -31,11 +31,19 @@ The implementation is written in Python using the Qiskit framework. All required
 - **Weighted Oracles:** Developing Oracles that prioritize specific chemical properties (e.g., toxicity vs. nitrogen presence) rather than treating all logical constraints as equal boolean filters.
 
 ## References
+1. Bae, E., Shin, J., & Choi, M. (2026). Reducing circuit resources in Grover's algorithm via constraint-aware initialization. arXiv. https://doi.org/10.48550/arXiv.2601.17725
 
-List all your references here. Remember to put links into markdown. For example:
+2. Grover, L. K. (1996). A fast quantum mechanical algorithm for database search. Proceedings of the 28th Annual ACM Symposium on Theory of Computing, 212–219. https://doi.org/10.1145/237814.237866
 
-1.  Einstein, A. (1905). *On the Electrodynamics of Moving Bodies*. Annalen der Physik, 17, 891-921. [Internet Archive](https://archive.org/details/einstein-1905-relativity)
+3. Guo, C. (2023). Grover’s algorithm – implementations and implications. Highlights in Science, Engineering and Technology, 38, 1071–1078. https://doi.org/10.54097/hset.v38i.5997
 
+4. Hill, D. R. C. (2026). Grover quantum algorithm: Applications and limits. Encyclopedia, 6(4), 89. https://doi.org/10.3390/encyclopedia6040089
+
+5. Jura, A. M. C., Jura, Ș. A., Popescu, D. E., Belengeanu, V., Gușiță, B., Pienar, C., Manea, A. M., & Boia, E. R. (2025). Quantum leap: Reshaping genetic diagnostics using quantum computing. Preprints. https://doi.org/10.20944/preprints202502.1371.v1
+
+6. Lavor, C., Liberti, L., & Maculan, N. (2016). Grover’s algorithm applied to the molecular distance geometry problem. Proceedings of the Brazilian Conference on Neural Networks (CBRN), 1–4. https://doi.org/10.21528/CBRN2005-234
+
+7. Olumide-Attah, A., Bagdasarian, R., & Ikenye, F. (2025). Quantum methods for modular exponentiation in Shor’s Algorithm.
 
 ---
 
