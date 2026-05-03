@@ -4,7 +4,7 @@
 
 ## Overview
 
-There are only four possible functions of the form $$\{0,1\}\rightarrow \{0,1\}$$, which are the following:
+There are only four possible functions of the form $$f: \{0,1\}\rightarrow \{0,1\}$$, which are the following:
 
 | $$x$$  | $$f_1$$ | $$f_2$$ | $$f_3$$ | $$f_4$$ |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
