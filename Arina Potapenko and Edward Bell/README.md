@@ -30,7 +30,7 @@
 
 ## Research Question
 
-The central inquiry of this study is: *"How does the implementation of $n$ logical constraints affect the search space and runtime of Grover’s Algorithm, investigated in the context of a simplified molecular library search?"*
+**The central inquiry of this study is:** *"How does the implementation of n logical constraints affect the search space and runtime of Grover’s Algorithm, investigated in the context of a simplified molecular library search?"*
 
 **Core Objectives:**
 Grover’s Algorithm provides a theoretical quadratic speedup for unstructured search problems where classical alternatives are limited. Our research explores the practical boundary of this speedup by focusing on two primary factors:
