@@ -30,7 +30,7 @@
 
 ## Research Question
 
-State your research question here and elaborate on it.
+How can we implement the Deutsch Algorithm to functions $f: \{0,1\} \rightarrow \{0,1\}$ and the Deutsch-Jozsa Algorithm to functions  $f: \{0,1\}^2 \rightarrow \{0,1\}$ and $f: \{0,1\}^3 \rightarrow \{0,1\}$?
 
 ## Motivation
 
@@ -48,17 +48,23 @@ If you want to see some good examples of README files check out:
 
 ## Future Work
 
-State and explain what follow-up research could be conducted based on your work.
+Using the same methods as the research, Deutsch-Jozsa Algorithm could be tested to 5-, 6- and 7- Qubit Systems to test whether the accuracies of prediction have a tendency depending on the functions. Future Research could be built upon instituting Error Correction into the "unknown" oracle, so in this way we could have a perfect oracle with an imperfect algorithm and then just test the effectiveness of Deutsch and Deutsch-Jozsa Algorithm by itself.
 
 ## References
 
-List all your references here. Remember to put links into markdown. For example:
+* Cleve, R., Ekert, A., Macchiavello, C., & Mosca, M. (1998). *QUANTUM ALGORITHMS REVISITED*. Proceedings of The Royal Society A: Mathematical, Physical and Engineering Sciences. [https://doi.org/10.1098/rspa.1998.0164](https://doi.org/10.1098/rspa.1998.0164)
+* Deutsch, D. (1985). *Quantum theory, the Church–Turing principle and the universal quantum computer*. Proceedings of the Royal Society of London. A. Mathematical and Physical Sciences. [https://doi.org/10.1098/rspa.1985.0070](https://doi.org/10.1098/rspa.1985.0070)
+* Deutsch, D., & Jozsa, R. (1992). *Rapid solution of problems by quantum computation*. Proceedings of the Royal Society of London. Series A: Mathematical and Physical Sciences. [https://doi.org/10.1098/rspa.1992.0167](https://doi.org/10.1098/rspa.1992.0167)
+* Jaradat, Y., Alia, M., Masoud, M., Mansrah, A., Jannoud, I., & Alheyasat, O. (2023). *Roadmap for Simulating Quantum Circuits Utilising IBM’s Qiskit Library: Programming Approach*. The Eurasia Proceedings of Science, Technology, Engineering & Mathematics. [https://doi.org/10.55549/epstem.1412445](https://doi.org/10.55549/epstem.1412445)
+* Javadi-Abhari, A., Treinish, M., Krsulich, K., Wood, C. J., Lishman, J., Gacon, J., Martiel, S., Nation, P. D., Bishop, L. S., Cross, A. W., Johnson, B. R., & Gambetta, J. M. (2024). *Quantum computing with Qiskit*. [https://arxiv.org/abs/2405.08810](https://arxiv.org/abs/2405.08810)
+* Kothari, K., & Chaudhuri, R. P. (2025). *Qubit Manipulation in Quantum Circuits—Solving Grover’s Algorithm for 2- and 3-Qubit Systems*. Beyond Quantum Proceedings 2025.
+* Nakahara, M., & Ohmi, T. (2008). *Quantum Computing—From Linear Algebra to Physical Realizations*. En *Quantum Computing: From Linear Algebra to Physical Realizations*. [https://doi.org/10.1201/9781420012293](https://doi.org/10.1201/9781420012293)
+* Nielsen, M. A., & Chuang, I. L. (2010). *Quantum Computation and Quantum Information: 10th Anniversary Edition*. Cambridge University Press.
+* *Noise Analysis of Grover’s Quantum Search Algorithm*. (2023). Indian Journal of Pure & Applied Physics. [https://doi.org/10.56042/ijpap.v61i5.69090](https://doi.org/10.56042/ijpap.v61i5.69090)
+* Textbook, Q. (s. f.). *Learn Quantum Computation using Qiskit* [Manuscript].
+* Weathers, J. M. (2010). *Methods for quantum circuit design and simulation*. Calhoun: The NPS Institutional Archive DSpace Repository.
+* Youvan, D. C. (2023). *Quantum Oracles: Design, Implementation, and Implications in Quantum Search Algorithms*. [https://doi.org/10.13140/RG.2.2.27075.78884](https://doi.org/10.13140/RG.2.2.27075.78884)
 
-1.  Einstein, A. (1905). *On the Electrodynamics of Moving Bodies*. Annalen der Physik, 17, 891-921. [Internet Archive](https://archive.org/details/einstein-1905-relativity)
-
-**Tip**: *If you have you references in BibTex, Google Scholar or Zotero*
-1. Create/copy a list into ChatGPT
-2. Ask it to turn it into an unsorted list in markdown
 
 ---
 
