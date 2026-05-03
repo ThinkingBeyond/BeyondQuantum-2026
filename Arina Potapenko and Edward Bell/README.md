@@ -24,15 +24,15 @@ The implementation is written in Python using the Qiskit framework. All required
 ## Repository Structure
 .
 ├── grover-molecular-search/
-│   ├── grover_algorithm.ipynb    # Main research notebook (Implementation & Analysis)
-│   ├── molecular_metadata.txt    # Mapping of molecules to bitstrings
-│   └── statevector_results.txt   # Exported results of the quantum state
+│   ├── grover_algorithm.ipynb               # Main research notebook (Implementation & Analysis)
+│   ├── molecular_metadata.txt               # Mapping of molecules to bitstrings
+│   └── statevector_results.txt              # Exported results of the quantum state
 ├── comparative-analysis/
-│   ├── classical_vs_quantum.ipynb # Benchmarking classical search vs Grover
-│   └── complexity_graph.png       # Visualization of search scaling
+│   ├── classical_vs_quantum.ipynb           # Benchmarking classical search vs Grover
+│   └── complexity_graph.png                 # Visualization of search scaling
 ├── dataset/
-│   └── molecular_library.csv     # The 16-molecule dataset with chemical properties
-└── README.md                     # Project overview and research abstract
+│   └── molecular_library.csv                # The 16-molecule dataset with chemical properties
+└── README.md                                # Project overview and research abstract
 
 ## Future Work
 
