@@ -23,16 +23,16 @@ The implementation is written in Python using the Qiskit framework. All required
 
 ## Repository Structure
 .
-├── grover-molecular-search/
-│   ├── grover_algorithm.ipynb               # Main research notebook (Implementation & Analysis)
-│   ├── molecular_metadata.txt               # Mapping of molecules to bitstrings
-│   └── statevector_results.txt              # Exported results of the quantum state
-├── comparative-analysis/
-│   ├── classical_vs_quantum.ipynb           # Benchmarking classical search vs Grover
-│   └── complexity_graph.png                 # Visualization of search scaling
-├── dataset/
-│   └── molecular_library.csv                # The 16-molecule dataset with chemical properties
-└── README.md                                # Project overview and research abstract
+├── discrete-Fourier-transform/
+│   ├── discrete-fourier-transform.ipynb     # Discrete Fourier transform modular multiplication notebook
+│   ├── metadata.txt                         # Example circuit metadata
+│   └── statevector.txt                      # Example circuit statevector
+├── modexp_comparison/
+│   ├── modexp_comparison.ipynb              # Modular exponentiation comparison graph
+|   ├── modexp_comparison.svg
+├── toffoli-gates/
+|   ├── toffoli-gates.ipynb                  # Toffoli gates-based modular exponentiation notebook
+└── README.md
 
 ## Future Work
 
