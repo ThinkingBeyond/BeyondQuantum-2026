@@ -34,7 +34,7 @@ How can we implement the Deutsch Algorithm to functions $f: \{0,1\} \rightarrow 
 
 ## Motivation
 
-Explain your motivation for your chosen research question here.
+Our main aim at this project is to evidence whether Deutsch and Deutsch-Jozsa Algorithms are an accurate approach to solve the main characteristic of $f: \{0,1\}^n \rightarrow \{0,1\}$-like functions.
 
 ## Your next subsection
 
