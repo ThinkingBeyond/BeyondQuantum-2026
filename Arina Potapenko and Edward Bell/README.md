@@ -41,15 +41,24 @@ Grover’s Algorithm provides a theoretical quadratic speedup for unstructured s
 
 ## Motivation
 
-In pharmaceutical research, virtual screening is an "unstructured search" problem—checking millions of potential drug candidates one by one. We chose this research question to test the efficiency of Grover's Algorithm, which theoretically offers a quadratic speedup over classical methods. By mapping molecular properties to logical constraints, we aim to identify the optimal threshold where quantum searching maintains high success probability before circuit complexity or over-rotation degrades the results.
+In pharmaceutical research, virtual screening is an "unstructured search" problem — checking millions of potential drug candidates one by one. We chose this research question to test the efficiency of Grover's Algorithm, which theoretically offers a quadratic speedup over classical methods. By mapping molecular properties to logical constraints, we aim to identify the optimal threshold where quantum searching maintains high success probability before circuit complexity or over-rotation degrades the results.
 
-## Your next subsection
+## Code and Implementations
 
-Continue working through the points listed above with the help of sensibly named subsections. 
+The implementation is written in Python using the Qiskit framework. All required packages (such as qiskit, matplotlib, and numpy) are pre-installed within the environment scripts provided in the notebooks.
 
-If you want to see some good examples of README files check out:
-- [Example 1](https://github.com/ThinkingBeyond/BeyondAI-2024/blob/main/warenya-loulia/README.md)
-- [Example 2](https://github.com/ThinkingBeyond/BeyondAI-2024/blob/main/shaana-karuna/README.md)
+## Repository Structure
+.
+├── grover-molecular-search/
+│   ├── grover_algorithm.ipynb    # Main research notebook (Implementation & Analysis)
+│   ├── molecular_metadata.txt    # Mapping of molecules to bitstrings
+│   └── statevector_results.txt   # Exported results of the quantum state
+├── comparative-analysis/
+│   ├── classical_vs_quantum.ipynb # Benchmarking classical search vs Grover
+│   └── complexity_graph.png       # Visualization of search scaling
+├── dataset/
+│   └── molecular_library.csv     # The 16-molecule dataset with chemical properties
+└── README.md
 
 [ ... ]
 
