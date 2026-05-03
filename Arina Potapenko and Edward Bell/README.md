@@ -22,21 +22,13 @@ In pharmaceutical research, virtual screening is an "unstructured search" proble
 The implementation is written in Python using the Qiskit framework. All required packages (such as qiskit, matplotlib, and numpy) are pre-installed within the environment scripts provided in the notebooks.
 
 ## Repository Structure
-.
-├── discrete-Fourier-transform/
-│   ├── discrete-fourier-transform.ipynb     # Discrete Fourier transform modular multiplication notebook
-│   ├── metadata.txt                         # Example circuit metadata
-│   └── statevector.txt                      # Example circuit statevector
-├── modexp_comparison/
-│   ├── modexp_comparison.ipynb              # Modular exponentiation comparison graph
-|   ├── modexp_comparison.svg
-├── toffoli-gates/
-|   ├── toffoli-gates.ipynb                  # Toffoli gates-based modular exponentiation notebook
-└── README.md
 
 ## Future Work
 
-State and explain what follow-up research could be conducted based on your work.
+- **Scalability Testing:** Investigating how the optimal iteration count ($k$) and over-rotation threshold scale on 8-qubit or 10-qubit systems as the molecular library grows.
+- **Hardware Implementation:** Testing these circuits on NISQ devices to analyze how physical gate errors and decoherence impact the success probability of complex Oracles.
+- **Hybrid Workflows:** Integrating Grover’s search with the Variational Quantum Eigensolver (VQE) to first identify a candidate and then simulate its specific binding affinity or ground state energy.
+- **Weighted Oracles:** Developing Oracles that prioritize specific chemical properties (e.g., toxicity vs. nitrogen presence) rather than treating all logical constraints as equal boolean filters.
 
 ## References
 
