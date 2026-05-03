@@ -1,6 +1,6 @@
 ![BeyondQuantum Banner for Research Projects](../BeyondQuantum_Banner_Research_Projects_2026.png)
 
-# How does the implementation of n logical constraints affect the search space and runtime of Grover’s Algorithm, investigated in the context of simplified molecular library search?
+# How does the implementation of *n* logical constraints affect the search space and runtime of Grover’s Algorithm, investigated in the context of simplified molecular library search?
 
 ***Provide a description of your project including*** 
 
