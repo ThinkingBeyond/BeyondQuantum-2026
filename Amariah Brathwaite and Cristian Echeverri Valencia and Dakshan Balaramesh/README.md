@@ -2,6 +2,21 @@
 
 # Qubit Manipulation in Quantum Circuits - Implementing Deutsch and Deutsch-Jozsa Algorithm for 2- and 3- and 4-Qubit Systems
 
+## Overview
+
+There are only four possible functions of the form $$\{0,1\}\rightarrow \{0,1\}$$, which are the following:
+
+| $$x$$  | $$f_1$$ | $$f_2$$ | $$f_3$$ | $$f_4$$ |
+| ------------- | ------------- |
+| 0 | 0 | 0 | 1 | 1 |
+| 1  | 0 | 1 | 0 | 1 |
+
+Classically, we may need two queries to guess if the function is either: 
+* **Constant:** All outputs are the same.
+* **Balanced:** Half outputs are 0s and half outputs are 1s.
+
+However, Deutsch Algorithm made a conceptual proof that with a single query and a quantum computer we could get the most important characteristic of this function. This project explores the implementation of this algorithm and its natural succesor on the question of: How could we guess a function of the form $$f: \{0,1\}^n \rightarrow \{0,1\}$$
+
 ***Provide a description of your project including*** 
 
 1. motivating your research question
@@ -30,11 +45,11 @@
 
 ## Research Question
 
-How can we implement the Deutsch Algorithm to functions $f: \{0,1\} \rightarrow \{0,1\}$ and the Deutsch-Jozsa Algorithm to functions  $f: \{0,1\}^2 \rightarrow \{0,1\}$ and $f: \{0,1\}^3 \rightarrow \{0,1\}$?
+How can we implement the Deutsch Algorithm to functions $$f: \{0,1\} \rightarrow \{0,1\}$$ and the Deutsch-Jozsa Algorithm to functions  $$f: \{0,1\}^2 \rightarrow \{0,1\}$$ and $$f: \{0,1\}^3 \rightarrow \{0,1\}$$?
 
 ## Motivation
 
-Our main aim at this project is to evidence whether Deutsch and Deutsch-Jozsa Algorithms are an accurate approach to solve the main characteristic of $f: \{0,1\}^n \rightarrow \{0,1\}$-like functions.
+Our main aim at this project is to evidence whether Deutsch and Deutsch-Jozsa Algorithms are an accurate approach to solve the main characteristic of $$f: \{0,1\}^n \rightarrow \{0,1\}$$-like functions.
 
 ## Your next subsection
 
