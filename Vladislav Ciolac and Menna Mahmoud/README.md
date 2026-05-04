@@ -30,11 +30,13 @@
 
 ## Research Question
 
-State your research question here and elaborate on it.
+Our research questions are:
+How do side-channel attacks affect the qber in a BB84 protocol?
+Which are the mathematical and statistical limitations of the BB84 protocol?
 
 ## Motivation
 
-Explain your motivation for your chosen research question here.
+Our motivation for the projects is the potential BB84 has for mass-applications in industries like telecommunications and internet traffick. Looking at the basic implementaton, it is not that complicated to implement with physics instruments and a well calculated environment.
 
 ## Your next subsection
 
