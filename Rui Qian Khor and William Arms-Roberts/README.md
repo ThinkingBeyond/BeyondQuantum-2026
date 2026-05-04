@@ -45,7 +45,9 @@ We randomly generated graphs with 10, 16, and 20 nodes, with each number of node
 ![Max-Cut Graph](Graph.png)
 
 ## Results
-We found that the QAOA consistently found equivalent or slightly better quality solutions than the SG algorithm, with the level of solution quality staying relatively consistent from 0.97-0.99 for all the graphs.
+We found that the QAOA consistently found equivalent or slightly better quality solutions than the SG algorithm, with the level of solution quality staying relatively consistent from 0.97-0.99 for all the graphs. And the SG algorithm ranging from 0.98-0.96
+
+![Approximation Ratio Comparison](Solution_Quality.png)
 
 ## Implications and Conclusion
 
