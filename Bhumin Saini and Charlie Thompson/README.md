@@ -10,11 +10,11 @@ In this research project, we will be comparing how trajectories of Bosonic Symme
 
 ## Motivation
 
-Standard quantum mechanics predicts measurement outcomes with remarkable precision, but stays silent on what particles *actually do* between measurements. **Bohmian mechanics** resolves this by assigning particles definite positions at all times, guided by a pilot wave $\Psi(x_1, x_2, t)$:
+Standard quantum mechanics predicts the results of measurements with great accuracy, but says nothing about what particles actually do between measurements. Bohmian mechanics solves this by giving particles definite positions at all times, guided by a pilot wave. $\Psi(x_1, x_2, t)$:
 
 $$\dot{x}_k = \frac{\hbar}{m} \mathrm{Im}\!\left(\frac{\partial_{x_k}\Psi}{\Psi}\right)$$
 
-For entangled states, the velocity of particle 1 instantaneously depends on the position of particle 2 - making entanglement's non-locality directly visible in individual trajectories. This project asks whether we can see that fingerprint in a controlled scattering simulation.
+In the case of entangled states the velocity of particle 1 depends instantaneously on the position of particle 2, and thus entanglement non-locality is directly visible in individual trajectories. This project asks if we can see that fingerprint in a controlled scattering simulation.
 
 ---
 ## Method
@@ -27,11 +27,14 @@ We compare three two-particle initial states scattering off a Gaussian barrier $
 | **2A** | Symmetric (bosonic) $\mathcal{N}[\varphi_A\varphi_B + \varphi_B\varphi_A]$ | Built into initial state |
 | **2B** | Product state + phase ramp $\Psi \cdot e^{i\alpha(t)(x_1-x_2)^2}$ | Induced during evolution |
 
-Stages 2A and 2B share identical initial marginal densities to Stage 1 (verified by KL divergence), isolating entanglement as the sole variable.
+Since stages 2A and 2B have the same initial marginal densities as stage 1 (confirmed by KL divergence), the only thing that changes is the entanglement.
 
-**Numerical methods:** Crank-Nicolson for wavefunction evolution, RK4 for trajectory integration (validated against RK45 on a subsample), and a Born-rule $\chi^2$ test to confirm quantum equilibrium throughout.
+**Numerical methods:** Crank-Nicolson for wave function evolution, RK4 for trajectory integration (checked against RK45 for a subsample), Born-rule $\chi^2$ test to check for quantum equilibrium at all times.
 
-**Metrics tracked:** KL divergence, independence ratio $I = P(TT)/[P(T_1)\cdot P(T_2)]$, velocity correlation $\rho_v(t)$, entanglement entropy $S_e$, norm conservation, and Born-rule $\chi^2$.
+**Metrics tracked:**KL divergence, independence ratio 
+$I = P(TT)/[P(T_1)\cdot P(T_2)]$, velocity correlation $\rho_v(t)$ entanglement entropy $S_e$, conservation of norm, and Born-rule $\chi^2$.
+
+
 
 ---
 ### Physical Parameters
@@ -62,7 +65,7 @@ Stages 2A and 2B share identical initial marginal densities to Stage 1 (verified
 
 | Equation | Formula |
 |----------|---------|
-| Guidance equation | $\dot{x}_k = \frac{\hbar}{m} \operatorname{Im}\!\left(\frac{\partial_{x_k}\Psi \cdot \Psi^*}{|\Psi|^2}\right)$ |
+| Guidance equation | $\dot{x}_k = \frac{\hbar}{m} \mathcal{Im}\!\left(\frac{\partial_{x_k}\Psi \cdot \Psi^*}{|\Psi|^2}\right)$ |
 | Crank-Nicolson step | $(I + irH)\Psi^{n+1} = (I - irH)\Psi^n$ |
 | Phase kernel (Stage 2B) | $\Psi \rightarrow \Psi \cdot \exp(i\,\Delta\alpha(t)(x_1-x_2)^2)$ |
 | Bosonic symmetrisation | $\Psi = \mathcal{N}[\varphi_A(x_1)\varphi_B(x_2) + \varphi_B(x_1)\varphi_A(x_2)]$ |
@@ -74,12 +77,12 @@ Stages 2A and 2B share identical initial marginal densities to Stage 1 (verified
 
 Six quantitative measures are tracked across all stages:
 
-1. **KL Divergence** — verifies a fair start by confirming identical marginal densities at $t = 0$ across all stages
-2. **Independence Ratio** $I = P(TT)\,/\,[P(T_1)\cdot P(T_2)]$ - $I \neq 1$ is a direct signature that entanglement is shaping scattering outcomes
-3. **Norm Conservation** $\|\Psi^n\|\,/\,\|\Psi^0\|$ - Crank-Nicolson holds this to machine precision throughout
+1. **KL Divergence** — checks identical marginal densities at 𝑡 = 0 for all stages, confirming a fair start
+2. **Independence Ratio** $I = P(TT)\,/\,[P(T_1)\cdot P(T_2)]$ - $I \neq 1$ is a clear signature that entanglement is shaping the outcome of scattering
+3. **Norm Conservation** $\|\Psi^n\|\,/\,\|\Psi^0\|$ - Crank-Nicolson keeps it at machine precision all the tim
 4. **Velocity Correlation** $\rho_v(t)$ (Pearson) - non-zero in entangled stages; trajectory-level fingerprint of Bohmian non-locality
-5. **Born-rule $\chi^2$** - ensemble positions must track $|\Psi|^2$ at $t_\text{mid}$ to confirm quantum equilibrium
-6. **Entanglement Entropy** $S_e$ - computed via Schmidt decomposition (SVD) at sampled time steps
+5. **Born-rule $\chi^2$** - ensemble positions must follow $|\Psi|^2$ at $t_\text{mid}$ to confirm quantum equilibrium
+6. **Entanglement Entropy** $S_e$ - computed by Schmidt decomposition (SVD) at sampled time steps
 
 ### Code Structure
 
