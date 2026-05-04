@@ -42,6 +42,8 @@ We analyzed how different side-Channel attacks like the **Intecept-Resend, Time-
 
 Our motivation for the projects is the potential BB84 has for mass-applications in industries like telecommunications and internet traffick. Looking at the basic implementaton, it is not that complicated to implement with physics instruments and a well calculated environment.
 
+The BB84 Protocol security depends on the hardware of the QKD device, which can have many imperfections. These imperfections are potential vulnerabilities which allow Eve to apply Side-Channel attacks. Many systems depend on the QBER to detect attacks, but for some side-channel attacks like the time-shidt and the detector blinding the QBER does not change significantly, which makes the QBER insufficient for those attacks.
+
 ## Your next subsection
 
 Continue working through the points listed above with the help of sensibly named subsections. 
