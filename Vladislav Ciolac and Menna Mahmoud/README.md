@@ -28,11 +28,15 @@
 
 **Tip:** Use tools to create markdown tables. For example, Obsidian has a table plugin, that makes creating tables much easier than doing it by hand.
 
-## Research Question
+## Research Questions
 
-Our research questions are:
-How do side-channel attacks affect the qber in a BB84 protocol?
-Which are the mathematical and statistical limitations of the BB84 protocol?
+Our research project tackeled two research questions.
+
+**1- How do different Side-Channel Attacks affect the security and the key generation of the BB84 protocol? and how to detect them using QBER?**
+
+We analyzed how different side-Channel attacks like the **Intecept-Resend, Time-Shift, and the Detector Blinding attacks** manipulate the hardware of the Quantum Key Distribution device to allow an Eavesdropper (Eve) gain information about the secret key. Also Studied whether the Quantum Bit Error rate (QBER) is sufficient to detect the Time-shift and the Detector Blinding attacks.
+
+**2-Which are the mathematical and statistical limitations of the BB84 protocol?**
 
 ## Motivation
 
