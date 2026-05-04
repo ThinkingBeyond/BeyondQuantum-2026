@@ -103,10 +103,10 @@ All three models were evaluated on a held-out 20% test set. Key metrics:
 
 ### Discussion
  
-**All three models achieved high recall (>0.99)**, confirming that exoplanet signals in Kepler KOI data are reliably detectable regardless of the approach used.
-**Classical approaches outperformed the hybrid model** on AUROC and precision. Logistic Regression, despite its simplicity, achieved the best overall scores - likely because the KOI dataset features are already highly engineered by NASA's pipeline.
-**The hybrid model remained competitive**, especially in recall, and its AUROC of 0.978 is still strong in absolute terms.
-The quantum component uses **fixed random weights** - no quantum training was performed. This is a known limitation: the QNN acts as a random feature map, not a trained encoder. Despite this, the extracted features proved informative enough for downstream classification.
+- All three models achieved high recall (>0.99), confirming that exoplanet signals in Kepler KOI data are reliably detectable regardless of the approach used.
+- Classical approaches outperformed the hybrid model on AUROC and precision. Logistic Regression, despite its simplicity, achieved the best overall scores - likely because the KOI dataset features are already highly engineered by NASA's pipeline.
+- The hybrid model remained competitive, especially in recall, and its AUROC of 0.978 is still strong in absolute terms.
+- The quantum component uses **fixed random weights** - no quantum training was performed. This is a known limitation: the QNN acts as a random feature map, not a trained encoder. Despite this, the extracted features proved informative enough for downstream classification.
 ---
 
 ## Future Work
