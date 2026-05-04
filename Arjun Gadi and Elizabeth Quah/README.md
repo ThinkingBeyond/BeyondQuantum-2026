@@ -3,7 +3,10 @@
 # **Noise Analysis on Novel GHZ-State Based Quantum Visual Secret Sharing in Medical Communication**
 
 ---
-
+## **Google colab**
+All of our code can be found in the following google colab. All the steps are explained in detail in text, as well as comments within code. 
+Link: https://colab.research.google.com/drive/1Iyfveu1dzghNEv8hWJaamuR6KsaPm_rm 
+---
 ## **Motivation**  
 Motivated by the relevance and significance of secure medical image sharing in existing healthcare systems, our research introduces a novel Entanglement-based Quantum Visual Secret Sharing (QVSS) scheme to encode binary pixel values directly into GHZ entangled states, enabling information-theoretic security.
 
@@ -49,13 +52,7 @@ Many QVSS protocols incorporate quantum superposition and entanglement primarily
 
 To construct our protocol, we build upon the existing HBB(1999) quantum secret sharing protocol, the first ever secret sharing protocol to utilise GHZ-state entanglement for multi-party key distribution. A GHZ state is an entangled quantum state involving three qubits that exhibits perfect correlation in the computational basis, producing only fully aligned outcomes such as 000 or 111\. The notation for a GHZ state is shown below: 
 
-- ![](image1.png)
-
-The quantum circuit required to construct a GHZ state is shown below: 
-
-- ![](image2.png)
-
-([https://en.wikipedia.org/wiki/Quantum\_secret\_sharing](https://en.wikipedia.org/wiki/Quantum_secret_sharing) )
+$\|\text{GHZ}\rangle = \frac{1}{\sqrt{2}}(|000\rangle + |111\rangle)\$
 
 By leveraging GHZ states, individual or partial measurements yield outcomes that appear random and provide no information about the global secret. Since our protocol involves three parties (Patient, Hospital A, Hospital B), this protocol’s methodology is ideal as a basis to our protocol since the secret can only be reconstructed if all parties cooperate by combining their respective shares. The key advantage we found from this approach lies in the fact that the secret is encoded and recovered through entanglement-based correlations rather than relying solely on classical correlation structures. 
 
@@ -74,9 +71,9 @@ Furthermore, the research area of QSS applications in imaging and medicine is re
 ### **Protocol Walkthrough**
 Our GHZ-3 protocol encrypts two binary images to be transmitted between three parties, namely the Patient (Authority), Hospital A (Secret Share 1\) and Hospital B (Secret Share 2).
 
-1. Pixels with the same index (i,j) in the respective binary images are paired together, such that (g{1,ij}, g{2,ij}) {0,1}2 .
+1. Pixels with the same index (i,j) in the respective binary images are paired together, such that $(g_{1,ij},g_{2,ij}) \in {{0,1}}^{2}$ .
 
-2. Each pixel pair is encoded into a 3-qubit GHZ state (|GHZ⟩ \= 12(|000⟩ \+ |111⟩) by applying the operation ,(I Xg1Xg2) ,such that the pixel values determine whether X-gate is applied on each qubit. The obtained GHZ state is shown below:
+2. Each pixel pair is encoded into a 3-qubit GHZ state $\|\text{GHZ}\rangle = \frac{1}{\sqrt{2}}(|000\rangle + |111\rangle)\$ by applying the operation ,$I \otimes X^{g_1} \otimes X^{g_2}$ ,such that the pixel values determine whether X-gate is applied on each qubit. The obtained GHZ state is shown below:
 
 ![](image3.png)
 
@@ -194,7 +191,6 @@ Our future research will focus on improving the practicality and integration of 
 Additionally, the protocol will be extended from binary to grayscale image representations to support clinically relevant modalities such as MRI, CT, and X-ray scans to improve compatibility with existing DICOM workflows. 
 
 ---
-
 ## **References**
 
 
