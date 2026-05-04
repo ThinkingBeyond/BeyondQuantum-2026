@@ -4,7 +4,7 @@
 
 ***Provide a description of your project including*** 
 
-1. motivating your research question
+1. motivating your research questio
 2. stating your research question
 3. explaining your method and implementation
 4. Briefly mention and discuss your results
