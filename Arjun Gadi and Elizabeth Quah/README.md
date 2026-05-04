@@ -229,11 +229,6 @@ Simon, A. K., and L. Kempe. "Robustness of Multipartite Entanglement." arXiv:qua
 
 "Quantum Secret Sharing." Wikipedia. Accessed May 4, 2026\. [https://en.wikipedia.org/wiki/Quantum\_secret\_sharing](https://en.wikipedia.org/wiki/Quantum_secret_sharing).
 
-Ignore this   
-If you want to see some good examples of README files check out:  
-- [Example 1](https://github.com/ThinkingBeyond/BeyondAI-2024/blob/main/warenya-loulia/README.md)  
-- [Example 2](https://github.com/ThinkingBeyond/BeyondAI-2024/blob/main/shaana-karuna/README.md)  
-
 ---
 
 > The research poster for this project can be found in the [BeyondQuantum Proceedings 2026](https://thinkingbeyond.education/beyondquantum_proceedings_2026/).
