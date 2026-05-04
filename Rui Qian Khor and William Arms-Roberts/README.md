@@ -32,13 +32,11 @@
 
 How does the solution quality of the standard Quantum Approximate Optimization Algorithm (QAOA) and Sahni-Gonzalez Algorithm compare in MaxCut instances on small, 3-, 4-, and 5-regular graphs?
 
-We tested unweighted graphs with 10, 16, and 20 nodes, with instances of 3-, 4-, and 5-regular graphs, in order to assess how the prefromance of QAOA scaled as the number of edges per node increases.
+We tested unweighted graphs with 10, 16, and 20 nodes, with instances of 3-, 4-, and 5-regular graphs, in order to assess how the performance of QAOA scaled as the number of edges per node increases.
 
 ## Motivation
 
-Explain your motivation for your chosen research question here.
-
-## Method
+Optimization problems are commonplace in real-life, with broad applications in areas such as marketing, finance, and engineering. Many of these optimization problems can be formatted as a Max-Cut problem. Finding an exact solution becomes exponentially more difficult as the complexity of the graphs increase however, meaning that only approximate solutions can be found for graphs above a certain complexity. QAOA offers a potential alternative to the classical apporiximation algorithms and could have the potential to surpass the effectiveness of classical approximation ratios if QAOA is able to effectively scale to the complexity of modern day application of the Max-Cut problem.
 
 To 
 
