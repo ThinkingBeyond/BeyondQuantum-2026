@@ -109,11 +109,16 @@ Continue working through the points listed above with the help of sensibly named
 
 
 
-[ ... ]
+## Conclusion
+The novel GHZ-3 QVSS protocol devised in this project addresses the security concerns and relevance in the application area of medical image sharing. By directly encoding the pixel values into the entangled GHZ state and encrypting two binary images simultaneously, we bridge the research gap in existing QVSS literature by introducing said novelty. 
+
+Through testing against both state-level and gate-level noise, we observe the differences in thresholds, performance metrics and reconstructed images under both theoretical and realistic noise conditions. The protocol’s immunity to phase-flip under both types of noise is a key finding in regards to the protocol’s practicality and robustness on real networks, since existing fibre-optic networks are dominated by phase errors. 
 
 ## Future Work
 
-State and explain what follow-up research could be conducted based on your work.
+Our future research will focus on improving the practicality and integration of the proposed protocol into existing healthcare infrastructure by redesigning it to operate in semi-quantum settings, where only hospitals are required to operate quantum hardware, and patients interact classically to address realistic infrastructure constraints. 
+
+Additionally, the protocol will be extended from binary to grayscale image representations to support clinically relevant modalities such as MRI, CT, and X-ray scans to improve compatibility with existing DICOM workflows. 
 
 ## References
 
