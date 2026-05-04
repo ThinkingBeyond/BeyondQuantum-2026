@@ -16,8 +16,7 @@ Grover’s Algorithm provides a theoretical quadratic speedup for unstructured s
 ## Motivation
 
 In pharmaceutical research, virtual screening is an "unstructured search" problem — checking millions of potential drug candidates one by one. We chose this research question to test the efficiency of Grover's Algorithm, which theoretically offers a quadratic speedup over classical methods. By mapping molecular properties to logical constraints, we aim to identify the optimal threshold where quantum searching maintains high success probability before circuit complexity or over-rotation degrades the results.
-As we are doing this research in a simplified form, we aimed to identify the effect adding constraints has on Grover, both due to expanding the search space, but also due to reducing the number of potential target solutions.
-## Code and Implementations
+As we are doing this research in a simplified form, we aimed to identify the effect adding constraints has on the efficiency of Grovers algorithm, due to both the search space and the number of valid target solutions being affected.
 
 The implementation is written in Python using the Qiskit framework. All required packages (such as qiskit, matplotlib, and numpy) are pre-installed within the environment scripts provided in the notebooks.
 
