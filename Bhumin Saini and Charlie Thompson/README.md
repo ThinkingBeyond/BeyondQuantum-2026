@@ -86,7 +86,21 @@ Six quantitative measures are tracked across all stages:
 
 ### Code Structure
 
-
+|S.No| Section | What it does |
+|---|------|-------------|
+| **0**| **Setup** | Imports, global parameters, display helpers |
+| **1**| **Grid & Wavepackets** | Build simulation grid; construct Gaussian packets |
+| **2**| **Wave function Initialization** | Product, symmetric-entangled, phase-induced wave functions |
+| **3**| **Potential & CN Matrices** | Gaussian barrier; Crank-Nicolson A, B matrices |
+| **4**| **Wavefunction Evolution** | Standard and phase-ramp time evolution |
+| **5**| **Bohmian Velocity Field** | Guidance-equation velocity from Ψ |
+| **6**| **Trajectory Sampling & Integration** | RK4 and RK45 trajectory engines |
+| **7**| **Metrics** | KL, independence ratio, Born-rule χ², entropy, velocity correlation |
+| **8**| **Plotting** | All static diagnostic plots |
+| **9**| **Animations** | 3D space-time braid + multi-stage 2D animation |
+| **10**| **Stage Runner** | One-call wrapper that runs an entire stage |
+| **11**| **Validation** | RK4 vs RK45, norm conservation, Born-rule validation |
+| **12**| **Main Pipeline** | Full experiment: all three stages end-to-end |
 ---
 
 ## Results
@@ -103,23 +117,27 @@ Six quantitative measures are tracked across all stages:
 
 | Stage | TT (%) | RR (%) | TR (%) | RT (%) | Independence Ratio $I$ |
 |-------|--------|--------|--------|--------|----------------------|
-| Stage 1 - Product | | | | | *(≈ 1.0 expected)* |
-| Stage 2A - Symmetric | | | | | |
-| Stage 2B - Phase-Induced | | | | | |
+| Stage 1 - Product | 29 | 118 | 122 | 31 | *(≈ 1.0 expected)* |
+| Stage 2A - Symmetric | 29 | 112 | 65 | 94 | 0.752 |
+| Stage 2B - Phase-Induced | 5 | 49 | 143 | 103 | 0.094 |
 
 ### Velocity Correlations $\rho_v(t)$
+ <img width="600" height="450" alt="download" src="https://github.com/user-attachments/assets/555a14c4-22d9-4dbb-b8ef-27ef4d4f40c1" />
 
 ### Entanglement Entropy $S_e(t)$
+<img width="1178" height="396" alt="image" src="https://github.com/user-attachments/assets/7ada1605-ca11-4f29-8760-ec541f12cd4a" />
 
 
 ### Final Position Densities
 
 | Stage 1 (Product) | Stage 2A (Symmetric) | Stage 2B (Phase-Induced) |
 |:-----------------:|:--------------------:|:------------------------:|
-| ![](s1_final.png) | ![](s2a_final.png)   | ![](s2b_final.png)       |
+| <img width="590" height="490" alt="image" src="https://github.com/user-attachments/assets/edc82512-7b61-40b6-9f10-736bca685c1b" /> |<img width="590" height="490" alt="image" src="https://github.com/user-attachments/assets/05a7d550-711d-4bed-9494-fffc0b1a5a4c" /> | <img width="590" height="490" alt="image" src="https://github.com/user-attachments/assets/6a6d3dc1-f682-4b33-a854-35b14632ae74" /> |
 
 ### Bohmian Trajectory Braids (3D Configuration Space)
-
+| Stage 1 (Product) | Stage 2A (Symmetric) | Stage 2B (Phase-Induced) |
+|:-----------------:|:--------------------:|:------------------------:|
+| <img width="400" height="389" alt="ScreenRecording_05-01-2026 21-19-37_1" src="https://github.com/user-attachments/assets/0a66f82b-c3b4-4d91-bdd7-658f68a76ee6" /> |<img width="400" height="389" alt="ScreenRecording_05-01-2026 21-20-23_1" src="https://github.com/user-attachments/assets/790b09c7-62bb-4344-879a-9b859e0936b2" /> | <img width="400" height="390" alt="ScreenRecording_05-01-2026 21-20-51_1" src="https://github.com/user-attachments/assets/fda80996-d22f-4b06-8e0a-dab5310f0265" /> |
 ## Conclusions
 
 Preliminary expectations based on theory:
