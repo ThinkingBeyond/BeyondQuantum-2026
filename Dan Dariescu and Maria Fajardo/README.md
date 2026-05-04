@@ -38,14 +38,18 @@ We chose this as it: 1. Built on a previous project 2. Was specific enough that 
 what did: 1. Phase 1: creating the noise
 
 We had to understand the problem so we ran simulations with 3 different noise types, amplitude dampening which we can think of as the loss of energy for the photons. Then there’s phase dampening which is where the qubits lose their coherence – their superposition. We also explored depolarizing noise, which can be thought of as randomisation of the data, however as the QBER curve was the gentlest, we decided to ignore it going forward and focus on the other two.
-
+![noise](noises.png)
+![phase](phase.png)
 Phase 2: solving the noise simply
 
 We took the well known and established repetition code, and adapted it to be modular and to work for qubits, using a circuit based approach. This works by copying the data 3 times at the start and then reading the data in sections of 3 at the end. Whichever phase is most common is the one taken as correct. However it requires a lot of qubits to program and if there are 2n errors in it, it cannot be detected.
+![repetition code](rep code.png)
 
 Phase 3: more complex error correction mechanisms
 
 To get over the limitations of repetition code, we decide to implement Hamming code which uses parity checks (how many times a 1 comes up in a row in the classical sense) to calculate the exact position of an error. It also uses up much fewer qubits as we only need log base 2 n +1  correction bits compared to 2n extra bits in repetition code. There are a lot of ways to implement it in code, through matrices, through the classical grid method, through a circuit, through XORS and more. We tried all of them, and whilst in the end we got both the circuit and the matrices to work, the  challenges here were massive, especially in getting the programmes to work, due to their complexity. The easier they were to adapt to quantum, the harder they were classically and we ended up spending 2 and a half weeks on this, but we stumbled onto a new area of research
+![hamming_code](hamming_code.png)
+![steane_code](steane_code.png)
 
 Phase 3.5 new area?
 
@@ -54,6 +58,7 @@ We realised we needed a way to convert quantum data to a classical algorithm, so
 Phase 4 – eavesdropping
 
 We wanted to see how all of our work would stack up against an attempted attack so in the last few weeks, we worked to implement a man in the middle attack – aka eavsedroppiong where a secret third conn ection is involved. Why do we care about this so much ? unlike in classical computing, if anyone reads the data, the superposition goes away so the data is rendered useless, meaning it has a much wider impact than just not getting the data like in a classical attack of this sort.
+![eve](eve.png)
 
 If you want to see some good examples of README files check out:
 
