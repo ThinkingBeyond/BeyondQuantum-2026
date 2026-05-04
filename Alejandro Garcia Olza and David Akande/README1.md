@@ -56,7 +56,7 @@ or developing a modified, non-instantaneous diffusion wave equation that avoids 
 
 - Fussy, Siegfried; Pascasio, J Mesa; Schwabl, Herbert; Grössing, Gerhard (2014). *Born's Rule as Signature of a Superclassical Current Algebra*. Annals of Physics. https://doi.org/10.1016/j.aop.2014.02.002
 
-- Groessing, Gerhard; Fussy, Siegfried; Pascasio, Johannes Mesa; Schwabl, Herbert (2018). *Vacuum Landscaping: Cause of Nonlocal Influences without Signaling*. arXiv: Quantum Physics. https://doi.org/10.3390/e20060458
+- Grossing, Gerhard; Fussy, Siegfried; Pascasio, Johannes Mesa; Schwabl, Herbert (2018). *Vacuum Landscaping: Cause of Nonlocal Influences without Signaling*. arXiv: Quantum Physics. https://doi.org/10.3390/e20060458
 
 - Grössing, Gerhard; Pascasio, Johannes Mesa; Schwabl, Herbert (2011). *A Classical Explanation of Quantization*. Foundations of Physics. https://doi.org/10.1007/s10701-011-9556-1
 
