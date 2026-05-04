@@ -6,12 +6,12 @@
 
 > *How does a hybrid quantum–classical feature extraction pipeline compare to classical models in the classification of Kepler KOI exoplanet data?*
 
-Specifically, we ask: can a quantum neural network (QNN) used as a feature extractor — feeding into a classical neural network — achieve competitive or superior classification performance compared to purely classical approaches such as Logistic Regression and a classical Multi-Layer Perceptron (MLP)?
+- Specifically, we ask: can a quantum neural network (QNN) used as a feature extractor - feeding into a classical neural network - achieve competitive or superior classification performance compared to purely classical approaches such as Logistic Regression and a classical Multi-Layer Perceptron (MLP)?
 ---
 
 ## Motivation
 
-The NASA Kepler Mission has identified thousands of exoplanet candidates, but a significant fraction of detections are false positives caused by stellar noise or binary star systems. Reliably distinguishing confirmed exoplanets from false positives is a critical step in exoplanet science.
+- The NASA Kepler Mission has identified thousands of exoplanet candidates, but a significant fraction of detections are false positives caused by stellar noise or binary star systems. Reliably distinguishing confirmed exoplanets from false positives is a critical step in exoplanet science.
 Classical machine learning methods have been applied to this task with strong results. However, Quantum Machine Learning (QML) offers a theoretically motivated alternative: quantum circuits operate in an exponentially large Hilbert space and can capture non-linear feature interactions that classical preprocessing methods like PCA inherently discard. This raises the question of whether quantum feature representations can provide a measurable advantage in classification accuracy on real astrophysical data.
 ---
 
