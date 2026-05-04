@@ -50,7 +50,7 @@ The BB84 Protocol security depends on the hardware of the QKD device, which can 
 
 In this research Side-Channel attacks were modeled using their corresponding QBER values. ***These QBER values were selected from the literature.***
 
-The highest QBER is assigned to the Intercept-Resend attack as its theoretical QBER value is nearly 15%-25% [1], follows the Time-Shift attack and its theoretical QBER value is between 1% − 4% [3], and finally the  Detector Blinding attack with theoretical QBER value of nearly 0% [2]
+The highest QBER is assigned to the Intercept-Resend attack as it causes the highest disturbance, therefore,  its theoretical QBER value is nearly 15%-25% [1], follows the Time-Shift attack with theoretical QBER value between 1% − 4%  as it cause moderate disturbance[3] , and finally the  Detector Blinding attack with theoretical QBER value of nearly 0% [2]
 
  | Attack Scenario        | Modeled QBER (e) |
 |----------------------|------------------|
@@ -59,7 +59,13 @@ The highest QBER is assigned to the Intercept-Resend attack as its theoretical Q
 | Time-Shift           | 0.05 (5%)        |
 | Detector Blinding    | 0.001 (0.1%)     |
 
+### Key Rate as a function of QBER
 
+The key rate is how many bits were transmitted from the sender to the receiver. Can be represented as 
+
+$$
+R = 1 - 2H(\text{Q})
+$$
 
 
 If you want to see some good examples of README files check out:
