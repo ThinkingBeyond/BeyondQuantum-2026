@@ -10,11 +10,11 @@ In this research project, we will be comparing how trajectories of Bosonic Symme
 
 ## Motivation
 
-Standard quantum mechanics predicts the results of measurements with great accuracy, but says nothing about what particles actually do between measurements. Bohmian mechanics solves this by giving particles definite positions at all times, guided by a pilot wave. $\Psi(x_1, x_2, t)$:
+Standard quantum mechanics predicts the results of measurements with great accuracy, but doesn't suggest anything about what particles actually do between measurements. Bohmian mechanics solves this by giving particles **definite** positions at all times, guided by a pilot wave. $\Psi(x_1, x_2, t)$:
 
 $$\dot{x}_k = \frac{\hbar}{m} \mathrm{Im}\!\left(\frac{\partial_{x_k}\Psi}{\Psi}\right)$$
 
-In the case of entangled states the velocity of particle 1 depends instantaneously on the position of particle 2, and thus entanglement non-locality is directly visible in individual trajectories. This project asks if we can see that fingerprint in a controlled scattering simulation.
+For entangled states, the velocity of particle 1 depends instantaneously on the position and velocity of particle 2. Thus, in entanglement, non-locality is directly visible in individual trajectories. This project asks if we can see that in a controlled scattering simulation.
 
 ---
 ## Method
@@ -27,9 +27,9 @@ We compare three two-particle initial states scattering off a Gaussian barrier $
 | **2A** | Symmetric (bosonic) $\mathcal{N}[\varphi_A\varphi_B + \varphi_B\varphi_A]$ | Built into initial state |
 | **2B** | Product state + phase ramp $\Psi \cdot e^{i\alpha(t)(x_1-x_2)^2}$ | Induced during evolution |
 
-Since stages 2A and 2B have the same initial marginal densities as stage 1 (confirmed by KL divergence), the only thing that changes is the entanglement.
+Since stages 2A and 2B have the same initial marginal densities as stage 1 (which is confirmed by KL divergence), the only thing that changes is the entanglement between the particles.
 
-**Numerical methods:** Crank-Nicolson for wave function evolution, RK4 for trajectory integration (checked against RK45 for a subsample), Born-rule $\chi^2$ test to check for quantum equilibrium at all times.
+**Numerical methods:** Crank-Nicolson for wavefunction evolution, RK4 for trajectory integration (checked against RK45 for a subsample), Born-rule $\chi^2$ test to check for quantum equilibrium at all times.
 
 **Metrics tracked:**KL divergence, independence ratio 
 $I = P(TT)/[P(T_1)\cdot P(T_2)]$, velocity correlation $\rho_v(t)$ entanglement entropy $S_e$, conservation of norm, and Born-rule $\chi^2$.
@@ -96,8 +96,8 @@ Six quantitative measures are tracked across all stages:
 
 | Comparison | KL Divergence | Verdict |
 |------------|--------------|---------|
-| Stage 1 vs Stage 2A (marginals) | *(insert value)* | *(fair start ✓ / ⚠)* |
-| Stage 1 vs Stage 2B (marginals) | *(insert value)* | *(fair start ✓ / ⚠)* |
+| Stage 1 vs Stage 2A (marginals) | ** | ** |
+| Stage 1 vs Stage 2B (marginals) | ** | ** |
 
 ### Scattering Outcome Fractions
 
@@ -120,13 +120,7 @@ Six quantitative measures are tracked across all stages:
 
 ### Bohmian Trajectory Braids (3D Configuration Space)
 
-*Insert rotating 3D braid animations — one per stage — showing $(x_1, x_2, t)$ trajectory bundles colour-coded by scattering outcome (TT=green, RR=red, TR=yellow, RT=blue).*
-
----
-
 ## Conclusions
-
-*(To be completed after results are obtained.)*
 
 Preliminary expectations based on theory:
 
