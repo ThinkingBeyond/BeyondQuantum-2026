@@ -4,9 +4,8 @@
 
 ---
 ## **Google colab**
-All of our code can be found in the following google colab. All the steps are explained in detail in text, as well as comments within code. 
-Link: https://colab.research.google.com/drive/1Iyfveu1dzghNEv8hWJaamuR6KsaPm_rm 
----
+
+All of our code can be found in the following google colab. All the steps are explained in detail in text, as well as comments within code.  https://colab.research.google.com/drive/1Iyfveu1dzghNEv8hWJaamuR6KsaPm_rm 
 ## **Motivation**  
 Motivated by the relevance and significance of secure medical image sharing in existing healthcare systems, our research introduces a novel Entanglement-based Quantum Visual Secret Sharing (QVSS) scheme to encode binary pixel values directly into GHZ entangled states, enabling information-theoretic security.
 
