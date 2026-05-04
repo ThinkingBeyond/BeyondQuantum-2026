@@ -41,10 +41,11 @@ Optimization problems are commonplace in real-life, with broad applications in a
 ## Methods
 
 We randomly generated graphs with 10, 16, and 20 nodes, with each number of nodes having 3 instances with 3, 4, and 5 connections on each node (example graph shown below). To measure the solution quality of the QAOA and SG algorithm we implemented a brute force algorithm that found the optimal cut of each graph, comparing it to the output of both the QAOA and the SG algorithm. Additionally we measured the number of two-qubit gates in each circuit that was created and average them across the 30 tests we ran of each graph to get an accurate idea of the average number of circuits needed to run the QAOA.
+
 ![Max-Cut Graph](Graph.png)
 
 ## Results
-
+We found that the QAOA consistently found equivalent or slightly better quality solutions than the SG algorithm, with the level of solution quality staying relatively consistent from 0.97-0.99 for all the graphs.
 
 ## Implications and Conclusion
 
