@@ -43,7 +43,7 @@ We had to understand the problem so we ran simulations with 3 different noise ty
 Phase 2: solving the noise simply
 
 We took the well known and established repetition code, and adapted it to be modular and to work for qubits, using a circuit based approach. This works by copying the data 3 times at the start and then reading the data in sections of 3 at the end. Whichever phase is most common is the one taken as correct. However it requires a lot of qubits to program and if there are 2n errors in it, it cannot be detected.
-![repetition code](rep code.png)
+![repetition code](rep_code.png)
 
 Phase 3: more complex error correction mechanisms
 
