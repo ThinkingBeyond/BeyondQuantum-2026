@@ -6,7 +6,7 @@
 
 **How does entanglement - whether from bosonic symmetrisation or dynamically-induced phase coupling - alter the deterministic Bohmian trajectories, scattering statistics, and velocity correlations of a two-particle system scattering off a Gaussian barrier?**
 
-In this research project, we will be comparing how trajectories of Bosonic Symmetric Entanglement and Phase-Induced Entanglement differ when they interact with a Guassian Potential barrier. We model the particles in each state as a Guassian wave packet, and we use numerical methods such as Crank-Nicolson, RK4 & RK45 - providing a comparison between each RK4 and RK45 - to simulate and evolve the trajectories. We also use metrics and validational measures such as 
+In this research project, we will be comparing how trajectories of Bosonic Symmetric Entanglement and Phase-Induced Entanglement differ when they interact with a Guassian Potential barrier. We model the particles in each state as a Guassian wave packet, and we use numerical methods such as Crank-Nicolson, RK4 & RK45 - providing a comparison between each RK4 and RK45 - to simulate and evolve the trajectories. We also use metrics and measures such as Entorpy, Velocity correlation, Independence ratio, Initial and Final densities to validate our results.
 
 ## Motivation
 
@@ -14,7 +14,7 @@ Standard quantum mechanics predicts measurement outcomes with remarkable precisi
 
 $$\dot{x}_k = \frac{\hbar}{m} \mathrm{Im}\!\left(\frac{\partial_{x_k}\Psi}{\Psi}\right)$$
 
-For entangled states, the velocity of particle 1 instantaneously depends on the position of particle 2 — making entanglement's non-locality directly visible in individual trajectories. This project asks whether we can see that fingerprint in a controlled scattering simulation.
+For entangled states, the velocity of particle 1 instantaneously depends on the position of particle 2 - making entanglement's non-locality directly visible in individual trajectories. This project asks whether we can see that fingerprint in a controlled scattering simulation.
 
 ---
 ## Method
@@ -75,11 +75,11 @@ Stages 2A and 2B share identical initial marginal densities to Stage 1 (verified
 Six quantitative measures are tracked across all stages:
 
 1. **KL Divergence** — verifies a fair start by confirming identical marginal densities at $t = 0$ across all stages
-2. **Independence Ratio** $I = P(TT)\,/\,[P(T_1)\cdot P(T_2)]$ — $I \neq 1$ is a direct signature that entanglement is shaping scattering outcomes
-3. **Norm Conservation** $\|\Psi^n\|\,/\,\|\Psi^0\|$ — Crank-Nicolson holds this to machine precision throughout
-4. **Velocity Correlation** $\rho_v(t)$ (Pearson) — non-zero in entangled stages; trajectory-level fingerprint of Bohmian non-locality
-5. **Born-rule $\chi^2$** — ensemble positions must track $|\Psi|^2$ at $t_\text{mid}$ to confirm quantum equilibrium
-6. **Entanglement Entropy** $S_e$ — computed via Schmidt decomposition (SVD) at sampled time steps
+2. **Independence Ratio** $I = P(TT)\,/\,[P(T_1)\cdot P(T_2)]$ - $I \neq 1$ is a direct signature that entanglement is shaping scattering outcomes
+3. **Norm Conservation** $\|\Psi^n\|\,/\,\|\Psi^0\|$ - Crank-Nicolson holds this to machine precision throughout
+4. **Velocity Correlation** $\rho_v(t)$ (Pearson) - non-zero in entangled stages; trajectory-level fingerprint of Bohmian non-locality
+5. **Born-rule $\chi^2$** - ensemble positions must track $|\Psi|^2$ at $t_\text{mid}$ to confirm quantum equilibrium
+6. **Entanglement Entropy** $S_e$ - computed via Schmidt decomposition (SVD) at sampled time steps
 
 ### Code Structure
 
@@ -100,9 +100,9 @@ Six quantitative measures are tracked across all stages:
 
 | Stage | TT (%) | RR (%) | TR (%) | RT (%) | Independence Ratio $I$ |
 |-------|--------|--------|--------|--------|----------------------|
-| Stage 1 — Product | | | | | *(≈ 1.0 expected)* |
-| Stage 2A — Symmetric | | | | | |
-| Stage 2B — Phase-Induced | | | | | |
+| Stage 1 - Product | | | | | *(≈ 1.0 expected)* |
+| Stage 2A - Symmetric | | | | | |
+| Stage 2B - Phase-Induced | | | | | |
 
 ### Velocity Correlations $\rho_v(t)$
 
