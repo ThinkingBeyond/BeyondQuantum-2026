@@ -42,11 +42,25 @@ We analyzed how different side-Channel attacks like the **Intecept-Resend, Time-
 
 Our motivation for the projects is the potential BB84 has for mass-applications in industries like telecommunications and internet traffick. Looking at the basic implementaton, it is not that complicated to implement with physics instruments and a well calculated environment.
 
-The BB84 Protocol security depends on the hardware of the QKD device, which can have many imperfections. These imperfections are potential vulnerabilities which allow Eve to apply Side-Channel attacks. Many systems depend on the QBER to detect attacks, but for some side-channel attacks like the time-shidt and the detector blinding the QBER does not change significantly, which makes the QBER insufficient for those attacks.
+The BB84 Protocol security depends on the hardware of the QKD device, which can have many imperfections. These imperfections are potential vulnerabilities which allow Eve to apply Side-Channel attacks. Many systems depend on the QBER to detect attacks, but for some side-channel attacks like the time-shift and the detector blinding the QBER does not change significantly, which makes the QBER insufficient for those attacks.
 
-## Your next subsection
+## Methods and Implementations
 
-Continue working through the points listed above with the help of sensibly named subsections. 
+### Modeling the Attacks
+
+In this research Side-Channel attacks were modeled using their corresponding QBER values. ***These QBER values were selected from the literature.***
+
+The highest QBER is assigned to the Intercept-Resend attack as its theoretical QBER value is nearly 15%-25% [1], follows the Time-Shift attack and its theoretical QBER value is between 1% − 4% [3], and finally the  Detector Blinding attack with theoretical QBER value of nearly 0% [2]
+
+ | Attack Scenario        | Modeled QBER (e) |
+|----------------------|------------------|
+| No Attack (Baseline) | 0.01 (1%)        |
+| Intercept-Resend     | 0.15 (15%)       |
+| Time-Shift           | 0.05 (5%)        |
+| Detector Blinding    | 0.001 (0.1%)     |
+
+
+
 
 If you want to see some good examples of README files check out:
 - [Example 1](https://github.com/ThinkingBeyond/BeyondAI-2024/blob/main/warenya-loulia/README.md)
@@ -60,15 +74,11 @@ State and explain what follow-up research could be conducted based on your work.
 
 ## References
 
-List all your references here. Remember to put links into markdown. For example:
+[1] [Quantum Cryptography: Public Key Distribution and Coin Tossing (Bennett & Brassard, 1984)](https://ieeexplore.ieee.org/document/1055638)
 
-1.  Einstein, A. (1905). *On the Electrodynamics of Moving Bodies*. Annalen der Physik, 17, 891-921. [Internet Archive](https://archive.org/details/einstein-1905-relativity)
+[2] [Hacking Commercial Quantum Cryptography Systems by Tailored Bright Illumination (Lydersen et al., 2010)](https://arxiv.org/abs/1008.4593)
 
-**Tip**: *If you have you references in BibTex, Google Scholar or Zotero*
-1. Create/copy a list into ChatGPT
-2. Ask it to turn it into an unsorted list in markdown
-
----
+[3] [Time-Shift Attack in Practical Quantum Cryptosystems (Qi et al., 2007)](https://arxiv.org/abs/quant-ph/0512083)
 
 > The research poster for this project can be found in the [BeyondQuantum Proceedings 2026](https://thinkingbeyond.education/beyondquantum_proceedings_2026/).
 
