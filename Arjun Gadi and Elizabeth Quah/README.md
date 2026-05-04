@@ -140,15 +140,14 @@ To quantify the results of this study, we used a range of metrics. The following
 
 ### **Heatmap**
 
-![](Arjun Gadi and Elizabeth Quah/qss_output  Github/fig10_heatmap.png)
-
+![Heatmap](qss_output%20%20Github/fig10_heatmap.png)
 The above plot shows a heatmap for the fidelity values obtained when the noise level is manipulated for the 4 noise channels. Bit-flip noise shows the sharpest degradation, and collapses at p ≈ 0.25. With depolarising noise fidelity drops below F=0.5 at λ ≈ 0.30. Amplitude damping is most resilient. 
 
 ---
 
 ### **Fidelity comparison**
 
-![](image5.png)
+![](qss_output%20%20Github/fig3_fidelity_comparison.png)
 
 The above plot illustrates the difference in fidelity between Mode A and Mode B. Mode A gives the theoretical floor, which matches the analytical formulas exactly, while Mode B reflects the nature of real IBM hardware. Mode B consistently performs worse than Mode A, the gap between them is the implementation overhead. 
 
@@ -156,7 +155,7 @@ The above plot illustrates the difference in fidelity between Mode A and Mode B.
 
 ### **BER**
 
-![](image6.png)
+![](qss_output%20%20Github/fig4_ber.png)
 
 As expected, as the noise increases the BER increases. However, the remarkable result here is the impact of Phase-Flip noise on BER. As illustrated in the graph, the protocol is immune to phase flip noise. This is significant because real life fibre optic quantum channels are dominated by phase errors, suggesting that GHZ-3 QSS may be more robust on real network than bit-flip based analysis would predict. 
 
@@ -164,7 +163,7 @@ As expected, as the noise increases the BER increases. However, the remarkable r
 
 ### **Visual reconstruction**
 
-![](image7.png)
+![](qss_output%20%20Github/fig11_visual.png)
 
 The above plot shows the impact on the reconstructed image as the level of depolarising noise increases. Consistent with the BER plot, as the depolarising parameter increases, the quality of the reconstructed image decreases. While depolarising, bit-flip, and amplitude damping all degrade the reconstructed image, it is important to note that under phaseflip noise, the reconstructed image would be the exact same as the original image.
 
