@@ -30,13 +30,22 @@
 
 ## Research Question
 
-State your research question here and elaborate on it.
+How does the solution quality of the standard Quantum Approximate Optimization Algorithm (QAOA) and Sahni-Gonzalez Algorithm compare in MaxCut instances on small, 3-, 4-, and 5-regular graphs?
+
+We tested unweighted graphs with 10, 16, and 20 nodes, with instances of 3-, 4-, and 5-regular graphs, in order to assess how the prefromance of QAOA scaled as the number of edges per node increases.
 
 ## Motivation
 
 Explain your motivation for your chosen research question here.
 
-## Your next subsection
+## Method
+
+To 
+
+## Results
+
+## Implications and Conclusion
+
 
 Continue working through the points listed above with the help of sensibly named subsections. 
 
