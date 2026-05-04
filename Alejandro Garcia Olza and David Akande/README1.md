@@ -26,24 +26,24 @@ Inspired by macroscopic fluid-dynamics experiments (such as Couder's bouncing dr
 
 First we are going to see what has been done from the theoretical part:
 
-*Formalization and Didactic Synthesis* We have formalized the Superclassical Thermodynamics model and systematically reviewed how it successfully explains various quantum phenomena.
+**Formalization and Didactic Synthesis** We have formalized the Superclassical Thermodynamics model and systematically reviewed how it successfully explains various quantum phenomena.
 
 To make this dense theoretical framework easily accessible for future researchers, we have condensed the core principles into a single, coherent, narrative-driven document (Theory_explained.pdf) that minimizes heavy mathematical formalism. This synthesis intuitively covers the emergent nature of quantization, the physical decay into multiple steady states, the entanglement, the duality and the epistemic origins of the Heisenberg Uncertainty Principle.
 
-*Critical Analysis: Strengths and Weaknesses* Following the synthesis, we conducted an analysis to highlight the main differences between this theory and orthodox or Bohmian mechanics, carefully weighing its strengths and weaknesses.
+**Critical Analysis: Strengths and Weaknesses** Following the synthesis, we conducted an analysis to highlight the main differences between this theory and orthodox or Bohmian mechanics, carefully weighing its strengths and weaknesses.
 
 Both are in this folder: https://drive.google.com/drive/folders/1pXL7ne2kQu6QiX_wSkJ877ZX2MtEJMat?usp=sharing
 
 
-*Conclusions*
+**Conclusions**
 
 In conclusion, we found that while Superclassical Thermodynamics provides a beautifully intuitive and physically grounded explanation for many quantum phenomena, it is not yet a complete fundamental theory. Its internal reliance on an idealized diffusion equation and its unresolved tension with Special Relativity represent significant theoretical obstacles.
 
-*Future Investigations*
+**Future Investigations**
 
 Based on our findings, we recommend focusing on two main areas for future research:
 
-- Incorporating Spin: It would be highly beneficial to deeply analyze the concept of particle spin within this thermodynamic framework. Existing literature suggests that Planck's constant can be linked to the fundamental angular momentum of the sub-quantum "zitterbewegung" (agitation motion), which could provide a purely classical explanation for spin.
+- Incorporating Spin: It would be highly beneficial to deeply analyze the concept of particle spin within this thermodynamic framework. Existing literature suggests that Planck's constant can be linked to the fundamental angular momentum of the sub-quantum "zitterbewegung" (agitation motion), which could provide a purely classical explanation for spin. We haven't really dive into this.
 
 - Reconciliation with Relativity: Future work must address the superluminal paradoxes. This could involve exploring the concept of an "emergent relativity"
 or developing a modified, non-instantaneous diffusion wave equation that avoids infinite propagation speeds while still accounting for the systemic updating of the vacuum landscape.
