@@ -47,13 +47,13 @@ Quantum Machine Learning (QML) is an emerging interdisciplinary field that explo
 - *Feature Maps*: A technique, implemented via parameterized circuits, that encodes classical data into quantum states, enabling quantum algorithms to operate in high-dimensional Hilbert spaces which potentially revealing patterns a Classical model may miss.
 
 ## Methodology 
-**Dataset**
-**Prepraration**
-**Classical SVM**
-**Quantum Scaling**
-**ZZ & Z Feature Map (Built-in)**
-**Modified Feature Maps**
-**Metrics**
+-**Dataset**
+-**Prepraration**
+-**Classical SVM**
+-**Quantum Scaling**
+-**ZZ & Z Feature Map (Built-in)**
+-**Modified Feature Maps**
+-**Metrics**
 ## Results
 ## Conclusion
 ## Future Work
@@ -71,6 +71,8 @@ State and explain what follow-up research could be conducted based on your work.
   Montalbán, Iraitz. “Quantum Computing Handbook.” Quantum Computing Handbook, 25 June 2025, https://iraitzm.github.io/qc-handbook/.
 
   QSVC - Qiskit Machine Learning 0.9.0. https://qiskit-community.github.io/qiskit-machine-learning/stubs/qiskit_machine_learning.algorithms.QSVC.html#qiskit_machine_learning.algorithms.QSVC. 
+
+  https://www.kaggle.com/datasets/yasserh/breast-cancer-dataset
 
 
  
