@@ -2,16 +2,7 @@
 
 # QBER STABILITY IN MDI-QKD UNDER QUANTUM NOISE AND EAVESDROPPING 
 
-***Provide a description of your project including*** 
-
-1. motivating your research question
-2. stating your research question
-3. explaining your method and implementation
-4. Briefly mention and discuss your results
-5. Draw your conclusions
-6. State what future investigations 
-7. State your references 
-
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1bvzKuTybs4rG-iR4PXrXOz4z0rsHJXtD?usp=sharing)
 ### Further Guidance: Formating
 - Structure this readme using subsections
 - Your job is to 
