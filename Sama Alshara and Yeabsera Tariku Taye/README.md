@@ -1,7 +1,6 @@
 ![BeyondQuantum Banner for Research Projects](../BeyondQuantum_Banner_Research_Projects_2026.png)
 
-# State Your Project Title Here With Capitalised Letters as Shown
-
+# How Quantum Feature Maps affect QSVM Performance
 ***Provide a description of your project including*** 
 
 1. motivating your research question
@@ -30,29 +29,51 @@
 
 ## Research Question
 
-State your research question here and elaborate on it.
+Our research question is "How does the choice of Quantum Feature Map affect QSVM performance? How does it compare to a classical SVM?"
+To further clarify, we will be testing out 4 different feature maps (two built in and two modified) and comparing the performance of the QSVMs to each other. Furthermore, by comparing these QSVMs to a Classical SVM, it will show whether Quantum Machine Learning can be a competitor or if this research is a theoretical exploration.
 
 ## Motivation
 
 Explain your motivation for your chosen research question here.
 
-## Your next subsection
+## Abstract
 
-Continue working through the points listed above with the help of sensibly named subsections. 
+Quantum Machine Learning (QML) is an emerging interdisciplinary field that explores the use of quantum computing to potentially enhance classical machine learning techniques. A key challenge in QML is encoding classical data into quantum states, known as quantum data encoding, which is achieved using quantum feature maps. In this work, we implement and systematically compare the Z Feature Map, ZZ Feature Map, and enhanced versions of these feature maps with increased circuit depth and entanglement. These are integrated into a Quantum Support Vector Classifier (QSVC) using a quantum kernel evaluated in simulation. We train and evaluate these models on the Wisconsin Diagnostic Breast Cancer (WDBC) dataset to analyze how feature map design impacts classification performance. Our results show that, for this dataset and experimental setup, the Enhanced Z Feature Map achieves the best performance, reaching an F1-score of 0.9718, highlighting the relevance of feature map design in this context.
 
-If you want to see some good examples of README files check out:
-- [Example 1](https://github.com/ThinkingBeyond/BeyondAI-2024/blob/main/warenya-loulia/README.md)
-- [Example 2](https://github.com/ThinkingBeyond/BeyondAI-2024/blob/main/shaana-karuna/README.md)
+## Overview of Key Concepts 
+- *Support Vector Machines (SVM)*: are a widely used classical machine learning algorithm that classifies data by finding an optimal hyperplane in a high-dimensional feature space. They work by finding the optimal hyperplane that separates data points of different classes with the maximum margin
+- *Principal Component Analysis (PCA)*: PCA is a dimensionality reduction technique widely used in data analysis and machine learning. It transforms a high-dimensional dataset into a smaller set of uncorrelated variables called principal components, while retaining most of the original information.
+- *QSVMs*: QSVM extends this approach by using quantum feature maps to encode classical data into a quantum Hilbert space, enabling the evaluation of quantum kernels.
+- *Feature Maps*: A technique, implemented via parameterized circuits, that encodes classical data into quantum states, enabling quantum algorithms to operate in high-dimensional Hilbert spaces which potentially revealing patterns a Classical model may miss.
 
-[ ... ]
-
+## Methodology 
+**Dataset**
+**Prepraration**
+**Classical SVM**
+**Quantum Scaling**
+**ZZ & Z Feature Map (Built-in)**
+**Modified Feature Maps**
+**Metrics**
+## Results
+## Conclusion
 ## Future Work
 
 State and explain what follow-up research could be conducted based on your work.
 
 ## References
 
-List all your references here. Remember to put links into markdown. For example:
+(Temporary listing of references)
+
+  Akpinar, Emine, et al. “Evaluating the Impact of Different Quantum Kernels on the Classification Performance of Support Vector Machine Algorithm: A Medical Dataset Application.” arXiv:2407.09930, arXiv, 19 July 2024. arXiv.org, https://doi.org/10.48550/arXiv.2407.09930.
+  
+  "1.4. Support Vector Machines.” Scikit-Learn, https://scikit-learn/stable/modules/svm.html.
+  
+  Montalbán, Iraitz. “Quantum Computing Handbook.” Quantum Computing Handbook, 25 June 2025, https://iraitzm.github.io/qc-handbook/.
+
+  QSVC - Qiskit Machine Learning 0.9.0. https://qiskit-community.github.io/qiskit-machine-learning/stubs/qiskit_machine_learning.algorithms.QSVC.html#qiskit_machine_learning.algorithms.QSVC. 
+
+
+ 
 
 1.  Einstein, A. (1905). *On the Electrodynamics of Moving Bodies*. Annalen der Physik, 17, 891-921. [Internet Archive](https://archive.org/details/einstein-1905-relativity)
 
