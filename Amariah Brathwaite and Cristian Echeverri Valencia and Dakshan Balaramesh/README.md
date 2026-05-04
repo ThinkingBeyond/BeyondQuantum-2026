@@ -76,7 +76,7 @@ Using the same methods as the research, Deutsch-Jozsa Algorithm could be tested 
 * Nakahara, M., & Ohmi, T. (2008). *Quantum Computing—From Linear Algebra to Physical Realizations*. En *Quantum Computing: From Linear Algebra to Physical Realizations*. [https://doi.org/10.1201/9781420012293](https://doi.org/10.1201/9781420012293)
 * Nielsen, M. A., & Chuang, I. L. (2010). *Quantum Computation and Quantum Information: 10th Anniversary Edition*. Cambridge University Press.
 * *Noise Analysis of Grover’s Quantum Search Algorithm*. (2023). Indian Journal of Pure & Applied Physics. [https://doi.org/10.56042/ijpap.v61i5.69090](https://doi.org/10.56042/ijpap.v61i5.69090)
-* Textbook, Q. (s. f.). *Learn Quantum Computation using Qiskit* [Manuscript].
+* Textbook, Q. (s. f.). *Learn Quantum Computation using Qiskit* [Manuscript](https://qiskit.org/learn).
 * Weathers, J. M. (2010). *Methods for quantum circuit design and simulation*. Calhoun: The NPS Institutional Archive DSpace Repository.
 * Youvan, D. C. (2023). *Quantum Oracles: Design, Implementation, and Implications in Quantum Search Algorithms*. [https://doi.org/10.13140/RG.2.2.27075.78884](https://doi.org/10.13140/RG.2.2.27075.78884)
 
