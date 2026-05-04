@@ -49,6 +49,10 @@ We found that the QAOA consistently found equivalent or slightly better quality 
 
 ![Approximation Ratio Comparison](Solution_Quality.png)
 
+Additionaly we found that the number of two-qubit gates required to run the QAOA circuit increases in a roughly linear pattern, with the number of gates increasing alongside the number of connections as well. The number of two-qubit gates required more than doubled when going from 3-5 connections per node, indicating poor connection-wise scalability.
+
+![Two-Qubit gates](Two-Qubit-Gates.png)
+
 ## Implications and Conclusion
 
 
