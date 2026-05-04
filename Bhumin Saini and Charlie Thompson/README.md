@@ -148,29 +148,6 @@ Preliminary expectations based on theory:
 
 1. Bohm, D. (1952). A Suggested Interpretation of the Quantum Theory in Terms of "Hidden" Variables I & II. *Physical Review*, 85, 166–193. [doi:10.1103/PhysRev.85.166](https://doi.org/10.1103/PhysRev.85.166)
 
-2. de Broglie, L. (1927). La mécanique ondulatoire et la structure atomique de la matière et du rayonnement. *Journal de Physique et le Radium*, 8, 225–241.
-
-3. Holland, P. R. (1993). *The Quantum Theory of Motion: An Account of the de Broglie–Bohm Causal Interpretation of Quantum Mechanics*. Cambridge University Press.
-
-4. Dürr, D., Goldstein, S., & Zanghì, N. (1992). Quantum Equilibrium and the Origin of Absolute Uncertainty. *Journal of Statistical Physics*, 67(5), 843–907. [doi:10.1007/BF01049004](https://doi.org/10.1007/BF01049004)
-
-**Two-Particle Bohmian Simulation**
-
-5. Guay, E., & Marchildon, L. (2003). Two-particle interference in standard and Bohmian quantum mechanics. *Journal of Physics A: Mathematical and General*, 36(20), 5617. [doi:10.1088/0305-4470/36/20/317](https://doi.org/10.1088/0305-4470/36/20/317) — [arXiv:quant-ph/0302085](https://arxiv.org/abs/quant-ph/0302085)
-
-6. Christov, I. P. et al. (2018). Entangled Quantum Dynamics of Many-Body Systems using Bohmian Trajectories. *Scientific Reports*, 8, 12704. [doi:10.1038/s41598-018-30730-0](https://doi.org/10.1038/s41598-018-30730-0)
-
-**Entanglement in Bohmian Mechanics**
-
-7. Benseny, A., Albareda, G., Sanz, Á. S., Mompart, J., & Oriols, X. (2014). Applied Bohmian Mechanics. *European Physical Journal D*, 68, 286. [doi:10.1140/epjd/e2014-50222-4](https://doi.org/10.1140/epjd/e2014-50222-4) — [arXiv:1406.3151](https://arxiv.org/abs/1406.3151)
-
-8. Sanz, A. S., & Miret-Artés, S. (2018). Revisiting Entanglement within the Bohmian Approach to Quantum Mechanics. *Entropy*, 20(6), 473. [doi:10.3390/e20060473](https://doi.org/10.3390/e20060473)
-
-**Numerical Methods**
-
-9. Deckert, D.-A., Dürr, D., & Pickl, P. (2007). Quantum Dynamics with Bohmian Trajectories. [arXiv:quant-ph/0701190](https://arxiv.org/abs/quant-ph/0701190)
-
-10. Press, W. H., Teukolsky, S. A., Vetterling, W. T., & Flannery, B. P. (2007). *Numerical Recipes: The Art of Scientific Computing* (3rd ed.). Cambridge University Press.
 
 
 > The research poster for this project can be found in the [BeyondQuantum Proceedings 2026](https://thinkingbeyond.education/beyondquantum_proceedings_2026/).
