@@ -1,6 +1,6 @@
 ![BeyondQuantum Banner for Research Projects](../BeyondQuantum_Banner_Research_Projects_2026.png)
 
-# State Your Project Title Here With Capitalised Letters as Shown
+# Noise Analysis on GHZ-State Based Quantum Visual Secret Sharing (QVSS) in Medical Communication
 
 ***Provide a description of your project including*** 
 
