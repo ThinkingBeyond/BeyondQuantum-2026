@@ -1,6 +1,6 @@
 ![BeyondQuantum Banner for Research Projects](../BeyondQuantum_Banner_Research_Projects_2026.png)
 
-# State Your Project Title Here With Capitalised Letters as Shown
+# Analysis of Side-Channel Attacks on the BB84 protocol and Discovering the Mathematical and Statistical Limitations of BB84
 
 ***Provide a description of your project including*** 
 
