@@ -17,7 +17,7 @@ Max-Cut is a type of Quadratic Unconstrained Binary Optimization Problem (QUBO).
 
 MaxCut is a problem within graph theory which aims to partiction nodes within a graph into two subgroups, such that the line drawn to divide the subgroups, interesect between a maximum of edges connecting nodes. This problem has a wide range of applications in anayzing social networks, circuit layout, and portfolio managment.
 
-<## Quantum Approximation Optimiation Algorithm>
+<!--## Quantum Approximation Optimiation Algorithm-->
 
 <## Sanhi-Gonzalez Algorith>
 
