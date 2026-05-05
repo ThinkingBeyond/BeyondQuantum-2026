@@ -2,31 +2,7 @@
 
 # QAOA vs. Classical Heurlistic
 
-***Provide a description of your project including*** 
-
-1. motivating your research question
-2. stating your research question
-3. explaining your method and implementation
-4. Briefly mention and discuss your results
-5. Draw your conclusions
-6. State what future investigations 
-7. State your references 
-
-### Further Guidance: Formating
-- Structure this readme using subsections
-- Your job is to 
-    - keep it clear
-    - provide sufficient detail, so what you did is understandable to the reader. This way other researchers and future cohorts of BeyondQuantum will be able to build on your research
-    - List all your references at the end
-- utilise markdown like *italics*, **bold**, numbered and unnumbered lists to make your document easier to read
-- if you refer to links use the respective markdown for links, e.g. `[ThinkingBeyond](https://thinkingbeyond.education/)`
-- If you have graphs and pictures you want to embed in your file use `![name](your_graphic.png)`
-- If you want to present your results in a table use
-    | Header 1            | Header 2  |
-    |---------------------|-----------|
-    | Lorem Ipsum         | 12345     |
-
-**Tip:** Use tools to create markdown tables. For example, Obsidian has a table plugin, that makes creating tables much easier than doing it by hand.
+## Project Description
 
 ## Research Question
 
@@ -64,7 +40,7 @@ If you want to see some good examples of README files check out:
 
 ## Future Work
 
-State and explain what follow-up research could be conducted based on your work.
+Graphs with node counts higher than 20 could be tested with the use of quantum hardware. Additionally there are different versions of QAOA that can be explored such as QAOA in QAOA and warm started QAOA. These versions goals appear to be to improve some of the scalability issues with QAOA.
 
 ## References
 
