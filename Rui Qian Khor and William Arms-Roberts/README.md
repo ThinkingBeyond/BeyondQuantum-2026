@@ -23,9 +23,11 @@ MaxCut is a problem within graph theory which aims to partiction nodes within a 
 
 <!--## Classical Brute-Force Algorithm-->
 
-<!--## Measure of Merit-->
+## Measure of Merit
 
-<!--### Approximation Ratio-->
+### Approximation Ratio
+The approximation ratio is a measure of the solution quality produced by an algorithm as it calculates a value for how closely the resulted solution matches the true optimal solution. This metric was chosen for it's ablity to consider the entire sample of the dataset. The formula of the approximation ratio is $A(I)/OPT(I)=alpha$, where $A(I)$ is the algorithm output and $OPT(I)$ is the optimal solution.
+
 
 <!--### Gate Count-->
 
