@@ -48,6 +48,7 @@ Graphs with node counts higher than 20 could be tested with the use of quantum h
 4. J. A. M, Kristel M, Toward a linear-ramp QAOA protocol: evidence of a scaling advantage in solving some combinatorial optimization problems (2025), npj quantum information, [nature](https://www.nature.com/articles/s41534-025-01082-1)
 5. David B et al, Towards Robust Benchmarking of Quantum Optimization Algorithms (2025), [IEEE](10.1109/QCE60285.2024.11030870)
 6. Micheal X, David W, Improved approximation algorithms for maximum cut and satisfiability problems using semidefinite programming (1995), [JACM](https://doi.org/10.1145/227683.227684)
+7. IBM quantum platform, Quantum approximate optimization algorithm (2024), [IBM](https://quantum.cloud.ibm.com/docs/en/tutorials/quantum-approximate-optimization-algorithm)
 
 
 ---
