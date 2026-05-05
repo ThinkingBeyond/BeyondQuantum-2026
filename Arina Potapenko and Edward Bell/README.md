@@ -96,7 +96,7 @@ The number of valid solutions (M) significantly impacts algorithm efficiency.
  - Optimal k decreases as the number of valid solutions increases, consistent with theoretical predictions.
 
 **4. Scaling Behavior vs Classical Search**
-- Grover’s Algorithm was compared to classical linear search for N = 16
+- Grover’s Algorithm was compared to classical linear search for *N = 16*
 - The quantum implementation required fewer iterations to locate target states, consistent with the expected quadratic speedup.
 
 **Key observation:**
