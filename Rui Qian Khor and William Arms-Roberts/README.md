@@ -2,8 +2,6 @@
 
 # QAOA vs. Classical Heurlistic
 
-## Project Description
-
 ## Research Question
 
 How does the solution quality of the standard Quantum Approximate Optimization Algorithm (QAOA) and Sahni-Gonzalez Algorithm compare in MaxCut instances on small, 3-, 4-, and 5-regular graphs?
