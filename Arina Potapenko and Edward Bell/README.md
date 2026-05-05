@@ -20,14 +20,14 @@ As we are doing this research in a simplified form, we aimed to identify the eff
 
 ## Results
 
-##**Overview:**
+##Overview:
 This study evaluates how the number of logical constraints *(n)* affects the performance of Grover’s Algorithm in a 4-qubit molecular search space **(N = 16). The analysis focuses on **three key aspects:**
 
 - Probability amplification across iterations *(k)*
 - Effect of solution density *(M)*
 - Comparison with classical search scaling
   
-##**1. Iterative Probability Amplification**
+##1. Iterative Probability Amplification
 - Grover’s Algorithm amplifies the probability of measuring target states through repeated application of the oracle and diffusion operator.
   
 **For a single target state *(M = 1)*:**
@@ -35,13 +35,14 @@ This study evaluates how the number of logical constraints *(n)* affects the per
 - At *k = 3* iterations, the target state reaches maximum amplification, dominating the probability distribution.
 - Beyond this point, additional iterations lead to over-rotation, reducing the probability of measuring the correct state.
   
-##**Key observation:**
+##Key observation:
 
 - The algorithm exhibits oscillatory behavior, and optimal performance depends on selecting the correct number of iterations.
 
 <img width="1243" height="475" alt="image" src="https://github.com/user-attachments/assets/fe7a40d5-daba-46b4-b660-2036c539acfd" />
 
-##**2. Effect of Solution Density (*M*)**
+
+##2. Effect of Solution Density (*M*)
 
 The number of valid solutions (M) significantly impacts algorithm efficiency.
 
