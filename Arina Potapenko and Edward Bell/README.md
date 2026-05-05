@@ -42,6 +42,7 @@ This study evaluates how the number of logical constraints *(n)* affects the per
 <img width="1243" height="475" alt="image" src="https://github.com/user-attachments/assets/fe7a40d5-daba-46b4-b660-2036c539acfd" />
 
 
+
 **2. Effect of Solution Density (*M*)**
 
 The number of valid solutions (M) significantly impacts algorithm efficiency.
