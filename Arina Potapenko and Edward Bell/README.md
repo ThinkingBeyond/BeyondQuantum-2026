@@ -41,7 +41,7 @@ This study evaluates how the number of logical constraints *(n)* affects the per
 
 <img width="1243" height="475" alt="image" src="https://github.com/user-attachments/assets/fe7a40d5-daba-46b4-b660-2036c539acfd" />
 
-
+&nbsp;
 
 **2. Effect of Solution Density (*M*)**
 The number of valid solutions (M) significantly impacts algorithm efficiency.
@@ -61,7 +61,7 @@ The number of valid solutions (M) significantly impacts algorithm efficiency.
 **Key observation:**
 - As *M* increases, fewer iterations are required, but the maximum achievable probability becomes more distributed across multiple valid states.
 
-**Success rate vs iterations for M = 1, 2, 3, 4**
+**Tbale 1: Success rate vs iterations for M = 1, 2, 3, 4**
 
 | Iterations    | *M=1* Success | *M=2* Success | *M=3* Success | *M=4* Success |
 | ------------- | ------------- |---------------|---------------|---------------|
@@ -79,6 +79,8 @@ The number of valid solutions (M) significantly impacts algorithm efficiency.
 
 
 <img width="600" height="470" alt="image" src="https://github.com/user-attachments/assets/e6c61681-6cb0-42bb-bed4-066ef95d8dc9" />
+
+&nbsp;
 
 **3. Optimal Iteration Counts**
 The experimentally observed optimal iteration values are:
