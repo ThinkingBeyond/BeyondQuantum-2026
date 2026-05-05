@@ -12,11 +12,10 @@ We tested unweighted graphs with 10, 16, and 20 nodes, with instances of 3-, 4-,
 
 Optimization problems are commonplace in real-life, with broad applications in areas such as marketing, finance, and engineering. Many of these optimization problems can be formatted as a Max-Cut problem. Finding an exact solution to these max-cut problems becomes exponentially more difficult as the complexity of the graphs increase however, meaning that only approximate solutions can be found for graphs above a certain complexity. QAOA offers a potential alternative to the classical apporiximation algorithms and could have the potential to surpass the effectiveness of classical approximation ratios if QAOA is able to effectively scale to the complexity of modern day application of the Max-Cut problem.
 
-## Quadratic Unconstrained Binary Optimization Problem (QUBO)
-QUBOs represent optimization problems in which the goal is to find a minimum or maximum of a quadratic function with binary variables (0s and 1s) and no constaints. These are the types of problems which the Quantum Approximation Optimization Algorithm (QAOA) aim to solve. Among QUBOs like the traveling sales man problem, they can all be represented by the Max-Cut problem.
+## Max-Cut
+Max-Cut is a type of Quadratic Unconstrained Binary Optimization Problem (QUBO). QUBOs represent optimization problems in which the goal is to find a minimum or maximum of a quadratic function with binary variables (0s and 1s) and no constaints. These are the types of problems which the Quantum Approximation Optimization Algorithm (QAOA) aim to solve. Among QUBOs like the traveling sales man problem, they can all be represented by the Max-Cut problem, which makes Max-Cut a popular problem used to benchmark the capablities of algorithms like QAOA.
 
-### Max-Cut
-
+MaxCut is a problem within graph theory which aims to partiction nodes within a graph into two subgroups, such that the line drawn to divide the subgroups, interesect between a maximum of edges connecting nodes. This problem has a wide range of applications in anayzing social networks, circuit layout, and portfolio managment.
 
 ## Quantum Approximation Optimiation Algorithm
 
