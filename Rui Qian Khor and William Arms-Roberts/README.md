@@ -37,7 +37,7 @@ The approximation ratio is a measure of the solution quality produced by an algo
 We randomly generated graphs with 10, 16, and 20 nodes, with each number of nodes having 3 instances with 3, 4, and 5 connections on each node (example graph shown below). To measure the solution quality of the QAOA and SG algorithm we implemented a brute force algorithm that found the optimal cut of each graph, comparing it to the output of both the QAOA and the SG algorithm. Additionally we measured the number of two-qubit gates in each circuit that was created and average them across the 30 tests we ran of each graph to get an accurate idea of the average number of circuits needed to run the QAOA.
 
 ### Experiement Details
-Quantum Platform: We tested the QAOA algorithm on a IBM Quantum Device Emulator, which aims to reproduce the capablities of the real quantum device by limiting qubit connectivity to that of the real device and simulating qunatum noise. Specifically, we used FakeSherbrooke, IBM's 127 qubit fake backend.
+Quantum Platform: We tested the QAOA algorithm on a IBM Quantum Device Emulator, which aims to reproduce the capablities of the real quantum device by limiting qubit connectivity to that of the real device and simulating qunatum noise. Specifically, we used FakeSherbrooke, IBM's 127 qubit simulated backend.
 
 ### Code Outline
 1. Created a random graph with the set graph features (ex. 10 nodes and 5-regular graph).
