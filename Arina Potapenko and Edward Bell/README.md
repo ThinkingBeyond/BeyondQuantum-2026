@@ -19,25 +19,32 @@ In pharmaceutical research, virtual screening is an "unstructured search" proble
 As we are doing this research in a simplified form, we aimed to identify the effect adding constraints has on the efficiency of Grovers algorithm, due to both the search space and the number of valid target solutions being affected. The implementation is written in Python using the Qiskit framework. All required packages (such as qiskit, matplotlib, and numpy) are pre-installed within the environment scripts provided in the notebooks.
 
 ## Results
-**Overview:**
-This study evaluates how the number of logical constraints *(n)* affects the performance of Grover’s Algorithm in a 4-qubit molecular search space **(N = 16). The analysis focuses on three key aspects:
+
+##**Overview:**
+This study evaluates how the number of logical constraints *(n)* affects the performance of Grover’s Algorithm in a 4-qubit molecular search space **(N = 16). The analysis focuses on **three key aspects:**
+
 - Probability amplification across iterations *(k)*
 - Effect of solution density *(M)*
 - Comparison with classical search scaling
   
-**1. Iterative Probability Amplification**
-Grover’s Algorithm amplifies the probability of measuring target states through repeated application of the oracle and diffusion operator.
-For a single target state *(M = 1)*:
-- After k = 1 iteration, the target state begins to show increased probability, but non-target states still retain significant amplitude.
-- At k = 3 iterations, the target state reaches maximum amplification, dominating the probability distribution.
-Beyond this point, additional iterations lead to over-rotation, reducing the probability of measuring the correct state.
-**Key observation:**
-The algorithm exhibits oscillatory behavior, and optimal performance depends on selecting the correct number of iterations.
+##**1. Iterative Probability Amplification**
+- Grover’s Algorithm amplifies the probability of measuring target states through repeated application of the oracle and diffusion operator.
+  
+**For a single target state *(M = 1)*:**
+- After *k = 1* iteration, the target state begins to show increased probability, but non-target states still retain significant amplitude.
+- At *k = 3* iterations, the target state reaches maximum amplification, dominating the probability distribution.
+- Beyond this point, additional iterations lead to over-rotation, reducing the probability of measuring the correct state.
+  
+##**Key observation:**
+
+- The algorithm exhibits oscillatory behavior, and optimal performance depends on selecting the correct number of iterations.
 
 <img width="1243" height="475" alt="image" src="https://github.com/user-attachments/assets/fe7a40d5-daba-46b4-b660-2036c539acfd" />
 
-**2. Effect of Solution Density (*M*)**
+##**2. Effect of Solution Density (*M*)**
+
 The number of valid solutions (M) significantly impacts algorithm efficiency.
+
 **M = 1**
 - Requires the highest number of iterations
 - Peak probability achieved at higher k
@@ -48,23 +55,11 @@ The number of valid solutions (M) significantly impacts algorithm efficiency.
 - Probability stabilizes around ~50%
 - Algorithm shows reduced sensitivity to iteration count
 
-**This behavior aligns with the relationship:**
-k≈
-4
-π
-	​
-
-M
-N
-	​
-
-	​
-
-
 **Key observation:**
-As *M* increases, fewer iterations are required, but the maximum achievable probability becomes more distributed across multiple valid states.
+- As *M* increases, fewer iterations are required, but the maximum achievable probability becomes more distributed across multiple valid states.
 
-📌 Insert Table: Success rate vs iterations for M = 1, 2, 3, 4
+###**Success rate vs iterations for M = 1, 2, 3, 4**
+
 | Iterations    | *M=1* Success | *M=2* Success | 
 | ------------- | ------------- |---------------|
 | 0             | 0.125         | 0.25          |
@@ -78,7 +73,8 @@ As *M* increases, fewer iterations are required, but the maximum achievable prob
 | 8             | 0.019457      | 0.25          |
 | 9             | 0.302891      | 0.25          |
 | 10            | 0.931266      | 1             |
-|---------------|---------------|---------------|
+
+
 <img width="600" height="470" alt="image" src="https://github.com/user-attachments/assets/e6c61681-6cb0-42bb-bed4-066ef95d8dc9" />
 
 **3. Optimal Iteration Counts**
