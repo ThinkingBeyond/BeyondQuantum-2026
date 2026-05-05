@@ -59,7 +59,7 @@ Using a classical model as a baseline is essential in this context. While quantu
 4)The interaction term: (π−x<sub>i</sub>)(π−x<sub>j</sub> was introduced to encode nonlinear relationships between neighboring features. Centering the encoding around π helps maintain distinguishability in the quantum state space, while the multiplicative form explicitly captures feature dependencies.
     -Overall, this design balances expressivity (through nonlinear feature interactions) with structured entanglement (through circular connectivity).
 - *Z (Modified)* The custom Z feature map follows the same single-qubit RZ encoding scheme as the standard version but introduces full entanglement across all qubits. Unlike the standard Z feature map, which treats features independently, this variant allows information to be connected globally through the circuit via entanglement. This increases the expressiveness of the representation without explicitly introducing pairwise product terms like the ZZ feature map.
--**Metrics**
+- **Metrics**
 -To compare the performance of both classical and quantum models, we used standard ML metrics that capture different aspects of classification quality, as well as runtime to see computational efficiency. All classification metrics are based on the confusion matrix, which summarizes model predictions into four categories:
 1) True Positive (TP): The model correctly predicts a malignant tumor as malignant
 2) True Negative (TN): The model correctly predicts a benign tumor as benign
