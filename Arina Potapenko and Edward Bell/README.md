@@ -101,7 +101,7 @@ The experimentally observed optimal iteration values are:
 <img width="989" height="690" alt="image" src="https://github.com/user-attachments/assets/c74bf6b1-73cd-4ccf-8a98-d5b9a1b5df00" />
 
 
-**5. Summary of Findings**
+#5. Summary of Findings
 - Increasing logical constraints reduces the number of valid solutions *(M)*
 - Lower M requires more Grover iterations *(k)*
 - The algorithm becomes more sensitive to iteration count as *M* decreases
