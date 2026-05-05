@@ -3,9 +3,7 @@
 # **Noise Analysis on Novel GHZ-State Based Quantum Visual Secret Sharing in Medical Communication**
 
 ---
-## **Google colab**
 
-All of our code can be found in the following google colab. All the steps are explained in detail in text, as well as comments within code.  https://colab.research.google.com/drive/1Iyfveu1dzghNEv8hWJaamuR6KsaPm_rm 
 ## **Motivation**  
 Motivated by the relevance and significance of secure medical image sharing in existing healthcare systems, our research introduces a novel Entanglement-based Quantum Visual Secret Sharing (QVSS) scheme to encode binary pixel values directly into GHZ entangled states, enabling information-theoretic security.
 
@@ -72,7 +70,9 @@ Our GHZ-3 protocol encrypts two binary images to be transmitted between three pa
 
 1. Pixels with the same index (i,j) in the respective binary images are paired together, such that $(g_{1,ij},g_{2,ij}) \in {{0,1}}^{2}$ .
 
-2. Each pixel pair is encoded into a 3-qubit GHZ state $\|\text{GHZ}\rangle = \frac{1}{\sqrt{2}}(|000\rangle + |111\rangle)\$ by applying the operation ,$I \otimes X^{g_1} \otimes X^{g_2}$ ,such that the pixel values determine whether X-gate is applied on each qubit. The obtained GHZ state is shown below:
+2. Each pixel pair is encoded into a 3-qubit GHZ state $\|\text{GHZ}\rangle = \frac{1}{\sqrt{2}}(|000\rangle + |111\rangle)\$ by applying the operation ,$$
+I \otimes X^{g_1} \otimes X^{g_2}
+$$ ,such that the pixel values determine whether X-gate is applied on each qubit. The obtained GHZ state is shown below:
 
 ![](image3.png)
 
@@ -88,7 +88,7 @@ For the complete mathematical proof of the protocol, do refer to the LaTex docum
 
 ## **Protocol’s Performance at Zero Noise**
 
-The protocol was implemented using Qiskit 
+All of our code can be found in the following Google Colab, implemented with Qiskit. All the steps are explained in detail through the comments within the code: https://colab.research.google.com/drive/1Iyfveu1dzghNEv8hWJaamuR6KsaPm_rm .
 
 At Zero Noise, the protocol obtains perfect, lossless recovery of the two binary images across all noise channels tested (listed in Results section). The protocol’s performance in the following metrics are as follows: 
 
