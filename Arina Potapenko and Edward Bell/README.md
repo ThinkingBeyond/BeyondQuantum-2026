@@ -7,11 +7,11 @@
 **The central inquiry of this study is:** *"How does the implementation of n logical constraints affect the search space and runtime of Grover’s Algorithm, investigated in the context of a simplified molecular library search?"*
 
 **Core Objectives:**
-Grover’s Algorithm provides a theoretical quadratic speedup for unstructured search problems where classical alternatives are limited. Our research explores the practical boundary of this speedup by *focusing on primary factors:*
-- **Constraint Complexity (*n*):** We investigate how increasing the number of logical filters — such as toxicity, nitrogen presence, molecular size, and the presence of a ring — impacts the construction of the quantum Oracle.
-- **Success Probability vs. Efficiency:** While additional constraints narrow the search space, they simultaneously increase circuit depth. We aim to identify the threshold where these constraints transition from being helpful filters to becoming a source of "noise" or complication that degrades the probability of a successful search.
-- **Technical Context:** To address this question, we utilized a 4-qubit circuit in Qiskit to navigate a dataset of 16 molecules. Each molecule is mapped to a unique 4-bit code based on specific biochemical properties. This setup allows us to precisely monitor the phenomenon of over-rotation — a state where applying too many Grover iterations (*k*) causes the quantum state vector to rotate past the target solution, effectively "losing" the signal of the correct molecule.
-- **Theoretical Significance:** By finding the precise balance of iterations (*k*) required for varying logical constraints, this research demonstrates how quantum searching can be optimized for identifying viable drug candidates in simplified chemical scenarios. Our findings highlight that maintaining accuracy in a quantum search is not just about having more constraints, but about managing the quantum state to avoid signal degradation.
+Grover’s Algorithm offers a theoretical quadratic speedup for unstructured search problems. This study examines the practical limits of that speedup by focusing on:
+- **Constraint Complexity *(n)*:** Investigating how increasing logical filters (e.g., toxicity, nitrogen presence, molecular size, ring structure) affects oracle construction and circuit complexity.
+- **Success Probability vs. Efficiency:** While constraints refine the search, they also increase circuit depth and sensitivity to iteration count. We identify the point where additional constraints begin to reduce performance.
+- **Technical Framework:** A 4-qubit Qiskit implementation was used to search a dataset of 16 molecules encoded as 4-bit strings, enabling controlled observation of algorithm behavior, including over-rotation.
+- **Theoretical Insight:** Results show that optimal performance depends on balancing constraint strictness with the correct number of Grover iterations *(k)*, highlighting the importance of precise amplitude amplification.
 
 ## Motivation
 
@@ -59,7 +59,7 @@ The number of valid solutions (M) significantly impacts algorithm efficiency.
 **Key observation:**
 - As *M* increases, fewer iterations are required, but the maximum achievable probability becomes more distributed across multiple valid states.
 
-###**Success rate vs iterations for M = 1, 2, 3, 4**
+**Success rate vs iterations for M = 1, 2, 3, 4**
 
 | Iterations    | *M=1* Success | *M=2* Success | *M=3* Success | *M=4* Success |
 | ------------- | ------------- |---------------|---------------|---------------|
@@ -81,45 +81,32 @@ The number of valid solutions (M) significantly impacts algorithm efficiency.
 **3. Optimal Iteration Counts**
 The experimentally observed optimal iteration values are:
 
-M (solutions)	Optimal k	Max Success Probability
-1	6	~0.9998
-2	1	~1.0
-3	3	~0.99
+| M (solutions)  | Best integer (k) | Plotted Average (k)| Max Success Rate|
+| -------------  | -----------------|--------------------|-----------------|
+| 1              | 6                | 6.016578           | 0.999786        |
+| 2              | 1                | 1                  | 1               |
+| 3              | 3                | 3.025896           | 0.990234        |      
+| 4              | 0                | 0.5                | 0.5             |
 
-Key observation:
-Optimal k decreases as the number of valid solutions increases, consistent with theoretical predictions.
+**Key observation:**
+ - Optimal k decreases as the number of valid solutions increases, consistent with theoretical predictions.
 
-📌 Insert Table: Summary of optimal parameters
+**4. Scaling Behavior vs Classical Search**
+- Grover’s Algorithm was compared to classical linear search for N = 16
+- The quantum implementation required fewer iterations to locate target states, consistent with the expected quadratic speedup.
 
-4. Scaling Behavior vs Classical Search
+**Key observation:**
+- The advantage of Grover’s Algorithm becomes more pronounced as the size of the search space increases.
 
-Grover’s Algorithm was compared to classical linear search for N = 16:
+<img width="989" height="690" alt="image" src="https://github.com/user-attachments/assets/c74bf6b1-73cd-4ccf-8a98-d5b9a1b5df00" />
 
-Classical search complexity:
 
-O(N)
-
-Quantum search complexity:
-
-O(
-N
-	​
-
-)
-
-The quantum implementation required fewer iterations to locate target states, consistent with the expected quadratic speedup.
-
-Key observation:
-The advantage of Grover’s Algorithm becomes more pronounced as the size of the search space increases.
-
-📌 Insert Graph: Classical vs quantum complexity scaling
-
-5. Summary of Findings
-Increasing logical constraints reduces the number of valid solutions (M)
-Lower M requires more Grover iterations (k)
-The algorithm becomes more sensitive to iteration count as M decreases
-Over-rotation occurs when k exceeds the optimal value
-Observed behavior matches theoretical predictions of Grover’s Algorithm
+**5. Summary of Findings**
+- Increasing logical constraints reduces the number of valid solutions *(M)*
+- Lower M requires more Grover iterations *(k)*
+- The algorithm becomes more sensitive to iteration count as *M* decreases
+- Over-rotation occurs when k exceeds the optimal value
+- Observed behavior matches theoretical predictions of Grover’s Algorithm
 
 ## Future Work
 
