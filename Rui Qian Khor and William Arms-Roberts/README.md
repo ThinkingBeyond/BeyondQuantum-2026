@@ -40,7 +40,7 @@ If you want to see some good examples of README files check out:
 
 ## Future Work
 
-Graphs with node counts higher than 20 could be tested with the use of quantum hardware. Additionally there are different versions of QAOA that can be explored such as QAOA in QAOA and warm started QAOA. These versions goals appear to be to improve some of the scalability issues with QAOA.
+Graphs with node counts higher than 20 could be tested with the use of quantum hardware. Additionally there are different versions of QAOA that can be explored such as QAOA in QAOA and warm started QAOA. These versions appear to try to improve some of the scalability issues with QAOA.
 
 ## References
 
