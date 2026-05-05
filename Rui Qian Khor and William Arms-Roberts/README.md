@@ -45,7 +45,7 @@ We randomly generated graphs with 10, 16, and 20 nodes, with each number of node
 ![Max-Cut Graph](Graph.png)
 
 ## Results
-We found that the QAOA consistently found equivalent or slightly better quality solutions than the SG algorithm, with the level of solution quality staying relatively consistent from 0.97-0.99 for all the graphs. And the SG algorithm ranging from 0.98-0.96
+We found that the QAOA consistently found equivalent or slightly better quality solutions than the SG algorithm, with the level of solution quality staying relatively consistent from 0.97-0.99 for all the graphs. And the SG algorithm ranging from 0.98-0.96. The solution quality appears to decrease linearly over the 20 node graphs, but we are unsure if this is a real decrease in the solution quality or just the solution quality range appearing to decrease. More testing on higher node graphs would be required to confirm this.
 
 ![Approximation Ratio Comparison](Solution_Quality.png)
 
@@ -54,9 +54,7 @@ Additionaly we found that the number of two-qubit gates required to run the QAOA
 ![Two-Qubit gates](Two-Qubit-Gates.png)
 
 ## Implications and Conclusion
-
-
-Continue working through the points listed above with the help of sensibly named subsections. 
+While the QAOA appears to have a slight advantage in solution quality, it is severly hampered in the issue of scalabilty. The largest factor is the number of qubits required, since every additional node requires another qubit in the circuit. Current quantum technology has around 120-150 qubits avaliable, which limits the possible uses of QAOA to smaller scale instances. Additionally the number of two qubit gates that can be supported is around 5000, which again limits the use case to instances with less connections, since the number of two qubit gates required increases as more connections are added. For now classical algortihms remain the best option for real world applications, but with the advancement of quantum technology QAOA could be a competitive option for binary optimization problems.
 
 If you want to see some good examples of README files check out:
 - [Example 1](https://github.com/ThinkingBeyond/BeyondAI-2024/blob/main/warenya-loulia/README.md)
