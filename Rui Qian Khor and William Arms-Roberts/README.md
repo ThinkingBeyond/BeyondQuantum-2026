@@ -41,13 +41,14 @@ Graphs with node counts higher than 20 could be tested with the use of quantum h
 
 ## References
 
-List all your references here. Remember to put links into markdown. For example:
 
-1.  Einstein, A. (1905). *On the Electrodynamics of Moving Bodies*. Annalen der Physik, 17, 891-921. [Internet Archive](https://archive.org/details/einstein-1905-relativity)
+1. Zeqiao Z, Yuxuan D, Xinmei T, Dacheng T, QAOA-in-QAOA: solving large-scale MaxCut problems on small quantum machines (2022),  [arxiv](https://arxiv.org/abs/2205.11762)
+2. Daniel P, Variational Quantum Algorithms for Combinatorial Optimization (2024), [arxiv](https://doi.org/10.48550/arXiv.2407.06421)
+3. Ishan P, Akhil A, Hybrid Quantum-HPC Solutions for Max-Cut: Bridging Classical and Quantum Algorithms (2024), [arxiv](https://doi.org/10.48550/arXiv.2410.15626)
+4. J. A. M, Kristel M, Toward a linear-ramp QAOA protocol: evidence of a scaling advantage in solving some combinatorial optimization problems (2025), npj quantum information, [nature](https://www.nature.com/articles/s41534-025-01082-1)
+5. David B et al, Towards Robust Benchmarking of Quantum Optimization Algorithms (2025), [IEEE](10.1109/QCE60285.2024.11030870)
+6. Micheal X, David W, Improved approximation algorithms for maximum cut and satisfiability problems using semidefinite programming (1995), [JACM](https://doi.org/10.1145/227683.227684)
 
-**Tip**: *If you have you references in BibTex, Google Scholar or Zotero*
-1. Create/copy a list into ChatGPT
-2. Ask it to turn it into an unsorted list in markdown
 
 ---
 
