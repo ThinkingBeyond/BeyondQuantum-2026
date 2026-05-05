@@ -80,7 +80,7 @@ Our GHZ-3 protocol encrypts two binary images to be transmitted between three pa
 
 5. Images are successfully reconstructed once the relation is applied to each pixel pair’s share matrices. 
 
-For the complete mathematical proof of the protocol, do refer to the LaTex document. 
+For the complete mathematical proof of the protocol, do refer to the Overleaf document attached in the Google Colab.
 
 ---
 
