@@ -78,7 +78,7 @@ While the QAOA appears to have a slight advantage in solution quality, it is sev
 
 ## Future Work
 
-Graphs with node counts higher than 20 could be tested with the use of quantum hardware. Additionally there are different versions of QAOA that can be explored such as QAOA in QAOA and warm started QAOA. These versions appear to try to improve some of the scalability issues with QAOA.
+Our project tested a limited range of small Max-Cut instances, which can potentially overlook greater overarching patterns, so graphs with node counts higher than 20 could be tested. Due to monetary limitations, this experiement was conducted using quantum emulators instead of real quantum hardware. Future works can build upon and confirm our findings through it's replications on equivalent quantum hardware. Additionally, there are different versions of QAOA that can be explored such as QAOA in QAOA and warm started QAOA. These versions appear to try to improve the scalability of QAOA and show promise in acheving greater overall preformance compared to standard QAOA.
 
 ## References
 
