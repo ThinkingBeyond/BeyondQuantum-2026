@@ -97,7 +97,15 @@ Using a classical model as a baseline is essential in this context. While quantu
 This is particularly important in medical applications, where missing a malignant case can have serious consequences. 
 4) F1 Score (Provides a balance between precision and recall.) = 2 * (Precision * Recall) / (Precision + Recall)
 ## Results
+| Model          | Accuracy | F1-Score | Recall | Runtime  |   |
+|----------------|----------|----------|--------|----------|---|
+| ZZ Feature map | 91.23 %  | 0.9286   | 91.55% | 1566.48s |   |
+| Z Feature Map  | 95.61%   | 0.9650   | 97.18% | 825.91s  |
+| Z (Modified)   | 96.49%   | 0.9718   | 97.18% | 843.35s  |
+| ZZ (Modified)  | 92.98%   | 0.9452   | 97.18% | 1391.53s |
+| Classical      | 96%      | 0.95     | 95.5%  | 38s      | 
 ## Conclusion
+
 ## Future Work
 
 State and explain what follow-up research could be conducted based on your work.
