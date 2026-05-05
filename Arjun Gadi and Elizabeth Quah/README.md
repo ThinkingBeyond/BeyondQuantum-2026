@@ -112,10 +112,11 @@ To evaluate the robustness of this novel GHZ-3 protocol, we tested the protocol 
 
 ### **Noise Modes**
 
-1. **State-Level Noise (Mode A)**: Apply the noise channel once to each qubit of the final prepared state, without involving gates at all. This is what the analytical formulas calculate. These analytical formulas can be found in fig12\_analytical.png
+1. **State-Level Noise (Mode A)**: Apply the noise channel once to each qubit of the final prepared state, without involving gates at all. This noise channel aligns with standard theoretical models in literature and serves as an idealised baseline for analysis.
      
-2. **Gate-Level Noise (Mode B)**: In Qiskit, a noise channel is attached to specific gate operations. Every time that gate fires, the error is applied. 
-While standard analytical models often rely on the effect of noise on the final prepared state of the qubit, this study implements a dual-mode noise characterization. By comparing idealised state-level errors, against instruction-level gate errors, we identify the specific threshold where standard analytical predictions fail to reflect the decoherence reality of NISQ-era hardware. 
+2. **Gate-Level Noise (Mode B)**: In Qiskit, a noise channel is attached to each gate operation.
+
+While standard analytical models often rely solely on state-level noise, this study implements a dual-mode noise characterization. By comparing idealised state-level errors, against instruction-level gate errors, we identify the specific threshold where standard analytical predictions fail to reflect the decoherence reality of NISQ-era hardware. 
 
 ---
 
