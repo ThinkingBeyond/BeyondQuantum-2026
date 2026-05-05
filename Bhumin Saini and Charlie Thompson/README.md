@@ -65,7 +65,7 @@ $I = P(TT)/[P(T_1)\cdot P(T_2)]$, velocity correlation $\rho_v(t)$ entanglement 
 
 | Equation | Formula |
 |----------|---------|
-| Guidance equation | $\dot{x}_k = \frac{\hbar}{m} \mathcal{Im}\!\left(\frac{\partial_{x_k}\Psi \cdot \Psi^*}{|\Psi|^2}\right)$ |
+| Guidance equation | $\dot{x}_k = \frac{\hbar}{m} \mathcal{Im}\!\left(\frac{\partial_{x_k}\Psi \cdot \Psi^*}{|\Psi|^2}\right})$ |
 | Crank-Nicolson step | $(I + irH)\Psi^{n+1} = (I - irH)\Psi^n$ |
 | Phase kernel (Stage 2B) | $\Psi \rightarrow \Psi \cdot \exp(i\,\Delta\alpha(t)(x_1-x_2)^2)$ |
 | Bosonic symmetrisation | $\Psi = \mathcal{N}[\varphi_A(x_1)\varphi_B(x_2) + \varphi_B(x_1)\varphi_A(x_2)]$ |
