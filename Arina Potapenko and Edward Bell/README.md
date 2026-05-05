@@ -15,7 +15,7 @@ Grover’s Algorithm offers a theoretical quadratic speedup for unstructured sea
 
 ## Motivation
 
-In pharmaceutical research, virtual screening is an "unstructured search" problem — checking millions of potential drug candidates one by one. We chose this research question to test the efficiency of Grover's Algorithm, which theoretically offers a quadratic speedup over classical methods. By mapping molecular properties to logical constraints, we aim to identify the optimal threshold where quantum searching maintains high success probability before circuit complexity or over-rotation degrades the results.
+In pharmaceutical research, virtual screening can be viewed as an unstructured search problem, where large numbers of candidate molecules must be evaluated. This study examines the efficiency of Grover’s Algorithm, which offers a theoretical quadratic speedup over classical methods. By mapping molecular properties to logical constraints, we investigate how increasing constraints affects performance, particularly in terms of solution density and sensitivity to over-rotation.
 As we are doing this research in a simplified form, we aimed to identify the effect adding constraints has on the efficiency of Grovers algorithm, due to both the search space and the number of valid target solutions being affected. The implementation is written in Python using the Qiskit framework. All required packages (such as `qiskit`, `matplotlib`, and `numpy`) are pre-installed within the environment scripts provided in the notebooks.
 
 ## Results
@@ -45,12 +45,15 @@ This study evaluates how the number of logical constraints *(n)* affects the per
 
 **2. Effect of Solution Density (*M*)**
 The number of valid solutions (M) significantly impacts algorithm efficiency.
+
 **M = 1**
 - Requires the highest number of iterations
-- Peak probability achieved at higher k 
+- Peak probability achieved at higher *k*
+
 **M = 2–3**
 - Fewer iterations required
 - High success probability reached more quickly
+  
 **M = 4**
 - Probability stabilizes around ~50%
 - Algorithm shows reduced sensitivity to iteration count
@@ -111,7 +114,7 @@ The number of valid solutions (M) significantly impacts algorithm efficiency.
 
 ## Future Work
 
-- **Scalability Testing:** Investigating how the optimal iteration count ($k$) and over-rotation threshold scale on 8-qubit or 10-qubit systems as the molecular library grows.
+- **Scalability Testing:** Investigating how the optimal iteration count *(k)* and over-rotation threshold scale on 8-qubit or 10-qubit systems as the molecular library grows.
 - **Hardware Implementation:** Testing these circuits on NISQ devices to analyze how physical gate errors and decoherence impact the success probability of complex Oracles.
 - **Hybrid Workflows:** Integrating Grover’s search with the Variational Quantum Eigensolver (VQE) to first identify a candidate and then simulate its specific binding affinity or ground state energy.
 - **Weighted Oracles:** Developing Oracles that prioritize specific chemical properties (e.g., toxicity vs. nitrogen presence) rather than treating all logical constraints as equal boolean filters.
