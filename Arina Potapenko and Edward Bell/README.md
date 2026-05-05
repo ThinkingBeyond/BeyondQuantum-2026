@@ -27,7 +27,7 @@ This study evaluates how the number of logical constraints *(n)* affects the per
 - Effect of solution density *(M)*
 - Comparison with classical search scaling
   
-**1.Iterative Probability Amplification**
+**1. Iterative Probability Amplification**
 - Grover’s Algorithm amplifies the probability of measuring target states through repeated application of the oracle and diffusion operator.
   
 **For a single target state *(M = 1)*:**
@@ -44,7 +44,6 @@ This study evaluates how the number of logical constraints *(n)* affects the per
 
 
 **2. Effect of Solution Density (*M*)**
-
 The number of valid solutions (M) significantly impacts algorithm efficiency.
 
 **M = 1**
