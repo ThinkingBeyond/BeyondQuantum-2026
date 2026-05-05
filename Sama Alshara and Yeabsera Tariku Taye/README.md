@@ -92,7 +92,7 @@ Using a classical model as a baseline is essential in this context. While quantu
 4) False Negative (FN): The model incorrectly predicts a malignant tumor as benign
 -------------------------------------------------------------------------------------
 1) Accuracy (measures % of correct predictions) : (TP + TN) / (TP + TN + FP + FN)
-2) Precision (Measures how many predicted malignant cases are actually correct.) = TP / (TP + FP)
+2) Precision (Measures how many predicted malignant cases are actually correct.) = TP / (TP + FP) - Although we did not use this directly, it's affect is reflected in the f1-score
 3) Recall (Measures how many actual malignant cases are correctly identified.) = TP / (TP + FN)
 This is particularly important in medical applications, where missing a malignant case can have serious consequences. 
 4) F1 Score (Provides a balance between precision and recall.) = 2 * (Precision * Recall) / (Precision + Recall)
@@ -105,10 +105,8 @@ This is particularly important in medical applications, where missing a malignan
 | ZZ (Modified)  | 92.98%   | 0.9452   | 97.18% | 1391.53s |
 | Classical      | 96%      | 0.95     | 95.5%  | 38s      | 
 ## Conclusion
-
+The results demonstrate that Quantum Support Vector Machines (QSVMs) can achieve performance that is competitive with classical methods. The modified Z feature map achieved the strongest overall results, slightly surpassing the classical SVM in both accuracy and F1-score, suggesting that introducing entanglement in a controlled way can improve model expressivity. In contrast, the ZZ feature maps—despite their ability to encode pairwise feature interactions did not display a better performance and had significantly higher computational costs. Across all quantum models, recall remained high, with majority outperforming the classical SVM, which is particularly important in a medical context as it reflects the ability to correctly identify malignant cases. However, this often came with trade-offs in runtime, with QSVMs requiring substantially more computation time compared to the classical model (anywhere from 21-41x more!). Overall, while quantum models show promise, especially in how sensitive they are to feature encoding, the classical SVM remains the more practical and efficient choice for this task given current computational limitations.
 ## Future Work
-
-State and explain what follow-up research could be conducted based on your work.
 
 ## References
 
