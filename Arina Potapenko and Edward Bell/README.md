@@ -21,7 +21,7 @@ As we are doing this research in a simplified form, we aimed to identify the eff
 ## Results
 
 **Overview:**
-This study evaluates how the number of logical constraints *(n)* affects the performance of Grover’s Algorithm in a 4-qubit molecular search space **(N = 16). The analysis focuses on **three key aspects:**
+This study evaluates how the number of logical constraints *(n)* affects the performance of Grover’s Algorithm in a 4-qubit molecular search space *(N = 16)*. The analysis focuses on **three key aspects:**
 
 - Probability amplification across iterations *(k)*
 - Effect of solution density *(M)*
