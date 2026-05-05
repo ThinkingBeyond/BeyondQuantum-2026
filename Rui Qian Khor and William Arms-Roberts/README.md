@@ -18,6 +18,24 @@ Optimization problems are commonplace in real-life, with broad applications in a
 
 We randomly generated graphs with 10, 16, and 20 nodes, with each number of nodes having 3 instances with 3, 4, and 5 connections on each node (example graph shown below). To measure the solution quality of the QAOA and SG algorithm we implemented a brute force algorithm that found the optimal cut of each graph, comparing it to the output of both the QAOA and the SG algorithm. Additionally we measured the number of two-qubit gates in each circuit that was created and average them across the 30 tests we ran of each graph to get an accurate idea of the average number of circuits needed to run the QAOA.
 
+1. Created a random graph with the set graph features (ex. 10 nodes and 5-regular graph).
+2. Find the approximate Max-Cut using QAOA.
+   1. 
+4. Find the approximate Max-Cut using the Sahni-Gonzalez Algorithm.
+5. Find the true optimal Max-Cut using a classical Brute-Force Algorithm.
+6. Calculate the approximation ratio of QAOA and the Sahni-Gonzalez Algorithm.
+7. Record the graph intance, approximation ratios, QAOA gate count, QAOA circuit, and QAOA soltuion distribution.
+8. Use a for-loop to run 30 times for each set of graph features.
+   1. 10 Nodes, 3 Edges
+   2. 10 Nodes, 4 Edges
+   3. 10 Nodes, 5 Edges
+   4. 16 Nodes, 3 Edges
+   5. 16 Nodes, 4 Edges
+   6. 16 Nodes, 5 Edges
+   7. 20 Nodes, 3 Edges
+   8. 20 Nodes, 4 Edges
+   9. 20 Nodes, 5 Edges
+
 ![Max-Cut Graph](Graph.png)
 
 ## Results
