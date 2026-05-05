@@ -72,26 +72,24 @@ Using a classical model as a baseline is essential in this context. While quantu
 -By constraining the feature range, we ensure that encoded data points remain distinguishable in the quantum state space, preserving meaningful variation for the model to learn from.
 =This step proved to be a make or break step in building QSVMs (or any Quantum-Classical hybrid algorithm). Without quantum scaling, model performance dropped significantly, reaching an accuracy of approximately 0.56, essentially no better than a coin flip. This highlights the sensitivity of quantum models to proper data encoding and reinforces the importance of careful preprocessing in quantum machine learning.
 - **ZZ & Z Feature Map (Built-in)**
-After preparing the data and applying quantum scaling, we constructed Quantum Support Vector Machines (QSVMs) using built-in feature maps from Qiskit. These feature maps define how classical data is encoded into quantum states and play a central role in model performance.
-We focused on two feature maps: Z feature maps and ZZ feature maps. 
-The Z feature map uses single-qubit rotation gates (specifically RZ gates) to encode each feature independently. Each input feature controls the rotation of a single qubit, meaning the resulting representation captures only individual feature contributions, with no interactions between them.
-In contrast, the ZZ feature map extends this encoding by introducing pairwise interactions between qubits through entangling ZZ-rotations. These operations encode products of features (x<sub>i</sub>x<sub>j</sub>), allowing the model to capture relationships between pairs of features.
--**Modified Feature Maps**
-*ZZ (Modified)* The custom ZZ feature map uses a circular (ring) entanglement structure, where each qubit interacts only with its nearest neighbors in a closed loop (e.g., qubit 0 ↔ 1 ↔ 2 ↔ 3 ↔ 0). This design ensures uniform connectivity across all qubits.
-The encoding process consists of:
-Superposition initialization using Hadamard gates
-Single-qubit encoding via RZ rotations
-Pairwise interaction encoding using a CNOT–RZ–CNOT structure
-The interaction term: (π−x<sub>i</sub>)(π−x<sub>j</sub> was introduced to encode nonlinear relationships between neighboring features. Centering the encoding around π helps maintain distinguishability in the quantum state space, while the multiplicative form explicitly captures feature dependencies.
-Overall, this design balances expressivity (through nonlinear feature interactions) with structured entanglement (through circular connectivity).
-*Z (Modified)* The custom Z feature map follows the same single-qubit RZ encoding scheme as the standard version but introduces full entanglement across all qubits. Unlike the standard Z feature map, which treats features independently, this variant allows information to be connected globally through the circuit via entanglement. This increases the expressiveness of the representation without explicitly introducing pairwise product terms like the ZZ feature map.
+    -After preparing the data and applying quantum scaling, we constructed Quantum Support Vector Machines (QSVMs) using built-in feature -maps from Qiskit. These feature maps define how classical data is encoded into quantum states and play a central role in model performance.
+    -We focused on two feature maps: Z feature maps and ZZ feature maps. 
+    -The Z feature map uses single-qubit rotation gates (specifically RZ gates) to encode each feature independently. Each input feature controls the rotation of a single qubit, meaning the resulting representation captures only individual feature contributions, with no interactions between them.
+    -In contrast, the ZZ feature map extends this encoding by introducing pairwise interactions between qubits through entangling ZZ-rotations. These operations encode products of features (x<sub>i</sub>x<sub>j</sub>), allowing the model to capture relationships between pairs of features.
+- **Modified Feature Maps**
+- *ZZ (Modified)* The custom ZZ feature map uses a circular (ring) entanglement structure, where each qubit interacts only with its nearest neighbors in a closed loop (e.g., qubit 0 ↔ 1 ↔ 2 ↔ 3 ↔ 0). This design ensures uniform connectivity across all qubits. The encoding process consists of:
+1) Superposition initialization using Hadamard gates
+2) Single-qubit encoding via RZ rotations
+3) Pairwise interaction encoding using a CNOT–RZ–CNOT structure
+4)The interaction term: (π−x<sub>i</sub>)(π−x<sub>j</sub> was introduced to encode nonlinear relationships between neighboring features. Centering the encoding around π helps maintain distinguishability in the quantum state space, while the multiplicative form explicitly captures feature dependencies.
+    -Overall, this design balances expressivity (through nonlinear feature interactions) with structured entanglement (through circular connectivity).
+- *Z (Modified)* The custom Z feature map follows the same single-qubit RZ encoding scheme as the standard version but introduces full entanglement across all qubits. Unlike the standard Z feature map, which treats features independently, this variant allows information to be connected globally through the circuit via entanglement. This increases the expressiveness of the representation without explicitly introducing pairwise product terms like the ZZ feature map.
 -**Metrics**
-To compare the performance of both classical and quantum models, we used standard ML metrics that capture different aspects of classification quality, as well as runtime to see computational efficiency.
-All classification metrics are based on the confusion matrix, which summarizes model predictions into four categories:
-True Positive (TP): The model correctly predicts a malignant tumor as malignant
-True Negative (TN): The model correctly predicts a benign tumor as benign
-False Positive (FP): The model incorrectly predicts a benign tumor as malignant
-False Negative (FN): The model incorrectly predicts a malignant tumor as benign
+-To compare the performance of both classical and quantum models, we used standard ML metrics that capture different aspects of classification quality, as well as runtime to see computational efficiency. All classification metrics are based on the confusion matrix, which summarizes model predictions into four categories:
+1) True Positive (TP): The model correctly predicts a malignant tumor as malignant
+2) True Negative (TN): The model correctly predicts a benign tumor as benign
+3) False Positive (FP): The model incorrectly predicts a benign tumor as malignant
+4) False Negative (FN): The model incorrectly predicts a malignant tumor as benign
 -------------------------------------------------------------------------------------
 1) Accuracy (measures % of correct predictions) : (TP + TN) / (TP + TN + FP + FN)
 2) Precision (Measures how many predicted malignant cases are actually correct.) = TP / (TP + FP)
