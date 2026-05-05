@@ -1,6 +1,6 @@
 ![BeyondQuantum Banner for Research Projects](../BeyondQuantum_Banner_Research_Projects_2026.png)
 
-# QAOA vs. Classical Heurlistic
+# Quantum Approimation Optimization Ratio vs. Classical Heurlistic
 
 ## Research Question
 
