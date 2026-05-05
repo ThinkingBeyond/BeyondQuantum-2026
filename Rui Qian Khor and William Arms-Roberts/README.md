@@ -41,10 +41,9 @@ Quantum Platform: We tested the QAOA algorithm on a IBM Quantum Device Emulator,
 
 ### Code Outline
 1. Created a random graph with the set graph features (ex. 10 nodes and 5-regular graph).
-2. Find the approximate Max-Cut using QAOA.
-   1. 
-4. Find the approximate Max-Cut using the Sahni-Gonzalez Algorithm.
-5. Find the true optimal Max-Cut using a classical Brute-Force Algorithm.
+2. Find the approximate Max-Cut solution using QAOA.
+4. Find the approximate Max-Cut solution using the Sahni-Gonzalez Algorithm.
+5. Find the true optimal Max-Cut solution using a classical Brute-Force Algorithm.
 6. Calculate the approximation ratio of QAOA and the Sahni-Gonzalez Algorithm.
 7. Record the graph intance, approximation ratios, QAOA gate count, QAOA circuit, and QAOA soltuion distribution.
 
