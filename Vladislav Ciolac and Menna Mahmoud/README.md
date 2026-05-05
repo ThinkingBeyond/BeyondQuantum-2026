@@ -52,6 +52,27 @@ We start with the QBER: After the sifting process Alice and Bob choose from thei
 QBER indicates the feasibility of the protocol round. If a protocol round has a QBER higher than 11%, then it is considered unsafe, because Eve has eavesdropped a high number of bits, indicated by the QBER.
 The second important parameter is the key-rate. It can be viewed from 2 perspectives: as a rate of the efficiency over time or over the number of total pulses (we can imagine pulses of single photons for each bit). It follows how many or how fast the secure bits remain in the processed final key.
 
+## The mean, variance, and standard deviation of the (normalized) estimated QBER. (p = 0.1, e = 0.2, N = 100, and Fsh = (0, 0.1))
+
+| Number of sent photons (r) | Mean (μ) | Variance | Standard deviation (σ) |
+| :--- | :--- | :--- | :--- |
+| 1000 | 0.105931 | 0.001654 | 0.040669 |
+| 1500 | 0.109241 | 0.000909 | 0.030150 |
+| 2000 | 0.110683 | 0.000896 | 0.029933 |
+| 2500 | 0.109744 | 0.000850 | 0.029154 |
+| 3000 | 0.111331 | 0.000655 | 0.025593 |
+| 5000 | 0.111237 | 0.000329 | 0.018138 |
+| 7500 | 0.108294 | 0.000235 | 0.015330 |
+| 10000 | 0.109247 | 0.000132 | 0.011091 |
+| 12500 | 0.110662 | 0.000092 | 0.009592 |
+| 15000 | 0.110308 | 0.000076 | 0.008718 |
+| 20000 | 0.110847 | 0.000064 | 0.008000 |
+| 25000 | 0.110241 | 0.000061 | 0.007810 |
+| 30000 | 0.110002 | 0.000046 | 0.006782 |
+| 50000 | 0.110473 | 0.000030 | 0.005477 |
+| 100000 | 0.109686 | 0.000023 | 0.004796 |
+| 200000 | 0.109950 | 0.000004 | 0.002000 |
+
 ### Modeling the Attacks
 
 In this research Side-Channel attacks were modeled using their corresponding QBER values. ***These QBER values were selected based on the literature.***
@@ -116,6 +137,8 @@ A simple and reliable method to diminish the QBER is reducing the number of diff
 ## Noise preprocessing.
 Advanced distillation is the first step, and after it follows noise preprocessing. At this point we assume that Eve has knowledge about bits in the sifted key (values of bits, positions, information about subsets, etc.). Alice can induce fake noise in the key by changing a certain number of bit's values in her sifted key. This noise has to be later corrected in an error correction step, but the gain is that Eve's knowledge about the changed bits and the neighboring subsets is wrong, and when she will to attack the result will be incorrect.
 Regarding how many bits have to be changed in order to cause enough disturbance for Eve is given by the formula
+
+<img width="790" height="587" alt="image" src="Vladislav Ciolac and Menna Mahmoud/image.png" />
 
 ## Conclusions 
 
