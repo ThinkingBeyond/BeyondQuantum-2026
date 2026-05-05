@@ -20,7 +20,7 @@ As we are doing this research in a simplified form, we aimed to identify the eff
 
 ## Results
 **Overview:**
-This study evaluates how the number of logical constraints *(n)* affects the performance of Grover’s Algorithm in a 4-qubit molecular search space (N = 16). The analysis focuses on three key aspects:
+This study evaluates how the number of logical constraints *(n)* affects the performance of Grover’s Algorithm in a 4-qubit molecular search space **(N = 16). The analysis focuses on three key aspects:
 - Probability amplification across iterations *(k)*
 - Effect of solution density *(M)*
 - Comparison with classical search scaling
@@ -68,25 +68,15 @@ As *M* increases, fewer iterations are required, but the maximum achievable prob
 | Iterations    | *M=1* Success | *M=2* Success | 
 | ------------- | ------------- |---------------|
 | 0             | 0.125         | 0.25          |
-| ------------- | ------------- |---------------|
 | 1             | 0.78125       | 1 (Opt)       |
-| ------------- | ------------- |---------------|
 | 2             | 0.945312      | 0.25          |
-|---------------|---------------|---------------|
 | 3             | 0.330078      | 0.25          |
-|---------------|---------------|---------------|
 | 4             | 0.012207      | 1             |
-|---------------|---------------|---------------|
 | 5             | 0.547974      | 0.25          |
-|---------------|---------------|---------------|
 | 6             | 0.999786 (Opt)| 0.25          |
-|---------------|---------------|---------------|
 | 7             | 0.576973      | 1             |
-|---------------|---------------|---------------|
 | 8             | 0.019457      | 0.25          |
-|---------------|---------------|---------------|
 | 9             | 0.302891      | 0.25          |
-|---------------|---------------|---------------|
 | 10            | 0.931266      | 1             |
 |---------------|---------------|---------------|
 <img width="600" height="470" alt="image" src="https://github.com/user-attachments/assets/e6c61681-6cb0-42bb-bed4-066ef95d8dc9" />
