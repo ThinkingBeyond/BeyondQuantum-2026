@@ -32,9 +32,6 @@ Additionaly we found that the number of two-qubit gates required to run the QAOA
 ## Implications and Conclusion
 While the QAOA appears to have a slight advantage in solution quality, it is severly hampered in the issue of scalabilty. The largest factor is the number of qubits required, since every additional node requires another qubit in the circuit. Current quantum technology has around 120-150 qubits avaliable, which limits the possible uses of QAOA to smaller scale instances. Additionally the number of two qubit gates that can be supported is around 5000, which again limits the use case to instances with less connections, since the number of two qubit gates required increases as more connections are added. For now classical algortihms remain the best option for real world applications, but with the advancement of quantum technology QAOA could be a competitive option for binary optimization problems.
 
-If you want to see some good examples of README files check out:
-- [Example 1](https://github.com/ThinkingBeyond/BeyondAI-2024/blob/main/warenya-loulia/README.md)
-- [Example 2](https://github.com/ThinkingBeyond/BeyondAI-2024/blob/main/shaana-karuna/README.md)
 
 [ ... ]
 
