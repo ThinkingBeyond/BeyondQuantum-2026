@@ -48,7 +48,7 @@ The BB84 Protocol security depends on the hardware of the QKD device, which can 
 
 ### Modeling the Attacks
 
-In this research Side-Channel attacks were modeled using their corresponding QBER values. ***These QBER values were selected from the literature.***
+In this research Side-Channel attacks were modeled using their corresponding QBER values. ***These QBER values were selected based on the literature.***
 
 The highest QBER is assigned to the Intercept-Resend attack as it causes the highest disturbance, therefore,  its theoretical QBER value is nearly 15%-25% [1], follows the Time-Shift attack with theoretical QBER value between 1% − 4%  as it cause moderate disturbance[3] , and finally the  Detector Blinding attack with theoretical QBER value of nearly 0% [2]
 
@@ -79,11 +79,29 @@ Function that is used to calculate Eve's information (Leakage), also used in the
 
 $H(\text{QBER}) = -\text{QBER} \log_2(\text{QBER}) - (1 - \text{QBER}) \log_2(1 - \text{QBER})$
 
-If you want to see some good examples of README files check out:
-- [Example 1](https://github.com/ThinkingBeyond/BeyondAI-2024/blob/main/warenya-loulia/README.md)
-- [Example 2](https://github.com/ThinkingBeyond/BeyondAI-2024/blob/main/shaana-karuna/README.md)
+## Discussing the Results of the Analysis
 
-[ ... ]
+### The BB84 Key Generation under different Side-Channel Attacks
+
+<img width="790" height="587" alt="image" src="https://github.com/user-attachments/assets/262f7552-7393-4d19-8743-12f067e0feb5" />
+
+This graph shows how the key generation is affected under multiple attacks.
+
+For the Intercept-Resend atttack (QBER=0.20) we can notice that the key rate went below zero which means that the key bits are totally damaged. Therefore Alice and Bob need to re-establish the BB84 connection.
+
+### The failure of QBER to detect some Side-Channel attacks
+
+<img width="790" height="590" alt="image" src="https://github.com/user-attachments/assets/cc3d8828-75af-42a0-8af1-24e981ee183f" />
+
+The blue straight line introduces a naive assumption that low QBER implies low information leakage.
+
+The red dot represents the detector blinding attack which invalidates that naive assumption.
+
+The graph shows that the detector blinding attack violates that assumption. The Detector Blinding attack do not increase the QBER above the standered threshold which will cause neither Alice or Bob to notice that their connection is compormised.
+
+What we finally conclude from that graph is the QBER fails to detect some side-channel attacks. Therefore **Hradware-Level monitoring mechanisms** are requird for those attacks.
+
+
 
 ## Future Work
 
