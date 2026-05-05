@@ -72,7 +72,7 @@ Our GHZ-3 protocol encrypts two binary images to be transmitted between three pa
 
 2. Each pixel pair is encoded into a 3-qubit GHZ state $\|\text{GHZ}\rangle = \frac{1}{\sqrt{2}}(|000\rangle + |111\rangle)\$ by applying the operation ,I ⊗ X^g₁ ⊗ X^g₂ ,such that the pixel values determine whether X-gate is applied on each qubit. The obtained GHZ state is shown below:
 
-![](images/image3.png)
+![](Ghz_State.png)
 
 3. Each GHZ state is measured to obtain results denoted as r0, r1, r2, to construct three share matrices held by each party participating in the transmission denoted as U, S1,S2 (whereby U is completely constructed of r0 values and vice versa).
 
