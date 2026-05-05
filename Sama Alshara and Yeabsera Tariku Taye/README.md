@@ -1,31 +1,6 @@
 ![BeyondQuantum Banner for Research Projects](../BeyondQuantum_Banner_Research_Projects_2026.png)
 
 # How Quantum Feature Maps affect QSVM Performance
-***Provide a description of your project including*** 
-
-1. motivating your research question
-2. stating your research question
-3. explaining your method and implementation
-4. Briefly mention and discuss your results
-5. Draw your conclusions
-6. State what future investigations 
-7. State your references 
-
-### Further Guidance: Formating
-- Structure this readme using subsections
-- Your job is to 
-    - keep it clear
-    - provide sufficient detail, so what you did is understandable to the reader. This way other researchers and future cohorts of BeyondQuantum will be able to build on your research
-    - List all your references at the end
-- utilise markdown like *italics*, **bold**, numbered and unnumbered lists to make your document easier to read
-- if you refer to links use the respective markdown for links, e.g. `[ThinkingBeyond](https://thinkingbeyond.education/)`
-- If you have graphs and pictures you want to embed in your file use `![name](your_graphic.png)`
-- If you want to present your results in a table use
-    | Header 1            | Header 2  |
-    |---------------------|-----------|
-    | Lorem Ipsum         | 12345     |
-
-**Tip:** Use tools to create markdown tables. For example, Obsidian has a table plugin, that makes creating tables much easier than doing it by hand.
 
 ## Research Question
 
@@ -106,8 +81,13 @@ This is particularly important in medical applications, where missing a malignan
 | Classical      | 96%      | 0.95     | 95.5%  | 38s      | 
 ## Conclusion
 The results demonstrate that Quantum Support Vector Machines (QSVMs) can achieve performance that is competitive with classical methods. The modified Z feature map achieved the strongest overall results, slightly surpassing the classical SVM in both accuracy and F1-score, suggesting that introducing entanglement in a controlled way can improve model expressivity. In contrast, the ZZ feature maps—despite their ability to encode pairwise feature interactions did not display a better performance and had significantly higher computational costs. Across all quantum models, recall remained high, with majority outperforming the classical SVM, which is particularly important in a medical context as it reflects the ability to correctly identify malignant cases. However, this often came with trade-offs in runtime, with QSVMs requiring substantially more computation time compared to the classical model (anywhere from 21-41x more!). Overall, while quantum models show promise, especially in how sensitive they are to feature encoding, the classical SVM remains the more practical and efficient choice for this task given current computational limitations.
+-*important note*: We noticed with each run, the results would vary which is assumed to have a connection with the probability aspect of Quantum. If you would like to see the exact run/code which lead to the documented results, you will find it as the pinned version in this Kaggle Notebook [Documented Run](https://www.kaggle.com/code/samaalshara2010/bequ-2026-qsvm-feature-maps-vs-svm)
 ## Future Work
-
+1) First, testing the enhanced Z feature map on real quantum hardware would provide insight into how these models perform beyond simulation, particularly under realistic noise conditions.
+2) Expanding the study to larger and more complex datasets can help determine whether any potential quantum advantage becomes more evident as problem complexity increases.
+3) Evaluating model consistency and stability, as repeated runs produced varying results. Future work should include multiple trials, averaging performance metrics, and analyzing variance to ensure the reliability and reproducibility of QSVM outcomes.
+4) Extending the analysis to different types of datasets, such as multi-class (non-binary) classification problems, this would provide a broader understanding of how these models generalize across diverse data structures.
+5) Incorporating systematic hyperparameter tuning for both classical and quantum models to ensure a fair and optimized comparison.
 ## References
 
 (Temporary listing of references)
