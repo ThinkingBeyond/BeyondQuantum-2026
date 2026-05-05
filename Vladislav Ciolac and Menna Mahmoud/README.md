@@ -59,7 +59,7 @@ The highest QBER is assigned to the Intercept-Resend attack as it causes the hig
 | Time-Shift           | 0.05 (5%)        |
 | Detector Blinding    | 0.001 (0.1%)     |
 
-### Key Rate as a function of QBER
+### The Key Rate as a Function of QBER
 
 The key rate is how many bits were transmitted from the sender to the receiver. Can be represented as 
 
@@ -67,6 +67,17 @@ $$
 R = 1 - 2H(\text{Q})
 $$
 
+Q is the Quantum Bit Error Rate (QBER) value 
+
+H is the Binary Entropy Function
+
+R is the Key Rate 
+
+### The Binary Entropy Function
+
+Function that is used to calculate Eve's information (Leakage), also used in the Key Rate function.
+
+$H(\text{QBER}) = -\text{QBER} \log_2(\text{QBER}) - (1 - \text{QBER}) \log_2(1 - \text{QBER})$
 
 If you want to see some good examples of README files check out:
 - [Example 1](https://github.com/ThinkingBeyond/BeyondAI-2024/blob/main/warenya-loulia/README.md)
