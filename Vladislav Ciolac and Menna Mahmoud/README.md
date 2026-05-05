@@ -85,7 +85,7 @@ $H(\text{QBER}) = -\text{QBER} \log_2(\text{QBER}) - (1 - \text{QBER}) \log_2(1 
 
 <img width="790" height="587" alt="image" src="https://github.com/user-attachments/assets/262f7552-7393-4d19-8743-12f067e0feb5" />
 
-This graph shows how the key generation is affected under multiple attacks.
+This graph shows how the key generation is affected under multiple attacks. Concluded from the graph that the Key rate decreases as the QBER increases.
 
 For the Intercept-Resend atttack (QBER=0.20) we can notice that the key rate went below zero which means that the key bits are totally damaged. Therefore Alice and Bob need to re-establish the BB84 connection.
 
@@ -101,11 +101,15 @@ The graph shows that the detector blinding attack violates that assumption. The 
 
 What we finally conclude from that graph is the QBER fails to detect some side-channel attacks. Therefore **Hradware-Level monitoring mechanisms** are requird for those attacks.
 
+## Conclusions 
+
+* Although QBER is succesful in detecting the intercept-Resend attack, but it fails for some other Side-Channel attacks.
+* The Time-shift and the Detector Blinding attacks do not increase the QBER above the standered 11% threshold, which makes them undetectable using the QBER.
 
 
 ## Future Work
 
-State and explain what follow-up research could be conducted based on your work.
+Detecting the Time-shift and the Detector Blinding attacks require hardware level monitoring mechanisms. Photocurrent mechanism for the Detector Blinding attack, Time Histogram Analysis for the Time-shift attack. 
 
 ## References
 
