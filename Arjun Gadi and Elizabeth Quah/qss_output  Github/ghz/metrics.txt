@@ -1,0 +1,49 @@
+============================================================
+  ENCRYPTION SECURITY METRICS
+============================================================
+
+  G1 vs S1:
+    PSNR                 2.88489
+    BER                  0.51465
+    SSIM                 -0.00980
+    NPCR                 51.46484
+    UACI                 51.46484
+    Entropy_share        0.99938
+    MI_IS_G              0.00018
+
+  G2 vs S2:
+    PSNR                 2.88489
+    BER                  0.51465
+    SSIM                 -0.02545
+    NPCR                 51.46484
+    UACI                 51.46484
+    Entropy_share        0.99982
+    MI_IS_G              0.00055
+
+  G1 vs U:
+    PSNR                 2.88489
+    BER                  0.51465
+    SSIM                 -0.00980
+    NPCR                 51.46484
+    UACI                 51.46484
+    Entropy_share        0.99938
+    MI_IS_G              0.00018
+
+  G2 vs U:
+    PSNR                 2.94297
+    BER                  0.50781
+    SSIM                 -0.01015
+    NPCR                 50.78125
+    UACI                 50.78125
+    Entropy_share        0.99938
+    MI_IS_G              0.00011
+
+  Parity_I(S1xS2;G1xG2): 0.78722
+
+────────────────────────────────────────────────────────────
+  Interpretation:
+  Low PSNR/BER/SSIM (share vs secret) → strong encryption
+  Low MI I(S;G) → no information leakage to individual party
+  NPCR ≈ 99.6%, UACI ≈ 33.5% → ideal encrypted share
+  Parity I ≈ 0 (Bell) or >0 (GHZ) → structural parity property
+────────────────────────────────────────────────────────────

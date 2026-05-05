@@ -10,11 +10,11 @@ In this research project, we will be comparing how trajectories of Bosonic Symme
 
 ## Motivation
 
-Standard quantum mechanics predicts the results of measurements with great accuracy, but says nothing about what particles actually do between measurements. Bohmian mechanics solves this by giving particles definite positions at all times, guided by a pilot wave. $\Psi(x_1, x_2, t)$:
+Standard quantum mechanics predicts the results of measurements with great accuracy, but doesn't suggest anything about what particles actually do between measurements. Bohmian mechanics solves this by giving particles **definite** positions at all times, guided by a pilot wave. $\Psi(x_1, x_2, t)$:
 
 $$\dot{x}_k = \frac{\hbar}{m} \mathrm{Im}\!\left(\frac{\partial_{x_k}\Psi}{\Psi}\right)$$
 
-In the case of entangled states the velocity of particle 1 depends instantaneously on the position of particle 2, and thus entanglement non-locality is directly visible in individual trajectories. This project asks if we can see that fingerprint in a controlled scattering simulation.
+For entangled states, the velocity of particle 1 depends instantaneously on the position and velocity of particle 2. Thus, in entanglement, non-locality is directly visible in individual trajectories. This project asks if we can see that in a controlled scattering simulation.
 
 ---
 ## Method
@@ -27,9 +27,9 @@ We compare three two-particle initial states scattering off a Gaussian barrier $
 | **2A** | Symmetric (bosonic) $\mathcal{N}[\varphi_A\varphi_B + \varphi_B\varphi_A]$ | Built into initial state |
 | **2B** | Product state + phase ramp $\Psi \cdot e^{i\alpha(t)(x_1-x_2)^2}$ | Induced during evolution |
 
-Since stages 2A and 2B have the same initial marginal densities as stage 1 (confirmed by KL divergence), the only thing that changes is the entanglement.
+Since stages 2A and 2B have the same initial marginal densities as stage 1 (which is confirmed by KL divergence), the only thing that changes is the entanglement between the particles.
 
-**Numerical methods:** Crank-Nicolson for wave function evolution, RK4 for trajectory integration (checked against RK45 for a subsample), Born-rule $\chi^2$ test to check for quantum equilibrium at all times.
+**Numerical methods:** Crank-Nicolson for wavefunction evolution, RK4 for trajectory integration (checked against RK45 for a subsample), Born-rule $\chi^2$ test to check for quantum equilibrium at all times.
 
 **Metrics tracked:**KL divergence, independence ratio 
 $I = P(TT)/[P(T_1)\cdot P(T_2)]$, velocity correlation $\rho_v(t)$ entanglement entropy $S_e$, conservation of norm, and Born-rule $\chi^2$.
@@ -86,7 +86,21 @@ Six quantitative measures are tracked across all stages:
 
 ### Code Structure
 
-
+|S.No| Section | What it does |
+|---|------|-------------|
+| **0**| **Setup** | Imports, global parameters, display helpers |
+| **1**| **Grid & Wavepackets** | Build simulation grid; construct Gaussian packets |
+| **2**| **Wave function Initialization** | Product, symmetric-entangled, phase-induced wave functions |
+| **3**| **Potential & CN Matrices** | Gaussian barrier; Crank-Nicolson A, B matrices |
+| **4**| **Wavefunction Evolution** | Standard and phase-ramp time evolution |
+| **5**| **Bohmian Velocity Field** | Guidance-equation velocity from Ψ |
+| **6**| **Trajectory Sampling & Integration** | RK4 and RK45 trajectory engines |
+| **7**| **Metrics** | KL, independence ratio, Born-rule χ², entropy, velocity correlation |
+| **8**| **Plotting** | All static diagnostic plots |
+| **9**| **Animations** | 3D space-time braid + multi-stage 2D animation |
+| **10**| **Stage Runner** | One-call wrapper that runs an entire stage |
+| **11**| **Validation** | RK4 vs RK45, norm conservation, Born-rule validation |
+| **12**| **Main Pipeline** | Full experiment: all three stages end-to-end |
 ---
 
 ## Results
@@ -96,37 +110,35 @@ Six quantitative measures are tracked across all stages:
 
 | Comparison | KL Divergence | Verdict |
 |------------|--------------|---------|
-| Stage 1 vs Stage 2A (marginals) | *(insert value)* | *(fair start ✓ / ⚠)* |
-| Stage 1 vs Stage 2B (marginals) | *(insert value)* | *(fair start ✓ / ⚠)* |
+| Stage 1 vs Stage 2A (marginals) | ** | ** |
+| Stage 1 vs Stage 2B (marginals) | ** | ** |
 
 ### Scattering Outcome Fractions
 
 | Stage | TT (%) | RR (%) | TR (%) | RT (%) | Independence Ratio $I$ |
 |-------|--------|--------|--------|--------|----------------------|
-| Stage 1 - Product | | | | | *(≈ 1.0 expected)* |
-| Stage 2A - Symmetric | | | | | |
-| Stage 2B - Phase-Induced | | | | | |
+| Stage 1 - Product | 29 | 118 | 122 | 31 | *(≈ 1.0 expected)* |
+| Stage 2A - Symmetric | 29 | 112 | 65 | 94 | 0.752 |
+| Stage 2B - Phase-Induced | 5 | 49 | 143 | 103 | 0.094 |
 
 ### Velocity Correlations $\rho_v(t)$
+ <img width="600" height="450" alt="download" src="https://github.com/user-attachments/assets/555a14c4-22d9-4dbb-b8ef-27ef4d4f40c1" />
 
 ### Entanglement Entropy $S_e(t)$
+<img width="1178" height="396" alt="image" src="https://github.com/user-attachments/assets/7ada1605-ca11-4f29-8760-ec541f12cd4a" />
 
 
 ### Final Position Densities
 
 | Stage 1 (Product) | Stage 2A (Symmetric) | Stage 2B (Phase-Induced) |
 |:-----------------:|:--------------------:|:------------------------:|
-| ![](s1_final.png) | ![](s2a_final.png)   | ![](s2b_final.png)       |
+| <img width="590" height="490" alt="image" src="https://github.com/user-attachments/assets/edc82512-7b61-40b6-9f10-736bca685c1b" /> |<img width="590" height="490" alt="image" src="https://github.com/user-attachments/assets/05a7d550-711d-4bed-9494-fffc0b1a5a4c" /> | <img width="590" height="490" alt="image" src="https://github.com/user-attachments/assets/6a6d3dc1-f682-4b33-a854-35b14632ae74" /> |
 
 ### Bohmian Trajectory Braids (3D Configuration Space)
-
-*Insert rotating 3D braid animations — one per stage — showing $(x_1, x_2, t)$ trajectory bundles colour-coded by scattering outcome (TT=green, RR=red, TR=yellow, RT=blue).*
-
----
-
+| Stage 1 (Product) | Stage 2A (Symmetric) | Stage 2B (Phase-Induced) |
+|:-----------------:|:--------------------:|:------------------------:|
+| <img width="400" height="389" alt="ScreenRecording_05-01-2026 21-19-37_1" src="https://github.com/user-attachments/assets/0a66f82b-c3b4-4d91-bdd7-658f68a76ee6" /> |<img width="400" height="389" alt="ScreenRecording_05-01-2026 21-20-23_1" src="https://github.com/user-attachments/assets/790b09c7-62bb-4344-879a-9b859e0936b2" /> | <img width="400" height="390" alt="ScreenRecording_05-01-2026 21-20-51_1" src="https://github.com/user-attachments/assets/fda80996-d22f-4b06-8e0a-dab5310f0265" /> |
 ## Conclusions
-
-*(To be completed after results are obtained.)*
 
 Preliminary expectations based on theory:
 

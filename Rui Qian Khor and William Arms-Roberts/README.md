@@ -2,72 +2,94 @@
 
 # QAOA vs. Classical Heurlistic
 
-***Provide a description of your project including*** 
-
-1. motivating your research question
-2. stating your research question
-3. explaining your method and implementation
-4. Briefly mention and discuss your results
-5. Draw your conclusions
-6. State what future investigations 
-7. State your references 
-
-### Further Guidance: Formating
-- Structure this readme using subsections
-- Your job is to 
-    - keep it clear
-    - provide sufficient detail, so what you did is understandable to the reader. This way other researchers and future cohorts of BeyondQuantum will be able to build on your research
-    - List all your references at the end
-- utilise markdown like *italics*, **bold**, numbered and unnumbered lists to make your document easier to read
-- if you refer to links use the respective markdown for links, e.g. `[ThinkingBeyond](https://thinkingbeyond.education/)`
-- If you have graphs and pictures you want to embed in your file use `![name](your_graphic.png)`
-- If you want to present your results in a table use
-    | Header 1            | Header 2  |
-    |---------------------|-----------|
-    | Lorem Ipsum         | 12345     |
-
-**Tip:** Use tools to create markdown tables. For example, Obsidian has a table plugin, that makes creating tables much easier than doing it by hand.
-
 ## Research Question
 
 How does the solution quality of the standard Quantum Approximate Optimization Algorithm (QAOA) and Sahni-Gonzalez Algorithm compare in MaxCut instances on small, 3-, 4-, and 5-regular graphs?
 
-We tested unweighted graphs with 10, 16, and 20 nodes, with instances of 3-, 4-, and 5-regular graphs, in order to assess how the prefromance of QAOA scaled as the number of edges per node increases.
+We tested unweighted graphs with 10, 16, and 20 nodes, with instances of 3-, 4-, and 5-regular graphs, in order to assess how the performance of QAOA scaled as the number of edges per node increases.
 
 ## Motivation
 
-Explain your motivation for your chosen research question here.
+Optimization problems are commonplace in real-life, with broad applications in areas such as marketing, finance, and engineering. Many of these optimization problems can be formatted as a Max-Cut problem. Finding an exact solution to these max-cut problems becomes exponentially more difficult as the complexity of the graphs increase however, meaning that only approximate solutions can be found for graphs above a certain complexity. QAOA offers a potential alternative to the classical apporiximation algorithms and could have the potential to surpass the effectiveness of classical approximation ratios if QAOA is able to effectively scale to the complexity of modern day application of the Max-Cut problem.
 
-## Method
+## Max-Cut
+Max-Cut is a type of Quadratic Unconstrained Binary Optimization Problem (QUBO). QUBOs represent optimization problems in which the goal is to find a minimum or maximum of a quadratic function with binary variables (0s and 1s) and no constaints. These are the types of problems which the Quantum Approximation Optimization Algorithm (QAOA) aim to solve. Among QUBOs like the traveling sales man problem, they can all be represented by the Max-Cut problem, which makes Max-Cut a popular problem used to benchmark the capablities of algorithms like QAOA.
 
-To 
+MaxCut is a problem within graph theory which aims to partiction nodes within a graph into two subgroups, such that the line drawn to divide the subgroups, interesect between a maximum of edges connecting nodes. This problem has a wide range of applications in anayzing social networks, circuit layout, and portfolio managment.
+
+<!--## Quantum Approximation Optimiation Algorithm-->
+
+<!--## Sanhi-Gonzalez Algorithm-->
+
+<!--## Classical Brute-Force Algorithm-->
+
+<!--## Measure of Merit-->
+
+<!--### Approximation Ratio-->
+
+<!--### Gate Count-->
+
+## Methods
+
+### Overview
+We randomly generated graphs with 10, 16, and 20 nodes, with each number of nodes having 3 instances with 3, 4, and 5 connections on each node (example graph shown below). To measure the solution quality of the QAOA and SG algorithm we implemented a brute force algorithm that found the optimal cut of each graph, comparing it to the output of both the QAOA and the SG algorithm. Additionally we measured the number of two-qubit gates in each circuit that was created and average them across the 30 tests we ran of each graph to get an accurate idea of the average number of circuits needed to run the QAOA.
+
+### Experiement Details
+Quantum Platform: We tested the QAOA algorithm on a IBM Quantum Device Emulator, which aims to reproduce the capablities of the real quantum device by limiting qubit connectivity to that of the real device and simulating qunatum noise. Specifically, we used FakeSherbrooke, IBM's 127 qubit fake backend.
+
+### Code Outline
+1. Created a random graph with the set graph features (ex. 10 nodes and 5-regular graph).
+2. Find the approximate Max-Cut using QAOA.
+   1. 
+4. Find the approximate Max-Cut using the Sahni-Gonzalez Algorithm.
+5. Find the true optimal Max-Cut using a classical Brute-Force Algorithm.
+6. Calculate the approximation ratio of QAOA and the Sahni-Gonzalez Algorithm.
+7. Record the graph intance, approximation ratios, QAOA gate count, QAOA circuit, and QAOA soltuion distribution.
+
+Use a for-loop to run steps 1-6, 30 times for each set of graph features.
+   1. 10 Nodes, 3 Edges
+   2. 10 Nodes, 4 Edges
+   3. 10 Nodes, 5 Edges
+   4. 16 Nodes, 3 Edges
+   5. 16 Nodes, 4 Edges
+   6. 16 Nodes, 5 Edges
+   7. 20 Nodes, 3 Edges
+   8. 20 Nodes, 4 Edges
+   9. 20 Nodes, 5 Edges
+
+![Max-Cut Graph](Graph.png)
 
 ## Results
+We found that the QAOA consistently found equivalent or slightly better quality solutions than the SG algorithm, with the level of solution quality staying relatively consistent from 0.97-0.99 for all the graphs. And the SG algorithm ranging from 0.98-0.96. The solution quality appears to decrease linearly over the 20 node graphs, but we are unsure if this is a real decrease in the solution quality or just the solution quality range appearing to decrease. More testing on higher node graphs would be required to confirm this.
+
+![Approximation Ratio Comparison](Solution_Quality.png)
+
+Additionaly we found that the number of two-qubit gates required to run the QAOA circuit increases in a roughly linear pattern, with the number of gates increasing alongside the number of connections as well. The number of two-qubit gates required more than doubled when going from 3-5 connections per node, indicating poor connection-wise scalability.
+
+![Two-Qubit gates](Two-Qubit-Gates.png)
+
+The syntheized data can be found in [data sheets](https://docs.google.com/spreadsheets/d/1Oxomdw1UGmlCHMsuy2j9GH-BQ797fcEJhxUDFdoc-YQ/edit?usp=sharing). 
+The raw data from each Max-Cut iteration conducted can be found in the following [google file](https://drive.google.com/drive/folders/1HOsF8niU69tRh6PZ0DAb73QZxZev1Twi?usp=sharing)
 
 ## Implications and Conclusion
+While the QAOA appears to have a slight advantage in solution quality, it is severly hampered in the issue of scalabilty. The largest factor is the number of qubits required, since every additional node requires another qubit in the circuit. Current quantum technology has around 120-150 qubits avaliable, which limits the possible uses of QAOA to smaller scale instances. Additionally the number of two qubit gates that can be supported is around 5000, which again limits the use case to instances with less connections, since the number of two qubit gates required increases as more connections are added. For now classical algortihms remain the best option for real world applications, but with the advancement of quantum technology QAOA could be a competitive option for binary optimization problems.
 
-
-Continue working through the points listed above with the help of sensibly named subsections. 
-
-If you want to see some good examples of README files check out:
-- [Example 1](https://github.com/ThinkingBeyond/BeyondAI-2024/blob/main/warenya-loulia/README.md)
-- [Example 2](https://github.com/ThinkingBeyond/BeyondAI-2024/blob/main/shaana-karuna/README.md)
-
-[ ... ]
 
 ## Future Work
 
-State and explain what follow-up research could be conducted based on your work.
+Graphs with node counts higher than 20 could be tested with the use of quantum hardware. Additionally there are different versions of QAOA that can be explored such as QAOA in QAOA and warm started QAOA. These versions appear to try to improve some of the scalability issues with QAOA.
 
 ## References
 
-List all your references here. Remember to put links into markdown. For example:
 
-1.  Einstein, A. (1905). *On the Electrodynamics of Moving Bodies*. Annalen der Physik, 17, 891-921. [Internet Archive](https://archive.org/details/einstein-1905-relativity)
+1. Zeqiao Z, Yuxuan D, Xinmei T, Dacheng T, QAOA-in-QAOA: solving large-scale MaxCut problems on small quantum machines (2022),  [arxiv](https://arxiv.org/abs/2205.11762)
+2. Daniel P, Variational Quantum Algorithms for Combinatorial Optimization (2024), [arxiv](https://doi.org/10.48550/arXiv.2407.06421)
+3. Ishan P, Akhil A, Hybrid Quantum-HPC Solutions for Max-Cut: Bridging Classical and Quantum Algorithms (2024), [arxiv](https://doi.org/10.48550/arXiv.2410.15626)
+4. J. A. M, Kristel M, Toward a linear-ramp QAOA protocol: evidence of a scaling advantage in solving some combinatorial optimization problems (2025), npj quantum information, [nature](https://www.nature.com/articles/s41534-025-01082-1)
+5. David B et al, Towards Robust Benchmarking of Quantum Optimization Algorithms (2025), [IEEE](10.1109/QCE60285.2024.11030870)
+6. Micheal X, David W, Improved approximation algorithms for maximum cut and satisfiability problems using semidefinite programming (1995), [JACM](https://doi.org/10.1145/227683.227684)
+7. IBM quantum platform, Quantum approximate optimization algorithm (2024), [IBM](https://quantum.cloud.ibm.com/docs/en/tutorials/quantum-approximate-optimization-algorithm)
 
-**Tip**: *If you have you references in BibTex, Google Scholar or Zotero*
-1. Create/copy a list into ChatGPT
-2. Ask it to turn it into an unsorted list in markdown
 
 ---
 

@@ -1,0 +1,53 @@
+============================================================
+  DECRYPTION QUALITY METRICS
+============================================================
+
+  G1 recovery:
+    PSNR                 ∞  ← LOSSLESS
+    BER                  0.00000 ← LOSSLESS
+    SSIM                 1.00000 ← LOSSLESS
+
+  G2 recovery:
+    PSNR                 ∞  ← LOSSLESS
+    BER                  0.00000 ← LOSSLESS
+    SSIM                 1.00000 ← LOSSLESS
+
+  G1 vs S1:
+    PSNR                 2.88489
+    BER                  0.51465
+    SSIM                 -0.00980
+    NPCR                 51.46484
+    UACI                 51.46484
+    Entropy              0.99938
+    MI                   0.00018
+
+  G2 vs S2:
+    PSNR                 2.88489
+    BER                  0.51465
+    SSIM                 -0.02545
+    NPCR                 51.46484
+    UACI                 51.46484
+    Entropy              0.99982
+    MI                   0.00055
+
+  G1 vs U:
+    PSNR                 2.88489
+    BER                  0.51465
+    SSIM                 -0.00980
+    NPCR                 51.46484
+    UACI                 51.46484
+    Entropy              0.99938
+    MI                   0.00018
+
+  Security: I(S1;G1): 0.00018
+
+  Security: I(S2;G2): 0.00055
+
+  Security: I(U;G1): 0.00018
+
+  Parity: I(S1⊕S2;G1⊕G2): 0.78722
+
+────────────────────────────────────────────────────────────
+  Recovery: PSNR=∞, BER=0, SSIM=1 → lossless ✓
+  Security: low PSNR/BER on shares, low MI → strong encryption ✓
+────────────────────────────────────────────────────────────
