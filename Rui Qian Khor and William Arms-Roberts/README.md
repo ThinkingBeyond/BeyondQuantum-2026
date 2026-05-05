@@ -19,7 +19,7 @@ MaxCut is a problem within graph theory which aims to partiction nodes within a 
 
 <!--## Quantum Approximation Optimiation Algorithm-->
 
-<## Sanhi-Gonzalez Algorithm-->
+<!--## Sanhi-Gonzalez Algorithm-->
 
 <!--## Classical Brute-Force Algorithm-->
 
