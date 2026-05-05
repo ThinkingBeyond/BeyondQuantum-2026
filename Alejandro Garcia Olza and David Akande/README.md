@@ -35,7 +35,7 @@ To make this dense theoretical framework easily accessible for future researcher
 
 **Critical Analysis: Strengths and Weaknesses** Following the synthesis, we conducted an analysis to highlight the main differences between this theory and orthodox or Bohmian mechanics, carefully weighing its strengths and weaknesses.
 
-Both are in this folder: https://drive.google.com/drive/folders/1pXL7ne2kQu6QiX_wSkJ877ZX2MtEJMat?usp=sharing
+Both are in this folder and in the carpet: https://drive.google.com/drive/folders/1pXL7ne2kQu6QiX_wSkJ877ZX2MtEJMat?usp=sharing
 
 
 **Conclusions**
