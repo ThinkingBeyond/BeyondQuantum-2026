@@ -100,7 +100,7 @@ At Zero Noise, the protocol obtains perfect, lossless recovery of the two binary
 To evaluate the robustness of this novel GHZ-3 protocol, we tested the protocol against four different noise channels:
 
 1. **Depolarizing Channel**: The "all-directions" noise model. With probability λ, the qubit is completely randomised.  
-- **Important:** In Qiskit, the depolarizing noise parameter λ is not the same as the standard Pauli error probability p. Instead, they are related by p \= 34λ. All results in our research project are consistently computed using λ (Qiskit convention).
+- **Important:** In Qiskit, the depolarizing noise parameter λ is not the same as the standard Pauli error probability p. Instead, they are related by p \= 3/4λ. All results in our research project are consistently computed using λ (Qiskit convention).
 
 2. **Bit-Flip Channel**: This channel applies an X gate (flips |0⟩↔|1⟩) with probability p. 
 
