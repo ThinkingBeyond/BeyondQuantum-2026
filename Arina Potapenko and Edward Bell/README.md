@@ -45,15 +45,12 @@ This study evaluates how the number of logical constraints *(n)* affects the per
 
 **2. Effect of Solution Density (*M*)**
 The number of valid solutions (M) significantly impacts algorithm efficiency.
-
 **M = 1**
 - Requires the highest number of iterations
-- Peak probability achieved at higher k
-  
+- Peak probability achieved at higher k 
 **M = 2–3**
 - Fewer iterations required
 - High success probability reached more quickly
-  
 **M = 4**
 - Probability stabilizes around ~50%
 - Algorithm shows reduced sensitivity to iteration count
@@ -61,7 +58,7 @@ The number of valid solutions (M) significantly impacts algorithm efficiency.
 **Key observation:**
 - As *M* increases, fewer iterations are required, but the maximum achievable probability becomes more distributed across multiple valid states.
 
-**Tbale 1: Success rate vs iterations for M = 1, 2, 3, 4**
+**Table 1: Success rate vs iterations for M = 1, 2, 3, 4**
 
 | Iterations    | *M=1* Success | *M=2* Success | *M=3* Success | *M=4* Success |
 | ------------- | ------------- |---------------|---------------|---------------|
@@ -83,7 +80,7 @@ The number of valid solutions (M) significantly impacts algorithm efficiency.
 &nbsp;
 
 **3. Optimal Iteration Counts**
-The experimentally observed optimal iteration values are:
+**Table 2.** The experimentally observed optimal iteration values are:
 
 | M (solutions)  | Best integer (k) | Plotted Average (k)| Max Success Rate|
 | -------------  | -----------------|--------------------|-----------------|
@@ -109,7 +106,7 @@ The experimentally observed optimal iteration values are:
 - Increasing logical constraints reduces the number of valid solutions *(M)*
 - Lower M requires more Grover iterations *(k)*
 - The algorithm becomes more sensitive to iteration count as *M* decreases
-- Over-rotation occurs when k exceeds the optimal value
+- Over-rotation occurs when *k* exceeds the optimal value
 - Observed behavior matches theoretical predictions of Grover’s Algorithm
 
 ## Future Work
