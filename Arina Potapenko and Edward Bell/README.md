@@ -49,9 +49,11 @@ The number of valid solutions (M) significantly impacts algorithm efficiency.
 **M = 1**
 - Requires the highest number of iterations
 - Peak probability achieved at higher k
+  
 **M = 2–3**
 - Fewer iterations required
 - High success probability reached more quickly
+  
 **M = 4**
 - Probability stabilizes around ~50%
 - Algorithm shows reduced sensitivity to iteration count
