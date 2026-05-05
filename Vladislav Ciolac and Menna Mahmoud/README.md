@@ -46,6 +46,12 @@ The BB84 Protocol security depends on the hardware of the QKD device, which can 
 
 ## Methods and Implementations
 
+## Important parameters in a protocol
+BB84 is characterized by 2 very important parameters: the Quantum Bit Error Rate and the key rate. These 2 parameters indicate if the protocol will be finished and considered secure, and also the efficiency of the protocol round.
+We start with the QBER: After the sifting process Alice and Bob choose from their sifted a range of subsets equivalent in the indices, and publicly compare their bits. QBER is the percentage of differing bits from the total number of the bits compared. Of course, because the bits were publicly discussed, they are discarded from the sifted keys.
+QBER indicates the feasibility of the protocol round. If a protocol round has a QBER higher than 11%, then it is considered unsafe, because Eve has eavesdropped a high number of bits, indicated by the QBER.
+The second important parameter is the key-rate. It can be viewed from 2 perspectives: as a rate of the efficiency over time or over the number of total pulses (we can imagine pulses of single photons for each bit). It follows how many or how fast the secure bits remain in the processed final key.
+
 ### Modeling the Attacks
 
 In this research Side-Channel attacks were modeled using their corresponding QBER values. ***These QBER values were selected based on the literature.***
@@ -100,6 +106,16 @@ The red dot represents the detector blinding attack which invalidates that naive
 The graph shows that the detector blinding attack violates that assumption. The Detector Blinding attack do not increase the QBER above the standered threshold which will cause neither Alice or Bob to notice that their connection is compormised.
 
 What we finally conclude from that graph is the QBER fails to detect some side-channel attacks. Therefore **Hradware-Level monitoring mechanisms** are requird for those attacks.
+
+## Limitations of BB84 and solutions
+The QBER measures how much Eve has interacted in the data transmission phase and how much knowledge she has gathered by measuring and disturbing the photons. 11% is an industry-standard QBER value at which it is considered that Eve has too much knowledge about the symmetric keys, and the protocol has to be discarded. There is a solutions of 2 additional steps which can be implemented and enhance the security of the key up to this point in the protocol.
+
+## Advanced distillation
+A simple and reliable method to diminish the QBER is reducing the number of differing equivalent bits in the 2 sifted keys. Alice decides on a subset of random bits in her key, and tells Bob a hint about her subset, without telling explicitly the bits. The hints can be simple like the parity of the number of 1 bits, or more advanced Low-Density Parity-Checks and Polar Codes. If 2 equivalent subsets do not match from the hints, they are discarded. This is an efficient way to eliminate the bits causing QBER, but the method also deletes good secure bits with them.
+
+## Noise preprocessing.
+Advanced distillation is the first step, and after it follows noise preprocessing. At this point we assume that Eve has knowledge about bits in the sifted key (values of bits, positions, information about subsets, etc.). Alice can induce fake noise in the key by changing a certain number of bit's values in her sifted key. This noise has to be later corrected in an error correction step, but the gain is that Eve's knowledge about the changed bits and the neighboring subsets is wrong, and when she will to attack the result will be incorrect.
+Regarding how many bits have to be changed in order to cause enough disturbance for Eve is given by the formula
 
 ## Conclusions 
 
