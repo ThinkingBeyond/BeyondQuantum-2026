@@ -1,21 +1,21 @@
 ![BeyondQuantum Banner for Research Projects](../BeyondQuantum_Banner_Research_Projects_2026.png)
 
-# Quantum Approimation Optimization Ratio vs. Classical Heurlistic
+# Quantum Approximation Optimization Ratio vs. Classical Heuristic
 
 ## Research Question
 
 How does the solution quality of the standard Quantum Approximate Optimization Algorithm (QAOA) and Sahni-Gonzalez Algorithm compare in MaxCut instances on small, 3-, 4-, and 5-regular graphs?
 
-We tested unweighted graphs with 10, 16, and 20 nodes, with instances of 3-, 4-, and 5-regular graphs, in order to assess how the performance of QAOA scaled as the number of edges per node increases.
+We tested unweighted graphs with 10, 16, and 20 nodes, with instances of 3-, 4-, and 5-regular graphs, in order to assess how the performance of QAOA scaled as the number of edges per node increased.
 
 ## Motivation
 
-Optimization problems are commonplace in real-life, with broad applications in areas such as marketing, finance, and engineering. Many of these optimization problems can be formatted as a Max-Cut problem. Finding an exact solution to these max-cut problems becomes exponentially more difficult as the complexity of the graphs increase however, meaning that only approximate solutions can be found for graphs above a certain complexity. QAOA offers a potential alternative to the classical apporiximation algorithms and could have the potential to surpass the effectiveness of classical approximation ratios if QAOA is able to effectively scale to the complexity of modern day application of the Max-Cut problem.
+Optimization problems are commonplace in real-life, with broad applications in areas such as marketing, finance, and engineering. Many of these optimization problems can be formatted as a Max-Cut problem. Finding an exact solution to these max-cut problems becomes exponentially more difficult as the complexity of the graphs increases; however, meaning that only approximate solutions can be found for graphs above a certain complexity. QAOA offers a potential alternative to the classical approximation algorithms and could have the potential to surpass the effectiveness of classical approximation ratios if QAOA is able to effectively scale to the complexity of modern-day applications of the Max-Cut problem.
 
 ## Max-Cut
-Max-Cut is a type of Quadratic Unconstrained Binary Optimization Problem (QUBO). QUBOs represent optimization problems in which the goal is to find a minimum or maximum of a quadratic function with binary variables (0s and 1s) and no constaints. These are the types of problems which the Quantum Approximation Optimization Algorithm (QAOA) aim to solve. Among QUBOs like the traveling sales man problem, they can all be represented by the Max-Cut problem, which makes Max-Cut a popular problem used to benchmark the capablities of algorithms like QAOA.
+Max-Cut is a type of Quadratic Unconstrained Binary Optimization Problem (QUBO). QUBOs represent optimization problems in which the goal is to find a minimum or maximum of a quadratic function with binary variables (0s and 1s) and no constraints. These are the types of problems that the Quantum Approximation Optimization Algorithm (QAOA) aims to solve. Among QUBOs like the traveling salesman problem, they can all be represented by the Max-Cut problem, which makes Max-Cut a popular problem used to benchmark the capabilities of algorithms like QAOA.
 
-MaxCut is a problem within graph theory which aims to partiction nodes within a graph into two subgroups, such that the line drawn to divide the subgroups, interesect between a maximum of edges connecting nodes. This problem has a wide range of applications in anayzing social networks, circuit layout, and portfolio managment.
+MaxCut is a problem within graph theory that aims to partition nodes within a graph into two subgroups, such that the line drawn to divide the subgroups intersects a maximum of edges connecting nodes. This problem has a wide range of applications in analyzing social networks, circuit layout, and portfolio management.
 
 <!--## Quantum Approximation Optimiation Algorithm-->
 
@@ -26,7 +26,7 @@ MaxCut is a problem within graph theory which aims to partiction nodes within a 
 ## Measure of Merit
 
 ### Approximation Ratio
-The approximation ratio is a measure of the solution quality produced by an algorithm as it calculates a value for how closely the resulted solution matches the true optimal solution. This metric was chosen for it's ablity to consider the entire sample of the dataset. The formula of the approximation ratio is $A(I)/OPT(I)=\alpha$, where $A(I)$ is the algorithm output and $OPT(I)$ is the optimal solution.
+The approximation ratio is a measure of the solution quality produced by an algorithm as it calculates a value for how closely the resulting solution matches the true optimal solution. This metric was chosen for it's ablity to consider the entire sample of the dataset. The formula of the approximation ratio is $A(I)/OPT(I)=\alpha$, where $A(I)$ is the algorithm output and $OPT(I)$ is the optimal solution.
 
 
 <!--### Gate Count-->
@@ -34,10 +34,10 @@ The approximation ratio is a measure of the solution quality produced by an algo
 ## Methods
 
 ### Overview
-We randomly generated graphs with 10, 16, and 20 nodes, with each number of nodes having 3 instances with 3, 4, and 5 connections on each node (example graph shown below). To measure the solution quality of the QAOA and SG algorithm we implemented a brute force algorithm that found the optimal cut of each graph, comparing it to the output of both the QAOA and the SG algorithm. Additionally we measured the number of two-qubit gates in each circuit that was created and average them across the 30 tests we ran of each graph to get an accurate idea of the average number of circuits needed to run the QAOA.
+We randomly generated graphs with 10, 16, and 20 nodes, with each number of nodes having 3 instances with 3, 4, and 5 connections on each node (example graph shown below). To measure the solution quality of the QAOA and SG algorithm, we implemented a brute force algorithm that found the optimal cut of each graph, comparing it to the output of both the QAOA and the SG algorithm. Additionally, we measured the number of two-qubit gates in each circuit that was created and averaged them across the 30 tests we ran of each graph to get an accurate idea of the average number of circuits needed to run the QAOA.
 
-### Experiement Details
-Quantum Platform: We tested the QAOA algorithm on a IBM Quantum Device Emulator, which aims to reproduce the capablities of the real quantum device by limiting qubit connectivity to that of the real device and simulating qunatum noise. Specifically, we used FakeSherbrooke, IBM's 127 qubit simulated backend.
+### Experiment Details
+Quantum Platform: We tested the QAOA algorithm on an IBM Quantum Device Emulator, which aims to reproduce the capabilities of the real quantum device by limiting qubit connectivity to that of the real device and simulating quantum noise. Specifically, we used FakeSherbrooke, IBM's 127-qubit simulated backend.
 
 ### Code Outline
 1. Created a random graph with the set graph features (ex. 10 nodes and 5-regular graph).
@@ -45,7 +45,7 @@ Quantum Platform: We tested the QAOA algorithm on a IBM Quantum Device Emulator,
 4. Find the approximate Max-Cut solution using the Sahni-Gonzalez Algorithm.
 5. Find the true optimal Max-Cut solution using a classical Brute-Force Algorithm.
 6. Calculate the approximation ratio of QAOA and the Sahni-Gonzalez Algorithm.
-7. Record the graph intance, approximation ratios, QAOA gate count, QAOA circuit, and QAOA soltuion distribution.
+7. Record the graph instance, approximation ratios, QAOA gate count, QAOA circuit, and QAOA solution distribution.
 
 Use a for-loop to run steps 1-6, 30 times for each set of graph features.
    1. 10 Nodes, 3 Edges
@@ -61,24 +61,24 @@ Use a for-loop to run steps 1-6, 30 times for each set of graph features.
 ![Max-Cut Graph](Graph.png)
 
 ## Results
-We found that the QAOA consistently found equivalent or slightly better quality solutions than the SG algorithm, with the level of solution quality staying relatively consistent from 0.97-0.99 for all the graphs. And the SG algorithm ranging from 0.98-0.96. The solution quality appears to decrease linearly over the 20 node graphs, but we are unsure if this is a real decrease in the solution quality or just the solution quality range appearing to decrease. More testing on higher node graphs would be required to confirm this.
+We found that the QAOA consistently found equivalent or slightly better quality solutions than the SG algorithm, with the level of solution quality staying relatively consistent from 0.97-0.99 for all the graphs. And the SG algorithm ranged from 0.98-0.96. The solution quality appears to decrease linearly over the 20 node graphs, but we are unsure if this is a real decrease in the solution quality or just the solution quality range appearing to decrease. More testing on higher node graphs would be required to confirm this.
 
 ![Approximation Ratio Comparison](Solution_Quality.png)
 
-Additionaly we found that the number of two-qubit gates required to run the QAOA circuit increases in a roughly linear pattern, with the number of gates increasing alongside the number of connections as well. The number of two-qubit gates required more than doubled when going from 3-5 connections per node, indicating poor connection-wise scalability.
+Additionally, we found that the number of two-qubit gates required to run the QAOA circuit increases in a roughly linear pattern, with the number of gates increasing alongside the number of connections as well. The number of two-qubit gates required more than doubled when going from 3-5 connections per node, indicating poor connection-wise scalability.
 
 ![Two-Qubit gates](Two-Qubit-Gates.png)
 
-The syntheized data can be found in [data sheets](https://docs.google.com/spreadsheets/d/1Oxomdw1UGmlCHMsuy2j9GH-BQ797fcEJhxUDFdoc-YQ/edit?usp=sharing). 
+The synthesized data can be found in [data sheets](https://docs.google.com/spreadsheets/d/1Oxomdw1UGmlCHMsuy2j9GH-BQ797fcEJhxUDFdoc-YQ/edit?usp=sharing). 
 The raw data from each Max-Cut iteration conducted can be found in the following [google file](https://drive.google.com/drive/folders/1HOsF8niU69tRh6PZ0DAb73QZxZev1Twi?usp=sharing)
 
 ## Implications and Conclusion
-While the QAOA appears to have a slight advantage in solution quality, it is severly hampered in the issue of scalabilty. The largest factor is the number of qubits required, since every additional node requires another qubit in the circuit. Current quantum technology has around 120-150 qubits avaliable, which limits the possible uses of QAOA to smaller scale instances. Additionally the number of two qubit gates that can be supported is around 5000, which again limits the use case to instances with less connections, since the number of two qubit gates required increases as more connections are added. For now classical algortihms remain the best option for real world applications, but with the advancement of quantum technology QAOA could be a competitive option for binary optimization problems.
+While the QAOA appears to have a slight advantage in solution quality, it is severely hampered by the issue of scalability. The largest factor is the number of qubits required, since every additional node requires another qubit in the circuit. Current quantum technology has around 120-150 qubits available, which limits the possible uses of QAOA to smaller-scale instances. Additionally, the number of two-qubit gates that can be supported is around 5000, which again limits the use case to instances with fewer connections, since the number of two-qubit gates required increases as more connections are added. For now, classical algorithms remain the best option for real-world applications, but with the advancement of quantum technology, QAOA could be a competitive option for binary optimization problems.
 
 
 ## Future Work
 
-Our project tested a limited range of small Max-Cut instances, which can potentially overlook greater overarching patterns, so graphs with node counts higher than 20 could be tested. Due to monetary limitations, this experiement was conducted using quantum emulators instead of real quantum hardware. Future works can build upon and confirm our findings through it's replications on equivalent quantum hardware. Additionally, there are different versions of QAOA that can be explored such as QAOA in QAOA and warm started QAOA. These versions appear to try to improve the scalability of QAOA and show promise in acheving greater overall preformance compared to standard QAOA.
+Our project tested a limited range of small Max-Cut instances, which can potentially overlook greater overarching patterns, so graphs with node counts higher than 20 could be tested. Due to monetary limitations, this experiment was conducted using quantum emulators instead of real quantum hardware. Future works can build upon and confirm our findings through their replications on equivalent quantum hardware. Additionally, there are different versions of QAOA that can be explored, such as QAOA in QAOA and warm-started QAOA. These versions appear to try to improve the scalability of QAOA and show promise in achieving greater overall performance compared to standard QAOA.
 
 ## References
 
