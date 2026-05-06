@@ -149,9 +149,10 @@ Preliminary expectations based on theory:
 ---
 
 ## Future Work
-
-
-
+Extend the simulation to three or more particles to investigate how multipartite entanglement affects Bohmian trajectory correlations and scattering behaviour.
+Investigate how decoherence and environmental noise influence Bohmian velocity correlations and entanglement dynamics
+Extend the framework to: fermionic systems, mixed states and spin-coupled particles,
+Increase grid resolution and ensemble size to test numerical convergence and finite-size effects more rigorously.
 ---
 
 ## References
