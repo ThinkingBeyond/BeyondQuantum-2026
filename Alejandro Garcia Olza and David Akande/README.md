@@ -5,7 +5,7 @@
 
 ### Research Question
 Is Superclassical Thermodynamics a theoretically viable and computationally accurate alternative to orthodox quantum mechanics for explaining sub-quantum phenomena? Specifically, can the assumption of a classical zero-point thermal field in ordinary 3D space successfully reproduce highly non-linear quantum dynamics, such as the Quantum Sweeper Effect, without relying on abstract wave-function collapse?
-
+---
 
 ### Motivation
 The primary motivation for this research stems from the profound ontological paradoxes left unresolved by the Copenhagen interpretation, such as the measurement problem and intrinsic indeterminism. While alternative frameworks like Bohmian mechanics succeed in providing defined trajectories, they still rely on a mysterious "quantum potential" and operate in an abstract 3N-dimensional configuration space, which David Bohm himself considered a mathematical artifice.
@@ -13,6 +13,7 @@ The primary motivation for this research stems from the profound ontological par
 Superclassical Thermodynamics offers a fascinating paradigm shift: it demystifies the quantum potential by redefining it as pure kinetic energy (heat) accumulated in the vacuum field.
 
 Inspired by macroscopic fluid-dynamics experiments (such as Couder's bouncing droplets), this theory brings quantum mechanics back to tangible, three-dimensional physical reality. We chose this topic to critically synthesize this dense theoretical framework into an accessible format and to computationally prove that these sub-quantum thermodynamic currents can indeed predict complex, anomalous behaviors like the Quantum Sweeper Effect.
+---
 
 ### Project Description 
 
@@ -24,6 +25,7 @@ Our research is divided into two main pillars:
 Theoretical Evaluation: A systematic assessment of the model's viability, highlighting its strengths (e.g., restoring a 3D physical ontology and explaining the quantum potential as thermodynamic heat) and its current theoretical limits (e.g., the conflict with Special Relativity due to systemic non-locality).
 
 Computational Simulation: An open-source numerical implementation of the Quantum Sweeper Effect. By utilizing sub-quantum thermodynamic flows and Bohm-type trajectories, we simulate how extremely attenuated beams are swept aside by probability currents, effectively reproducing macroscopic quantum predictions using exclusively classical fluid dynamics.
+---
 
 ### Theoretical Part: Results, Conclusions and future research
 
@@ -50,10 +52,10 @@ Based on our findings, we recommend focusing on two main areas for future resear
 
 - Reconciliation with Relativity: Future work must address the superluminal paradoxes. This could involve exploring the concept of an "emergent relativity"
 or developing a modified, non-instantaneous diffusion wave equation that avoids infinite propagation speeds while still accounting for the systemic updating of the vacuum landscape.
-
+---
 
 ### Experimental Part: Quantum Sweeper Effect
-
+---
 
 ### References
 
@@ -104,3 +106,6 @@ or developing a modified, non-instantaneous diffusion wave equation that avoids 
 - Sanz, A. S.; Miret-Artes, S. (2008). *A Trajectory-Based Understanding of Quantum Interference*. Journal of Physics A. https://doi.org/10.1088/1751-8113/41/43/435303
 
 - Walleczek, J.; Grössing, G.; Pylkkänen, P.; Hiley, B. (2019). *Emergent Quantum Mechanics: David Bohm Centennial Perspectives*. Entropy. https://doi.org/10.3390/e21020113
+---
+
+> The research poster for this project can be found in the [BeyondQuantum Proceedings 2026](https://thinkingbeyond.education/beyondquantum_proceedings_2026/).
