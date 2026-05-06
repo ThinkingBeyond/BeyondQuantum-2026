@@ -90,8 +90,6 @@ The results demonstrate that Quantum Support Vector Machines (QSVMs) can achieve
 5) Incorporating systematic hyperparameter tuning for both classical and quantum models to ensure a fair and optimized comparison.
 ## References
 
-(Temporary listing of references)
-
   Akpinar, Emine, et al. “Evaluating the Impact of Different Quantum Kernels on the Classification Performance of Support Vector Machine Algorithm: A Medical Dataset Application.” arXiv:2407.09930, arXiv, 19 July 2024. arXiv.org, https://doi.org/10.48550/arXiv.2407.09930.
   
   "1.4. Support Vector Machines.” Scikit-Learn, https://scikit-learn/stable/modules/svm.html.
@@ -100,16 +98,16 @@ The results demonstrate that Quantum Support Vector Machines (QSVMs) can achieve
 
   QSVC - Qiskit Machine Learning 0.9.0. https://qiskit-community.github.io/qiskit-machine-learning/stubs/qiskit_machine_learning.algorithms.QSVC.html#qiskit_machine_learning.algorithms.QSVC. 
 
-  https://www.kaggle.com/datasets/yasserh/breast-cancer-dataset
+  
+  “Documentation.” IBM Quantum Documentation, https://qiskit.qotlabs.org/.
+
+  Shan, Zheng, et al. “Demonstration of Breast Cancer Detection Using QSVM on IBM Quantum Processors.” 9 Mar. 2022. In Review, https://doi.org/10.21203/rs.3.rs-1434074/v1.
 
 
- 
+  Jha, Ravi Kumar, et al. “Comparative Performance Analysis of Quantum Feature Maps for Quantum Kernel-Based Machine Learning.” Scientific Reports, vol. 16, no. 1, Feb. 2026, p. 8142. DOI.org (Crossref), https://doi.org/10.1038/s41598-026-39392-9.
 
-1.  Einstein, A. (1905). *On the Electrodynamics of Moving Bodies*. Annalen der Physik, 17, 891-921. [Internet Archive](https://archive.org/details/einstein-1905-relativity)
 
-**Tip**: *If you have you references in BibTex, Google Scholar or Zotero*
-1. Create/copy a list into ChatGPT
-2. Ask it to turn it into an unsorted list in markdown
+[Breast Cancer Dataset] (https://www.kaggle.com/datasets/yasserh/breast-cancer-dataset)
 
 ---
 
