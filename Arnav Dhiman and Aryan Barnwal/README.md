@@ -74,7 +74,7 @@ State and explain what follow-up research could be conducted based on your work.
 
 - M. A. Nielsen and I. L. Chuang, Quantum Computation and Quantum Information, Cambridge University Press, 2011
 - S. M. Barnett, Introduction to Quantum Information, Oxford University Press, 2009
-- X.-X. Fang et al., "Maximal Coin-Position Entanglement Generation in a Quantum Walk," Phys. Rev. A 107, 012433 (2023)
+- X.-X. Fang et al., "Maximal coin-position entanglement generation in a quantum walk for the third step and beyond regardless of the initial state" Phys. Rev. A 107, 012433 (2023)  https://arxiv.org/pdf/2209.01727
 
 
 ---
