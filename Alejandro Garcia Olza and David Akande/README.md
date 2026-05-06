@@ -3,6 +3,8 @@
 
 # SUPERCLASSICAL THERMODYNAMICS: THEORETICAL EVALUATION AND SIMULATION OF THE QUANTUM SWEEPER EFFECT
 
+---
+
 ### Research Question
 Is Superclassical Thermodynamics a theoretically viable and computationally accurate alternative to orthodox quantum mechanics for explaining sub-quantum phenomena? Specifically, can the assumption of a classical zero-point thermal field in ordinary 3D space successfully reproduce highly non-linear quantum dynamics, such as the Quantum Sweeper Effect, without relying on abstract wave-function collapse?
 
