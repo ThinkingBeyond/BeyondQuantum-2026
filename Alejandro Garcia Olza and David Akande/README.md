@@ -29,6 +29,7 @@ Our research is divided into two main pillars:
 Theoretical Evaluation: A systematic assessment of the model's viability, highlighting its strengths (e.g., restoring a 3D physical ontology and explaining the quantum potential as thermodynamic heat) and its current theoretical limits (e.g., the conflict with Special Relativity due to systemic non-locality).
 
 Computational Simulation: An open-source numerical implementation of the Quantum Sweeper Effect. By utilizing sub-quantum thermodynamic flows and Bohm-type trajectories, we simulate how extremely attenuated beams are swept aside by probability currents, effectively reproducing macroscopic quantum predictions using exclusively classical fluid dynamics.
+
 ---
 
 ### Theoretical Part: Results, Conclusions and future research
