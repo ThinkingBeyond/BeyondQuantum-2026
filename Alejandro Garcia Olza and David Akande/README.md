@@ -60,7 +60,45 @@ or developing a modified, non-instantaneous diffusion wave equation that avoids 
 
 ---
 
-### Experimental Part: Quantum Sweeper Effect
+### Experimental Part: Quantum Sweeper Effect [See Code](01_quantum_sweeper.ipynb)
+
+# Section 1: Motivation
+
+## Motivation
+
+The de Broglie-Bohm interpretation predicts that particles follow deterministic trajectories guided by a pilot wave. Grössing and collaborators proposed that this wave is not abstract but physically real: a superclassical sub-quantum medium whose dynamics emerge from convective drift and diffusive osmotic heat flow. If correct, the Bohmian guidance equation should be exactly reproducible by a thermodynamic current algebra, with no appeal to standard quantum formalism.
+
+The Quantum Sweeper Effect provides a rigorous test. In standard quantum mechanics, attenuating one slit simply dims the weaker beam. In Bohmian mechanics, the osmotic velocity depends on the curvature of the probability amplitude rather than its magnitude, so the sub-quantum pressure gradient at the attenuated slit survives even as intensity approaches zero. This deflects and compresses the surviving particles into a narrow bundle, sweeping them laterally away from the dominant beam. The effect is anomalous, counterintuitive, and macroscopically testable.
+
+This simulation asks directly whether the superclassical current algebra reproduces the QSE quantitatively across five orders of magnitude of slit attenuation, and whether the two theoretical routes converge to identical velocity fields. A positive result would give the sub-quantum thermodynamic interpretation its first full computational demonstration in the extreme-attenuation regime.
+
+## Summary
+
+The simulation models a double-slit experiment with slit separation $d = 200\,\mu\text{m}$, initial beam waist $\sigma_0 = 22\,\mu\text{m}$, wavelength $\lambda = 1.8\,\text{nm}$, and propagation distance $L = 5\,\text{m}$. The slit-2 transmission factor is varied across $a \in \{1,\,10^{-2},\,10^{-4},\,10^{-6},\,10^{-10}\}$. The total probability current is decomposed into four terms: the slit-1 self-current, the attenuated slit-2 self-current, a conventional cosine interference term, and the diffusive osmotic term $R_1 R_2(u_{1x}-u_{2x})\sin\phi$ identified as the sweeper driver. The transverse velocity $v_x = J_x / P_\text{tot}$ is computed using both the superclassical current algebra and the Bohmian guidance equation $v_{x,\text{Bohm}} = (\hbar/m)\,\mathrm{Im}(\partial_x\psi/\psi)$ in parallel.
+
+Streamlines are integrated via the spatial ODE $dx/dy = v_x/v_y$, which eliminates singularities when $P_\text{tot} \to 0$ at extreme attenuation. Integration uses a DOP853 solver at tolerances $r_\text{tol}=10^{-10}$, $a_\text{tol}=10^{-12}$, with 60 Born-distributed seeds per slit family. A ten-group validation suite verifies no-crossing, superclassical-Bohmian equivalence, the contrast law $(1+\sqrt{a})^2/4$, and the monotonic growth of transverse deflection across the full attenuation range.
+
+## Results
+
+The Bohmian and superclassical velocity fields agree to below $10^{-10}$ relative error at every tested spatial point and attenuation value, confirming machine-precision equivalence for Gaussian wavepackets. The osmotic velocity difference $u_{1x}-u_{2x} = \hbar d/(2m\sigma^2)$ is verified to be strictly independent of $a$, meaning the sweeper driver maintains full geometric strength as the conventional interference term decays with $\sqrt{a}$. The effect on trajectories is clear: at $a=1$ both beam families fan symmetrically, while at $a=10^{-10}$ the slit-2 bundle undergoes a measured 4.5-fold compression in transverse standard deviation, and the transverse deflection ratio grows by over three orders of magnitude across the sweeper range. The no-crossing property of Bohmian trajectories is preserved at all five attenuation levels.
+
+Three rendered plots in the notebook best communicate these findings. 
+The **osmotic velocity field** (Section 2.5): This visualises the attenuation-independent pressure gradient. 
+![osmotic velocity field diagnostic](outputs/fig_osmotic_pressure_heatmap.png)
+
+The **two-panel streamline** (Section 9): This shows the no-crossing property and lateral compression of the slit-2 bundle in a single comparative view. 
+![two-panel streamline](outputs/fig_geometry_panorama_heatmap.png)
+
+The **four-panel density-and-trajectory heatmap** (Section 10): This overlays streamlines on the probability density background across four attenuation levels and annotates each panel with its compression ratio, providing the most complete visual record of how the sweeper intensifies.
+![four-panel density-and-trajectory heatmap](outputs/fig_density_trajectory_heatmap_4panel.png)
+
+## Conclusion
+
+This simulation establishes, to machine precision, that the Bohmian guidance equation is exactly reproduced by the superclassical thermodynamic current algebra of Grössing et al. for Gaussian wavepackets across five attenuation regimes. The Quantum Sweeper Effect is confirmed as a direct consequence of the attenuation-independent osmotic pressure structure the framework predicts: the attenuated beam undergoes a 4.5-fold spatial compression at $a=10^{-10}$, and the transverse deflection ratio grows by over three orders of magnitude across the sweeper range. These results support interpreting the pilot wave as a physical thermodynamic medium rather than an abstract guiding field, though the idealised single-particle, free-field geometry means broader universality claims require further investigation.
+
+## Future Work
+
+Several extensions would sharpen these conclusions. The most immediate is the introduction of external potentials: testing whether the superclassical-Bohmian equivalence survives applied forces would determine how far the Gaussian ansatz can be relaxed. A second direction is quantitative comparison with published neutron interferometry or atom optics experiments, replacing the current qualitative morphology validation with testable predictions for measured compression ratios and separatrix displacement. Third, extending the current algebra to two-particle entangled states would probe whether the thermodynamic-medium picture can account for non-local correlations, the sharpest unresolved challenge for sub-quantum models. Finally, adapting the velocity decomposition to the Dirac or Klein-Gordon equation would test whether the osmotic-convective structure persists in the relativistic regime or is fundamentally tied to the non-relativistic limit used throughout.
 
 ---
 
