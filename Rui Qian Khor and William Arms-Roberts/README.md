@@ -33,23 +33,23 @@ The Sahni-Gonzalez algorithm is an algorithm that starts from a single pair of n
 
 start at the highest weight edge
 
-↓
+   ↓
          
 nodes connected to the edges are the starting pair
 
- ↓  
+   ↓  
          
 split the pair into two sets 
 
-↓  
+   ↓  
          
 check next node's connection to each of the starting nodes  
 
-↓ 
+   ↓ 
          
 put the node into the set opposite the highest connection starting node  
 
-↓ 
+   ↓ 
          
 repeat for the rest of the nodes 
 
