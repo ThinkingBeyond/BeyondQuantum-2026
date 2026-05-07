@@ -78,7 +78,8 @@ The number of valid solutions (M) significantly impacts algorithm efficiency.
 | 10            | 0.931266      | 1             | 0.914383      | 0.5           |
 
 
-<img width="600" height="470" alt="image" src="https://github.com/user-attachments/assets/e6c61681-6cb0-42bb-bed4-066ef95d8dc9" />
+<img width="811" height="635" alt="Screenshot 2026-05-07 124944" src="https://github.com/user-attachments/assets/7197d308-7bcf-457c-962e-f3d058a7580f" />
+
 
 &nbsp;
 
