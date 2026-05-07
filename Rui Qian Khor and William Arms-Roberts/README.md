@@ -10,7 +10,7 @@ We tested unweighted graphs with 10, 16, and 20 nodes, with instances of 3-, 4-,
 
 ## Motivation
 
-Optimization problems are commonplace in real-life, with broad applications in areas such as marketing, finance, and engineering. Many of these optimization problems can be formatted as a Max-Cut problem. Finding an exact solution to these max-cut problems becomes exponentially more difficult as the complexity of the graphs increases; however, meaning that only approximate solutions can be found for graphs above a certain complexity. QAOA offers a potential alternative to the classical approximation algorithms and could have the potential to surpass the effectiveness of classical approximation ratios if QAOA is able to effectively scale to the complexity of modern-day applications of the Max-Cut problem.
+Optimization problems are commonplace in real-life, with broad applications in areas such as marketing, finance, and engineering. Many of these optimization problems can be formatted as a Max-Cut problem. Finding an exact solution to these max-cut problems becomes exponentially more difficult as the complexity of the graphs increases; however, this means that only approximate solutions can be found for graphs above a certain complexity. QAOA offers a potential alternative to the classical approximation algorithms and could have the potential to surpass the effectiveness of classical approximation ratios if QAOA is able to effectively scale to the complexity of modern-day applications of the Max-Cut problem.
 
 ## Max-Cut
 Max-Cut is a type of Quadratic Unconstrained Binary Optimization Problem (QUBO). QUBOs represent optimization problems in which the goal is to find a minimum or maximum of a quadratic function with binary variables (0s and 1s) and no constraints. These are the types of problems that the Quantum Approximation Optimization Algorithm (QAOA) aims to solve. Among QUBOs like the traveling salesman problem, they can all be represented by the Max-Cut problem, which makes Max-Cut a popular problem used to benchmark the capabilities of algorithms like QAOA.
@@ -25,11 +25,13 @@ MaxCut is a problem within graph theory that aims to partition nodes within a gr
 
 ## Measure of Merit
 
-### Approximation Ratio
+### Solution Quality - Approximation Ratio
 The approximation ratio is a measure of the solution quality produced by an algorithm as it calculates a value for how closely the resulting solution matches the true optimal solution. This metric was chosen for it's ablity to consider the entire sample of the dataset. The formula of the approximation ratio is $A(I)/OPT(I)=\alpha$, where $A(I)$ is the algorithm output and $OPT(I)$ is the optimal solution.
 
+### Resource Use - Gate Count
+Typical measures of an algorithm's resource usage include runtime and energy usage. However, when dealing with quantum algorithms, these measures can be difficult to access or unrepresentative of the algorithm. While energy usage is often seen as the most accurate report of an algorithm's resource usage, it is difficult to access on the typical public user interface of IBM Quantum. Our project opted for the use of quantum simulations instead of true quantum hardware, meaning the quantum behaviors of quantum computing were emulated on a classical processor. Because these simulations require additional classical computation to model quantum effects, the runtime of the simulated quantum algorithm does not accurately reflect the runtime the algorithm would have on a real quantum computer.
 
-<!--### Gate Count-->
+Instead of energy usage and runtime, our project measured the total gates and two-qubit gates utilized within the quantum algorithm. This measure can represent the efficiency of the algorithms. Additionally, current quantum devices have limited qubit gate counts; measuring gate counts can be used to determine the amount of gate resources being utilized by the algorithm.
 
 ## Methods
 
