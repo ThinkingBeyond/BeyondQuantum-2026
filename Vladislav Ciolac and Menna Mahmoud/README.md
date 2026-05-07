@@ -102,6 +102,10 @@ The graph shows that the detector blinding attack violates that assumption. The 
 
 What we finally conclude from that graph is the QBER fails to detect some side-channel attacks. Therefore **Hradware-Level monitoring mechanisms** are requird for those attacks.
 
+### Run on Google Colab
+
+[Click here to open the notebook in Colab](https://colab.research.google.com/drive/15gNVaGfA7y3vBXIqiyzRQigJIwBleWhO?usp=sharing)
+
 ## Limitations of BB84 and solutions
 The QBER measures how much Eve has interacted in the data transmission phase and how much knowledge she has gathered by measuring and disturbing the photons. 11% is an industry-standard QBER value at which it is considered that Eve has too much knowledge about the symmetric keys, and the protocol has to be discarded. There is a solutions of 2 additional steps which can be implemented and enhance the security of the key up to this point in the protocol.
 
