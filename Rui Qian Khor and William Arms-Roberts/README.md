@@ -1,7 +1,7 @@
 ![BeyondQuantum Banner for Research Projects](../BeyondQuantum_Banner_Research_Projects_2026.png)
 
 # Quantum Approximation Optimization Ratio vs. Classical Heuristic
-[Google colab](https://colab.research.google.com/drive/1SvMgp-lwdbEtp4B1DVivEoVY2rHAgx6P?usp=sharing)
+[![Open In Colab](https://colab.research.google.com/drive/1SvMgp-lwdbEtp4B1DVivEoVY2rHAgx6P?usp=sharing)]
 
 ## Research Question
 
