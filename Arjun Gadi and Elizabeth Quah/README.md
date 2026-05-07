@@ -70,15 +70,13 @@ The protocol securely shares two binary images among three parties: the Patient 
 
 1. Pixel Pairing
 The corresponding pixels from both binary images for each pixel position `(i,j)` are grouped into a pixel pair: (g₁,ij , g₂,ij) ∈ {0,1}² . 
----
+
 2. GHZ State Preparation
 A 3-qubit GHZ entangled state is prepared:|GHZ⟩ = 1/√2 (|000⟩ + |111⟩) . 
 
----
 3. Quantum Encoding
 The binary pixel values determine whether X-gates are applied to the second and third qubits (I ⊗ X^g₁ ⊗ X^g₂), which are the respective shares to be sent to Hospital A and Hospital B. This directly encodes the pixel information into the entangled state, producing: |ψg₁,g₂⟩ = 1/√2 (|0,g₁,g₂⟩ + |1,1⊕g₁,1⊕g₂⟩).
 
----
 4. Share Distribution
 Each GHZ state is measured to obtain outcomes `(r₀, r₁, r₂)`. These measurement results are distributed into three separate share matrices:
 - Patient → U
@@ -87,7 +85,6 @@ Each GHZ state is measured to obtain outcomes `(r₀, r₁, r₂)`. These measur
 
 Individually, no share reveals information about the original images. 
 
----
 5. Secret Reconstruction
 The secret images are reconstructed collaboratively using XOR correlations:
 
@@ -98,8 +95,6 @@ g₂,ij = r₀,ij ⊕ r₂,ij
 Applying these relations across all pixel pairs reconstructs both original images pixel by pixel.
 
 For the complete mathematical proof of the protocol, do refer to the Overleaf document attached in the Google Colab.
-
----
 
 ## **Protocol’s Performance at Zero Noise**
 
