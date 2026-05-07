@@ -9,6 +9,16 @@ How does the solution quality of the standard Quantum Approximate Optimization A
 
 We tested unweighted graphs with 10, 16, and 20 nodes, with instances of 3-, 4-, and 5-regular graphs, in order to assess how the performance of QAOA scaled as the number of edges per node increased.
 
+## Terms and Definitions 
+
+**Graph** - A collection of nodes with lines or "edges" connecting two nodes. These edges can have values associated with them, called weights.
+
+**Regular Graph** - A graph where every node has the same number of edges connecting them to other nodes
+
+**Hamiltonian** - An operator representing the total energy of a physicsl system
+
+**Heuristic Algorithm** - An algorithm that uses guesses and approximations to arrive at an approximate answer much faster than a traditional algorithm
+
 ## Motivation
 
 Optimization problems are commonplace in real-life, with broad applications in areas such as marketing, finance, and engineering. Many of these optimization problems can be formatted as a Max-Cut problem. Finding an exact solution to these Max-Cut problems becomes exponentially more difficult as the complexity of the graphs increases; however, this means that only approximate solutions can be found for graphs above a certain complexity. QAOA offers a potential alternative to the classical approximation algorithms and could have the potential to surpass the effectiveness of classical approximation ratios if QAOA is able to effectively scale to the complexity of modern-day applications of the Max-Cut problem.
