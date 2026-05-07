@@ -91,7 +91,7 @@ The number of valid solutions (M) significantly impacts algorithm efficiency.
 | 1              | 6                | 6.016578           | 0.999786        |
 | 2              | 1                | 1                  | 1               |
 | 3              | 3                | 3.025896           | 0.990234        |      
-| 4              | 0                | 0.5                | 0.5             |
+| 4              | 0                | 0                  | 0.5             |
 
 **Key observation:**
  - Optimal k decreases as the number of valid solutions increases, consistent with theoretical predictions.
