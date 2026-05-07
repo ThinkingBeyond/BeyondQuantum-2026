@@ -39,7 +39,8 @@ This study evaluates how the number of logical constraints *(n)* affects the per
 
 - The algorithm exhibits oscillatory behavior, and optimal performance depends on selecting the correct number of iterations.
 
-<img width="1243" height="475" alt="image" src="https://github.com/user-attachments/assets/fe7a40d5-daba-46b4-b660-2036c539acfd" />
+<img width="811" height="635" alt="Screenshot 2026-05-07 124944" src="https://github.com/user-attachments/assets/491a7e9b-eadc-4726-a6b9-bfd3a8fd1b7a" />
+
 
 &nbsp;
 
