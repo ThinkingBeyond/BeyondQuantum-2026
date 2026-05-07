@@ -26,7 +26,7 @@ MaxCut is a problem within graph theory that aims to partition nodes within a gr
 ### Classical Brute-Force Algorithm
 The classical brute-force algorithm is an exact algorithm, meaning it finds the true optimal result of the optimization problem. This contrasts with the approximate methods of the previously mentioned Sanhi-Gonzalez Algorithm and Quantum Approximation Optimization Algorithm.
 
-The brute-force algorithm iteratively tests every possible solution of the Max-Cut problem for the given graph to find the true optimal solution.
+The brute-force algorithm iteratively tests every possible solution of the Max-Cut problem for the given graph to find the true optimal solution, the downside however is the algorithm's comlplexity of $O(2^n)$, making it impossible to use for more complicated graphs.
 
 ## Measure of Merit
 
