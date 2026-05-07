@@ -14,11 +14,11 @@ In theory, quantum models should be able to capture patterns that classical mode
 Quantum machine learning explores what happens when quantum systems, by leveraging properties such as superposition, are used to learn from data. However, this introduces a fundamental challenge: how classical data, such as medical measurements, can be encoded into quantum systems?
 We want to better understand this challenge  Specifically, we investigate how different quantum feature maps influence the performance of Quantum Support Vector Machines (QSVMs), and whether these models can meaningfully compete with well-established classical approaches in a high-stakes context.
 In a world running towards AI, it is key to understand where it can fit into medical treatment and if it is reliable enough to be used as an assistant to diagnosis
----------------------------------------------------------------------------
+
 ## Abstract
 
 Quantum Machine Learning (QML) is an emerging interdisciplinary field that explores the use of quantum computing to potentially enhance classical machine learning techniques. A key challenge in QML is encoding classical data into quantum states, known as quantum data encoding, which is achieved using quantum feature maps. In this work, we implement and systematically compare the Z Feature Map, ZZ Feature Map, and enhanced versions of these feature maps with increased circuit depth and entanglement. These are integrated into a Quantum Support Vector Classifier (QSVC) using a quantum kernel evaluated in simulation. We train and evaluate these models on the Wisconsin Diagnostic Breast Cancer (WDBC) dataset to analyze how feature map design impacts classification performance, whether the model will correctly classify patients with benign or malignant tumors. Our results show that, for this dataset and experimental setup, the Enhanced Z Feature Map achieves the best performance, reaching an F1-score of 0.9718, highlighting the relevance of feature map design in this context.
----------------------------------------------------------------------------------
+
 ## Overview of Key Concepts 
 - *Support Vector Machines (SVM)*: a widely used classical machine learning algorithm that classifies data by finding an optimal hyperplane in a high-dimensional feature space. They work by finding the optimal hyperplane that separates data points of different classes with the maximum margin
 - *Principal Component Analysis (PCA)*: PCA is a dimensionality reduction technique widely used in data analysis and machine learning. It transforms a high-dimensional dataset into a smaller set of uncorrelated variables called principal components, while retaining most of the original information.
@@ -79,12 +79,12 @@ This is particularly important in medical applications, where missing a malignan
 | Z (Modified)   | 96.49%   | 0.9718   | 97.18% | 843.35s  |
 | ZZ (Modified)  | 92.98%   | 0.9452   | 97.18% | 1391.53s |
 | Classical      | 96%      | 0.95     | 95.5%  | 38s      | 
-------------------------------------------------------------------------------------
+
 ## Conclusion
 The results demonstrate that Quantum Support Vector Machines (QSVMs) can achieve performance that is competitive with classical methods. The modified Z feature map achieved the strongest overall results, slightly surpassing the classical SVM in both accuracy and F1-score, suggesting that introducing entanglement in a controlled way can improve model expressivity. In contrast, the ZZ feature maps—despite their ability to encode pairwise feature interactions did not display a better performance and had significantly higher computational costs. Across all quantum models, recall remained high, with majority outperforming the classical SVM, which is particularly important in a medical context as it reflects the ability to correctly identify malignant cases. However, this often came with trade-offs in runtime, with QSVMs requiring substantially more computation time compared to the classical model (anywhere from 21-41x more!).
 These findings suggest that while quantum machine learning is not yet practical enough to replace classical approaches, it shows strong potential for the future of QML . More broadly, this work reflects the growing role of artificial intelligence in medicine, *not as a replacement for medical professionals*, but as a assistive tool capable of supporting diagnosis, improving pattern recognition, and helping clinicians make more informed decisions. As quantum hardware and algorithms improve, QML may eventually contribute to even more advanced and accurate medical systems.
 -*important note*: We noticed with each run, the results would vary which is assumed to have a connection with the probability aspect of Quantum. If you would like to see the exact run/code which lead to the documented results, you will find it as the pinned version in this Kaggle Notebook [Documented Run](https://www.kaggle.com/code/samaalshara2010/bequ-2026-qsvm-feature-maps-vs-svm)
----------------------------------------------------------------------------------
+
 ## Future Work
 1) First, testing the enhanced Z feature map on real quantum hardware would provide insight into how these models perform beyond simulation, particularly under realistic noise conditions.
 2) Expanding the study to larger and more complex datasets can help determine whether any potential quantum advantage becomes more evident as problem complexity increases.
