@@ -31,27 +31,27 @@ The brute-force algorithm iteratively tests every possible solution of the Max-C
 ### Sahni-Gonzalez Algorithm
 The Sahni-Gonzalez algorithm is an algorithm that starts from a single pair of nodes and evaluates the connections of each node to the starting pair to approximate an optimal cut with significantly less computations. The algorithm works like this: 
 
-start at the highest weight edge
+<div align="center">start at the highest weight edge</div>
 
 <div align="center">↓</div>
          
-nodes connected to the edges are the starting pair
+<div align="center">nodes connected to the edges are the starting pair</div>
 
 <div align="center">↓</div>
          
-split the pair into two sets 
+<div align="center">split the pair into two sets </div> 
 
 <div align="center">↓</div> 
          
-check next node's connection to each of the starting nodes  
+<div align="center">check next node's connection to each of the starting nodes</div>  
 
 <div align="center">↓</div> 
          
-put the node into the set opposite the highest connection starting node  
+<div align="center">put the node into the set opposite the highest connection starting node</div>
 
 <div align="center">↓</div>
          
-repeat for the rest of the nodes 
+<div align="center">repeat for the rest of the nodes </div>
 
 
 ## Measure of Merit
