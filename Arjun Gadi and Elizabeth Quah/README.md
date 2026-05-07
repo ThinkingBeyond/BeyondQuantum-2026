@@ -66,19 +66,36 @@ Furthermore, the research area of QSS applications in imaging and medicine is re
 ---
 
 ### **Protocol Walkthrough**
-Our GHZ-3 protocol encrypts two binary images to be transmitted between three parties, namely the Patient (Authority), Hospital A (Secret Share 1\) and Hospital B (Secret Share 2).
+The protocol securely shares two binary images among three parties: the Patient (Authority), Hospital A, and Hospital B.
 
-1. Pixels with the same index (i,j) in the respective binary images are paired together, such that $(g_{1,ij},g_{2,ij}) \in {{0,1}}^{2}$ .
+1. Pixel Pairing
+The corresponding pixels from both binary images for each pixel position `(i,j)` are grouped into a pixel pair: (g₁,ij , g₂,ij) ∈ {0,1}² . 
+---
+2. GHZ State Preparation
+A 3-qubit GHZ entangled state is prepared:|GHZ⟩ = 1/√2 (|000⟩ + |111⟩) . 
 
-2. Each pixel pair is encoded into a 3-qubit GHZ state $\|\text{GHZ}\rangle = \frac{1}{\sqrt{2}}(|000\rangle + |111\rangle)\$ by applying the operation ,I ⊗ X^g₁ ⊗ X^g₂, such that the pixel values determine whether X-gate is applied on each qubit.
+---
+3. Quantum Encoding
+The binary pixel values determine whether X-gates are applied to the second and third qubits (I ⊗ X^g₁ ⊗ X^g₂), which are the respective shares to be sent to Hospital A and Hospital B. This directly encodes the pixel information into the entangled state, producing: |ψg₁,g₂⟩ = 1/√2 (|0,g₁,g₂⟩ + |1,1⊕g₁,1⊕g₂⟩).
 
-$\|\psi_{g_1,g_2}\rangle =\frac{1}{\sqrt{2}}(|0,g_1,g_2\rangle + |1,1\oplus g_1,1\oplus g_2\rangle)\$
+---
+4. Share Distribution
+Each GHZ state is measured to obtain outcomes `(r₀, r₁, r₂)`. These measurement results are distributed into three separate share matrices:
+- Patient → U
+- Hospital A → S₁
+- Hospital B → S₂
 
-3. Each GHZ state is measured to obtain results denoted as r0, r1, r2, to construct three share matrices held by each party participating in the transmission denoted as U, S1,S2 (whereby U is completely constructed of r0 values and vice versa).
+Individually, no share reveals information about the original images. 
 
-4. Using the share matrices, each pixel from the secret images is reconstructed through the relation, g1,ij= ro,ijr1,ij  and g2,ij= ro,ijr2,ij. 
+---
+5. Secret Reconstruction
+The secret images are reconstructed collaboratively using XOR correlations:
 
-5. Images are successfully reconstructed once the relation is applied to each pixel pair’s share matrices. 
+g₁,ij = r₀,ij ⊕ r₁,ij
+
+g₂,ij = r₀,ij ⊕ r₂,ij
+
+Applying these relations across all pixel pairs reconstructs both original images pixel by pixel.
 
 For the complete mathematical proof of the protocol, do refer to the Overleaf document attached in the Google Colab.
 
