@@ -83,15 +83,17 @@ Quantum Platform: We tested the QAOA algorithm on an IBM Quantum Device Emulator
 7. Record the graph instance, approximation ratios, QAOA gate count, QAOA circuit, and QAOA solution distribution.
 
 Use a for-loop to run steps 1-6, 30 times for each set of graph features.
-   1. 10 Nodes, 3 Edges
-   2. 10 Nodes, 4 Edges
-   3. 10 Nodes, 5 Edges
-   4. 16 Nodes, 3 Edges
-   5. 16 Nodes, 4 Edges
-   6. 16 Nodes, 5 Edges
-   7. 20 Nodes, 3 Edges
-   8. 20 Nodes, 4 Edges
-   9. 20 Nodes, 5 Edges
+| Nodes | Edges Per Node |
+|-------|----------------|
+| 10    | 3              |
+| 10    | 4              |
+| 10    | 5              |
+| 16    | 3              |
+| 16    | 4              |
+| 16    | 5              |
+| 20    | 3              |
+| 20    | 4              |
+| 20    | 5              |
 
 ![Max-Cut Graph](Graph.png)
 
