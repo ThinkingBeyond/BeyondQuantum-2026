@@ -2,32 +2,6 @@
 
 # Analysis of Side-Channel Attacks on the BB84 protocol and Discovering the Mathematical and Statistical Limitations of BB84
 
-***Provide a description of your project including*** 
-
-1. motivating your research questio
-2. stating your research question
-3. explaining your method and implementation
-4. Briefly mention and discuss your results
-5. Draw your conclusions
-6. State what future investigations 
-7. State your references 
-
-### Further Guidance: Formating
-- Structure this readme using subsections
-- Your job is to 
-    - keep it clear
-    - provide sufficient detail, so what you did is understandable to the reader. This way other researchers and future cohorts of BeyondQuantum will be able to build on your research
-    - List all your references at the end
-- utilise markdown like *italics*, **bold**, numbered and unnumbered lists to make your document easier to read
-- if you refer to links use the respective markdown for links, e.g. `[ThinkingBeyond](https://thinkingbeyond.education/)`
-- If you have graphs and pictures you want to embed in your file use `![name](your_graphic.png)`
-- If you want to present your results in a table use
-    | Header 1            | Header 2  |
-    |---------------------|-----------|
-    | Lorem Ipsum         | 12345     |
-
-**Tip:** Use tools to create markdown tables. For example, Obsidian has a table plugin, that makes creating tables much easier than doing it by hand.
-
 ## Research Questions
 
 Our research project tackeled two research questions.
@@ -36,7 +10,7 @@ Our research project tackeled two research questions.
 
 We analyzed how different side-Channel attacks like the **Intecept-Resend, Time-Shift, and the Detector Blinding attacks** manipulate the hardware of the Quantum Key Distribution device to allow an Eavesdropper (Eve) gain information about the secret key. Also Studied whether the Quantum Bit Error rate (QBER) is sufficient to detect the Time-shift and the Detector Blinding attacks.
 
-**2-Which are the mathematical and statistical limitations of the BB84 protocol?**
+**2-What are the mathematical and statistical limitations of the BB84 protocol?**
 
 ## Motivation
 
@@ -46,13 +20,13 @@ The BB84 Protocol security depends on the hardware of the QKD device, which can 
 
 ## Methods and Implementations
 
-## Important parameters in a protocol
+### Important parameters in a protocol
 BB84 is characterized by 2 very important parameters: the Quantum Bit Error Rate and the key rate. These 2 parameters indicate if the protocol will be finished and considered secure, and also the efficiency of the protocol round.
 We start with the QBER: After the sifting process Alice and Bob choose from their sifted a range of subsets equivalent in the indices, and publicly compare their bits. QBER is the percentage of differing bits from the total number of the bits compared. Of course, because the bits were publicly discussed, they are discarded from the sifted keys.
 QBER indicates the feasibility of the protocol round. If a protocol round has a QBER higher than 11%, then it is considered unsafe, because Eve has eavesdropped a high number of bits, indicated by the QBER.
 The second important parameter is the key-rate. It can be viewed from 2 perspectives: as a rate of the efficiency over time or over the number of total pulses (we can imagine pulses of single photons for each bit). It follows how many or how fast the secure bits remain in the processed final key.
 
-## The mean, variance, and standard deviation of the (normalized) estimated QBER. (p = 0.1, e = 0.2, N = 100, and Fsh = (0, 0.1))
+### The mean, variance, and standard deviation of the (normalized) estimated QBER. (p = 0.1, e = 0.2, N = 100, and Fsh = (0, 0.1))
 
 | Number of sent photons (r) | Mean (μ) | Variance | Standard deviation (σ) |
 | :--- | :--- | :--- | :--- |
