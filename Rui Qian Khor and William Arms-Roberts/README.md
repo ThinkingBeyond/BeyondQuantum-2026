@@ -15,7 +15,7 @@ We tested unweighted graphs with 10, 16, and 20 nodes, with instances of 3-, 4-,
 
 **Regular Graph** - A graph where every node has the same number of edges connecting them to other nodes
 
-**Hamiltonian** - An operator representing the total energy of a physicsl system
+**Hamiltonian** - An operator representing the total energy of a physical system
 
 **Heuristic Algorithm** - An algorithm that uses guesses and approximations to arrive at an approximate answer much faster than a traditional algorithm
 
