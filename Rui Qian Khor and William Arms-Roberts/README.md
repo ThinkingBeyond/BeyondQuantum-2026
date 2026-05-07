@@ -51,7 +51,8 @@ The Sahni-Gonzalez algorithm is an algorithm that starts from a single pair of n
 
 <div align="center">↓</div>
          
-<div align="center">repeat for the rest of the nodes </div>  
+<div align="center">repeat for the rest of the nodes </div>\
+
 Because the algorithm checks each node and edge once it has a complexity of $O(n + E)$, where n is the number of nodes and E is the number of edges. This complexity scales much better than the brute-force algorithm and allows it to be effectively used for graphs with hundreds of nodes.
 
 
