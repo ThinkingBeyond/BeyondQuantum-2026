@@ -67,20 +67,29 @@ Using the same methods as the research, Deutsch-Jozsa Algorithm could be tested 
 
 ## References
 
-* Cleve, R., Ekert, A., Macchiavello, C., & Mosca, M. (1998). *QUANTUM ALGORITHMS REVISITED*. Proceedings of The Royal Society A: Mathematical, Physical and Engineering Sciences. [https://doi.org/10.1098/rspa.1998.0164](https://doi.org/10.1098/rspa.1998.0164)
-* Deutsch, D. (1985). *Quantum theory, the Church–Turing principle and the universal quantum computer*. Proceedings of the Royal Society of London. A. Mathematical and Physical Sciences. [https://doi.org/10.1098/rspa.1985.0070](https://doi.org/10.1098/rspa.1985.0070)
-* Deutsch, D., & Jozsa, R. (1992). *Rapid solution of problems by quantum computation*. Proceedings of the Royal Society of London. Series A: Mathematical and Physical Sciences. [https://doi.org/10.1098/rspa.1992.0167](https://doi.org/10.1098/rspa.1992.0167)
-* Jaradat, Y., Alia, M., Masoud, M., Mansrah, A., Jannoud, I., & Alheyasat, O. (2023). *Roadmap for Simulating Quantum Circuits Utilising IBM’s Qiskit Library: Programming Approach*. The Eurasia Proceedings of Science, Technology, Engineering & Mathematics. [https://doi.org/10.55549/epstem.1412445](https://doi.org/10.55549/epstem.1412445)
-* Javadi-Abhari, A., Treinish, M., Krsulich, K., Wood, C. J., Lishman, J., Gacon, J., Martiel, S., Nation, P. D., Bishop, L. S., Cross, A. W., Johnson, B. R., & Gambetta, J. M. (2024). *Quantum computing with Qiskit*. [https://arxiv.org/abs/2405.08810](https://arxiv.org/abs/2405.08810)
-* Kothari, K., & Chaudhuri, R. P. (2025). *Qubit Manipulation in Quantum Circuits—Solving Grover’s Algorithm for 2- and 3-Qubit Systems*. Beyond Quantum Proceedings 2025.
-* Nakahara, M., & Ohmi, T. (2008). *Quantum Computing—From Linear Algebra to Physical Realizations*. En *Quantum Computing: From Linear Algebra to Physical Realizations*. [https://doi.org/10.1201/9781420012293](https://doi.org/10.1201/9781420012293)
-* Nielsen, M. A., & Chuang, I. L. (2010). *Quantum Computation and Quantum Information: 10th Anniversary Edition*. Cambridge University Press.
-* *Noise Analysis of Grover’s Quantum Search Algorithm*. (2023). Indian Journal of Pure & Applied Physics. [https://doi.org/10.56042/ijpap.v61i5.69090](https://doi.org/10.56042/ijpap.v61i5.69090)
-* Textbook, Q. (s. f.). *Learn Quantum Computation using Qiskit* [Manuscript](https://qiskit.org/learn).
-* Weathers, J. M. (2010). *Methods for quantum circuit design and simulation*. Calhoun: The NPS Institutional Archive DSpace Repository.
-* Youvan, D. C. (2023). *Quantum Oracles: Design, Implementation, and Implications in Quantum Search Algorithms*. [https://doi.org/10.13140/RG.2.2.27075.78884](https://doi.org/10.13140/RG.2.2.27075.78884)
+- Weathers, Jeremy M. (2010). *Methods for quantum circuit design and simulation*. *Calhoun: The NPS Institutional Archive DSpace Repository*.
 
+- Cleve, Richard, Ekert, Artur, Macchiavello, Chiara, & Mosca, Michele (1998). *Quantum Algorithms Revisited*. *Proceedings of The Royal Society A: Mathematical, Physical and Engineering Sciences*. https://doi.org/10.1098/rspa.1998.0164
 
+- Jaradat, Yousef, Alia, Mohammad, Masoud, M., Mansrah, Ahmad, Jannoud, Ismael, & Alheyasat, Omar (2023). *Roadmap for Simulating Quantum Circuits Utilising IBM’s Qiskit Library: Programming Approach*. *The Eurasia Proceedings of Science, Technology, Engineering & Mathematics*. https://doi.org/10.55549/epstem.1412445
+
+- Deutsch, D. (1985). *Quantum theory, the Church–Turing principle and the universal quantum computer*. *Proceedings of the Royal Society of London. A. Mathematical and Physical Sciences*. https://doi.org/10.1098/rspa.1985.0070
+
+- Deutsch, D., & Jozsa, R. (1992). *Rapid solution of problems by quantum computation*. *Proceedings of the Royal Society of London. Series A: Mathematical and Physical Sciences*. https://doi.org/10.1098/rspa.1992.0167
+
+- Kothari, K., & Chaudhuri, P. R. (2025). *Qubit Manipulation in Quantum Circuits - Solving Grover's Algorithm for 2- and 3-Qubit Systems*. *Beyond Quantum Proceedings 2025*.
+
+- Youvan, Douglas (2023). *Quantum Oracles: Design, Implementation, and Implications in Quantum Search Algorithms*. https://doi.org/10.13140/RG.2.2.27075.78884
+
+- Nakahara, Mikio, & Ohmi, Tetsuo (2008). *Quantum Computing - From Linear Algebra to Physical Realizations*. https://doi.org/10.1201/9781420012293
+
+- Nielsen, Michael A., & Chuang, Isaac L. (2010). *Quantum Computation and Quantum Information: 10th Anniversary Edition*. Cambridge University Press.
+
+- Qiskit Textbook. *Learn Quantum Computation using Qiskit*. https://qiskit.org/learn
+
+- Javadi-Abhari, Ali, Treinish, Matthew, Krsulich, Kevin, Wood, Christopher J., Lishman, Jake, Gacon, Julien, Martiel, Simon, Nation, Paul D., Bishop, Lev S., Cross, Andrew W., Johnson, Blake R., & Gambetta, Jay M. (2024). *Quantum computing with Qiskit*. arXiv:2405.08810. https://arxiv.org/abs/2405.08810
+
+- *Noise Analysis of Grover's Quantum Search Algorithm* (2023). *Indian Journal of Pure & Applied Physics*. https://doi.org/10.56042/ijpap.v61i5.69090
 ---
 
 > The research poster for this project can be found in the [BeyondQuantum Proceedings 2026](https://thinkingbeyond.education/beyondquantum_proceedings_2026/).
