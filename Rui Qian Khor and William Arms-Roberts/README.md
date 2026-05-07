@@ -17,11 +17,16 @@ Max-Cut is a type of Quadratic Unconstrained Binary Optimization Problem (QUBO).
 
 MaxCut is a problem within graph theory that aims to partition nodes within a graph into two subgroups, such that the line drawn to divide the subgroups intersects a maximum of edges connecting nodes. This problem has a wide range of applications in analyzing social networks, circuit layout, and portfolio management.
 
+## Algorithms
+
 <!--## Quantum Approximation Optimiation Algorithm-->
 
 <!--## Sanhi-Gonzalez Algorithm-->
 
-<!--## Classical Brute-Force Algorithm-->
+### Classical Brute-Force Algorithm
+The classical brute-force algorithm is an exact algorithm, meaning it finds the true optimal result of the optimization problem. This contrasts with the approximate methods of the previously mentioned Sanhi-Gonzalez Algorithm and Quantum Approximation Optimization Algorithm.
+
+The brute-force algorithm iteratively tests every possible solution of the Max-Cut problem for the given graph to find the true optimal solution.
 
 ## Measure of Merit
 
