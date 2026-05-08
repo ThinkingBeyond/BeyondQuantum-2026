@@ -74,7 +74,7 @@ The corresponding pixels from both binary images for each pixel position `(i,j)`
 2. GHZ State Preparation
 A 3-qubit GHZ entangled state is prepared:|GHZ⟩ = 1/√2 (|000⟩ + |111⟩) . 
 
-3. Quantum Encoding
+3. Quantum Encoding:
 The binary pixel values determine whether X-gates are applied to the second and third qubits (I ⊗ X^g₁ ⊗ X^g₂), which are the respective shares to be sent to Hospital A and Hospital B. This directly encodes the pixel information into the entangled state, producing: |ψg₁,g₂⟩ = 1/√2 (|0,g₁,g₂⟩ + |1,1⊕g₁,1⊕g₂⟩).
 
 4. Share Distribution
