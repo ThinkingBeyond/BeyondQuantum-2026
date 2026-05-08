@@ -33,13 +33,13 @@ For this study, we decided to evaluate our models in a high-stakes situation, ca
 =The dataset contains 569 samples, with a relatively balanced class distribution: 212 Malignant - 357 Benign
 - Example of Input Data (After Preprocessing + PCA)
 - 
-|   | PC1       | PC2      | PC3       | PC4       | Target |
-| 0 | 4.244903  | 9.131428 | 1.504262  | -0.650982 | 0      |
-| 1 | 9.053755  | 0.475310 | -3.198215 | 0.704403  | 0      | 
-| 2 | -2.275374 | 3.278471 | 2.816370  | -0.268242 | 0      |
-| 3 | -2.510453 | 0.743743 | -0.736034 | 2.524633  | 0      |
-| 4 | -2.302848 | 2.665155 | 1.192885  | -1.268602 | 0      |
-
+| Index | PC1       | PC2      | PC3       | PC4       | Target |
+|------:|-----------:|----------:|-----------:|-----------:|-------:|
+| 0 | 4.244903  | 9.131428 | 1.504262  | -0.650982 | 0 |
+| 1 | 9.053755  | 0.475310 | -3.198215 | 0.704403  | 0 |
+| 2 | -2.275374 | 3.278471 | 2.816370  | -0.268242 | 0 |
+| 3 | -2.510453 | 0.743743 | -0.736034 | 2.524633  | 0 |
+| 4 | -2.302848 | 2.665155 | 1.192885  | -1.268602 | 0 |
 - **Prepraration**
 The first task to complete was actually preparing our dataset to be used.  
 1) split into training and testing sets using an 80/20 ratio to ensure reliable model evaluation.
