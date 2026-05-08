@@ -67,7 +67,7 @@ The Sahni-Gonzalez algorithm is an algorithm that starts from a single pair of n
 Because the algorithm checks each node and edge once it has a complexity of $O(n + E)$, where n is the number of nodes and E is the number of edges. This complexity scales much better than the brute-force algorithm and allows it to be effectively used for graphs with hundreds of nodes.
 
 ### Quantum Approximation Optimiation Algorithm
-
+The Quantum approximation optimization algorithm (QAOA) is a hybrid quantum-classical algorithm and as mentioned above, is used to find approximate solutions for QUBO problems. The QAOA is a specific type of Variational Quantum Eigensolver, a branch of algorithms used to find the ground state energy of a systems hamiltonian. QAOA finds the ground state of a cost function hamiltonian, where the ground state energy represents the optimized value of the cost function associated with a QUBO problem. The circuit for the QAOA is composed of two parts, the cost hamiltonian, and the mixer hamiltonian. The cost hamiltonian consists of rotation gates characterized by the parameter $\gamma$, and is used to guide the system closer to the optimal solution. The mixer hamiltonian consists of a series of X-gates characterized by the parameter $\beta$, and is used to expand the solution space and stop the algorithm from getting stuck. A classical optimizer is then used to evaluate the circuits and find the optimal values for $\gamma$ and $\beta$. The circuit is then run a final time using the optimal parameters and the output from the circuit is an approximation of the optimzed cost function. 
 ## Measure of Merit
 
 ### Solution Quality - Approximation Ratio
