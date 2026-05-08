@@ -26,7 +26,8 @@ Optimization problems are commonplace in real-life, with broad applications in a
 ## Max-Cut
 Max-Cut is a type of Quadratic Unconstrained Binary Optimization Problem (QUBO). QUBOs represent optimization problems in which the goal is to find a minimum or maximum of a quadratic function with binary variables (0s and 1s) and no constraints. These are the types of problems that the Quantum Approximation Optimization Algorithm (QAOA) aims to solve. Among QUBOs like the traveling salesman problem, they can all be represented by the Max-Cut problem, which makes Max-Cut a popular problem used to benchmark the capabilities of algorithms like QAOA.
 
-MaxCut is a problem within graph theory that aims to partition nodes within a graph into two subgroups, such that the line drawn to divide the subgroups intersects a maximum of edges connecting nodes. This problem has a wide range of applications in analyzing social networks, circuit layout, and portfolio management.
+MaxCut is a problem within graph theory that aims to partition nodes within a graph into two subgroups, such that the line drawn to divide the subgroups intersects a maximum of edges connecting nodes, as seen in the image below. This problem has a wide range of applications in analyzing social networks, circuit layout, and portfolio management.
+![MaxCut](MaxCut.png)
 
 ## Algorithms
 
