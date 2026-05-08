@@ -120,7 +120,7 @@ q₃: ─[U(x₉,x₁₀,x₁₁)]──X─●──────────[Ry
 q₄: ─[U(x₁₂,x₁₃,x₁₄)]───X─●────────[Ry(θ₄)]─
 ```
 ### Models
-Logistic Regression, trained on PCA-preprocessed features, serves as a lightweight global reference for what classical methods can achieve without any neural component. The Classical MLP - a two-layer feedforward network trained with Adam and Binary Cross-Entropy — is the more direct counterpart to the hybrid, since both share the same architecture; the only difference is that the hybrid receives the 5-dimensional quantum feature vector $\langle Z \rangle$ as input instead of PCA features, which makes the two directly comparable and isolates the effect of quantum feature extraction.
+Logistic Regression, trained on PCA-preprocessed features, serves as a lightweight global reference for what classical methods can achieve without any neural component. The Classical MLP - a two-layer feedforward network trained with Adam and Binary Cross-Entropy - is the more direct counterpart to the hybrid, since both share the same architecture; the only difference is that the hybrid receives the 5-dimensional quantum feature vector $\langle Z \rangle$ as input instead of PCA features, which makes the two directly comparable and isolates the effect of quantum feature extraction.
 
 ### Implementation
  
@@ -134,7 +134,7 @@ The full implementation is available in [`Final_Code.ipynb`](Final_Code.ipynb), 
 
 ## Results
  
-All three models were evaluated on a held-out 20% test set. The table below reports five metrics: accuracy, F1, recall, precision, and AUROC (Area Under the Receiver Operating Characteristic Curve). AUROC measures how well a classifier separates the two classes across all possible decision thresholds — a value of 1.0 means perfect separation, 0.5 means random guessing. Because the KOI dataset is class-imbalanced, AUROC gives a more complete picture of performance than accuracy alone, capturing the trade-off between true positive rate and false positive rate regardless of threshold choice.
+All three models were evaluated on a held-out 20% test set. The table below reports five metrics: accuracy, F1, recall, precision, and AUROC (Area Under the Receiver Operating Characteristic Curve). AUROC measures how well a classifier separates the two classes across all possible decision thresholds - a value of 1.0 means perfect separation, 0.5 means random guessing. Because the KOI dataset is class-imbalanced, AUROC gives a more complete picture of performance than accuracy alone, capturing the trade-off between true positive rate and false positive rate regardless of threshold choice.
  
 | Metric | LogReg | Classical MLP | Hybrid QNN-MLP |
 |---|---|---|---|
