@@ -7,18 +7,20 @@
 
 Can a Non-Uniform Quantum Fourier Transform be used to identify protein active sites from non-uniform energy data and guide high-precision adaptive spline modeling?
 
+Protein active sites are specific regions of a protein where important biological interactions occur, such as binding or catalytic activity. Adaptive spline modeling refers to constructing a smooth approximation of the energy landscape using interpolation with increased resolution in regions that contain significant structural variation.
+
 ## Motivation
 
-Proteins change shape over time, and these changes are governed by complex energy landscapes. Molecular simulations generate huge amounts of data, but only a small part of it contains the most important information, such as transition regions. In addition, this data is often not evenly spaced, which makes it difficult to analyze using classical methods like standard Fourier analysis that rely on uniform sampling. This creates a need for methods that can handle irregular data efficiently.
+Proteins change shape over time, and these changes are governed by complex energy landscapes. Molecular simulations generate huge amounts of data, but only a small part of it contains the most important information, such as transition regions. In addition, this data is often not evenly spaced, which makes it difficult to analyze using classical methods like standard Fourier analysis (Fourier Transform is a mathematical operation that decomposes time-based signals into frequency components, which allows to see hidden periodicities that are not visible on raw signal) that rely on uniform sampling. This creates a need for methods that can handle irregular data efficiently.
 
-To address this, we aim to combine data reduction techniques with a Non-Uniform Quantum Fourier Transform (NUQFT) to focus on the most relevant regions and analyze them effectively despite the non-uniform nature of the data.
+To address this, we aim to combine data reduction techniques with a Non-Uniform Quantum Fourier Transform (NUQFT) to focus on the most relevant regions and analyze them effectively despite the non-uniform nature of the data. 
 
 ## Implementation and Methods
 
 We designed a pipeline that focuses only on the most important parts of the data.
 First, we use a gradient-based approach to detect regions where the energy changes rapidly, since these are usually the most meaningful. These selected points are then grouped into clusters to separate different meaningful regions along the structure.
 
-Next, we apply a quantum-inspired frequency analysis step. Instead of performing a full Non-Uniform Quantum Fourier Transform (NUQFT), which would compute all frequency components simultaneously, we estimate individual frequency components one at a time. This is done using the Hadamard test, where phase information is encoded into a quantum circuit and extracted through interference measured on an auxiliary qubit.
+Next, we apply a quantum-inspired frequency analysis step. Instead of performing a full Non-Uniform Quantum Fourier Transform (NUQFT), which would compute all frequency components simultaneously, we estimate individual frequency components one at a time. This is done using the Hadamard test. The Hadamard test estimates how strongly a specific frequency appears in the signal. Phase information, which describes the alignment of wave-like patterns in the data, is encoded into the quantum circuit. Interference between quantum states is then measured using an auxiliary qubit to recover information about that frequency component.
 
 In this process, each circuit evaluates how strongly a specific frequency is present in the signal. By repeating this for multiple frequencies, we build a spectrum similar to a Fourier transform, even though the data is not uniformly sampled.
 
