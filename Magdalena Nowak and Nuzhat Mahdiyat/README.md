@@ -23,12 +23,12 @@ We used the **Kepler Objects of Interest (KOI) Cumulative Table** from the [NASA
 - **Label:** `1` = Confirmed exoplanet, `0` = False positive / non-planet
 ## Features (20 columns)
 
-** Candidate disposition
+Candidate disposition
 | Feature | Description |
 |---|---|
 | `koi_score` | Disposition score (0–1); higher = more likely a planet |
 
-** False positive flags
+False positive flags
 | Feature | Description |
 |---|---|
 | `koi_fpflag_ss` | Stellar eclipse — nearby eclipsing binary |
@@ -36,7 +36,7 @@ We used the **Kepler Objects of Interest (KOI) Cumulative Table** from the [NASA
 | `koi_fpflag_ec` | Ephemeris contamination — match with another object |
 | `koi_fpflag_nt` | Non-transit shape — unusual light curve morphology |
 
-** Transit geometry
+Transit geometry
 | Feature | Description |
 |---|---|
 | `koi_period` | Orbital period [days] |
@@ -45,20 +45,20 @@ We used the **Kepler Objects of Interest (KOI) Cumulative Table** from the [NASA
 | `koi_depth` | Transit depth [ppm] — fractional flux decrease |
 | `koi_impact` | Impact parameter b — normalized distance from disk center |
 
-** Planet properties
+Planet properties
 | Feature | Description |
 |---|---|
 | `koi_prad` | Planet radius [R⊕] — derived from transit depth |
 | `koi_teq` | Equilibrium temperature [K] |
 | `koi_insol` | Insolation flux [F⊕] — relative to Earth |
 
-** Signal quality
+Signal quality
 | Feature | Description |
 |---|---|
 | `koi_model_snr` | Transit model fit SNR |
 | `koi_tce_plnt_num` | TCE planet number — detection order in the system |
 
-** Stellar parameters & sky position
+Stellar parameters & sky position
 | Feature | Description |
 |---|---|
 | `koi_steff` | Stellar effective temperature [K] |
@@ -143,9 +143,7 @@ All three models were evaluated on a held-out 20% test set. The table below repo
 | **Recall** | 0.9915 | 0.9245 | 0.9915 |
 | **Precision** | 0.9748 | 0.8603 | 0.8056 |
 | **AUROC** | 0.9996 | 0.9924 | 0.9784 |
- 
---Image of: ROC curve comparison of all three models  
---name: ROC_Comparison
+
 ---
 
 ### Discussion
