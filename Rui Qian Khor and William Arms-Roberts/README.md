@@ -43,27 +43,27 @@ The brute-force algorithm iteratively tests every possible solution of the Max-C
 ### Sahni-Gonzalez Algorithm
 The Sahni-Gonzalez algorithm is an algorithm that starts from a single pair of nodes and evaluates the connections of each node to the starting pair to approximate an optimal cut with significantly less computations. The algorithm works like this: 
 
-<div align="center">start at the highest weight edge</div>
+<div align="center">Start at the highest weight edge</div>
 
 <div align="center">↓</div>
          
-<div align="center">nodes connected to the edges are the starting pair</div>
+<div align="center">Nodes connected to the edges are the starting pair</div>
 
 <div align="center">↓</div>
          
-<div align="center">split the pair into two sets </div> 
+<div align="center">Split the pair into two sets </div> 
 
 <div align="center">↓</div> 
          
-<div align="center">check next node's connection to each of the starting nodes</div>  
+<div align="center">Check next node's connection to each of the starting nodes</div>  
 
 <div align="center">↓</div> 
          
-<div align="center">put the node into the set opposite the highest connection starting node</div>
+<div align="center">Put the node into the set opposite the highest connection starting node</div>
 
 <div align="center">↓</div>
          
-<div align="center">repeat for the rest of the nodes </div><br/>
+<div align="center">Repeat for the rest of the nodes </div><br/>
 
 Because the algorithm checks each node and edge once it has a complexity of $O(n + E)$, where n is the number of nodes and E is the number of edges. This complexity scales much better than the brute-force algorithm and allows it to be effectively used for graphs with hundreds of nodes.
 
@@ -83,9 +83,10 @@ Instead of energy usage and runtime, our project measured the total gates and tw
 
 ### Overview
 We randomly generated graphs with 10, 16, and 20 nodes, with each number of nodes having 3 instances with 3, 4, and 5 connections on each node (example graph shown below). To measure the solution quality of the QAOA and SG algorithm, we implemented a brute force algorithm that found the optimal cut of each graph, comparing it to the output of both the QAOA and the SG algorithm. Additionally, we measured the number of two-qubit gates in each circuit that was created and averaged them across the 30 tests we ran of each graph to get an accurate idea of the average number of circuits needed to run the QAOA.
+![Max-Cut Graph](Graph.png)
 
 ### Experiment Details
-Quantum Platform: We tested the QAOA algorithm on an IBM Quantum Device Emulator, which aims to reproduce the capabilities of the real quantum device by limiting qubit connectivity to that of the real device and simulating quantum noise. Specifically, we used Sherbrooke, IBM's 127-qubit simulated backend.
+Quantum Platform: We tested the QAOA on an IBM Quantum Device Emulator, which aims to reproduce the capabilities of the real quantum device by limiting qubit connectivity to that of the real device and simulating quantum noise. Specifically, we used Sherbrooke, IBM's 127-qubit simulated backend.
 
 ### Code Outline
 1. Created a random graph with the set graph features (ex. 10 nodes and 5-regular graph).
@@ -108,7 +109,6 @@ Use a for-loop to run steps 1-6, 30 times for each set of graph features.
 | 20    | 4              |
 | 20    | 5              |
 
-![Max-Cut Graph](Graph.png)
 
 ## Results
 We found that the QAOA consistently found equivalent or slightly better quality solutions than the SG algorithm, with the level of solution quality staying relatively consistent from 0.97-0.99 for all the graphs. And the SG algorithm ranged from 0.98-0.96. The solution quality appears to decrease linearly over the 20 node graphs, but we are unsure if this is a real decrease in the solution quality or just the solution quality range appearing to decrease. More testing on higher node graphs would be required to confirm this.
@@ -128,7 +128,7 @@ While the QAOA appears to have a slight advantage in solution quality, it is sev
 
 ## Future Work
 
-Our project tested a limited range of small Max-Cut instances, which can potentially overlook greater overarching patterns, so graphs with node counts higher than 20 could be tested. Due to monetary limitations, this experiment was conducted using quantum emulators instead of real quantum hardware. Future works can build upon and confirm our findings through their replications on equivalent quantum hardware. Additionally, there are different versions of QAOA that can be explored, such as QAOA in QAOA and warm-started QAOA. These versions appear to try to improve the scalability of QAOA and show promise in achieving greater overall performance compared to standard QAOA.
+Our project tested a limited range of small Max-Cut instances, which can potentially overlook greater overarching patterns, so graphs with node counts higher than 20 should be tested. Due to monetary limitations, this experiment was conducted using quantum emulators instead of real quantum hardware. Future works can build upon and confirm our findings through their replications on equivalent quantum hardware. Additionally, there are different versions of QAOA that can be explored, such as QAOA in QAOA and warm-started QAOA. These versions appear to try to improve the scalability of QAOA and show promise in achieving greater overall performance compared to standard QAOA.
 
 ## References
 
