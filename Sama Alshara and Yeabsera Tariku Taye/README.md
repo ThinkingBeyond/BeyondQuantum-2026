@@ -33,7 +33,7 @@ For this study, we decided to evaluate our models in a high-stakes situation, ca
 =The dataset contains 569 samples, with a relatively balanced class distribution: 212 Malignant - 357 Benign
 - Example of Input Data (After Preprocessing + PCA)
 - 
-| Index | PC1       | PC2      | PC3       | PC4       | Target |
+| Patient| PC1       | PC2      | PC3       | PC4       | Target |
 |------:|-----------:|----------:|-----------:|-----------:|-------:|
 | 0 | 4.244903  | 9.131428 | 1.504262  | -0.650982 | 0 |
 | 1 | 9.053755  | 0.475310 | -3.198215 | 0.704403  | 0 |
