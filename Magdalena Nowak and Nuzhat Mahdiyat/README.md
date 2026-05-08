@@ -21,23 +21,51 @@ We used the **Kepler Objects of Interest (KOI) Cumulative Table** from the [NASA
  
 - Each sample corresponds to one KOI
 - **Label:** `1` = Confirmed exoplanet, `0` = False positive / non-planet
-- **Features used (20 columns):**
+## Features (20 columns)
+
+** Candidate disposition
 | Feature | Description |
 |---|---|
-| `koi_score` | Disposition score |
-| `koi_fpflag_ss`, `koi_fpflag_co`, `koi_fpflag_ec`, `koi_fpflag_nt` | False positive flags |
-| `koi_period` | Orbital period |
-| `koi_depth` | Transit depth |
-| `koi_duration` | Transit duration |
-| `koi_impact` | Impact parameter |
-| `koi_prad` | Planet radius |
-| `koi_teq` | Equilibrium temperature |
-| `koi_insol` | Insolation flux |
-| `koi_model_snr` | Model SNR |
-| `koi_steff`, `koi_slogg`, `koi_kepmag` | Stellar parameters |
-| `koi_tce_plnt_num` | TCE planet number |
-| `koi_time0bk` | Transit epoch |
-| `ra`, `dec` | Sky coordinates |
+| `koi_score` | Disposition score (0–1); higher = more likely a planet |
+
+** False positive flags
+| Feature | Description |
+|---|---|
+| `koi_fpflag_ss` | Stellar eclipse — nearby eclipsing binary |
+| `koi_fpflag_co` | Centroid offset — blended background source |
+| `koi_fpflag_ec` | Ephemeris contamination — match with another object |
+| `koi_fpflag_nt` | Non-transit shape — unusual light curve morphology |
+
+** Transit geometry
+| Feature | Description |
+|---|---|
+| `koi_period` | Orbital period [days] |
+| `koi_time0bk` | Transit epoch [BJD − 2 454 833] |
+| `koi_duration` | Transit duration [hours] |
+| `koi_depth` | Transit depth [ppm] — fractional flux decrease |
+| `koi_impact` | Impact parameter b — normalized distance from disk center |
+
+** Planet properties
+| Feature | Description |
+|---|---|
+| `koi_prad` | Planet radius [R⊕] — derived from transit depth |
+| `koi_teq` | Equilibrium temperature [K] |
+| `koi_insol` | Insolation flux [F⊕] — relative to Earth |
+
+** Signal quality
+| Feature | Description |
+|---|---|
+| `koi_model_snr` | Transit model fit SNR |
+| `koi_tce_plnt_num` | TCE planet number — detection order in the system |
+
+** Stellar parameters & sky position
+| Feature | Description |
+|---|---|
+| `koi_steff` | Stellar effective temperature [K] |
+| `koi_slogg` | Stellar surface gravity [log g] |
+| `koi_kepmag` | Kepler-band magnitude [mag] |
+| `ra` | Right ascension [°] |
+| `dec` | Declination [°] |
  
 A sample of the data:
  
@@ -66,7 +94,21 @@ Classical Neural Network
        ↓
 Binary Classification
 
+
 ```
+
+Preprocessing :
+- StandardScaler normalises all input features to zero mean and unit variance
+- PCA (15 components, preserving ≥95% variance) reduces dimensionality
+- MinMaxScaler rescales features to the range $[-\pi, \pi]$ for angle encoding into the quantum circuit.
+The quantum component acts as a "feature transformation layer" - before classical learning.
+ 
+- Encoding : Angle encoding via U-gates — each qubit encodes 3 features via rotation angles $(\theta, \phi, \lambda)$
+- Entanglement : Circular CX (CNOT) connectivity — $q_0 \rightarrow q_1 \rightarrow \ldots \rightarrow q_4 \rightarrow q_0$
+- Weights : Fixed random parameters $\theta \in [0, 2\pi]^5$ (no quantum training)
+- Observables : Pauli-Z operators per qubit → 5-dimensional quantum feature vector $\langle Z_i \rangle$
+- Framework : Qiskit `EstimatorQNN` with `StatevectorEstimator`
+- Hilbert space dimension : $2^5 = 32$
 
 The circuit architecture:
  
@@ -77,6 +119,8 @@ q₂: ─[U(x₆,x₇,x₈)]───X─●───────────[Ry
 q₃: ─[U(x₉,x₁₀,x₁₁)]──X─●──────────[Ry(θ₃)]─
 q₄: ─[U(x₁₂,x₁₃,x₁₄)]───X─●────────[Ry(θ₄)]─
 ```
+### Models
+Logistic Regression, trained on PCA-preprocessed features, serves as a lightweight global reference for what classical methods can achieve without any neural component. The Classical MLP - a two-layer feedforward network trained with Adam and Binary Cross-Entropy — is the more direct counterpart to the hybrid, since both share the same architecture; the only difference is that the hybrid receives the 5-dimensional quantum feature vector $\langle Z \rangle$ as input instead of PCA features, which makes the two directly comparable and isolates the effect of quantum feature extraction.
 
 ### Implementation
  
@@ -90,7 +134,7 @@ The full implementation is available in [`Final_Code.ipynb`](Final_Code.ipynb), 
 
 ## Results
  
-All three models were evaluated on a held-out 20% test set. Key metrics:
+All three models were evaluated on a held-out 20% test set. The table below reports five metrics: accuracy, F1, recall, precision, and AUROC (Area Under the Receiver Operating Characteristic Curve). AUROC measures how well a classifier separates the two classes across all possible decision thresholds — a value of 1.0 means perfect separation, 0.5 means random guessing. Because the KOI dataset is class-imbalanced, AUROC gives a more complete picture of performance than accuracy alone, capturing the trade-off between true positive rate and false positive rate regardless of threshold choice.
  
 | Metric | LogReg | Classical MLP | Hybrid QNN-MLP |
 |---|---|---|---|
@@ -99,6 +143,9 @@ All three models were evaluated on a held-out 20% test set. Key metrics:
 | **Recall** | 0.9915 | 0.9245 | 0.9915 |
 | **Precision** | 0.9748 | 0.8603 | 0.8056 |
 | **AUROC** | 0.9996 | 0.9924 | 0.9784 |
+ 
+--Image of: ROC curve comparison of all three models  
+--name: ROC_Comparison
 ---
 
 ### Discussion
