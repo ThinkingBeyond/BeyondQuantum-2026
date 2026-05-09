@@ -4,6 +4,9 @@
 The following project is done by Amariah Brathwaite, Cristian Echeverri Valencia and Dakshan Balaramesh; mentored by Mr. Axel Karger. This project explores Qubit Manipulation, specifically using the Deutsch and Deutsch-Jozsa Algorithms.
 ## Overview
 
+Quantum Computing is an innovative methodology that has transformed classical computational methods, as we know then today. Central to quantum computing is the qubit (quantum bit), which is an abstract mathematical object that can exist in a superposition of the classical bits (0 & 1). This prperty of qubits is often combined with entanglement, a phenomenon which posits that the state of one qubit is linked to another. When these two properties are combined with a thrird, quantum interference, quantum systems are then able to access and process information in a way that is much more powerful than classical computational methods.
+
+
 Quantum Computing employs several algorithms, two of which are the Deutsch and Deutsch-Josza Algorithms
 
 There are only four possible functions of the form $$f: \{0,1\}\rightarrow \{0,1\}$$, which are the following:
