@@ -31,8 +31,9 @@ However, measurement-device-independent quantum key distribution is vulnerable t
 To approach this problem realistically, we modelled three major quantum noise channels (amplitude damping, phase damping, and depolarising noise) using Qiskit simulations, and then analysed how both error correction and eavesdropping attacks affected the QBER and the Secret Key Rate (SKR). Instead of immediately relying on highly theoretical fault-tolerant quantum codes that remain difficult to implement on modern hardware, we first explored simpler, more practical correction methods, such as repetition coding and Hamming-based techniques, to evaluate the improvements realistically achievable in near-term quantum systems.
 
 
-## Key Terms and Definitions shown in this research (Advanced)
-Quantum Key Distribution is a cryptographic method that uses quantum mechanics to allow two parties to securely generate a shared secret key. 
+## Key Terms and Definitions shown in this research (advanced)
+#### Quantum Key Distribution:
+A cryptographic method that uses quantum mechanics to allow two parties to securely generate a shared secret key. 
 #### Measurement-Device-Independent QKD (MDI-QKD):
 A QKD protocol designed to eliminate detector-side attacks by introducing an untrusted intermediary (“Charlie”) who performs Bell-state measurements without learning the final key. Currently, it is amongst the most secure quantum cryptography algorithms, significantly better than E91 or BB84. 
 #### Quantum Bit Error Rate (QBER):
@@ -41,7 +42,7 @@ The percentage of bits received incorrectly during quantum communication. High Q
 A noise channel representing energy loss, such as photon absorption, where quantum states decay from |1⟩ to |0⟩. 
 #### Phase Damping Noise (Dephasing):
 A noise process that destroys quantum coherence without changing the energy state of the qubit. 
-#### Depolarising Noise
+#### Depolarising Noise:
 A noise channel that randomly alters the quantum state in quantum systems. 
 #### Intercept-Resend Attack:
 An eavesdropping strategy in which an attacker (Eve) measures transmitted qubits and sends replacement states, introducing detectable errors into the channel. 
@@ -50,10 +51,8 @@ Methods that protect quantum information from noise by encoding logical qubits i
 #### Secure Key Rate (SKR):
 A measure of how successful the key generation is. 
 
-
-
 ## Key Terms and Definitions shown in this research (simple)
-#### Quantum Key Distribution 
+#### Quantum Key Distribution: 
 Think of it like a password that is secret - so only A and B can communicate - no one else can join in.
 
 #### Measurement-Device-Independent QKD (MDI-QKD):
@@ -82,7 +81,6 @@ How often that password that we talked about earlier is generated correctly.
 
 
 ##  Research phases summarised
-
 
 Our investigation followed four connected phases, moving from understanding quantum noise to testing security under active attack.
 
@@ -155,7 +153,7 @@ Despite the working algorithm, due to hardware limitations, the real-world appli
 
 ### Phase 4 — Eavesdropping and the Masking Problem
 
-Due to the problematic nature of eavesdropping for quantum communication, it destroys the data that it reads. We decided to test how the QBER is impacted by eavesdropping, and if our implementations of Steane code and repetition code could fix it.
+Due to the problematic nature of eavesdropping for quantum communication, it destroys the data that it reads. We decided to test how QBER is impacted by eavesdropping and whether the implemented repetition code could mitigate these effects.
 
 ![eve](eve.png)
 
@@ -181,7 +179,7 @@ The correction mechanisms that we have implemented reduce how the message is imp
 
 The type of noise present in a system greatly impacts the error rate and the effectiveness of any correction algorithms.
 
-Amplitude damping is the harshest noise, followed by depolarising, and then, lastly, phase damping.  All three negatively impact the QBER and, therefore, the SKR and the applicability of MDI-QKD in practical applications.
+Amplitude damping is the harshest noise, followed by depolarising, and then, phase damping.  All three negatively impact the QBER and, therefore, the SKR and the applicability of MDI-QKD in practical applications.
 
 Repetition code was able to significantly reduce its impact, especially on amplitude damping; however, it's limited in high-noise applications and by resource constraints, as it requires a 3x increase in the amount of data sent.
 
@@ -202,7 +200,6 @@ A particularly interesting possibility involves hybrid quantum-classical correct
 Eve masking is a particularly worrying side effect of our error correction code, as it would mean that anyone could theoretically listen in to any quantum communication. This should be addressed as soon as possible, likely through the creation of a more effective error correction algorithm, or perhaps development to MDI-QKD, where a 4th person could be involved. However, implementing this would require significant work. Machine learning could also be used here; however, the data set we currently have is very small, so that would be a challenge.
 
 Whilst our Steane code works to correct both phase and bit flip errors, we only had time to implement a bit flip version of  repetition code. Perhaps this could be looked into and then developed into other error correction codes as it may work better for long-distance quantum communication, if used alongside Steane code. 
-
 
 
 It's important to note that whilst Steane code gave better results, it was not fully noise tolerant, in order to achieve that, continuously variable error correction would have to be implemented, which is an area of high interest due to its theoretical perfection correction, which would also lead to MDI-QKD being highly accurate
