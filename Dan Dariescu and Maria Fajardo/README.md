@@ -4,41 +4,17 @@
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1bvzKuTybs4rG-iR4PXrXOz4z0rsHJXtD?usp=sharing)
 
-## Main Contributions
-- Comparative analysis of three quantum noise channels in Measurement-Device-Independent Quantum Key Distribution
-- Implementation of a 3-qubit repetition code for noisy quantum channels
-- Exploration of classical Hamming decoding and Steane-style quantum error correction challenges
-- Analysis of QBER stability under intercept-resend attacks
-- Observation of potential “Eve masking” effects during classical-style correction
+## Sections of our research
+- A comparative analysis of three quantum noise channels in Measurement-Device-Independent Quantum Key Distribution (understanding the problem)
+- An implementation of a 3-qubit repetition code for noisy quantum channels (the simple fix)
+- The exploration of classical Hamming decoding and Steane-style quantum error correction challenges (The more complex fix)
+- An Analysis of QBER stability under intercept-resend attacks (further testing)
+- Observation of potential “Eve masking” effects during classical-style correction (links to the future)
 
 ## Research Question
 
 How do different types of quantum noise (depolarising, phase damping, amplitude damping) and eavesdropping attacks affect the stability of the QBER in MDI-QKD, and to what extent can simple error correction strategies (such as repetition code and Hamming code) mitigate these effects to improve secure key generation?
 
-## Key Terms and Definitions
-#### Quantum Key Distribution (QKD):
-A cryptographic method that uses quantum mechanics to allow two parties to securely generate a shared secret key.
-
-#### Measurement-Device-Independent QKD (MDI-QKD):
-A QKD protocol designed to eliminate detector-side attacks by introducing an untrusted intermediary (“Charlie”) who performs Bell-state measurements without learning the final key.
-
-#### Quantum Bit Error Rate (QBER):
-The percentage of bits received incorrectly during quantum communication. High QBER indicates either strong environmental noise, eavesdropping, or both.
-
-#### Amplitude Damping Noise:
-A noise channel representing energy loss, such as photon absorption, where quantum states decay from |1⟩ to |0⟩.
-
-#### Phase Damping Noise (Dephasing):
-A noise process that destroys quantum coherence without changing the energy state of the qubit.
-
-#### Depolarising Noise:
-A noise channel that randomly alters the quantum state, effectively acting as “white noise” in quantum systems.
-
-#### Intercept-Resend Attack:
-An eavesdropping strategy in which an attacker (Eve) measures transmitted qubits and sends replacement states, introducing detectable errors into the channel.
-
-#### Quantum Error Correction (QEC):
-Methods that protect quantum information from noise by encoding logical qubits into multiple physical qubits and correcting errors using syndrome measurements.
 
 ## Motivation
 
@@ -60,6 +36,32 @@ More specifically, this research allowed us to:
 - and examine the limitations of classical post-processing compared to true quantum error correction.
 
 These questions connect directly to one of the central challenges facing future quantum networks: not only reducing errors in noisy quantum channels, but determining whether those errors originate from natural environmental noise or from malicious interference hidden within the corrected noise floor.
+
+
+## Key Terms and Definitions within this research
+#### Quantum Key Distribution (QKD):
+A cryptographic method that uses quantum mechanics to allow two parties to securely generate a shared secret key. This "key" allows the different parties to communicate with each other without worrying about anyone listening in (in theory).
+
+#### Measurement-Device-Independent QKD (MDI-QKD):
+A QKD protocol designed to eliminate detector-side attacks by introducing an untrusted intermediary (“Charlie”) who performs Bell-state measurements without learning the final key. Currently, it is amongst the most secure quantum cryptography algorithms, significantly better than E91 or BB84 - both of which have fundamental flaws.
+
+#### Quantum Bit Error Rate (QBER):
+The percentage of bits received incorrectly during quantum communication. High QBER indicates either strong environmental noise, eavesdropping, or both. - We want this to be as low as possible in order to get successful data transmission.
+
+#### Amplitude Damping Noise:
+A noise channel representing energy loss, such as photon absorption, where quantum states decay from |1⟩ to |0⟩. (We can think of this as the loss of energy - the photons just stop there)
+
+#### Phase Damping Noise (Dephasing):
+A noise process that destroys quantum coherence without changing the energy state of the qubit. (this is where the superposition gets removed - it stops being quantum)
+
+#### Depolarising Noise:
+A noise channel that randomly alters the quantum state in quantum systems. (We can think of this as white noise / static - it's just random) 
+
+#### Intercept-Resend Attack:
+An eavesdropping strategy in which an attacker (Eve) measures transmitted qubits and sends replacement states, introducing detectable errors into the channel. (This is because when we measure something in quantum mechanics, we remove information about it.)
+
+#### Quantum Error Correction (QEC):
+Methods that protect quantum information from noise by encoding logical qubits into multiple physical qubits and correcting errors using syndrome measurements.
 
 ## Methods Overview
 
