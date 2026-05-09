@@ -159,7 +159,10 @@ Most importantly, our eavesdropping simulations revealed that lowering QBER alon
 
 ## Future Work
 
-This project showed that the effectiveness of quantum error correction depends strongly on the type of noise affecting the channel. While simple repetition codes improved performance against bit-flip dominated noise, they failed against phase-flip errors and introduced important security limitations such as Eve masking. Several promising directions remain open for future research.
+This project showed that the effectiveness of quantum error correction depends strongly on the type of noise affecting the channel. While simple repetition codes improved performance against bit-flip dominated noise, they failed against phase-flip errors and introduced important security limitations such as Eve masking. Several promising directions remain open for future research. 
+
+
+For example:
 
 One natural continuation would be implementing true fault-tolerant quantum error correction using codes such as the Steane code, Shor, or surface codes. Unlike repetition coding, these methods preserve superposition during correction and could potentially distinguish natural noise from malicious interference through syndrome analysis. However, they require significantly more advanced stabilizer measurements, ancilla management, and fault-tolerant circuit design.
 
@@ -167,7 +170,7 @@ Another important direction is phase-flip correction. Our results showed that re
 
 Our eavesdropping simulations also revealed the masking problem: error correction may reduce QBER while simultaneously hiding Eve’s activity within the corrected noise floor. Future research could investigate whether syndrome statistics, machine learning, or hybrid quantum-classical analysis can identify attack patterns that remain invisible to classical post-processing alone.
 
-A particularly interesting possibility involves hybrid quantum-classical correction systems. While classical codes already form the foundation of many quantum codes through the CSS construction, future work could explore how measured quantum communication data might interact with existing classical decoding infrastructure in practical communication networks. This could help reduce hardware costs and improve scalability, though major theoretical and security challenges remain unresolved.
+A particularly interesting possibility involves hybrid quantum-classical correction systems. This would that an input of quantum data to a classical algorithm would be possible. There has been very little work done in this field - it remains mostly untapped due to complications associated with it. We have talked about using machine learning or a series of converter algorithms in order to achieve this, but due to a lack of time, actually implementing this is a large area of interest. This would hypothetically allow classical infrastrucutre to be used for quantum communication, which is why it is an area of such high iterest, despite the numerous problems associated with its implementation
 
 Finally, future projects could extend this work beyond discrete-variable MDI-QKD toward continuous-variable MDI-QKD, which may offer higher key rates and stronger compatibility with modern telecommunications infrastructure, but introduces much greater mathematical and experimental complexity.
 
