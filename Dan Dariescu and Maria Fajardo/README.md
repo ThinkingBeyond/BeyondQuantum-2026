@@ -4,12 +4,13 @@
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1hMkjwqCfdoX6ONX73SsGv-NObnIk8L6w?usp=sharing)
 
-## Sections of this document
+## Structure of the Document
 - Research Question
 - Motivation and Choice of Topic
 - Key Terms and Definitions
---Formal Definitions
---Conceptual Explanations (Simplified Version)
+- Key Terms and Definitions
+  - Formal Definitions
+  - Conceptual Explanations (Simplified Version)
 - Understanding the Problem: Comparative Analysis of Three Quantum Noise Channels in Measurement-Device-Independent Quantum Key Distribution (MDI-QKD)
 - A Simple Solution: Implementation of a 3-Qubit Repetition Code for Noisy Quantum Channels
 - A More Advanced Approach: Classical Hamming Decoding and Steane-Style Quantum Error Correction and Their Challenges
