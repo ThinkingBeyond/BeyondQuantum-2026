@@ -5,16 +5,17 @@
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1hMkjwqCfdoX6ONX73SsGv-NObnIk8L6w?usp=sharing)
 
 ## Sections of this document
-- The research question
-- Why we chose this topic
-- The keywords
-- the key words  - simplified definitions
-- A comparative analysis of three quantum noise channels in Measurement-Device-Independent Quantum Key Distribution (understanding the problem)
-- An implementation of a 3-qubit repetition code for noisy quantum channels (the simple fix)
-- The exploration of classical Hamming decoding and Steane-style quantum error correction challenges (The more complex fix)
-- An Analysis of QBER stability under intercept-resend attacks (further testing)
-- The future areas of research based on our findings
-- Our references
+- Research Question
+- Motivation and Choice of Topic
+- Key Terms and Definitions
+--Formal Definitions
+--Conceptual Explanations (Simplified Version)
+- Understanding the Problem: Comparative Analysis of Three Quantum Noise Channels in Measurement-Device-Independent Quantum Key Distribution (MDI-QKD)
+- A Simple Solution: Implementation of a 3-Qubit Repetition Code for Noisy Quantum Channels
+- A More Advanced Approach: Classical Hamming Decoding and Steane-Style Quantum Error Correction and Their Challenges
+- Security Analysis: Behaviour of QBER Under Intercept-Resend Attacks
+- Future Research Directions Based on Findings
+- References
 
 ## Research Question
 
