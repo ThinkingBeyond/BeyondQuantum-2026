@@ -74,7 +74,7 @@ We can think of this as white noise / static - it's just random.
 ###### Formal: 
 An eavesdropping strategy in which an attacker (Eve) measures transmitted qubits and sends replacement states, introducing detectable errors into the channel. 
 ###### Conceptual: 
-Because measurement disturbs quantum states, this introduces detectable errors.
+An eavesdropper intercepts the quantum message, measures it, and then tries to send a new version forward. Because measuring a quantum state changes it, the replacement is never perfect, and this creates errors that can be detected.
 
 #### Quantum Error Correction (QEC):
 ###### Formal: 
