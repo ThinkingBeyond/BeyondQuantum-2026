@@ -84,6 +84,8 @@ These results justified focusing later correction strategies primarily on amplit
 
 To reduce bit-flip dominated errors, we implemented a 3-qubit repetition code with majority-vote correction.
 
+![phase](phase.png)
+
 The repetition code significantly lowered error rates for amplitude damping and depolarizing noise. At p = 0.30:
 
 Amplitude damping improved from 33.0% → 22.8% QBER
@@ -92,6 +94,8 @@ Depolarizing improved from 14.8% → 5.4% QBER
 However, the code produced no improvement for phase damping because phase damping creates phase-flip (Z) errors rather than bit-flip (X) errors.
 
 At high noise levels (p > 0.4), performance declined because multiple simultaneous qubit errors became common, exceeding the correction capability of the repetition code.
+
+![repetition code](rep_code.png)
 
 Key finding:
 Simple repetition coding can substantially improve MDI-QKD reliability against bit-flip dominated noise, but fails completely against phase-flip errors.
