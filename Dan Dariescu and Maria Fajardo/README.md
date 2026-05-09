@@ -18,26 +18,22 @@ How do different types of quantum noise (depolarising, phase damping, amplitude 
 
 ## Motivation
 
-As quantum computing advances, many cryptographic systems currently used to protect banking, medical records, government communications, and digital infrastructure are expected to become vulnerable to quantum attacks. This has intensified global interest in quantum cryptography, particularly Quantum Key Distribution (QKD), which offers theoretically secure communication based on the laws of quantum mechanics rather than the computational difficulty of mathematical problems.
-
-Among QKD protocols, Measurement-Device-Independent Quantum Key Distribution is considered one of the most promising for real-world deployment because it eliminates detector-side attacks, a major practical vulnerability in earlier quantum communication systems. This makes MDI-QKD especially relevant for future high-security applications such as long-distance fibre-optic quantum networks, satellite-based quantum communication, financial data protection, and secure governmental or military communication systems.
-
-However, despite its theoretical security advantages, MDI-QKD remains physically fragile. In realistic communitheenvironme of MDI-QKDnts, transmitted qubits are constantly affected by environmental noise, signal loss, decoherence, and imperfect hardware. As these errors accumulate, the Quantum Bit Error Rate (QBER) rises until secure key generation eventually collapses. In practice, this means that even theoretically secure quantum protocols can fail under realistic physical conditions. We decided to address this to improve the security of MDI-QKD.
-
-This project builds on previous Beyond Quantum research by Taskia Isla,and Irene Gallini (2025), which compared multiple QKD protocols and id,tified noise sensitivity as a major limitation preventing practical quantum communication at scaleiteir findings motivated us to investigate the problem from a more focused, implementation-oriented perspective: rather than broadly comparing protocols, we examined how specific physical noise channels destabilise MDI-QKD, how effectively realistic correction strategies can mitigate these effects, and whether error correction itself may unintentionally introduce new security risks.
-
-To approach this problem realistically, we modelled three major quantum noise channels (amplitude damping, phase damping, and depolarising noise) using Qiskit simulations, and then analysed how both error correction and eavesdropping attacks affected the QBER and the Secret Key Rate (SKR). Instead of immediately relying on highly theoretical fault-tolerant quantum codes that remain difficult to implement on modern hardware, we first explored simpler and more practical correction methods, such as repetition coding and Hamming-based techniques, to evaluate what improvements are realistically achievable in near-term quantum systems.
+As Quantum computing and, therefore, quantum communication advance and become more widespread, the need for secure communication will only increase. Once it is implemented into critical infrastructure, such as hospitals for medical imaging, as seen in one of the other groups in the cohort, secure quantum communication will become more than just a preference; it will be a requirement. This has led to developments in quantum communication algorithms, such as BB84 and E91, as Askia Isla and Irene Gallini found in their project last year on this topic. However, both of those are flawed, which is why MDI-QKD was created. This algorithm uses Bell-state measurements and introduces a third party into the equation, thereby making the communication between A and B secure.
 
 
+However, measurement-device-independent quantum key distribution is vulnerable to noise. Increasing the noise to make the quantum bit error rate above 11%, and the whole algorithm stops functioning. This means that whilst in theory, MDI QKD is secure, in practise, the real-world noise it faces is a major problem. Hence, this year we decided to dedicate our project to address this real-world issue, to make the algorithm usable.
 
-## Key Terms and Definitioshowedn this research
-in# Quantum Key Distributitcryptographic method that uses quantum mechanics to allow two parties to securely generate a shared secret key. This "key" allows the different parties to communicate with each other withouting in (in code's correction capabilityry).
+To approach this problem realistically, we modelled three major quantum noise channels (amplitude damping, phase damping, and depolarising noise) using Qiskit simulations, and then analysed how both error correction and eavesdropping attacks affected the QBER and the Secret Key Rate (SKR). Instead of immediately relying on highly theoretical fault-tolerant quantum codes that remain difficult to implement on modern hardware, we first explored simpler, more practical correction methods, such as repetition coding and Hamming-based techniques, to evaluate the improvements realistically achievable in near-term quantum systems.
+
+
+## Key Terms and Definitions shown in this research (Advanced and basic versions)
+Quantum Key Distribution is a cryptographic method that uses quantum mechanics to allow two parties to securely generate a shared secret key. (Think of it like a password that is secret - so only A and B and communicate - no one else can join in)
 
 #### Measurement-Device-Independent QKD (MDI-QKD):
-A QKD protocol designed to eliminate detector-side attacks by introducing an untrusted intermediary (“Charlie”) who performs Bell-state measurements without learning the final key. Currently, it is amongst the most secure quantum cryptography algorithms, significantly better than E91 or BB84 - both of which have fundamental flaws.
+A QKD protocol designed to eliminate detector-side attacks by introducing an untrusted intermediary (“Charlie”) who performs Bell-state measurements without learning the final key. Currently, it is amongst the most secure quantum cryptography algorithms, significantly better than E91 or BB84. (It's the best "key" version generator we have)
 
 #### Quantum Bit Error Rate (QBER):
-The percentage of bits received incorrectly during quantum communication. High QBER indicates either strong environmental noise, eavesdropping, or both. - We want this to be as low as possible in order to get successful data transmission.
+The percentage of bits received incorrectly during quantum communication. High QBER indicates either strong environmental noise, eavesdropping, or both. (It's a measure of how successful the communication between A and B is in terms of % or as a decimal from 0 to 1)
 
 #### Amplitude Damping Noise:
 A noise channel representing energy loss, such as photon absorption, where quantum states decay from |1⟩ to |0⟩. (We can think of this as the loss of energy - the photons just stop there)
@@ -46,19 +42,23 @@ A noise channel representing energy loss, such as photon absorption, where quant
 A noise process that destroys quantum coherence without changing the energy state of the qubit. (this is where the superposition gets removed - it stops being quantum)
 
 #### Depolarising Noise:
-A noise channel that randomly alters the quantum state in quantum systems. (We can think of this as white noise / static - it's just random) 
+A noise channel that randomly alters the quantum state in quantum systems. (We can think of this as white noise / static - it's just random.) 
 
 #### Intercept-Resend Attack:
 An eavesdropping strategy in which an attacker (Eve) measures transmitted qubits and sends replacement states, introducing detectable errors into the channel. (This is because when we measure something in quantum mechanics, we remove information about it.)
 
 #### Quantum Error Correction (QEC):
-Methods that protect quantum information from noise by encoding logical qubits into multiple physical qubits and correcting errors using syndrome measurements. (Basically it deals with the noise so its no longer such a big issue)
+Methods that protect quantum information from noise by encoding logical qubits into multiple physical qubits and correcting errors using syndrome measurements. (Basically, it deals with the noise, so it's no longer such a big issue.)
 
-## Methods Overview
+#### Secure Key Rate (SKR):
+A measure of how successful the key generation is. (Essentially, how often is that password that we talked about earlier generated correctly.) 
+
+
+##  
 
 Our investigation followed four connected phases, moving from understanding quantum noise to testing security under active attack.
 
-Phase 1 modeled three major quantum noise channels in MDI-QKD using Qiskit simulations: amplitude damping (energy loss), phase damping (loss of coherence), and depolarising noise (randomised states). We measured their impact on the Quantum Bit Error Rate (QBER) and Secret Key Rate (SKR) to identify which noise types most strongly threaten secure communication.
+Phase 1 modelled three major quantum noise channels in MDI-QKD using Qiskit simulations: amplitude damping (energy loss), phase damping (loss of coherence), and depolarising noise (randomised states). We measured their impact on the Quantum Bit Error Rate (QBER) and Secret Key Rate (SKR) to identify which noise types most strongly threaten secure communication.
 
 Phase 2 implemented a 3-qubit repetition code using quantum circuits and majority-vote decoding. This allowed us to test whether simple error correction could reduce QBER under realistic noisy conditions.
 
