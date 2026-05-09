@@ -31,7 +31,7 @@ However, measurement-device-independent quantum key distribution is vulnerable t
 To approach this problem realistically, we modelled three major quantum noise channels (amplitude damping, phase damping, and depolarising noise) using Qiskit simulations, and then analysed how both error correction and eavesdropping attacks affected the QBER and the Secret Key Rate (SKR). Instead of immediately relying on highly theoretical fault-tolerant quantum codes that remain difficult to implement on modern hardware, we first explored simpler, more practical correction methods, such as repetition coding and Hamming-based techniques, to evaluate the improvements realistically achievable in near-term quantum systems.
 
 
-## Key Terms and Definitions shown in this research (advanced)
+## Key Terms and Definitions shown in this research (Formal Definitions)
 #### Quantum Key Distribution:
 A cryptographic method that uses quantum mechanics to allow two parties to securely generate a shared secret key. 
 #### Measurement-Device-Independent QKD (MDI-QKD):
@@ -51,7 +51,7 @@ Methods that protect quantum information from noise by encoding logical qubits i
 #### Secure Key Rate (SKR):
 A measure of how successful the key generation is. 
 
-## Key Terms and Definitions shown in this research (simple)
+## Key Terms and Definitions shown in this research (Conceptual Explanations)
 #### Quantum Key Distribution: 
 Think of it like a password that is secret - so only A and B can communicate - no one else can join in.
 
@@ -71,7 +71,7 @@ This is where the superposition gets removed - it stops being quantum.
 We can think of this as white noise / static - it's just random. 
 
 #### Intercept-Resend Attack:
-This is because when we measure something in quantum mechanics, we remove information about it.
+An attack where an eavesdropper measures the quantum signal and then sends a replacement. Because measurement disturbs quantum states, this introduces detectable errors.
 
 #### Quantum Error Correction (QEC):
 It deals with the noise, so it's no longer such a big issue.
