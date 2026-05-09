@@ -8,7 +8,30 @@
 
 How do different types of quantum noise (depolarising, phase damping, amplitude damping) and eavesdropping attacks affect the stability of the QBER in MDI-QKD, and to what extent can simple error correction strategies (such as repetition code and Hamming code) mitigate these effects to improve secure key generation?
 
-## Terms and Definitions
+## Key Terms and Definitions
+# Quantum Key Distribution (QKD)
+A cryptographic method that uses quantum mechanics to allow two parties to securely generate a shared secret key.
+
+# Measurement-Device-Independent QKD (MDI-QKD)
+A QKD protocol designed to eliminate detector-side attacks by introducing an untrusted intermediary (“Charlie”) who performs Bell-state measurements without learning the final key.
+
+# Quantum Bit Error Rate (QBER)
+The percentage of bits received incorrectly during quantum communication. High QBER indicates either strong environmental noise, eavesdropping, or both.
+
+# Amplitude Damping Noise
+A noise channel representing energy loss, such as photon absorption, where quantum states decay from |1⟩ to |0⟩.
+
+# Phase Damping Noise (Dephasing)
+A noise process that destroys quantum coherence without changing the energy state of the qubit.
+
+# Depolarising Noise
+A noise channel that randomly alters the quantum state, effectively acting as “white noise” in quantum systems.
+
+# Intercept-Resend Attack
+An eavesdropping strategy in which an attacker (Eve) measures transmitted qubits and sends replacement states, introducing detectable errors into the channel.
+
+# Quantum Error Correction (QEC)
+Methods that protect quantum information from noise by encoding logical qubits into multiple physical qubits and correcting errors using syndrome measurements.
 
 ## Motivation
 
