@@ -61,7 +61,7 @@ A noise channel that randomly alters the quantum state in quantum systems. (We c
 An eavesdropping strategy in which an attacker (Eve) measures transmitted qubits and sends replacement states, introducing detectable errors into the channel. (This is because when we measure something in quantum mechanics, we remove information about it.)
 
 #### Quantum Error Correction (QEC):
-Methods that protect quantum information from noise by encoding logical qubits into multiple physical qubits and correcting errors using syndrome measurements.
+Methods that protect quantum information from noise by encoding logical qubits into multiple physical qubits and correcting errors using syndrome measurements. (Basically it deals with the noise so its no longer such a big issue)
 
 ## Methods Overview
 
