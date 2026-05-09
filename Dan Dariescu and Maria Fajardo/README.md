@@ -43,10 +43,10 @@ This project builds upon previous Beyond Quantum research in quantum cryptograph
 
 More specifically, this research allowed us to:
 
-analyze how different quantum noise channels affect secure communication,
-investigate whether simple error correction methods can preserve security,
-explore how eavesdropping interacts with natural noise,
-and examine the limitations of classical post-processing compared to true quantum error correction.
+- analyze how different quantum noise channels affect secure communication,
+- investigate whether simple error correction methods can preserve security,
+- explore how eavesdropping interacts with natural noise,
+- and examine the limitations of classical post-processing compared to true quantum error correction.
 
 These questions are directly connected to one of the central challenges of future quantum networks: not only reducing errors, but distinguishing natural noise from malicious interference.
 
