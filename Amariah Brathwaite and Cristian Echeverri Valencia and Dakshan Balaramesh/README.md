@@ -61,6 +61,12 @@ Our main aim at this project is to evidence whether Deutsch and Deutsch-Jozsa Al
 ## Method and Implemetation
 This project heavily relies on oracles. These are functions that are embedded into a quantum circuit that perform the transformation $$|x\rangle |y\rangle \rightarrow |x\rangle |y\rangle &oplus; f(x)\rangle$$
 
+For this project we implemented oracles for both constant functions (all inputs have the same output) and balanced functions (half the inputs result in 0 and the other half result 1)
+
+To implement these oracle, these steps were taken:
+1. The qubits were set in a superposition of states using a Hadamard gate
+2. 
+
 ## Your next subsection
 
 Continue working through the points listed above with the help of sensibly named subsections. 
