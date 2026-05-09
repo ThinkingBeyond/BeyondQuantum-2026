@@ -1,8 +1,10 @@
 ![BeyondQuantum Banner for Research Projects](../BeyondQuantum_Banner_Research_Projects_2026.png)
 
 # Qubit Manipulation in Quantum Circuits - Implementing Deutsch and Deutsch-Jozsa Algorithm for 2- and 3- and 4-Qubit Systems
-
+The following project is done by Amariah Brathwaite, Cristian Echeverri Valencia and Dakshan Balaramesh; mentored by Mr. Axel Karger. This project explores Qubit Manipulation, specifically using the Deutsch and Deutsch-Jozsa Algorithms.
 ## Overview
+
+Quantum Computing employs several algorithms, two of which are the Deutsch and Deutsch-Josza Algorithms
 
 There are only four possible functions of the form $$f: \{0,1\}\rightarrow \{0,1\}$$, which are the following:
 
