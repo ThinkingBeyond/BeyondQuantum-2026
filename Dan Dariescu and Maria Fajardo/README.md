@@ -71,9 +71,10 @@ Amplitude damping produced the highest QBER and the fastest collapse of secure c
 
 Because Secret Key Rate depends nonlinearly on QBER, small increases in error rapidly reduced secure key generation. Under amplitude damping, SKR nearly vanished by p ≈ 0.30, while phase damping still maintained usable key generation.
 
-![QBER Across Noise Types](images/MDI-QKD_Raw_QBER_Across_Three_Noise_Types.png)
+![QBER Across Noise Types](MDI-QKD_Raw_QBER_Across_Three_Noise_Types.png)
 
-![SKR Across Noise Types](images/MDI-QKD_Secure_Key_Rate_Across_Three_Noise_Types.png)
+![SKR Across Noise Types](MDI-QKD_Secret_Key_Rate_Across_Three_Noise_Types.png)
+
 
 Key finding:
 MDI-QKD is most vulnerable to amplitude damping and depolarizing noise, while phase damping is significantly less destructive under Z-basis measurements.
