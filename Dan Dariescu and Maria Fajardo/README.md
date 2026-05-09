@@ -47,10 +47,10 @@ To approach this problem realistically, we modeled three major quantum noise cha
 
 More specifically, this research allowed us to:
 
-analyze how different quantum noise channels affect secure communication,
-investigate whether simple error correction methods can preserve security,
-explore how eavesdropping interacts with natural noise,
-and examine the limitations of classical post-processing compared to true quantum error correction.
+- analyze how different quantum noise channels affect secure communication,
+- investigate whether simple error correction methods can preserve security,
+- explore how eavesdropping interacts with natural noise,
+- and examine the limitations of classical post-processing compared to true quantum error correction.
 
 These questions connect directly to one of the central challenges facing future quantum networks: not only reducing errors in noisy quantum channels, but determining whether those errors originate from natural environmental noise or from malicious interference hidden within the corrected noise floor.
 
