@@ -47,6 +47,10 @@ To implement these oracle, these steps were taken:
 4.  The ibm_marrakesh backend was then used to capture data from a real quantum device
 5.  The AerSimuator was used to provide theoretical results, for comparison.
 
+## Results
+Is is deduced that both algorithms can identify whether a function is constant or balanced in a single query. 
+For the Deutsch Algorithm, it correctly identified balaced functions by outputting $$|1\rangle$$ on the given input qubit.
+
 ## Future Work
 
 Using the same methods as the research, Deutsch-Jozsa Algorithm could be tested to 5-, 6- and 7- Qubit Systems to test whether the accuracies of prediction have a tendency depending on the functions. Future Research could be built upon instituting Error Correction into the "unknown" oracle, so in this way we could have a perfect oracle with an imperfect algorithm and then just test the effectiveness of Deutsch and Deutsch-Jozsa Algorithm by itself.
