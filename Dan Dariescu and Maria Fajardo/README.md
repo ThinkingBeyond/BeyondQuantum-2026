@@ -9,7 +9,7 @@
 How do different types of quantum noise (depolarising, phase damping, amplitude damping) and eavesdropping attacks affect the stability of the QBER in MDI-QKD, and to what extent can simple error correction strategies (such as repetition code and Hamming code) mitigate these effects to improve secure key generation?
 
 ## Key Terms and Definitions
-# Quantum Key Distribution (QKD)
+### Quantum Key Distribution (QKD)
 A cryptographic method that uses quantum mechanics to allow two parties to securely generate a shared secret key.
 
 # Measurement-Device-Independent QKD (MDI-QKD)
