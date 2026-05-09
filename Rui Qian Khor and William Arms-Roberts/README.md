@@ -32,17 +32,13 @@ MaxCut is a problem within graph theory that aims to partition nodes within a gr
 
 ## Algorithms
 
-<!--## Quantum Approximation Optimiation Algorithm-->
-
-<!--## Sanhi-Gonzalez Algorithm-->
-
 ### Classical Brute-Force Algorithm
 The classical brute-force algorithm is an exact algorithm, meaning it finds the true optimal result of the optimization problem. This contrasts with the approximate methods of the previously mentioned Sanhi-Gonzalez Algorithm and Quantum Approximation Optimization Algorithm.
 
-The brute-force algorithm iteratively tests every possible solution of the Max-Cut problem for the given graph to find the true optimal solution, the downside however is the algorithm's comlplexity of $O(2^n)$, making it impossible to use for more complicated graphs.
+The brute-force algorithm iteratively tests every possible solution of the Max-Cut problem for the given graph to find the true optimal solution; the downside, however, is the algorithm's complexity of $O(2^n)$, making it impossible to use for more complicated graphs.
 
 ### Sahni-Gonzalez Algorithm
-The Sahni-Gonzalez algorithm is an algorithm that starts from a single pair of nodes and evaluates the connections of each node to the starting pair to approximate an optimal cut with significantly less computations. The algorithm works like this: 
+The Sahni-Gonzalez algorithm is an algorithm that starts from a single pair of nodes and evaluates the connections of each node to the starting pair to approximate an optimal cut with significantly fewer computations. The algorithm works like this: 
 
 <div align="center">Start at the highest weight edge</div>
 
@@ -66,14 +62,14 @@ The Sahni-Gonzalez algorithm is an algorithm that starts from a single pair of n
          
 <div align="center">Repeat for the rest of the nodes </div><br/>
 
-Because the algorithm checks each node and edge once it has a complexity of $O(n + E)$, where n is the number of nodes and E is the number of edges. This complexity scales much better than the brute-force algorithm and allows it to be effectively used for graphs with hundreds of nodes.
+Because the algorithm checks each node and edge once, it has a complexity of $O(n + E)$, where n is the number of nodes and E is the number of edges. This complexity scales much better than the brute-force algorithm and allows it to be effectively used for graphs with hundreds of nodes.
 
-### Quantum Approximation Optimiation Algorithm
-The Quantum approximation optimization algorithm (QAOA) is a hybrid quantum-classical algorithm and as mentioned above, is used to find approximate solutions for QUBO problems. The QAOA is a specific type of Variational Quantum Eigensolver, a branch of algorithms used to find the ground state energy of a systems hamiltonian. QAOA finds the ground state of a cost function hamiltonian, where the ground state energy represents the optimized value of the cost function associated with a QUBO problem. The circuit for the QAOA is composed of two parts, the cost hamiltonian, and the mixer hamiltonian. The cost hamiltonian consists of rotation gates characterized by the parameter $\gamma$, and is used to guide the system closer to the optimal solution. The mixer hamiltonian consists of a series of X-gates characterized by the parameter $\beta$, and is used to expand the solution space and stop the algorithm from getting stuck. A classical optimizer is then used to evaluate the circuits and find the optimal values for $\gamma$ and $\beta$. The circuit is then run a final time using the optimal parameters and the output from the circuit is an approximation of the optimzed cost function. 
+### Quantum Approximation Optimization Algorithm
+The Quantum approximation optimization algorithm (QAOA) is a hybrid quantum-classical algorithm and, as mentioned above, is used to find approximate solutions for QUBO problems. The QAOA is a specific type of Variational Quantum Eigensolver, a branch of algorithms used to find the ground state energy of a system's Hamiltonian. QAOA finds the ground state of a cost function Hamiltonian, where the ground state energy represents the optimized value of the cost function associated with a QUBO problem. The circuit for the QAOA is composed of two parts: the cost Hamiltonian and the mixer Hamiltonian. The cost Hamiltonian consists of rotation gates characterized by the parameter $\gamma$, and is used to guide the system closer to the optimal solution. The mixer Hamiltonian consists of a series of X-gates characterized by the parameter $\beta$, and is used to expand the solution space and stop the algorithm from getting stuck. A classical optimizer is then used to evaluate the circuits and find the optimal values for $\gamma$ and $\beta$. The circuit is then run a final time using the optimal parameters, and the output from the circuit is an approximation of the optimized cost function. 
 ## Measure of Merit
 
 ### Solution Quality - Approximation Ratio
-The approximation ratio is a measure of the solution quality produced by an algorithm as it calculates a value for how closely the resulting solution matches the true optimal solution. This metric was chosen for it's ablity to consider the entire sample of the dataset. The formula of the approximation ratio is $A(I)/OPT(I)=\alpha$, where $A(I)$ is the algorithm output and $OPT(I)$ is the optimal solution.
+The approximation ratio is a measure of the solution quality produced by an algorithm as it calculates a value for how closely the resulting solution matches the true optimal solution. This metric was chosen for its ablity to consider the entire sample of the dataset. The formula of the approximation ratio is $A(I)/OPT(I)=\alpha$, where $A(I)$ is the algorithm output and $OPT(I)$ is the optimal solution.
 
 ### Resource Use - Gate Count
 Typical measures of an algorithm's resource usage include runtime and energy usage. However, when dealing with quantum algorithms, these measures can be difficult to access or unrepresentative of the algorithm. While energy usage is often seen as the most accurate report of an algorithm's resource usage, it is difficult to access on the typical public user interface of IBM Quantum. Our project opted for the use of quantum simulations instead of true quantum hardware, meaning the quantum behaviors of quantum computing were emulated on a classical processor. Because these simulations require additional classical computation to model quantum effects, the runtime of the simulated quantum algorithm does not accurately reflect the runtime the algorithm would have on a real quantum computer.
