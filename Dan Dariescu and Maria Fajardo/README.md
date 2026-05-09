@@ -106,8 +106,6 @@ To overcome the limitations of repetition coding, we explored the Hamming [7,4,3
 
 ![hamming_code](hamming_code.png)
 
-![steane_code](steane_code.png)
-
 The classical Hamming decoder successfully identified single-bit errors through parity-check matrices. We then attempted a quantum implementation using syndrome extraction circuits and ancilla qubits.
 
 Although the full Steane implementation did not function correctly, the process revealed several important challenges in practical quantum error correction:
