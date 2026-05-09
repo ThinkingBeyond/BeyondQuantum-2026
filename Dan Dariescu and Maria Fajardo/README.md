@@ -70,7 +70,9 @@ Simulations showed that different noise channels affect MDI-QKD very differently
 Amplitude damping produced the highest QBER and the fastest collapse of secure communication, reaching 39.0% QBER at p = 0.30. Depolarizing noise showed similarly destructive behavior, while phase damping remained comparatively stable and never crossed the 11% security threshold within the tested range.
 
 Because Secret Key Rate depends nonlinearly on QBER, small increases in error rapidly reduced secure key generation. Under amplitude damping, SKR nearly vanished by p ≈ 0.30, while phase damping still maintained usable key generation.
+
 ![QBER Across Noise Types](images/MDI-QKD_Raw_QBER_Across_Three_Noise_Types.png)
+
 ![SKR Across Noise Types](images/MDI-QKD_Secure_Key_Rate_Across_Three_Noise_Types.png)
 
 Key finding:
