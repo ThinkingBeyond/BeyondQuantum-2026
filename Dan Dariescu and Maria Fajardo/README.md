@@ -35,20 +35,24 @@ Methods that protect quantum information from noise by encoding logical qubits i
 
 ## Motivation
 
-As quantum computing advances, many classical cryptographic systems are expected to become vulnerable to quantum attacks. This has increased the importance of quantum cryptography, particularly Quantum Key Distribution (QKD), which offers theoretically secure communication based on the laws of quantum mechanics.
+As quantum computing advances, many cryptographic systems currently used to protect banking, medical records, government communications, and digital infrastructure are expected to become vulnerable to quantum attacks. This has intensified global interest in quantum cryptography, particularly Quantum Key Distribution (QKD), which offers theoretically secure communication based on the laws of quantum mechanics rather than the computational difficulty of mathematical problems.
 
-Among QKD protocols, Measurement-Device-Independent QKD (MDI-QKD) is especially important because it removes detector-side vulnerabilities, one of the largest practical weaknesses in earlier protocols. However, even MDI-QKD remains highly sensitive to environmental noise, which can increase QBER and eventually prevent secure key generation altogether.
+Among QKD protocols, Measurement-Device-Independent Quantum Key Distribution is considered one of the most promising for real-world deployment because it eliminates detector-side attacks, one of the largest practical vulnerabilities in earlier quantum communication systems. This makes MDI-QKD especially relevant for future high-security applications such as long-distance fiber-optic quantum networks, satellite-based quantum communication, financial data protection, and secure governmental or military communication systems.
 
-This project builds upon previous Beyond Quantum research conducted by Taskia Islam and Irene Gallini (2025), which compared multiple QKD protocols and identified noise sensitivity as a major limitation in practical quantum communication systems. Their findings motivated our decision to investigate how specific quantum noise channels and error correction strategies affect QBER stability in MDI-QKD.
+However, despite its theoretical security advantages, MDI-QKD remains physically fragile. In realistic communication environments, transmitted qubits are constantly affected by environmental noise, signal loss, decoherence, and imperfect hardware. As these errors accumulate, the Quantum Bit Error Rate (QBER) rises until secure key generation eventually collapses. In practice, this means that even theoretically secure quantum protocols can fail under realistic physical conditions.
+
+This project builds upon previous Beyond Quantum research conducted by Taskia Islam and Irene Gallini (2025), which compared multiple QKD protocols and identified noise sensitivity as one of the major limitations preventing practical quantum communication at scale. Their findings motivated us to investigate the problem from a more focused and implementation-oriented perspective: rather than broadly comparing protocols, we examined how specific physical noise channels destabilize MDI-QKD, how effectively realistic correction strategies can mitigate those effects, and whether error correction itself may unintentionally introduce new security risks.
+
+To approach this problem realistically, we modeled three major quantum noise channels — amplitude damping, phase damping, and depolarizing noise — using Qiskit simulations, then analyzed how both error correction and eavesdropping attacks affected QBER and Secret Key Rate (SKR). Instead of immediately relying on highly theoretical fault-tolerant quantum codes that remain difficult to implement on modern hardware, we first explored simpler and more practical correction methods such as repetition coding and Hamming-based techniques to evaluate what improvements are realistically achievable in near-term quantum systems.
 
 More specifically, this research allowed us to:
 
-- analyze how different quantum noise channels affect secure communication,
-- investigate whether simple error correction methods can preserve security,
-- explore how eavesdropping interacts with natural noise,
-- and examine the limitations of classical post-processing compared to true quantum error correction.
+analyze how different quantum noise channels affect secure communication,
+investigate whether simple error correction methods can preserve security,
+explore how eavesdropping interacts with natural noise,
+and examine the limitations of classical post-processing compared to true quantum error correction.
 
-These questions are directly connected to one of the central challenges of future quantum networks: not only reducing errors, but distinguishing natural noise from malicious interference.
+These questions connect directly to one of the central challenges facing future quantum networks: not only reducing errors in noisy quantum channels, but determining whether those errors originate from natural environmental noise or from malicious interference hidden within the corrected noise floor.
 
 ## Methods Overview
 
