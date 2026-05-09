@@ -175,18 +175,21 @@ This led to the realisation of Eve masking.
 The eavesdropper could be hidden by the noisy environment and could be hidden even in the corrected code at the receiver.
 
 Main takeaway for this section of the research:
-The correction mechanisms that we have implemented reduce how the message is impacted by noise. However they also allow for eavsedropping to be hidden, meaning that another method of error correction should be developed and looked into (see future work)
+The correction mechanisms that we have implemented reduce how the message is impacted by noise. However, they also allow for eavsedropping to be hidden, meaning that another method of error correction should be developed and looked into (see future work)
 
 ## Conclusions
 
+The type of noise present in a system greatly impacts the error rate and the effectiveness of any correction algorithms.
 
-This project demonstrates that the effectiveness of quantum error correction depends strongly on the physical type of noise present in the channel.
+Amplitude damping is the harshest noise, followed by depolarising, and then, lastly, phase damping.  All three negatively impact the QBER and, therefore, the SKR and the applicability of MDI-QKD in practical applications.
 
-Amplitude damping and depolarising noise severely degrade MDI-QKD performance, but repetition coding can partially restore secure communication. Phase damping. presents a fundamentally different challenge because it introduces phase errors that are invisible to repetition-based correction.
+Repetition code was able to significantly reduce its impact, especially on amplitude damping; however, it's limited in high-noise applications and by resource constraints, as it requires a 3x increase in the amount of data sent.
 
-Our exploration of Hamming and Steane codes showed that advanced quantum error correction could theoretically solve these limitations, but practical implementation remains highly complex due to fault-tolerance requirements.
+The Hamming code is oversimplified for a quantum application (see future work), and the Steane code should be used instead.
 
-Most importantly, our eavesdropping simulations revealed that lowering QBER alone is not sufficient for security. Classical-style correction may unintentionally conceal attacks within the natural noise floor, reinforcing the importance of true syndrome-based quantum error correction for future secure quantum networks.
+Steane code is a much better implementation; however, it is hardware-limited, and that could lead to Eve masking. (see future work)
+
+Eavesdropping can impact the QBER and SKR, however, not as much as any noise type, and so is much harder to correct for and also detect.
 
 ## Future Work
 
