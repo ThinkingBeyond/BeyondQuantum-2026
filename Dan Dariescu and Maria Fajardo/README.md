@@ -30,16 +30,25 @@ A noise channel that randomly alters the quantum state, effectively acting as â€
 #### Intercept-Resend Attack:
 An eavesdropping strategy in which an attacker (Eve) measures transmitted qubits and sends replacement states, introducing detectable errors into the channel.
 
-#### Quantum Error Correction (QEC)
+#### Quantum Error Correction (QEC):
 Methods that protect quantum information from noise by encoding logical qubits into multiple physical qubits and correcting errors using syndrome measurements.
 
 ## Motivation
 
-As quantum computing develops, the demand for secure quantum communication will increase dramatically,  which led to the creation of MDI QKD, a secure protocol where work was done last year in the larger topic of quantum cryptography. However, noise is the main challenge which is stunting the development of quantum communication. This is why we chose noise as the focus of our project for this year
+As quantum computing advances, many classical cryptographic systems are expected to become vulnerable to quantum attacks. This has increased the importance of quantum cryptography, particularly Quantum Key Distribution (QKD), which offers theoretically secure communication based on the laws of quantum mechanics.
 
-The research question:
+Among QKD protocols, Measurement-Device-Independent QKD (MDI-QKD) is especially important because it removes detector-side vulnerabilities, one of the largest practical weaknesses in earlier protocols. However, even MDI-QKD remains highly sensitive to environmental noise, which can increase QBER and eventually prevent secure key generation altogether.
 
-We chose this as it: 1. Built on a previous project 2. Was specific enough that we could create a plan very easily 3. Was simple enough to be realistic 
+This project builds upon previous Beyond Quantum research in quantum cryptography by focusing specifically on the role of quantum noise and error correction in MDI-QKD systems. We chose this topic because it combines theoretical relevance with practical experimental challenges and allowed us to investigate a realistic problem currently limiting the development of large-scale quantum communication networks.
+
+More specifically, this research allowed us to:
+
+analyze how different quantum noise channels affect secure communication,
+investigate whether simple error correction methods can preserve security,
+explore how eavesdropping interacts with natural noise,
+and examine the limitations of classical post-processing compared to true quantum error correction.
+
+These questions are directly connected to one of the central challenges of future quantum networks: not only reducing errors, but distinguishing natural noise from malicious interference.
 
 
 
