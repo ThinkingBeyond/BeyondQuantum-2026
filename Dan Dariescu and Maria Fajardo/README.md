@@ -4,7 +4,11 @@
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1hMkjwqCfdoX6ONX73SsGv-NObnIk8L6w?usp=sharing)
 
-## Sections of our research
+## Sections of this document
+- The research question
+- Why we chose this topic
+- The keywords
+- the key words  - simplified definitions
 - A comparative analysis of three quantum noise channels in Measurement-Device-Independent Quantum Key Distribution (understanding the problem)
 - An implementation of a 3-qubit repetition code for noisy quantum channels (the simple fix)
 - The exploration of classical Hamming decoding and Steane-style quantum error correction challenges (The more complex fix)
@@ -97,7 +101,7 @@ We ran 3 simulations, which showed that different noise channels affect MDI-QKD 
 
 
 Amplitude damping produced the highest QBER and the fastest collapse of secure communication, 
-Its QBER was39.0% at p = 0.30, where p is the noise probability.
+Its QBER was 39.0% at p = 0.30, where p is the noise probability.
 
 Depolarising noise showed similarly destructive behaviour, but its curve was slightly gentler, 
 
@@ -105,7 +109,7 @@ Phase damping remained comparatively stable and only crossed the 11% security th
 
 ![QBER Across Noise Types](MDI-QKD_Raw_QBER_Across_Three_Noise_Types.png)
 
-Because the secret key rate depends nonlinearly on QBER, small increases in error rapidly reduce secure key generation. Under amplitude damping, SKR nearly vanished by p ≈ 0.30, while phase damping still maintained usable key generation until the very end.
+Because the secret key rate depends nonlinearly on QBER, small increases in the error rate reduce the  secure key generation rapidly. Under amplitude damping, SKR nearly vanished by p ≈ 0.30, while phase damping still maintained usable key generation until the very end.
 
 ![SKR Across Noise Types](MDI-QKD_Secret_Key_Rate_Across_Three_Noise_Types.png)
 
@@ -116,14 +120,14 @@ MDI-QKD is most vulnerable to amplitude damping, followed by depolarising noise,
 ### Phase 2 — Repetition Code Error Correction
 
 To reduce bit-flip-dominated errors, we implemented a 3-qubit repetition code with majority-vote correction.
-This works by copying each transmitted bit 3 times, then checking the bits which arrive in series of 3. The bit which comes up the most is taken to be correct. However, if there are multiple of 2 errors, then it cannot be detected. Also it increases the number of bits we have to transmit. it tripples the data size
+This works by copying each transmitted bit 3 times, then checking the bits which arrive in series of 3. The bit which comes up the most is taken to be correct. However, if there are multiple of 2 errors, then it cannot be detected. Also, it increases the number of bits we have to transmit. It triples the data size
 ![phase](phase.png)
 ![amplitude](amplitude.png)
 
-The repetition code significantly lowered error rates for amplitude damping and depolarising noise. At p = 0.30:
+The repetition code significantly lowered error rates for amplitude damping and depolarising noise. At p = 0.30 for both of them (same as before):
 
-Amplitude damping improved from 33.0% → 22.8% QBER
-Depolarising improved from 14.8% → 5.4% QBER
+Amplitude damping started at 33.0%, and it is now at 22.8% for the QBER
+Depolarising started at  14.8%, and it is now at  5.4% for the QBER
 
 However, the code showed no improvement in phase damping as we implemented it to correct the qubit value, not its phase, due to the extra time required for that.
 
@@ -142,9 +146,6 @@ The Hamming code was invented by John Hamming, who worked on the Manhattan Proje
 
 ![hamming_code](hamming_code.png)
 
-The classical Hamming decoder successfully identified single-bit errors through parity-check matrices. We then attempted a quantum implementation using syndrome extraction circuits and ancilla qubits.
-In addition to this, for the Hamming code, we tried: 1. the matrix-based approach, 2. the circuit-based approach, 3. the simple XOR approach and 4. the basic version before running into faults with all of them.
-
 
 During this phase, we attempted all of the implementation methodologies, including the matrix-based, the circuit-based, the XOR-based and more. We found that in order to convert the classical Hamming code to work with quantum data, we would need a quantum data-to-classical algorithm translator (see future work section). We eventually settled on the circuit-based approach and Steane code for the matrix-based approach, which can detect both bit and phase flip errors, without having to create 2 seperate versions of it. The QBER was also lower compared to the repetition code, meaning that it is more applicable to the 2 algorithms
  
@@ -154,28 +155,30 @@ Despite the working algorithm, due to hardware limitations, the real-world appli
 
 ### Phase 4 — Eavesdropping and the Masking Problem
 
-Finally, we introduced an intercept-resend attack to test whether error correction could maintain secure communication in the presence of active eavesdropping.
+Due to the problematic nature of eavesdropping for quantum communication, it destroys the data that it reads. We decided to test how the QBER is impacted by eavesdropping, and if our implementations of Steane code and repetition code could fix it.
 
 ![eve](eve.png)
 
-QBER increased linearly with Eve's attack probability, matching the theoretical relation:
+The QBER increased linearly with Eve’s attack probability, matching our prediction of what the relationship should be in theory.
 
 
 The repetition code reduced QBER below the 11% security threshold for amplitude damping and depolarising noise:
 
-- Amplitude damping: 18.5% → 7.4%
-- Depolarising: 17.0% → 8.5%
+- Amplitude damping started at 18.5%, and it is now at 7.4% for the QBER
+- Depolarising started at 17.0%, and it is now at 8.5% for the QBER
 
-However, phase damping remained above threshold at 13.0% because repetition codes cannot correct phase-flip errors.
+However, phase damping remained above threshold at 13.0% because our implementation of the repetition code does not correct phase-flip errors, as we were time-constrained.
 
-This led to an important discovery: Eve masking.
+This led to the realisation of Eve masking.
 
-Because the repetition code relies on measurement and majority voting, it behaves similarly to classical post-processing. As a result, Eve's interference can become hidden inside the corrected noise floor, making attacks difficult to distinguish from natural channel noise.
 
-Key finding:
-Classical-style correction can lower QBER while simultaneously masking eavesdropping activity. True quantum error correction would be required to distinguish natural noise from malicious interference through syndrome analysis.
+The eavesdropper could be hidden by the noisy environment and could be hidden even in the corrected code at the receiver.
 
-## Overall Conclusions
+Main takeaway for this section of the research:
+The correction mechanisms that we have implemented reduce how the message is impacted by noise. However they also allow for eavsedropping to be hidden, meaning that another method of error correction should be developed and looked into (see future work)
+
+## Conclusions
+
 
 This project demonstrates that the effectiveness of quantum error correction depends strongly on the physical type of noise present in the channel.
 
