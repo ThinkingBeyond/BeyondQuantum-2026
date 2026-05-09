@@ -79,7 +79,7 @@ Because the secret key rate depends nonlinearly on QBER, small increases in the 
 
 ![SKR Across Noise Types](MDI-QKD_Secret_Key_Rate_Across_Three_Noise_Types.png)
 
-Main takeaway for this section of the research:
+#### Main takeaway for this section of the research:
 MDI-QKD is most vulnerable to amplitude damping, followed by depolarising noise, while phase damping is significantly less impactful, so we decided to focus less on it going forward. 
 
 
@@ -101,7 +101,7 @@ At high noise levels (p > 0.4), a multiple of 2n errors is very common, meaning 
 
 ![repetition code](rep_code.png)
 
-Main takeaway for this section of the research:
+#### Main takeaway for this section of the research:
 While it reduces the error rate for bit flip errors, the data transmitted is 3x more, and if there are 2n errors, it still fails.
 
 ### Phase 3 — Hamming and Steane Codes
@@ -116,7 +116,7 @@ The Hamming code was invented by John Hamming, who worked on the Manhattan Proje
 During this phase, we attempted all of the implementation methodologies, including the matrix-based, the circuit-based, the XOR-based and more. We found that in order to convert the classical Hamming code to work with quantum data, we would need a quantum data-to-classical algorithm translator (see future work section). We eventually settled on the circuit-based approach and Steane code for the matrix-based approach, which can detect both bit and phase flip errors, without having to create 2 seperate versions of it. The QBER was also lower compared to the repetition code, meaning that it is more applicable to the 2 algorithms
  
 
-Main takeaway for this section of the research:
+#### Main takeaway for this section of the research:
 Despite the working algorithm, due to hardware limitations, the real-world applicability of Steane code is limited for the time being.
 
 ### Phase 4 — Eavesdropping and the Masking Problem
@@ -140,22 +140,14 @@ This led to the realisation of Eve masking.
 
 The eavesdropper could be hidden by the noisy environment and could be hidden even in the corrected code at the receiver.
 
-Main takeaway for this section of the research:
+#### Main takeaway for this section of the research:
 The correction mechanisms that we have implemented reduce how the message is impacted by noise. However, they also allow for eavsedropping to be hidden, meaning that another method of error correction should be developed and looked into (see future work)
 
-## Conclusions
+## Conclusion
 
-The type of noise present in a system greatly impacts the error rate and the effectiveness of any correction algorithms.
+The effectiveness of Measurement-Device-Independent Quantum Key Distribution (MDI-QKD) in practical scenarios is fundamentally tied to the specific noise profile of the system, as the type of interference present greatly impacts both error rates and the success of correction strategies. Our investigation confirms a clear hierarchy of interference: amplitude damping remains the most destructive force, followed by depolarizing noise, while phase damping remains the most manageable. While the three-qubit repetition code proved capable of significantly reducing these impacts—particularly in amplitude-dominated channels—its reliance on a three-fold increase in data transmission highlights a critical trade-off between resource constraints and security in high-noise environments. Furthermore, while Hamming codes provide a necessary conceptual baseline, they are ultimately oversimplified for quantum applications; true progress requires the implementation of more robust frameworks like the Steane code. However, the transition to Steane code is currently restricted by hardware limitations that can inadvertently lead to "Eve masking," where eavesdropping becomes nearly indistinguishable from natural decoherence and thus much harder to detect.
 
-Amplitude damping is the harshest noise, followed by depolarising, and then, phase damping.  All three negatively impact the QBER and, therefore, the SKR and the applicability of MDI-QKD in practical applications.
-
-Repetition code was able to significantly reduce its impact, especially on amplitude damping; however, it's limited in high-noise applications and by resource constraints, as it requires a 3x increase in the amount of data sent.
-
-The Hamming code is oversimplified for a quantum application (see future work), and the Steane code should be used instead.
-
-Steane code is a much better implementation; however, it is hardware-limited, and that could lead to Eve masking. (see future work)
-
-Eavesdropping can impact the QBER and SKR, however, not as much as any noise type, and so is much harder to correct for and also detect.
+Beyond the technical benchmarks, these findings hold significant weight for the evolution of the global cryptographic infrastructure. For the research community, this study underscores that the path toward a functional Quantum Internet depends not just on the strength of the protocol, but on the ability to distinguish malicious intercept-resend attacks from environmental noise. By identifying the specific vulnerabilities of MDI-QKD under realistic noise conditions, this research informs the next generation of hybrid error-correction development. On a broader scale, as traditional encryption becomes increasingly vulnerable to quantum computing threats, the refinement of noise-resilient MDI-QKD protocols is essential for protecting the general public's most sensitive data—from financial systems to national security. Ultimately, addressing the gap between theoretical error correction and hardware-limited reality is a prerequisite for the deployment of truly secure, large-scale quantum networks.
 
 ## Future Work
 
