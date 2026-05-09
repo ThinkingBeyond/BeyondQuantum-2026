@@ -94,7 +94,7 @@ g₂,ij = r₀,ij ⊕ r₂,ij
 
 Applying these relations across all pixel pairs reconstructs both original images pixel by pixel.
 
-For the complete mathematical proof of the protocol, do refer to the Overleaf document attached in the Google Colab.
+For the complete mathematical proof of the protocol, do refer to the [Mathematical Proof](https://github.com/ThinkingBeyond/BeyondQuantum-2026/blob/main/Arjun%20Gadi%20and%20Elizabeth%20Quah/Complete%20Mathematical%20Proof%20of%20GHZ-Based%20Quantum%20Visual%20Secret%20Sharing.pdf). Link to the Overleaf file can be found in the Google Colab as well. 
 
 ## **Protocol’s Performance at Zero Noise**
 
