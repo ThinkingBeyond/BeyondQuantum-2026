@@ -104,14 +104,18 @@ Simple repetition coding can substantially improve MDI-QKD reliability against b
 
 To overcome the limitations of repetition coding, we explored the Hamming [7,4,3] code and the Steane [[7,1,3]] quantum code.
 
-The classical Hamming decoder successfully corrected single-bit errors through parity-check matrices. We then attempted a quantum implementation using syndrome extraction circuits and ancilla qubits.
+![hamming_code](hamming_code.png)
+
+![steane_code](steane_code.png)
+
+The classical Hamming decoder successfully identified single-bit errors through parity-check matrices. We then attempted a quantum implementation using syndrome extraction circuits and ancilla qubits.
 
 Although the full Steane implementation did not function correctly, the process revealed several important challenges in practical quantum error correction:
 
-Correct logical state encoding
-Fault-tolerant syndrome extraction
-Ancilla crosstalk and residual entanglement
-Error propagation during stabilizer measurements
+- Correct logical state encoding
+- Fault-tolerant syndrome extraction
+- Ancilla crosstalk and residual entanglement
+- Error propagation during stabilizer measurements
 
 Despite implementation difficulties, Steane theoretically offers major advantages over repetition coding because it can detect both bit-flip and phase-flip errors.
 
@@ -121,6 +125,8 @@ The gap between theoretical quantum error correction and practical implementatio
 ### Phase 4 — Eavesdropping and the Masking Problem
 
 Finally, we introduced an intercept-resend attack to test whether error correction could maintain secure communication under active eavesdropping.
+
+![eve](eve.png)
 
 QBER increased linearly with Eve’s attack probability, matching the theoretical relation:
 
@@ -150,41 +156,19 @@ Our exploration of Hamming and Steane codes showed that advanced quantum error c
 
 Most importantly, our eavesdropping simulations revealed that lowering QBER alone is not sufficient for security. Classical-style correction may unintentionally conceal attacks within the natural noise floor, reinforcing the importance of true syndrome-based quantum error correction for future secure quantum networks.
 
-## Your next subsection
-
-what did: 1. Phase 1: creating the noise
-
-We had to understand the problem so we ran simulations with 3 different noise types, amplitude dampening which we can think of as the loss of energy for the photons. Then there’s phase dampening which is where the qubits lose their coherence – their superposition. We also explored depolarizing noise, which can be thought of as randomisation of the data, however as the QBER curve was the gentlest, we decided to ignore it going forward and focus on the other two.
-![noise](noises.png)
-![phase](phase.png)
-Phase 2: solving the noise simply
-
-We took the well known and established repetition code, and adapted it to be modular and to work for qubits, using a circuit based approach. This works by copying the data 3 times at the start and then reading the data in sections of 3 at the end. Whichever phase is most common is the one taken as correct. However it requires a lot of qubits to program and if there are 2n errors in it, it cannot be detected.
-![repetition code](rep_code.png)
-
-Phase 3: more complex error correction mechanisms
-
-To get over the limitations of repetition code, we decide to implement Hamming code which uses parity checks (how many times a 1 comes up in a row in the classical sense) to calculate the exact position of an error. It also uses up much fewer qubits as we only need log base 2 n +1  correction bits compared to 2n extra bits in repetition code. There are a lot of ways to implement it in code, through matrices, through the classical grid method, through a circuit, through XORS and more. We tried all of them, and whilst in the end we got both the circuit and the matrices to work, the  challenges here were massive, especially in getting the programmes to work, due to their complexity. The easier they were to adapt to quantum, the harder they were classically and we ended up spending 2 and a half weeks on this, but we stumbled onto a new area of research
-![hamming_code](hamming_code.png)
-![steane_code](steane_code.png)
-
-Phase 3.5 new area?
-
-We realised we needed a way to convert quantum data to a classical algorithm, so we spent a day searching for algorithms to do this or work done in this area in general. What we found was essentially nothing, which surprised both of us, so we got our mentor to have a closer look. He found some papers – in bibliography  - but they proved to be of no use. Essentially what we had stumbled upon is an area which we believe has great potential, but has little development. Why do we believe that? Its because we’d be able to use already existing classical algorithms and infrastructure for communication, meaning that we’d avoid a large cost from investing in quantum resources instead, which would ultimately serve the same purpose. However, as its such a new area, and we eventually did manage to get the quantum version of hamming code to work, although we had to look at Steane code (closely related but not the same) to get it all to function.
-
-Phase 4 – eavesdropping
-
-We wanted to see how all of our work would stack up against an attempted attack so in the last few weeks, we worked to implement a man in the middle attack – aka eavsedroppiong where a secret third conn ection is involved. Why do we care about this so much ? unlike in classical computing, if anyone reads the data, the superposition goes away so the data is rendered useless, meaning it has a much wider impact than just not getting the data like in a classical attack of this sort.
-![eve](eve.png)
-
-
-
-
 ## Future Work
 
-In the end we  achieved pretty much everything we wanted to. We overcame great challenges and even stumbled onto a new area which may have some promise  (though like I said needs more development in it). So overall, we achieved what we set out to do and then some, meaning the project was a success.
+This project showed that the effectiveness of quantum error correction depends strongly on the type of noise affecting the channel. While simple repetition codes improved performance against bit-flip dominated noise, they failed against phase-flip errors and introduced important security limitations such as Eve masking. Several promising directions remain open for future research.
 
-Continously variable error correction code should be looked into, despite its challenges, as that would result in theoretically perfect message transmission.
+One natural continuation would be implementing true fault-tolerant quantum error correction using codes such as the Steane code, Shor, or surface codes. Unlike repetition coding, these methods preserve superposition during correction and could potentially distinguish natural noise from malicious interference through syndrome analysis. However, they require significantly more advanced stabilizer measurements, ancilla management, and fault-tolerant circuit design.
+
+Another important direction is phase-flip correction. Our results showed that repetition codes cannot correct phase damping because they only address bit-flip errors. Future groups could explore CSS-based constructions or dedicated phase-flip codes to improve security in dephasing-dominated quantum channels such as long-distance fiber communication.
+
+Our eavesdropping simulations also revealed the masking problem: error correction may reduce QBER while simultaneously hiding Eve’s activity within the corrected noise floor. Future research could investigate whether syndrome statistics, machine learning, or hybrid quantum-classical analysis can identify attack patterns that remain invisible to classical post-processing alone.
+
+A particularly interesting possibility involves hybrid quantum-classical correction systems. While classical codes already form the foundation of many quantum codes through the CSS construction, future work could explore how measured quantum communication data might interact with existing classical decoding infrastructure in practical communication networks. This could help reduce hardware costs and improve scalability, though major theoretical and security challenges remain unresolved.
+
+Finally, future projects could extend this work beyond discrete-variable MDI-QKD toward continuous-variable MDI-QKD, which may offer higher key rates and stronger compatibility with modern telecommunications infrastructure, but introduces much greater mathematical and experimental complexity.
 
 ## References
 
