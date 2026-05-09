@@ -28,7 +28,7 @@ Max-Cut is a type of Quadratic Unconstrained Binary Optimization Problem (QUBO).
 
 MaxCut is a problem within graph theory that aims to partition nodes within a graph into two subgroups, such that the line drawn to divide the subgroups intersects a maximum of edges connecting nodes, as seen in the image below. This problem has a wide range of applications in analyzing social networks, circuit layout, and portfolio management.
 
-![MaxCut](MaxCut.png)
+![MaxCut](MaxCut.jpg)
 
 ## Algorithms
 
