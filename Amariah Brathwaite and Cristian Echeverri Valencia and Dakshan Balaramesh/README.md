@@ -39,18 +39,13 @@ This project heavily relies on oracles. These are functions that are embedded in
 For this project we implemented oracles for both constant functions (all inputs have the same output) and balanced functions (half the inputs result in 0 and the other half result 1)
 
 To implement these oracle, these steps were taken:
-1. The qubits were set in a superposition of states using a Hadamard gate
-2. 
-
-## Your next subsection
-
-Continue working through the points listed above with the help of sensibly named subsections. 
-
-If you want to see some good examples of README files check out:
-- [Example 1](https://github.com/ThinkingBeyond/BeyondAI-2024/blob/main/warenya-loulia/README.md)
-- [Example 2](https://github.com/ThinkingBeyond/BeyondAI-2024/blob/main/shaana-karuna/README.md)
-
-[ ... ]
+1. Qubits were initialized to $$|1\rangle$$
+   - Deutsch Algortithm: a single qubit
+   - Deutsch-Josza Algortithm: $$n$$ qubits eg: 2, 3, 4
+2. The qubits are then set in a superposition of states using a Hadamard gate
+3.  The specific oracle gate was then composed into the circuit  
+4.  The ibm_marrakesh backend was then used to capture data from a real quantum device
+5.  The AerSimuator was used to provide theoretical results, for comparison.
 
 ## Future Work
 
