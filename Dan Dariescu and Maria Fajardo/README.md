@@ -5,10 +5,11 @@
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1bvzKuTybs4rG-iR4PXrXOz4z0rsHJXtD?usp=sharing)
 
 ## Main Contributions
-- Comparative analysis of three quantum noise channels in MDI-QKD
-- Implementation of repetition and Hamming-based correction strategies
-- Experimental study of QBER stability under intercept-resend attacks
-- Identification of the “Eve masking” phenomenon in classical-style correction
+- Comparative analysis of three quantum noise channels in Measurement-Device-Independent Quantum Key Distribution
+- Implementation of a 3-qubit repetition code for noisy quantum channels
+- Exploration of classical Hamming decoding and Steane-style quantum error correction challenges
+- Analysis of QBER stability under intercept-resend attacks
+- Observation of potential “Eve masking” effects during classical-style correction
 
 ## Research Question
 
