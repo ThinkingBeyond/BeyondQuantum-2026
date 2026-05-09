@@ -149,7 +149,7 @@ To quantify the results of this study, we used a range of metrics. The following
 ### **Heatmap**
 
 ![Heatmap](qss_output%20%20Github/fig10_heatmap.png)
-The above plot shows a heatmap for the fidelity values obtained when the noise level is manipulated for the 4 noise channels. Bit-flip noise shows the sharpest degradation, and collapses at p ≈ 0.25. With depolarising noise fidelity drops below F=0.5 at λ ≈ 0.30. Amplitude damping is most resilient. 
+The above plot shows a heatmap for the fidelity values obtained when the noise level is manipulated for the 4 noise channels. Bit-flip noise shows the sharpest degradation, and collapses at p ≈ 0.25. With depolarising noise, fidelity drops below F=0.5 at λ ≈ 0.30. Amplitude damping is most resilient. 
 
 ---
 
