@@ -51,11 +51,12 @@ However, Deutsch Algorithm made a conceptual proof that with a single query and 
 
 ## Research Question
 
-How can we implement the Deutsch Algorithm to functions $$f: \{0,1\} \rightarrow \{0,1\}$$ and the Deutsch-Jozsa Algorithm to functions  $$f: \{0,1\}^2 \rightarrow \{0,1\}$$ and $$f: \{0,1\}^3 \rightarrow \{0,1\}$$?
+How can we implement the Deutsch Algorithm to functions $$f: \{0,1\} \rightarrow \{0,1\}$$ and the Deutsch-Jozsa Algorithm to functions  $$f: \{0,1\}^2 \rightarrow \{0,1\}$$ and $$f: \{0,1\}^3 \rightarrow \{0,1\}$$ to accurately predict if a function is constant or balanced?
 
 ## Motivation
 
-Our main aim at this project is to evidence whether Deutsch and Deutsch-Jozsa Algorithms are an accurate approach to solve the main characteristic of $$f: \{0,1\}^n \rightarrow \{0,1\}$$-like functions.
+At their inception, the Deutsch and Deutsch-Jozsa algortithms were supoosed to provide proof that quantum computers are more efficient than classical computers. These algorithms were not originally designed for real-world application, however there has been increased speculation regarding the capabilities of quantum computing.
+Our main aim at this project is to evidence whether Deutsch and Deutsch-Jozsa Algorithms are an accurate approach to solve the main characteristic of $$f: \{0,1\}^n \rightarrow \{0,1\}$$-like functions contemporarily. 
 
 ## Your next subsection
 
