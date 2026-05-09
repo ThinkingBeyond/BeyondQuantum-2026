@@ -59,7 +59,7 @@ At their inception, the Deutsch and Deutsch-Jozsa algortithms were supoosed to p
 Our main aim at this project is to evidence whether Deutsch and Deutsch-Jozsa Algorithms are an accurate approach to solve the main characteristic of $$f: \{0,1\}^n \rightarrow \{0,1\}$$-like functions contemporarily. 
 
 ## Method and Implemetation
-This project heavily relies on oracles. These are functions that are embedded into a quantum circuit that perform the transformation $$|x\rangle |y\rangle \rightarrow |x\rangle |y\rangle oplus f(x)\rangle$$
+This project heavily relies on oracles. These are functions that are embedded into a quantum circuit that perform the transformation $$|x\rangle |y\rangle \rightarrow |x\rangle |y\rangle &oplus; f(x)\rangle$$
 
 ## Your next subsection
 
