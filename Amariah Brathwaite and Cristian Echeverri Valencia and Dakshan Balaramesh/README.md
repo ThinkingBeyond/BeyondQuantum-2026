@@ -58,6 +58,9 @@ How can we implement the Deutsch Algorithm to functions $$f: \{0,1\} \rightarrow
 At their inception, the Deutsch and Deutsch-Jozsa algortithms were supoosed to provide proof that quantum computers are more efficient than classical computers. These algorithms were not originally designed for real-world application, however there has been increased speculation regarding the capabilities of quantum computing.
 Our main aim at this project is to evidence whether Deutsch and Deutsch-Jozsa Algorithms are an accurate approach to solve the main characteristic of $$f: \{0,1\}^n \rightarrow \{0,1\}$$-like functions contemporarily. 
 
+## Method and Implemetation
+This project heavily relies on oracles. These are functions that are embedded into a quantum circuit that perform the transformation $$|x\rangle |y\rangle \rightarrow |x\rangle |y\rangle oplus f(x)\rangle$$
+
 ## Your next subsection
 
 Continue working through the points listed above with the help of sensibly named subsections. 
