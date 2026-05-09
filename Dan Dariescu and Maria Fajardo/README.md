@@ -136,27 +136,21 @@ While it reduces the error rate for bit flip errors, the data transmitted is 3x 
 
 ### Phase 3 — Hamming and Steane Codes
 
-To overcome the limitations of repetition coding, we explored the Hamming [7,4,3] code and the Steane [[7,1,3]] quantum code.
-This is a much more refined way of detecting errors
+To overcome the limitations of repetition codes, we explored the Hamming [7,4,3] code and the Steane [[7,1,3]] quantum code.
+The Hamming code was invented by John Hamming, who worked on the Manhattan Project, and it's a much more refined way of detecting errors and correcting them in $log_2 (n) +1$ bits. It arranges the data into a logical matrix and calculates the parity bits for each row and column, which is to say that it counts the number of 1s in a row/ column. If there is a mismatch, the parity bits can be used to give the exact placement of the error within the matrix, and therefore, it can correct it.
 
-Firstly, we arrange the bits in a grid. In the classical sense, we count the number of ones in a row and in a column. If it's even, we add a 0 to the end of the row/ column. If it's an odd number of 1s, we add a 1. That bit that we added is called a parity bit. We repeat this for each row and each column.  Then we end up with something like this:
 
 ![hamming_code](hamming_code.png)
 
 The classical Hamming decoder successfully identified single-bit errors through parity-check matrices. We then attempted a quantum implementation using syndrome extraction circuits and ancilla qubits.
-In addition to this, for the Hamming code, we tried: 1. the matrix-based approach, 2. the circuit-based approach, 3. the simple XOR approach and 4. the basic version before running into faults with all of them 
+In addition to this, for the Hamming code, we tried: 1. the matrix-based approach, 2. the circuit-based approach, 3. the simple XOR approach and 4. the basic version before running into faults with all of them.
 
-Although the full Steane implementation did not function correctly, the process revealed several important challenges in practical quantum error correction:
 
-- Correct logical state encoding
-- Fault-tolerant syndrome extraction
-- Ancilla crosstalk and residual entanglement
-- Error propagation during stabiliser measurements
+During this phase, we attempted all of the implementation methodologies, including the matrix-based, the circuit-based, the XOR-based and more. We found that in order to convert the classical Hamming code to work with quantum data, we would need a quantum data-to-classical algorithm translator (see future work section). We eventually settled on the circuit-based approach and Steane code for the matrix-based approach, which can detect both bit and phase flip errors, without having to create 2 seperate versions of it. The QBER was also lower compared to the repetition code, meaning that it is more applicable to the 2 algorithms
+ 
 
-Despite implementation difficulties, Steane theoretically offers major advantages over repetition coding because it can detect both bit-flip and phase-flip errors.
-
-Key finding:
-The gap between theoretical quantum error correction and practical implementation is substantial, even for relatively small codes such as Steane [[7,1,3]].
+Main takeaway for this section of the research:
+Despite the working algorithm, due to hardware limitations, the real-world applicability of Steane code is limited for the time being.
 
 ### Phase 4 — Eavesdropping and the Masking Problem
 
@@ -166,7 +160,6 @@ Finally, we introduced an intercept-resend attack to test whether error correcti
 
 QBER increased linearly with Eve's attack probability, matching the theoretical relation:
 
-QBER= 0.25p_eve + noise
 
 The repetition code reduced QBER below the 11% security threshold for amplitude damping and depolarising noise:
 
