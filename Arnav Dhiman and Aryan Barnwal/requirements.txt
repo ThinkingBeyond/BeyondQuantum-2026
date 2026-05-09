@@ -1,0 +1,10 @@
+qiskit
+qiskit-aer
+physics-tenpy
+qutip
+networkx
+scipy
+numpy
+pandas
+matplotlib
+seaborn
