@@ -2,7 +2,7 @@
 
 # QBER STABILITY IN MDI-QKD UNDER QUANTUM NOISE AND EAVESDROPPING 
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1bvzKuTybs4rG-iR4PXrXOz4z0rsHJXtD?usp=sharing)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1hMkjwqCfdoX6ONX73SsGv-NObnIk8L6w?usp=sharing)
 
 ## Sections of our research
 - A comparative analysis of three quantum noise channels in Measurement-Device-Independent Quantum Key Distribution (understanding the problem)
@@ -20,22 +20,14 @@ How do different types of quantum noise (depolarising, phase damping, amplitude 
 
 As quantum computing advances, many cryptographic systems currently used to protect banking, medical records, government communications, and digital infrastructure are expected to become vulnerable to quantum attacks. This has intensified global interest in quantum cryptography, particularly Quantum Key Distribution (QKD), which offers theoretically secure communication based on the laws of quantum mechanics rather than the computational difficulty of mathematical problems.
 
-Among QKD protocols, Measurement-Device-Independent Quantum Key Distribution is considered one of the most promising for real-world deployment because it eliminates detector-side attacks, one of the largest practical vulnerabilities in earlier quantum communication systems. This makes MDI-QKD especially relevant for future high-security applications such as long-distance fiber-optic quantum networks, satellite-based quantum communication, financial data protection, and secure governmental or military communication systems.
+Among QKD protocols, Measurement-Device-Independent Quantum Key Distribution is considered one of the most promising for real-world deployment because it eliminates detector-side attacks, a major practical vulnerability in earlier quantum communication systems. This makes MDI-QKD especially relevant for future high-security applications such as long-distance fibre-optic quantum networks, satellite-based quantum communication, financial data protection, and secure governmental or military communication systems.
 
-However, despite its theoretical security advantages, MDI-QKD remains physically fragile. In realistic communication environments, transmitted qubits are constantly affected by environmental noise, signal loss, decoherence, and imperfect hardware. As these errors accumulate, the Quantum Bit Error Rate (QBER) rises until secure key generation eventually collapses. In practice, this means that even theoretically secure quantum protocols can fail under realistic physical conditions.
+However, despite its theoretical security advantages, MDI-QKD remains physically fragile. In realistic communication environments, transmitted qubits are constantly affected by environmental noise, signal loss, decoherence, and imperfect hardware. As these errors accumulate, the Quantum Bit Error Rate (QBER) rises until secure key generation eventually collapses. In practice, this means that even theoretically secure quantum protocols can fail under realistic physical conditions. We decided to address this to improve the security of MDI-QKD.
 
-This project builds upon previous Beyond Quantum research conducted by Taskia Islam and Irene Gallini (2025), which compared multiple QKD protocols and identified noise sensitivity as one of the major limitations preventing practical quantum communication at scale. Their findings motivated us to investigate the problem from a more focused and implementation-oriented perspective: rather than broadly comparing protocols, we examined how specific physical noise channels destabilize MDI-QKD, how effectively realistic correction strategies can mitigate those effects, and whether error correction itself may unintentionally introduce new security risks.
+This project builds on previous Beyond Quantum research by Taskia Islam and Irene Gallini (2025), which compared multiple QKD protocols and identified noise sensitivity as a major limitation preventing practical quantum communication at scale. Their findings motivated us to investigate the problem from a more focused, implementation-oriented perspective: rather than broadly comparing protocols, we examined how specific physical noise channels destabilise MDI-QKD, how effectively realistic correction strategies can mitigate these effects, and whether error correction itself may unintentionally introduce new security risks.
 
-To approach this problem realistically, we modeled three major quantum noise channels (amplitude damping, phase damping, and depolarizing noise) using Qiskit simulations, then analyzed how both error correction and eavesdropping attacks affected QBER and Secret Key Rate (SKR). Instead of immediately relying on highly theoretical fault-tolerant quantum codes that remain difficult to implement on modern hardware, we first explored simpler and more practical correction methods such as repetition coding and Hamming-based techniques to evaluate what improvements are realistically achievable in near-term quantum systems.
+To approach this problem realistically, we modelled three major quantum noise channels (amplitude damping, phase damping, and depolarising noise) using Qiskit simulations, and then analysed how both error correction and eavesdropping attacks affected the QBER and the Secret Key Rate (SKR). Instead of immediately relying on highly theoretical fault-tolerant quantum codes that remain difficult to implement on modern hardware, we first explored simpler and more practical correction methods, such as repetition coding and Hamming-based techniques, to evaluate what improvements are realistically achievable in near-term quantum systems.
 
-More specifically, this research allowed us to:
-
-- analyze how different quantum noise channels affect secure communication,
-- investigate whether simple error correction methods can preserve security,
-- explore how eavesdropping interacts with natural noise,
-- and examine the limitations of classical post-processing compared to true quantum error correction.
-
-These questions connect directly to one of the central challenges facing future quantum networks: not only reducing errors in noisy quantum channels, but determining whether those errors originate from natural environmental noise or from malicious interference hidden within the corrected noise floor.
 
 
 ## Key Terms and Definitions within this research
@@ -80,19 +72,16 @@ Phase 4 introduced an intercept-resend eavesdropping attack (“Eve”) to evalu
 
 Simulations showed that different noise channels affect MDI-QKD very differently.
 
-Amplitude damping produced the highest QBER and the fastest collapse of secure communication, reaching 39.0% QBER at p = 0.30. Depolarizing noise showed similarly destructive behavior, while phase damping remained comparatively stable and never crossed the 11% security threshold within the tested range.
+Amplitude damping produced the highest QBER and the fastest collapse of secure communication, reaching 39.0% QBER at p = 0.30. Depolarising noise showed similarly destructive behaviour, while phase damping remained comparatively stable and never crossed the 11% security threshold within the tested range. However, phase damping noise was the gentlest - so we implemented it first, then amplitude damping, then depolarising - although the last one has a very complex theoretical circuit design, so we decided to gloss over that for time's sake.
 
 ![QBER Across Noise Types](MDI-QKD_Raw_QBER_Across_Three_Noise_Types.png)
 
-Because Secret Key Rate depends nonlinearly on QBER, small increases in error rapidly reduced secure key generation. Under amplitude damping, SKR nearly vanished by p ≈ 0.30, while phase damping still maintained usable key generation.
+Because the secret key rate depends nonlinearly on QBER, small increases in error rapidly reduce secure key generation. Under amplitude damping, SKR nearly vanished by p ≈ 0.30, while phase damping still maintained usable key generation.
 
 ![SKR Across Noise Types](MDI-QKD_Secret_Key_Rate_Across_Three_Noise_Types.png)
 
-Key finding:
-MDI-QKD is most vulnerable to amplitude damping and depolarizing noise, while phase damping is significantly less destructive under Z-basis measurements.
-
-These results justified focusing later correction strategies primarily on amplitude damping and depolarizing channels.
-
+Main takeaway for this section of the research:
+MDI-QKD is most vulnerable to amplitude damping and depolarising noise, while phase damping is significantly less destructive under Z-basis measurements. 
 ### Phase 2 — Repetition Code Error Correction
 
 To reduce bit-flip dominated errors, we implemented a 3-qubit repetition code with majority-vote correction.
