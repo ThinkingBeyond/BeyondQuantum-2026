@@ -193,20 +193,21 @@ Eavesdropping can impact the QBER and SKR, however, not as much as any noise typ
 
 ## Future Work
 
-This project showed that the effectiveness of quantum error correction depends strongly on the type of noise affecting the channel. While simple repetition codes improved performance against bit-flip dominated noise, they failed against phase-flip errors and introduced important security limitations such as Eve masking. Several promising directions remain open for future research. 
-
+Whilst we were successful in reducing the impact of noise on MDI-QKD, there are certain areas which need development
 
 For example:
 
-One natural continuation would be implementing true fault-tolerant quantum error correction using codes such as the Steane code, Shor, or surface codes. Unlike repetition coding, these methods preserve superposition during correction and could potentially distinguish natural noise from malicious interference through syndrome analysis. However, they require significantly more advanced stabilizer measurements, ancilla management, and fault-tolerant circuit design.
+A particularly interesting possibility involves hybrid quantum-classical correction systems. This would mean that an input of quantum data to a classical algorithm would be possible. There has been very little work done in this field - it remains mostly untapped due to the associated complications. After stumbling onto it, we have discussed using machine learning or a series of converter algorithms to achieve this, but due to a lack of time, implementing it is a major area of interest. This would hypothetically allow classical infrastructure to be used for quantum communication, which is why it is an area of such high interest, despite the numerous problems associated with its implementation. 
 
-Another important direction is phase-flip correction. Our results showed that repetition codes cannot correct phase damping because they only address bit-flip errors. Future groups could explore CSS-based constructions or dedicated phase-flip codes to improve security in dephasing-dominated quantum channels such as long-distance fiber communication.
+Eve masking is a particularly worrying side effect of our error correction code, as it would mean that anyone could theoretically listen in to any quantum communication. This should be addressed as soon as possible, likely through the creation of a more effective error correction algorithm, or perhaps development to MDI-QKD, where a 4th person could be involved. However, implementing this would require significant work. Machine learning could also be used here; however, the data set we currently have is very small, so that would be a challenge.
 
-Our eavesdropping simulations also revealed the masking problem: error correction may reduce QBER while simultaneously hiding Eve’s activity within the corrected noise floor. Future research could investigate whether syndrome statistics, machine learning, or hybrid quantum-classical analysis can identify attack patterns that remain invisible to classical post-processing alone.
+Whilst our Steane code works to correct both phase and bit flip errors, we only had time to implement a bit flip version of  repetition code. Perhaps this could be looked into and then developed into other error correction codes as it may work better for long-distance quantum communication, if used alongside Steane code. 
 
-A particularly interesting possibility involves hybrid quantum-classical correction systems. This would that an input of quantum data to a classical algorithm would be possible. There has been very little work done in this field - it remains mostly untapped due to complications associated with it. We have talked about using machine learning or a series of converter algorithms in order to achieve this, but due to a lack of time, actually implementing this is a large area of interest. This would hypothetically allow classical infrastrucutre to be used for quantum communication, which is why it is an area of such high iterest, despite the numerous problems associated with its implementation
 
-Finally, future projects could extend this work beyond discrete-variable MDI-QKD toward continuous-variable MDI-QKD, which may offer higher key rates and stronger compatibility with modern telecommunications infrastructure, but introduces much greater mathematical and experimental complexity.
+
+It's important to note that whilst Steane code gave better results, it was not fully noise tolerant, in order to achieve that, continuously variable error correction would have to be implemented, which is an area of high interest due to its theoretical perfection correction, which would also lead to MDI-QKD being highly accurate
+
+
 
 ## References
 
