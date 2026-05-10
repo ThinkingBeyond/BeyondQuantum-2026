@@ -12,7 +12,7 @@ In this research project, we will be comparing how trajectories of Bosonic Symme
 
 Standard quantum mechanics predicts the results of measurements with great accuracy, but doesn't suggest anything about what particles actually do between measurements. Bohmian mechanics solves this by giving particles **definite** positions at all times, guided by a pilot wave. $\Psi(x_1, x_2, t)$:
 
-$$\dot{x}_k = \frac{\hbar}{m} \mathrm{Im}\!\left(\frac{\partial_{x_k}\Psi}{\Psi}\right)$$
+$$\dot{x}_k = \frac{\hbar}{m} \mathrm{Im}\left(\frac{\partial_{x_k}\Psi}{\Psi}\right)$$
 
 For entangled states, the velocity of particle 1 depends instantaneously on the position and velocity of particle 2. Thus, in entanglement, non-locality is directly visible in individual trajectories. This project asks if we can see that in a controlled scattering simulation.
 
@@ -31,7 +31,7 @@ Since stages 2A and 2B have the same initial marginal densities as stage 1 (whic
 
 **Numerical methods:** Crank-Nicolson for wavefunction evolution, RK4 for trajectory integration (checked against RK45 for a subsample), Born-rule $\chi^2$ test to check for quantum equilibrium at all times.
 
-**Metrics tracked:**KL divergence, independence ratio 
+**Metrics tracked:** KL divergence, independence ratio 
 $I = P(TT)/[P(T_1)\cdot P(T_2)]$, velocity correlation $\rho_v(t)$ entanglement entropy $S_e$, conservation of norm, and Born-rule $\chi^2$.
 
 
@@ -65,7 +65,7 @@ $I = P(TT)/[P(T_1)\cdot P(T_2)]$, velocity correlation $\rho_v(t)$ entanglement 
 
 | Equation | Formula |
 |----------|---------|
-| Guidance equation | $\dot{x}_k = \frac{\hbar}{m} \mathcal{Im}\!\left(\frac{\partial_{x_k}\Psi \cdot \Psi^*}{|\Psi|^2}\right})$ |
+| Guidance equation | $\dot{x}_k = \frac{\hbar}{m_k}\,\mathrm{Im}\!\left(\frac{\partial_{x_k}\Psi}{\Psi}\right)$ |
 | Crank-Nicolson step | $(I + irH)\Psi^{n+1} = (I - irH)\Psi^n$ |
 | Phase kernel (Stage 2B) | $\Psi \rightarrow \Psi \cdot \exp(i\,\Delta\alpha(t)(x_1-x_2)^2)$ |
 | Bosonic symmetrisation | $\Psi = \mathcal{N}[\varphi_A(x_1)\varphi_B(x_2) + \varphi_B(x_1)\varphi_A(x_2)]$ |
@@ -117,24 +117,54 @@ Six quantitative measures are tracked across all stages:
 
 | Stage | TT (%) | RR (%) | TR (%) | RT (%) | Independence Ratio $I$ |
 |-------|--------|--------|--------|--------|----------------------|
-| Stage 1 - Product | 29 | 118 | 122 | 31 | *(≈ 1.0 expected)* |
-| Stage 2A - Symmetric | 29 | 112 | 65 | 94 | 0.752 |
-| Stage 2B - Phase-Induced | 5 | 49 | 143 | 103 | 0.094 |
+| Stage 1 - Product | 29 (9.7%) | 118 (39.3%) | 122 (40.7%) | 31 (10.3%) | *(≈ 1.0 expected)* |
+| Stage 2A - Symmetric | 29 (9.7%) | 112 (37.3%) | 65 (21.7%) | 94 (31.3%) | 0.752 |
+| Stage 2B - Phase-Induced | 5 (1.7%) | 49 (16.3%) | 143 (47.7%) | 103 (34.3%) | 0.094 |
 
 ### Velocity Correlations $\rho_v(t)$
+
+
+$\rho_v(t)$ is the Pearson correlation between the Bohmian velocities $\dot{x}_1(t)$ and $\dot{x}_2(t)$ over 300 trajectories. Values near zero indicate independent motion, while non-zero values indicate non-local coupling.
+
+* **Stage 1 (blue):** Correlation stays near zero, consistent with an unentangled product state.
+
+* **Stage 2A (Pink):** Correlation is non-zero, showing coupling already present from bosonic symmetrisation.
+
+* **Stage 2B (yellow):** Correlation rises during $t \in [0,t_{\mathrm{ramp}}]$ and then saturates, revealing the gradual onset of dynamically induced entanglement.
+
  <img width="600" height="450" alt="download" src="https://github.com/user-attachments/assets/555a14c4-22d9-4dbb-b8ef-27ef4d4f40c1" />
 
 ### Entanglement Entropy $S_e(t)$
+
+$S_e(t)$ is the von Neumann entanglement entropy computed from the Schmidt decomposition of $\Psi(x_1,x_2,t)$. A value of $S_e=0$ indicates a separable product state, while larger values indicate stronger entanglement.
+
+* **Stage 1:** $S_e \approx 0$ throughout, confirming no entanglement generation.
+
+* **Stage 2A:** $S_e$ is non-zero from $t=0$, reflecting entanglement introduced by bosonic symmetrisation.
+
+* **Stage 2B:** $S_e$ increases during the phase ramp, showing the gradual creation of dynamical entanglement by the kernel $e^{i\alpha(t)(x_1-x_2)^2}$.
+
+Together with $\rho_v(t)$, the entropy evolution confirms the same entanglement ordering across the three stages.
+
 <img width="1178" height="396" alt="image" src="https://github.com/user-attachments/assets/7ada1605-ca11-4f29-8760-ec541f12cd4a" />
 
 
 ### Final Position Densities
+
+Each panel shows the final two-particle probability density $|\Psi(x_1,x_2,t_{\mathrm{final}})|^2$ in configuration space. The axes represent the particle positions $x_1$ and $x_2$, with the barrier centred at $x=0$.
+
+The four quadrants correspond to the possible scattering outcomes:
+TT (top-right), RR (bottom-left), TR (top-left), and RT (bottom-right), representing transmitted/reflected combinations for the two particles.
+
 
 | Stage 1 (Product) | Stage 2A (Symmetric) | Stage 2B (Phase-Induced) |
 |:-----------------:|:--------------------:|:------------------------:|
 | <img width="590" height="490" alt="image" src="https://github.com/user-attachments/assets/edc82512-7b61-40b6-9f10-736bca685c1b" /> |<img width="590" height="490" alt="image" src="https://github.com/user-attachments/assets/05a7d550-711d-4bed-9494-fffc0b1a5a4c" /> | <img width="590" height="490" alt="image" src="https://github.com/user-attachments/assets/6a6d3dc1-f682-4b33-a854-35b14632ae74" /> |
 
 ### Bohmian Trajectory Braids (3D Configuration Space)
+
+Each panel shows 300 Bohmian trajectories in configuration-time space $(x_1,x_2,t)$. Each curve represents a trajectory pair $(x_1(t),x_2(t))$ evolving in time. The vertical axis is time, while the horizontal axes give the positions of particles 1 and 2. The scattering barrier is centred at $x_1=x_2=0$.
+
 | Stage 1 (Product) | Stage 2A (Symmetric) | Stage 2B (Phase-Induced) |
 |:-----------------:|:--------------------:|:------------------------:|
 | <img width="400" height="389" alt="ScreenRecording_05-01-2026 21-19-37_1" src="https://github.com/user-attachments/assets/0a66f82b-c3b4-4d91-bdd7-658f68a76ee6" /> |<img width="400" height="389" alt="ScreenRecording_05-01-2026 21-20-23_1" src="https://github.com/user-attachments/assets/790b09c7-62bb-4344-879a-9b859e0936b2" /> | <img width="400" height="390" alt="ScreenRecording_05-01-2026 21-20-51_1" src="https://github.com/user-attachments/assets/fda80996-d22f-4b06-8e0a-dab5310f0265" /> |
@@ -142,9 +172,9 @@ Six quantitative measures are tracked across all stages:
 
 Preliminary expectations based on theory:
 
-- **Stage 1** should show $I \approx 1$ and $\rho_v \approx 0$, confirming that product-state particles scatter independently with no velocity correlations.
-- **Stage 2A** should show $I \neq 1$ and a non-zero $\rho_v(t)$ arising from the bosonic exchange symmetry encoded in the initial state.
-- **Stage 2B** should show $\rho_v(t)$ growing from zero during the phase ramp ($t < t_\text{ramp} = 1.5$) and stabilising thereafter, directly visualising the *build-up* of dynamically induced entanglement in Bohmian trajectory space.
+This project shows that entanglement produces clear, measurable signatures in Bohmian trajectories. The product state remained nearly independent, bosonic symmetrisation introduced immediate non-local correlations, and phase-induced entanglement generated the strongest dynamical coupling.
+
+The consistent agreement between velocity correlations $\rho_v(t)$, entanglement entropy $S_e(t)$, and scattering statistics confirms that both structural and dynamically generated entanglement leave distinct fingerprints in two-particle quantum dynamics.
 
 ---
 
@@ -160,6 +190,7 @@ Preliminary expectations based on theory:
 **Foundational Bohmian Mechanics**
 
 1. Bohm, D. (1952). A Suggested Interpretation of the Quantum Theory in Terms of "Hidden" Variables I & II. *Physical Review*, 85, 166–193. [doi:10.1103/PhysRev.85.166](https://doi.org/10.1103/PhysRev.85.166)
+
 
 
 
