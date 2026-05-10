@@ -1,7 +1,7 @@
 ![BeyondQuantum Banner for Research Projects](../BeyondQuantum_Banner_Research_Projects_2026.png)
 
 # Qubit Manipulation in Quantum Circuits - Implementing Deutsch and Deutsch-Jozsa Algorithm for 2- and 3- and 4-Qubit Systems
-The following project is done by Amariah Brathwaite, Cristian Echeverri Valencia and Dakshan Balaramesh; mentored by Mr. Axel Karger. This project explores Qubit Manipulation, specifically using the Deutsch and Deutsch-Jozsa Algorithms.
+The following project is done by Amariah Brathwaite, Cristian Echeverri Valencia and Dakshan Balaramesh, and mentored by Mr. Axel Karger. This project explores Qubit Manipulation, specifically using the Deutsch and Deutsch-Jozsa Algorithms.
 ## Overview
 
 Quantum Computing is an innovative methodology that has transformed classical computational methods, as we know then today. Central to quantum computing is the qubit (quantum bit), which is an abstract mathematical object that can exist in a superposition of the classical bits (0 & 1). This prperty of qubits is often combined with entanglement, a phenomenon which posits that the state of one qubit is linked to another. When these two properties are combined with a thrird, quantum interference, quantum systems are then able to access and process information in a way that is much more powerful than classical computational methods.
@@ -49,10 +49,11 @@ To implement these oracle, these steps were taken:
 
 ## Results
 Is is deduced that both algorithms can identify whether a function is constant or balanced in a single query. 
-For the Deutsch Algorithm, it correctly identified balaced functions by outputting $$|1\rangle$$ on the given input qubit.
-Also, it was found that the balanced function predictions were less accurate than the constant function predictions for this algorithm.
+For the Deutsch Algorithm, it correctly identified Balanced functions by outputting $$|1\rangle$$ on the given input qubit.
+Also, it was found that the balanced function predictions were less accurate than the constant function predictions for the algorithm.
 
-For the Deutsch-Josza Algorithm, 
+For the Deutshc-Jozsa Algorithm, it too identified the Balanced and Constant functions correctly with over 90% accuracy in both cases. 
+And as in the Deutsch Algorithm, the prediction accuracy for Balanced functions was lower than for Constant functions.
 
 ## Future Work
 
