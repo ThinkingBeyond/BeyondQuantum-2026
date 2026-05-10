@@ -50,7 +50,9 @@ To implement these oracle, these steps were taken:
 ## Results
 Is is deduced that both algorithms can identify whether a function is constant or balanced in a single query. 
 For the Deutsch Algorithm, it correctly identified balaced functions by outputting $$|1\rangle$$ on the given input qubit.
-Also, it was found that the balanced function predictions were less accurate than the constant function predictions for this algorithm. 
+Also, it was found that the balanced function predictions were less accurate than the constant function predictions for this algorithm.
+
+For the Deutsch-Josza Algorithm, 
 
 ## Future Work
 
