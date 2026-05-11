@@ -107,7 +107,7 @@ While it reduces the error rate for bit flip errors, the data transmitted is 3x 
 ### Phase 3 — Hamming and Steane Codes
 
 To overcome the limitations of repetition codes, we explored the Hamming [7,4,3] code and the Steane [[7,1,3]] quantum code.
-The Hamming code was invented by John Hamming, who worked on the Manhattan Project, and it's a much more refined way of detecting errors and correcting them in $log_2 (n) +1$ bits. It arranges the data into a logical matrix and calculates the parity bits for each row and column, which is to say that it counts the number of 1s in a row/ column. If there is a mismatch, the parity bits can be used to give the exact placement of the error within the matrix, and therefore, it can correct it.
+The Hamming code was invented by Richard Hamming, who worked on the Manhattan Project, and it's a much more refined way of detecting errors and correcting them in $log_2 (n) +1$ bits. It arranges the data into a logical matrix and calculates the parity bits for each row and column, which is to say that it counts the number of 1s in a row/ column. If there is a mismatch, the parity bits can be used to give the exact placement of the error within the matrix, and therefore, they can correct it.
 
 
 ![hamming_code](hamming_code.png)
