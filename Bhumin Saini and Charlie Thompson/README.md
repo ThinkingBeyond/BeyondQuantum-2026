@@ -110,8 +110,8 @@ Six quantitative measures are tracked across all stages:
 
 | Comparison | KL Divergence | Verdict |
 |------------|--------------|---------|
-| Stage 1 vs Stage 2A (marginals) | 5.542e-03 | ⚠ near-zero |
-| Stage 1 vs Stage 2B (marginals) | 0.000e+00 | fair start ✓ |
+| Stage 1 vs Stage 2A (marginals) | 5.542e-03 | near-zero |
+| Stage 1 vs Stage 2B (marginals) | 0.000e+00 | fair start |
 
 ### Scattering Outcome Fractions
 
