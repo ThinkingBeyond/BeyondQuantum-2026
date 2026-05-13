@@ -1,6 +1,6 @@
 ![BeyondQuantum Banner for Research Projects](../BeyondQuantum_Banner_Research_Projects_2026.png)
 
-# State Your Project Title Here With Capitalised Letters as Shown
+# **Proving The System-Environment Split**
 
 ***Provide a description of your project including*** 
 
