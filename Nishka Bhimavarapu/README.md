@@ -1,6 +1,6 @@
 ![BeyondQuantum Banner for Research Projects](../BeyondQuantum_Banner_Research_Projects_2026.png)
 
-# **Proving The System-Environment Split**
+# **The Measurement Problem: The System-Environment Split**
 
 ***Provide a description of your project including*** 
 
@@ -30,7 +30,9 @@
 
 ## Research Question
 
-State your research question here and elaborate on it.
+Can the system-environment split be derived or justified from within Quantum Darwinism's framework rather than assumed?
+
+This research question seeks to understand whether the 
 
 ## Motivation
 
