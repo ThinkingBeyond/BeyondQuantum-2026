@@ -2,16 +2,17 @@
 
 # **The Measurement Problem: The System-Environment Split**
 
-## Research Question
-
-Can the system-environment split be derived or justified from within Quantum Darwinism's framework rather than assumed?
-
 
 ## Motivation
 
 When initially researching the measurement problem, I came across an assumption present in almost every research paper: the system-environment split. The system-environment split in quantum mechanics is defined as a conceptual and mathematical division of a total quantum universe into a specific part of interest, the system, and the surrounding, the environment; this split is fundamental to studying open quantum systems, decoherence, and the transition from quantum to classical behavior. 
 
 What started off as an investigation into the measurement problem through the Many-Worlds Interpretation soon led to questions regarding this unjustified assumption. I seeked to understand whether this foundational assumption of the system-environment split can be justified internally or whether it remains irreducible through theories within Quantum Darwinism.
+
+## Research Question
+
+Can the system-environment split be derived or justified from within Quantum Darwinism's framework rather than assumed?
+
 
 ## Quantum Darwinism
 
