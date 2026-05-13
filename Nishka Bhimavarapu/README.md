@@ -45,57 +45,61 @@ Quantum Darwinism (QD), developed primarily by Wojciech Zurek, proposes that cla
 
 ## Core Frameworks
 
-**Spectrum Broadcast Structures:**
+1. **Kastner's Circularity Objection:**
 
-Introduced by Korbicz, Horodecki et al. (2014–2015), SBS provides a precise mathematical criterion for quantum objectivity, going beyond the informal redundancy idea of Quantum Darwinism. 
+    Kastner's circularity objection is the argument that Quantum Darwinism cannot justify its own starting point — it has to assume a system–environment      split in order to run, but producing that split is exactly what it's supposed to explain.
 
-A joint system-environment state has SBS form when: ρS:F₁…Fₙ = Σᵢ pᵢ |sᵢ⟩⟨sᵢ| ⊗ ρᵢF₁ ⊗ … ⊗ ρᵢFₙ
+2. **Spectrum Broadcast Structures:**
 
---> {|sᵢ⟩} are the pointer (einselected) states of the system
+    Introduced by Korbicz, Horodecki et al. (2014–2015), SBS provides a precise mathematical criterion for quantum objectivity, going beyond the informal     redundancy idea of Quantum Darwinism. 
 
---> Each fragment Fₖ independently contains full classical information about the system
+    A joint system-environment state has SBS form when: ρS:F₁…Fₙ = Σᵢ pᵢ |sᵢ⟩⟨sᵢ| ⊗ ρᵢF₁ ⊗ … ⊗ ρᵢFₙ where:
 
---> Fragments are mutually uncorrelated (tensor product structure)
+- {|sᵢ⟩} are the pointer (einselected) states of the system
 
-A state is "objectively classical" precisely when it reaches SBS form — the environment becomes a communication channel. SBS is strictly stronger than simple decoherence as it demands that information about the system be not just lost to the environment, but broadcast in an accessible, redundant manner.
+- Each fragment Fₖ independently contains full classical information about the system
 
+- Fragments are mutually uncorrelated (tensor product structure)
 
-
-
-**Strong Quantum Darwinism:**
-
-Strong QD (Brandão, Piani & Horodecki, 2015; further developed by Le Bihan, Lorenzetti) tightens QD's requirements by imposing two additional demands beyond standard redundancy:
-
---> Exclusivity: Observers can access only classically encoded information about S from environmental fragments — no non-classical (quantum) correlations leak through
-
---> Completeness: The classical information available per fragment is the full pointer-state information, not partial
-
---> Scalability: The redundancy index R → ∞ as the number of independent observers grows
-
-This distinguishes genuine objectivity from partial decoherence. The framework sharpens the distinction between systems that merely lose quantum coherence and those that truly become classical observers.
-
-Strong QD also tightens the constraint on valid system-environment splits: only splits that produce this structure qualify as producing objective classical reality — but again, multiple splits may satisfy this criterion.
+    A state is "objectively classical" precisely when it reaches SBS form — the environment becomes a communication channel. SBS is strictly stronger         than simple decoherence as it demands that information about the system be not just lost to the environment, but broadcast in an accessible,              redundant manner.
 
 
-**Zurek's Extantons:**
-Zurek introduced extantons as the proposed "atoms of objective existence" — the minimal quantum units that can attain classical, observer-independent reality within the QD framework.
-
-An extanton is defined as a quantum system that simultaneously satisfies:
-
---> Has well-defined pointer states selected by einselection (stability under monitoring)
-
---> Broadcasts its state redundantly into the environment in SBS form
-
---> Can be identified by multiple independent observers consistently
-
---> Is robust — its classical information survives repeated environmental interaction
-
-Extantons constrain the system-environment split as not every decomposition of the Hilbert space produces extantons. Only splits where one subsystem einselects stable pointer states and redundantly encodes them in the complement qualify.
-
-This is a meaningful advance as extantons dramatically narrow the space of permissible splits. However, they do not uniquely determine it: multiple Hilbert-space decompositions may produce valid extantons, and the selection among these remains underdetermined from within Quantum Darwinism alone.
 
 
-Kastner's Circularity Objection:
+3. **Strong Quantum Darwinism:**
+
+    Strong QD (Brandão, Piani & Horodecki, 2015; further developed by Le Bihan, Lorenzetti) tightens QD's requirements by imposing two additional demands     beyond standard redundancy:
+
+- Exclusivity: Observers can access only classically encoded information about S from environmental fragments — no non-classical (quantum) correlations leak through
+
+- Completeness: The classical information available per fragment is the full pointer-state information, not partial
+
+- Scalability: The redundancy index R → ∞ as the number of independent observers grows
+
+    This distinguishes genuine objectivity from partial decoherence. The framework sharpens the distinction between systems that merely lose quantum         coherence and those that truly become classical observers.
+
+    Strong QD also tightens the constraint on valid system-environment splits: only splits that produce this structure qualify as producing objective         classical reality — but again, multiple splits may satisfy this criterion.
+
+
+
+
+4. **Zurek's Extantons:**
+
+    Zurek introduced extantons as the proposed "atoms of objective existence" — the minimal quantum units that can attain classical, observer-independent     reality within the QD framework.
+
+    An extanton is defined as a quantum system that simultaneously satisfies:
+
+- Has well-defined pointer states selected by einselection (stability under monitoring)
+
+- Broadcasts its state redundantly into the environment in SBS form
+
+- Can be identified by multiple independent observers consistently
+
+- Is robust — its classical information survives repeated environmental interaction
+
+    Extantons constrain the system-environment split as not every decomposition of the Hilbert space produces extantons. Only splits where one subsystem      einselects stable pointer states and redundantly encodes them in the complement qualify.
+
+    This is a meaningful advance as extantons dramatically narrow the space of permissible splits. However, they do not uniquely determine it: multiple       Hilbert-space decompositions may produce valid extantons, and the selection among these remains underdetermined from within Quantum Darwinism alone.
 
 
 
@@ -113,14 +117,11 @@ Overall, Quantum Darwinism cannot internally derive the system–environment spl
 State and explain what follow-up research could be conducted based on your work.
 
 ## References
-
-List all your references here. Remember to put links into markdown. For example:
-
-1.  Einstein, A. (1905). *On the Electrodynamics of Moving Bodies*. Annalen der Physik, 17, 891-921. [Internet Archive](https://archive.org/details/einstein-1905-relativity)
-
-**Tip**: *If you have you references in BibTex, Google Scholar or Zotero*
-1. Create/copy a list into ChatGPT
-2. Ask it to turn it into an unsorted list in markdown
+1. Kastner, R. E. (2024). Conventional quantum theory does not support a coherent relational account. Philosophy of Physics, Article 158. https://doi.org/10.31389/pop.158
+2. Korbicz, J. K. (2021). Roads to objectivity: Quantum Darwinism, Spectrum Broadcast Structures, and strong quantum Darwinism—a review. Quantum, 5, Article 571. https://doi.org/10.22331/q-2021-11-08-571
+3. Zurek, W. H. (2003). Decoherence, einselection, and the quantum origins of the classical. Reviews of Modern Physics, 75, 715–775. https://doi.org/10.1103/RevModPhys.75.715
+4. Zurek, W. H. (2009). Quantum Darwinism. Nature Physics, 5, 181–188. https://doi.org/10.1038/nphys1202
+5. Zurek, W. H. (2022). Quantum theory of the classical: Einselection, envariance, quantum Darwinism and extantons. Entropy, 24(11), Article 1520. https://doi.org/10.3390/e24111520
 
 ---
 
