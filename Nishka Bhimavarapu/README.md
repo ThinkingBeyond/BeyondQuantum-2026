@@ -70,7 +70,7 @@ An extanton is defined as a quantum system that simultaneously satisfies:
 
 - Has well-defined pointer states selected by einselection (stability under monitoring)
 
-- Broadcasts its state redundantly into the environment in SBS form
+- Displays its state redundantly into the environment in SBS form
 
 - Can be identified by multiple independent observers consistently
 
@@ -82,13 +82,18 @@ This is a meaningful advance as extantons dramatically narrow the space of permi
 
 
 
-## Conclusion
+## Main Argument
 
 Zurek's extantons represent the most promising internal resource for constraining the split. By identifying which subsystem decompositions produce stable, redundantly broadcast pointer states, they eliminate most candidate splits as incompatible with QD. However, they narrow the space of valid splits rather than uniquely selecting one. The residual underdetermination — multiple extanton-producing splits may coexist — cannot be resolved from within QD's dynamical framework alone. An external principle is still required to select the "true" split.
 
 Kastner's foundational critique deepens the problem: to define pointer states (and hence extantons), one must already presuppose a preferred system–environment decomposition — the very thing QD is trying to explain. The framework thus appears circular at its foundations. While QD correctly describes how classicality propagates once a split is in place, it cannot bootstrap that split from purely quantum-mechanical resources. This transforms what initially looked like a technical gap into a philosophical problem about the limits of physical explanation.
 
-Overall, Quantum Darwinism cannot internally derive the system–environment split. Extantons and SBS together significantly constrain which splits are physically admissible, but the theory presupposes the very decomposition it would need to justify. Kastner's circularity objection reveals this as a philosophical rather than merely technical limitation — QD offers a powerful and empirically grounded account of how classicality spreads, but the origin of the split itself lies beyond its explanatory reach.
+
+
+
+## Conclusion
+
+Quantum Darwinism cannot internally derive the system–environment split. Extantons and SBS together significantly constrain which splits are physically admissible, but the theory presupposes the very decomposition it would need to justify. Kastner's circularity objection reveals this as a philosophical rather than merely technical limitation — QD offers a powerful and empirically grounded account of how classicality spreads, but the origin of the split itself lies beyond its explanatory reach.
 
 
 
