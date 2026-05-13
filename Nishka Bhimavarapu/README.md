@@ -56,7 +56,7 @@ Strong QD (Brandão, Piani & Horodecki, 2015; further developed by Le Bihan, Lor
 
 - Scalability: The redundancy index R → ∞ as the number of independent observers grows
 
-This distinguishes genuine objectivity from partial decoherence. The framework sharpens the distinction between systems that merely lose quantum         coherence and those that truly become classical observers.
+This distinguishes true objectivity from partial decoherence as it sharpens the distinction between systems that merely lose quantum coherence and those that truly become classical observers.
 
 Strong QD also tightens the constraint on valid system-environment splits: only splits that produce this structure qualify as producing objective         classical reality — but again, multiple splits may satisfy this criterion.
 
