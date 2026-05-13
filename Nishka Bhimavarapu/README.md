@@ -33,10 +33,10 @@ Kastner's circularity objection is the argument that Quantum Darwinism cannot ju
 Introduced by Korbicz, Horodecki et al. (2014–2015), SBS provides a precise mathematical criterion for quantum objectivity, going beyond the informal     redundancy idea of Quantum Darwinism. 
 
 A joint system-environment state has SBS form when: 
-$\[\rho_{S:F_1\ldots F_n}=\sum_i p_i\,|s_i\rangle\langle s_i|\otimes\rho_i^{F_1}\otimes\cdots\otimes\rho_i^{F_n}\]$
+ $\[\rho_{S:F_1\ldots F_n}=\sum_i p_i\,|s_i\rangle\langle s_i|\otimes\rho_i^{F_1}\otimes\cdots\otimes\rho_i^{F_n}\]$
 where:
 
-- {|sᵢ⟩} are the pointer (einselected) states of the system
+- |sᵢ⟩ are the pointer (einselected) states of the system
 
 - Each fragment Fₖ independently contains full classical information about the system
 
