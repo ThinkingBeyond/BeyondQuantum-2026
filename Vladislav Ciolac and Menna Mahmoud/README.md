@@ -1,6 +1,6 @@
 ![BeyondQuantum Banner for Research Projects](../BeyondQuantum_Banner_Research_Projects_2026.png)
 
-# Analysis of Side-Channel Attacks on the BB84 protocol and Discovering the Mathematical and Statistical Limitations of BB84
+# Analysis of side-channel attacks on the BB84 protocol and discovering it's mathematical and statistical limitations
 
 ## Research Questions
 
@@ -8,13 +8,14 @@ Our research project tackeled two research questions.
 
 **1- How do different Side-Channel Attacks affect the security and the key generation of the BB84 protocol? and how to detect them using QBER?**
 
-We analyzed how different side-Channel attacks like the **Intecept-Resend, Time-Shift, and the Detector Blinding attacks** manipulate the hardware of the Quantum Key Distribution device to allow an Eavesdropper (Eve) gain information about the secret key. Also Studied whether the Quantum Bit Error rate (QBER) is sufficient to detect the Time-shift and the Detector Blinding attacks.
+We analyzed how different side-Channel attacks like the **Intecept-Resend, Time-Shift, and the Detector Blinding attacks** manipulate the hardware of the Quantum Key Distribution device to allow an Eavesdropper (Eve) gain information about the secret key. We have also studied whether the Quantum Bit Error rate (QBER) is sufficient to detect the Time-shift and the Detector Blinding attacks.
 
 **2-What are the mathematical and statistical limitations of the BB84 protocol?**
+BB84 is a physical protocol with digital applications. At it's core, it is based on statistically positive outcomes, and probabilities. There are limittaions when the protocol's mathematical background does not perform efficiently, or has insecure operations.
 
 ## Motivation
 
-Our motivation for the projects is the potential BB84 has for mass-applications in industries like telecommunications and internet traffick. Looking at the basic implementaton, it is not that complicated to implement with physics instruments and a well calculated environment.
+Our motivation for the project is the potential BB84 has for mass-applications in industries like telecommunications and internet traffick. Looking at the basic implementaton, it is not that complicated to implement with physics instruments and a well calculated environment.
 
 The BB84 Protocol security depends on the hardware of the QKD device, which can have many imperfections. These imperfections are potential vulnerabilities which allow Eve to apply Side-Channel attacks. Many systems depend on the QBER to detect attacks, but for some side-channel attacks like the time-shift and the detector blinding the QBER does not change significantly, which makes the QBER insufficient for those attacks.
 
@@ -102,9 +103,8 @@ The graph shows that the detector blinding attack violates that assumption. The 
 
 What we finally conclude from that graph is the QBER fails to detect some side-channel attacks. Therefore **Hradware-Level monitoring mechanisms** are requird for those attacks.
 
-### Run on Google Colab
 
-[Click here to open the notebook in Colab](https://colab.research.google.com/drive/15gNVaGfA7y3vBXIqiyzRQigJIwBleWhO?usp=sharing)
+
 
 ## Limitations of BB84 and solutions
 The QBER measures how much Eve has interacted in the data transmission phase and how much knowledge she has gathered by measuring and disturbing the photons. 11% is an industry-standard QBER value at which it is considered that Eve has too much knowledge about the symmetric keys, and the protocol has to be discarded. There is a solutions of 2 additional steps which can be implemented and enhance the security of the key up to this point in the protocol.
@@ -114,19 +114,36 @@ A simple and reliable method to diminish the QBER is reducing the number of diff
 
 ## Noise preprocessing.
 Advanced distillation is the first step, and after it follows noise preprocessing. At this point we assume that Eve has knowledge about bits in the sifted key (values of bits, positions, information about subsets, etc.). Alice can induce fake noise in the key by changing a certain number of bit's values in her sifted key. This noise has to be later corrected in an error correction step, but the gain is that Eve's knowledge about the changed bits and the neighboring subsets is wrong, and when she will to attack the result will be incorrect.
-Regarding how many bits have to be changed in order to cause enough disturbance for Eve is given by the formula
+Regarding how much Noise Preprocessing is necessary for a protocol, we have a formula:
 
-<img width="790" height="587" alt="image" src="Vladislav Ciolac and Menna Mahmoud/image.png" />
+<img width="532" height="541" alt="image" src="https://github.com/user-attachments/assets/efc18ee0-6118-4745-b8de-aee7daac7ff8" />
+
+## And to evidentiate the difference Noise Preprocessing makes:
+
+
+<img width="808" height="661" alt="image" src="https://github.com/user-attachments/assets/28a3f48a-77c9-4f31-b6b1-c9c008bfa306" />
+
+figure 1 shows the relationship between the measured QBER and the added noise preprocessing
+
+
+<img width="768" height="654" alt="image" src="https://github.com/user-attachments/assets/4361a078-79f2-4956-a385-e0476db74ee9" />
+
+figure 2 shows the difference between the classical and the optimised implementation wit the 2 additional steps.
+
+
 
 ## Conclusions 
 
-* Although QBER is succesful in detecting the intercept-Resend attack, but it fails for some other Side-Channel attacks.
-* The Time-shift and the Detector Blinding attacks do not increase the QBER above the standered 11% threshold, which makes them undetectable using the QBER.
+BB84 is a great protocol when it works as intended. Attacks and natural noise can cause it to not function properly, and this affects the QBER and key-rate. Although QBER is succesful in detecting the intercept-Resend attack, it fails for some other Side-Channel attacks. The Time-shift and the Detector Blinding attacks do not increase the QBER above the standered 11% threshold, which makes them undetectable using the QBER. There are also solutions for situations when the QBER exceeds 11% and to save the  protocol 2 addional steps are added: Advanced Distillation and Noise Preprocessing. This is done taking into consideration the key-rate too, and thus obtaining a safe and efficient protocol.
 
 
 ## Future Work
 
-Detecting the Time-shift and the Detector Blinding attacks require hardware level monitoring mechanisms. Photocurrent mechanism for the Detector Blinding attack, Time Histogram Analysis for the Time-shift attack. 
+Detecting the Time-shift and the Detector Blinding attacks require hardware level monitoring mechanisms. Photocurrent mechanism for the Detector Blinding attack, Time Histogram Analysis for the Time-shift attack. Another future direction for the project is a more efficient Advanced Distillation process, that does not eliminate many secure bits along with insecure bits, by choosing the subsets in our advantage.
+
+### Run on Google Colab
+
+[Click here to open the notebook in Colab](https://colab.research.google.com/drive/15gNVaGfA7y3vBXIqiyzRQigJIwBleWhO?usp=sharing)
 
 ## References
 
