@@ -90,7 +90,6 @@ Kastner's foundational critique deepens the problem: to define pointer states (a
 
 
 
-
 ## Conclusion
 
 Quantum Darwinism cannot internally derive the system–environment split. Extantons and SBS together significantly constrain which splits are physically admissible, but the theory presupposes the very decomposition it would need to justify. Kastner's circularity objection reveals this as a philosophical rather than merely technical limitation — QD offers a powerful and empirically grounded account of how classicality spreads, but the origin of the split itself lies beyond its explanatory reach.
