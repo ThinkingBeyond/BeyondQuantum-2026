@@ -9,6 +9,7 @@ When initially researching the measurement problem, I came across an assumption 
 
 What started off as an investigation into the measurement problem through the Many-Worlds Interpretation soon led to questions regarding this unjustified assumption. I seeked to understand whether this foundational assumption of the system-environment split can be justified internally or whether it remains irreducible through theories within Quantum Darwinism.
 
+
 ## Research Question
 
 Can the system-environment split be derived or justified from within Quantum Darwinism's framework rather than assumed?
@@ -17,6 +18,7 @@ Can the system-environment split be derived or justified from within Quantum Dar
 ## Quantum Darwinism
 
 Quantum Darwinism (QD), developed primarily by Wojciech Zurek, proposes that classical reality emerges from quantum mechanics through repeated redundant encoding of information. As a system S interacts with its environment E, only certain "pointer states" — stable under environmental monitoring via einselection — survive decoherence. Environmental fragments Fᵢ each carry redundant copies of S's pointer-state information. Observers access the system only through these records — explaining why independent observers agree on classical facts.
+
 
 ## Core Frameworks
 
