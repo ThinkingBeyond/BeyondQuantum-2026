@@ -32,21 +32,60 @@
 
 Can the system-environment split be derived or justified from within Quantum Darwinism's framework rather than assumed?
 
-This research question seeks to understand whether the 
 
 ## Motivation
 
-Explain your motivation for your chosen research question here.
+When initially researching the measurement problem, I came across an assumption present in almost every research paper: the system-environment split. The system-environment split in quantum mechanics is defined as a conceptual and mathematical division of a total quantum universe into a specific part of interest, the system, and the surrounding, the environment; this split is fundamental to studying open quantum systems, decoherence, and the transition from quantum to classical behavior. 
 
-## Your next subsection
+What started off as an investigation into the measurement problem through the Many-Worlds Interpretation soon led to questions regarding this unjustified assumption. I seeked to understand whether this foundational assumption of the system-environment split can be justified internally or whether it remains irreducible through theories within Quantum Darwinism.
 
-Continue working through the points listed above with the help of sensibly named subsections. 
+## Quantum Darwinism
 
-If you want to see some good examples of README files check out:
-- [Example 1](https://github.com/ThinkingBeyond/BeyondAI-2024/blob/main/warenya-loulia/README.md)
-- [Example 2](https://github.com/ThinkingBeyond/BeyondAI-2024/blob/main/shaana-karuna/README.md)
+Quantum Darwinism (QD), developed primarily by Wojciech Zurek, proposes that classical reality emerges from quantum mechanics through repeated redundant encoding of information. As a system S interacts with its environment E, only certain "pointer states" — stable under environmental monitoring via einselection — survive decoherence. Environmental fragments Fᵢ each carry redundant copies of S's pointer-state information. Observers access the system only through these records — explaining why independent observers agree on classical facts.
 
-[ ... ]
+## Core Frameworks
+
+**Spectrum Broadcast Structures:**
+Introduced by Korbicz, Horodecki et al. (2014–2015), SBS provides a precise mathematical criterion for quantum objectivity, going beyond the informal redundancy idea of Quantum Darwinism. 
+A joint system-environment state has SBS form when: ρS:F₁…Fₙ = Σᵢ pᵢ |sᵢ⟩⟨sᵢ| ⊗ ρᵢF₁ ⊗ … ⊗ ρᵢFₙ
+--> {|sᵢ⟩} are the pointer (einselected) states of the system
+--> Each fragment Fₖ independently contains full classical information about the system
+--> Fragments are mutually uncorrelated (tensor product structure)
+A state is "objectively classical" precisely when it reaches SBS form — the environment becomes a communication channel. SBS is strictly stronger than simple decoherence as it demands that information about the system be not just lost to the environment, but broadcast in an accessible, redundant manner.
+
+
+**Strong Quantum Darwinism:**
+Strong QD (Brandão, Piani & Horodecki, 2015; further developed by Le Bihan, Lorenzetti) tightens QD's requirements by imposing two additional demands beyond standard redundancy:
+--> Exclusivity: Observers can access only classically encoded information about S from environmental fragments — no non-classical (quantum) correlations leak through
+--> Completeness: The classical information available per fragment is the full pointer-state information, not partial
+--> Scalability: The redundancy index R → ∞ as the number of independent observers grows
+This distinguishes genuine objectivity from partial decoherence. The framework sharpens the distinction between systems that merely lose quantum coherence and those that truly become classical observers.
+Strong QD also tightens the constraint on valid system-environment splits: only splits that produce this structure qualify as producing objective classical reality — but again, multiple splits may satisfy this criterion.
+
+
+**Zurek's Extantons:**
+Zurek introduced extantons as the proposed "atoms of objective existence" — the minimal quantum units that can attain classical, observer-independent reality within the QD framework.
+An extanton is defined as a quantum system that simultaneously satisfies:
+--> Has well-defined pointer states selected by einselection (stability under monitoring)
+--> Broadcasts its state redundantly into the environment in SBS form
+--> Can be identified by multiple independent observers consistently
+--> Is robust — its classical information survives repeated environmental interaction
+Extantons constrain the system-environment split as not every decomposition of the Hilbert space produces extantons. Only splits where one subsystem einselects stable pointer states and redundantly encodes them in the complement qualify.
+This is a meaningful advance as extantons dramatically narrow the space of permissible splits. However, they do not uniquely determine it: multiple Hilbert-space decompositions may produce valid extantons, and the selection among these remains underdetermined from within Quantum Darwinism alone.
+
+
+Kastner's Circularity Objection:
+
+
+
+## Conclusion
+
+Zurek's extantons represent the most promising internal resource for constraining the split. By identifying which subsystem decompositions produce stable, redundantly broadcast pointer states, they eliminate most candidate splits as incompatible with QD. However, they narrow the space of valid splits rather than uniquely selecting one. The residual underdetermination — multiple extanton-producing splits may coexist — cannot be resolved from within QD's dynamical framework alone. An external principle is still required to select the "true" split.
+
+Kastner's foundational critique deepens the problem: to define pointer states (and hence extantons), one must already presuppose a preferred system–environment decomposition — the very thing QD is trying to explain. The framework thus appears circular at its foundations. While QD correctly describes how classicality propagates once a split is in place, it cannot bootstrap that split from purely quantum-mechanical resources. This transforms what initially looked like a technical gap into a philosophical problem about the limits of physical explanation.
+
+Overall, Quantum Darwinism cannot internally derive the system–environment split. Extantons and SBS together significantly constrain which splits are physically admissible, but the theory presupposes the very decomposition it would need to justify. Kastner's circularity objection reveals this as a philosophical rather than merely technical limitation — QD offers a powerful and empirically grounded account of how classicality spreads, but the origin of the split itself lies beyond its explanatory reach.
+
 
 ## Future Work
 
