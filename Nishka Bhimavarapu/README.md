@@ -100,9 +100,9 @@ Quantum Darwinism cannot internally derive the system–environment split. Extan
 
 1. Deriving a split selection criterion from within QD
    Rather than accepting the split, future work could try to find a principle internal to QD that picks out a preferred factorization. For example, mathematically minimising quantum discord across partitions, or identifying which decompositions maximise the redundancy index R in the thermodynamic limit.
-2. Mathematically defining Zurek's Extantons
-3. Connecting algebraic quantum field theory
+2. Connecting algebraic quantum field theory
    AQFT already has a sophisticated account of how subsystems and observables are localised in spacetime without requiring a pre-given split — subsystems emerge from the algebraic structure of local observable algebras. It would be worth examining whether QD's redundancy and objectivity conditions can be recovered or reframed in that language, and whether AQFT's approach sidesteps Kastner's circularity or just relocates it.
+3. Mathematically defining Zurek's Extantons
 
 
 ## References
