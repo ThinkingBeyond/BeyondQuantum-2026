@@ -46,31 +46,52 @@ Quantum Darwinism (QD), developed primarily by Wojciech Zurek, proposes that cla
 ## Core Frameworks
 
 **Spectrum Broadcast Structures:**
+
 Introduced by Korbicz, Horodecki et al. (2014–2015), SBS provides a precise mathematical criterion for quantum objectivity, going beyond the informal redundancy idea of Quantum Darwinism. 
+
 A joint system-environment state has SBS form when: ρS:F₁…Fₙ = Σᵢ pᵢ |sᵢ⟩⟨sᵢ| ⊗ ρᵢF₁ ⊗ … ⊗ ρᵢFₙ
+
 --> {|sᵢ⟩} are the pointer (einselected) states of the system
+
 --> Each fragment Fₖ independently contains full classical information about the system
+
 --> Fragments are mutually uncorrelated (tensor product structure)
+
 A state is "objectively classical" precisely when it reaches SBS form — the environment becomes a communication channel. SBS is strictly stronger than simple decoherence as it demands that information about the system be not just lost to the environment, but broadcast in an accessible, redundant manner.
 
 
+
+
 **Strong Quantum Darwinism:**
+
 Strong QD (Brandão, Piani & Horodecki, 2015; further developed by Le Bihan, Lorenzetti) tightens QD's requirements by imposing two additional demands beyond standard redundancy:
+
 --> Exclusivity: Observers can access only classically encoded information about S from environmental fragments — no non-classical (quantum) correlations leak through
+
 --> Completeness: The classical information available per fragment is the full pointer-state information, not partial
+
 --> Scalability: The redundancy index R → ∞ as the number of independent observers grows
+
 This distinguishes genuine objectivity from partial decoherence. The framework sharpens the distinction between systems that merely lose quantum coherence and those that truly become classical observers.
+
 Strong QD also tightens the constraint on valid system-environment splits: only splits that produce this structure qualify as producing objective classical reality — but again, multiple splits may satisfy this criterion.
 
 
 **Zurek's Extantons:**
 Zurek introduced extantons as the proposed "atoms of objective existence" — the minimal quantum units that can attain classical, observer-independent reality within the QD framework.
+
 An extanton is defined as a quantum system that simultaneously satisfies:
+
 --> Has well-defined pointer states selected by einselection (stability under monitoring)
+
 --> Broadcasts its state redundantly into the environment in SBS form
+
 --> Can be identified by multiple independent observers consistently
+
 --> Is robust — its classical information survives repeated environmental interaction
+
 Extantons constrain the system-environment split as not every decomposition of the Hilbert space produces extantons. Only splits where one subsystem einselects stable pointer states and redundantly encodes them in the complement qualify.
+
 This is a meaningful advance as extantons dramatically narrow the space of permissible splits. However, they do not uniquely determine it: multiple Hilbert-space decompositions may produce valid extantons, and the selection among these remains underdetermined from within Quantum Darwinism alone.
 
 
