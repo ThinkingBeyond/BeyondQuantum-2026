@@ -28,7 +28,7 @@ Kastner's circularity objection is the argument that Quantum Darwinism cannot ju
 
 
 
-### 2. **Spectrum Broadcast Structures:**
+### 2. **Spectrum Broadcast Structures (SBS):**
 
 Introduced by Korbicz, Horodecki et al. (2014–2015), SBS provides a precise mathematical criterion for quantum objectivity, going beyond the informal     redundancy idea of Quantum Darwinism. 
 
