@@ -64,7 +64,7 @@ Strong QD also tightens the constraint on valid system-environment splits: only 
 
 ### 4. **Zurek's Extantons:**
 
-Zurek introduced extantons as the proposed "atoms of objective existence" — the minimal quantum units that can attain classical, observer-independent     reality within the QD framework.
+Zurek introduced extantons as the proposed minimal quantum units that can attain classical, observer-independent reality within the QD framework.
 
 An extanton is defined as a quantum system that simultaneously satisfies:
 
@@ -89,6 +89,7 @@ Zurek's extantons represent the most promising internal resource for constrainin
 Kastner's foundational critique deepens the problem: to define pointer states (and hence extantons), one must already presuppose a preferred system–environment decomposition — the very thing QD is trying to explain. The framework thus appears circular at its foundations. While QD correctly describes how classicality propagates once a split is in place, it cannot bootstrap that split from purely quantum-mechanical resources. This transforms what initially looked like a technical gap into a philosophical problem about the limits of physical explanation.
 
 Overall, Quantum Darwinism cannot internally derive the system–environment split. Extantons and SBS together significantly constrain which splits are physically admissible, but the theory presupposes the very decomposition it would need to justify. Kastner's circularity objection reveals this as a philosophical rather than merely technical limitation — QD offers a powerful and empirically grounded account of how classicality spreads, but the origin of the split itself lies beyond its explanatory reach.
+
 
 
 ## Future Work
