@@ -2,32 +2,6 @@
 
 # **The Measurement Problem: The System-Environment Split**
 
-***Provide a description of your project including*** 
-
-1. motivating your research question
-2. stating your research question
-3. explaining your method and implementation
-4. Briefly mention and discuss your results
-5. Draw your conclusions
-6. State what future investigations 
-7. State your references 
-
-### Further Guidance: Formating
-- Structure this readme using subsections
-- Your job is to 
-    - keep it clear
-    - provide sufficient detail, so what you did is understandable to the reader. This way other researchers and future cohorts of BeyondQuantum will be able to build on your research
-    - List all your references at the end
-- utilise markdown like *italics*, **bold**, numbered and unnumbered lists to make your document easier to read
-- if you refer to links use the respective markdown for links, e.g. `[ThinkingBeyond](https://thinkingbeyond.education/)`
-- If you have graphs and pictures you want to embed in your file use `![name](your_graphic.png)`
-- If you want to present your results in a table use
-    | Header 1            | Header 2  |
-    |---------------------|-----------|
-    | Lorem Ipsum         | 12345     |
-
-**Tip:** Use tools to create markdown tables. For example, Obsidian has a table plugin, that makes creating tables much easier than doing it by hand.
-
 ## Research Question
 
 Can the system-environment split be derived or justified from within Quantum Darwinism's framework rather than assumed?
@@ -45,15 +19,17 @@ Quantum Darwinism (QD), developed primarily by Wojciech Zurek, proposes that cla
 
 ## Core Frameworks
 
-1. **Kastner's Circularity Objection:**
+### 1. **Kastner's Circularity Objection:**
 
-    Kastner's circularity objection is the argument that Quantum Darwinism cannot justify its own starting point — it has to assume a system–environment      split in order to run, but producing that split is exactly what it's supposed to explain.
+Kastner's circularity objection is the argument that Quantum Darwinism cannot justify its own starting point — it has to assume a system–environment      split in order to run, but producing that split is exactly what it's supposed to explain.
 
-2. **Spectrum Broadcast Structures:**
 
-    Introduced by Korbicz, Horodecki et al. (2014–2015), SBS provides a precise mathematical criterion for quantum objectivity, going beyond the informal     redundancy idea of Quantum Darwinism. 
 
-    A joint system-environment state has SBS form when: ρS:F₁…Fₙ = Σᵢ pᵢ |sᵢ⟩⟨sᵢ| ⊗ ρᵢF₁ ⊗ … ⊗ ρᵢFₙ where:
+### 2. **Spectrum Broadcast Structures:**
+
+Introduced by Korbicz, Horodecki et al. (2014–2015), SBS provides a precise mathematical criterion for quantum objectivity, going beyond the informal     redundancy idea of Quantum Darwinism. 
+
+A joint system-environment state has SBS form when: ρS:F₁…Fₙ = Σᵢ pᵢ |sᵢ⟩⟨sᵢ| ⊗ ρᵢF₁ ⊗ … ⊗ ρᵢFₙ where:
 
 - {|sᵢ⟩} are the pointer (einselected) states of the system
 
@@ -61,14 +37,13 @@ Quantum Darwinism (QD), developed primarily by Wojciech Zurek, proposes that cla
 
 - Fragments are mutually uncorrelated (tensor product structure)
 
-    A state is "objectively classical" precisely when it reaches SBS form — the environment becomes a communication channel. SBS is strictly stronger         than simple decoherence as it demands that information about the system be not just lost to the environment, but broadcast in an accessible,              redundant manner.
+A state is "objectively classical" precisely when it reaches SBS form — the environment becomes a communication channel. SBS is strictly stronger         than simple decoherence as it demands that information about the system be not just lost to the environment, but broadcast in an accessible,              redundant manner.
 
 
 
+### 3. **Strong Quantum Darwinism:**
 
-3. **Strong Quantum Darwinism:**
-
-    Strong QD (Brandão, Piani & Horodecki, 2015; further developed by Le Bihan, Lorenzetti) tightens QD's requirements by imposing two additional demands     beyond standard redundancy:
+Strong QD (Brandão, Piani & Horodecki, 2015; further developed by Le Bihan, Lorenzetti) tightens QD's requirements by imposing two additional demands     beyond standard redundancy:
 
 - Exclusivity: Observers can access only classically encoded information about S from environmental fragments — no non-classical (quantum) correlations leak through
 
@@ -76,18 +51,17 @@ Quantum Darwinism (QD), developed primarily by Wojciech Zurek, proposes that cla
 
 - Scalability: The redundancy index R → ∞ as the number of independent observers grows
 
-    This distinguishes genuine objectivity from partial decoherence. The framework sharpens the distinction between systems that merely lose quantum         coherence and those that truly become classical observers.
+This distinguishes genuine objectivity from partial decoherence. The framework sharpens the distinction between systems that merely lose quantum         coherence and those that truly become classical observers.
 
-    Strong QD also tightens the constraint on valid system-environment splits: only splits that produce this structure qualify as producing objective         classical reality — but again, multiple splits may satisfy this criterion.
-
-
+Strong QD also tightens the constraint on valid system-environment splits: only splits that produce this structure qualify as producing objective         classical reality — but again, multiple splits may satisfy this criterion.
 
 
-4. **Zurek's Extantons:**
 
-    Zurek introduced extantons as the proposed "atoms of objective existence" — the minimal quantum units that can attain classical, observer-independent     reality within the QD framework.
+### 4. **Zurek's Extantons:**
 
-    An extanton is defined as a quantum system that simultaneously satisfies:
+Zurek introduced extantons as the proposed "atoms of objective existence" — the minimal quantum units that can attain classical, observer-independent     reality within the QD framework.
+
+An extanton is defined as a quantum system that simultaneously satisfies:
 
 - Has well-defined pointer states selected by einselection (stability under monitoring)
 
@@ -97,9 +71,9 @@ Quantum Darwinism (QD), developed primarily by Wojciech Zurek, proposes that cla
 
 - Is robust — its classical information survives repeated environmental interaction
 
-    Extantons constrain the system-environment split as not every decomposition of the Hilbert space produces extantons. Only splits where one subsystem      einselects stable pointer states and redundantly encodes them in the complement qualify.
+Extantons constrain the system-environment split as not every decomposition of the Hilbert space produces extantons. Only splits where one subsystem      einselects stable pointer states and redundantly encodes them in the complement qualify.
 
-    This is a meaningful advance as extantons dramatically narrow the space of permissible splits. However, they do not uniquely determine it: multiple       Hilbert-space decompositions may produce valid extantons, and the selection among these remains underdetermined from within Quantum Darwinism alone.
+This is a meaningful advance as extantons dramatically narrow the space of permissible splits. However, they do not uniquely determine it: multiple       Hilbert-space decompositions may produce valid extantons, and the selection among these remains underdetermined from within Quantum Darwinism alone.
 
 
 
