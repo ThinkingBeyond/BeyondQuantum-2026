@@ -17,7 +17,7 @@ Can the system-environment split be derived or justified from within Quantum Dar
 
 ## Quantum Darwinism
 
-Quantum Darwinism (QD), developed primarily by Wojciech Zurek, proposes that classical reality emerges from quantum mechanics through repeated redundant encoding of information. As a system S interacts with its environment E, only certain "pointer states" — stable under environmental monitoring via einselection — survive decoherence. Environmental fragments Fᵢ each carry redundant copies of S's pointer-state information. Observers access the system only through these records — explaining why independent observers agree on classical facts.
+Quantum Darwinism (QD), developed primarily by Wojciech Zurek, proposes that classical reality emerges from quantum mechanics through repeated redundant encoding of information. As a system S interacts with its environment E, only certain "pointer states" — stable under environmental monitoring via eselection (environment selection) — survive decoherence. Environmental fragments Fᵢ each carry redundant copies of S's pointer-state information. Observers access the system only through these records — explaining why independent observers agree on classical facts.
 
 
 ## Core Frameworks
