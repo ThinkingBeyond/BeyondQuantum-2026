@@ -179,7 +179,7 @@ The above plot shows the impact on the reconstructed image as the level of depol
 
 ## **Comparison against Classical VSS**
 
-| Property | Classical VSS | GHZ3 Protocol |
+| Property | Classical VSS | GHZ-3 Protocol |
 | :---- | :---- | :---- |
 | Qubit/Bit Cost per Pixel | The cost scales with expansion factor | A fixed ratio of 2 bits per 3 qubits; no expansion |
 | Multi-Image Capacity | Sharing two images requires two separate protocol runs | Single 3-qubit GHZ triplet simultaneously encodes two pixel pairs; generalizes to n-qubit GHZ encoding n-1 images |
