@@ -52,6 +52,10 @@ Is is deduced that both algorithms can identify whether a function is constant o
 For the Deutsch Algorithm, it correctly identified Balanced functions by outputting $$|1\rangle$$ on the given input qubit.
 Also, it was found that the balanced function predictions were less accurate than the constant function predictions for the algorithm.
 
+<img width="1462" height="1229" alt="IMG_6381" src="https://github.com/user-attachments/assets/10594618-630e-4c4a-9b65-f057deb9a5dd" />
+
+
+
 For the Deutshc-Jozsa Algorithm, it too identified the Balanced and Constant functions correctly with over 90% accuracy in both cases. 
 And as in the Deutsch Algorithm, the prediction accuracy for Balanced functions was lower than for Constant functions.
 
