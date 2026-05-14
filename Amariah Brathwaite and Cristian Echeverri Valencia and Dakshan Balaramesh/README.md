@@ -54,6 +54,9 @@ Also, it was found that the balanced function predictions were less accurate tha
 
 <img width="1462" height="1229" alt="IMG_6381" src="https://github.com/user-attachments/assets/10594618-630e-4c4a-9b65-f057deb9a5dd" />
 
+<img width="1609" height="1223" alt="IMG_6382" src="https://github.com/user-attachments/assets/1162711d-6a28-4f42-8548-eb5d186bd4f7" />
+
+<img width="1969" height="1257" alt="IMG_6383" src="https://github.com/user-attachments/assets/aa1c93ab-aedb-4c29-b356-2b11c5078862" />
 
 
 For the Deutshc-Jozsa Algorithm, it too identified the Balanced and Constant functions correctly with over 90% accuracy in both cases. 
