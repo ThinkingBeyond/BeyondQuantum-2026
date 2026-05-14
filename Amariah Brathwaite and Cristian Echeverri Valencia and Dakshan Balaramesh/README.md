@@ -62,6 +62,15 @@ Also, it was found that the balanced function predictions were less accurate tha
 For the Deutshc-Jozsa Algorithm, it too identified the Balanced and Constant functions correctly with over 90% accuracy in both cases. 
 And as in the Deutsch Algorithm, the prediction accuracy for Balanced functions was lower than for Constant functions.
 
+<img width="1612" height="1331" alt="IMG_6384" src="https://github.com/user-attachments/assets/5829e785-49ae-413d-bce5-89f41168395c" />
+
+<img width="1942" height="1348" alt="IMG_6386" src="https://github.com/user-attachments/assets/a98a3c77-f66f-48cd-afc0-74698d4a2a38" />
+
+<img width="1939" height="1159" alt="IMG_6387" src="https://github.com/user-attachments/assets/0329d701-1869-46f2-9b72-6553a7ac2697" />
+
+
+
+
 ## Future Work
 
 Using the same methods as the research, Deutsch-Jozsa Algorithm could be tested to 5-, 6- and 7- Qubit Systems to test whether the accuracies of prediction have a tendency depending on the functions. Future Research could be built upon instituting Error Correction into the "unknown" oracle, so in this way we could have a perfect oracle with an imperfect algorithm and then just test the effectiveness of Deutsch and Deutsch-Jozsa Algorithm by itself.
