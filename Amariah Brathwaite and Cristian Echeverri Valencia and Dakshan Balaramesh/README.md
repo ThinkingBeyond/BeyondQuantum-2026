@@ -26,7 +26,7 @@ However, Deutsch Algorithm made a conceptual proof that with a single query and 
 
 ## Research Question
 
-How can we implement the Deutsch Algorithm to functions $$f: \{0,1\} \rightarrow \{0,1\}$$ and the Deutsch-Jozsa Algorithm to functions  $$f: \{0,1\}^2 \rightarrow \{0,1\}$$ and $$f: \{0,1\}^3 \rightarrow \{0,1\}$$ to accurately predict if a function is constant or balanced?
+How can we implement the Deutsch Algorithm to functions $f: \{0,1\} \rightarrow \{0,1\}$ and the Deutsch-Jozsa Algorithm to functions  $f: \{0,1\}^2 \rightarrow \{0,1\}$?
 
 ## Motivation
 
