@@ -101,24 +101,20 @@ These findings suggest that while quantum machine learning is not yet practical 
 5) Incorporating systematic hyperparameter tuning for both classical and quantum models to ensure a fair and optimized comparison.
 ## References
 
-  Akpinar, Emine, et al. “Evaluating the Impact of Different Quantum Kernels on the Classification Performance of Support Vector Machine Algorithm: A Medical Dataset Application.” arXiv:2407.09930, arXiv, 19 July 2024. arXiv.org, https://doi.org/10.48550/arXiv.2407.09930.
-  
-  "1.4. Support Vector Machines.” Scikit-Learn, https://scikit-learn/stable/modules/svm.html.
-  
-  Montalbán, Iraitz. “Quantum Computing Handbook.” Quantum Computing Handbook, 25 June 2025, https://iraitzm.github.io/qc-handbook/.
+Akpinar, E., et al. (2024). Evaluating the impact of different quantum kernels on the classification performance of support vector machine algorithm: A medical dataset application. arXiv. https://doi.org/10.48550/arXiv.2407.09930
 
-  QSVC - Qiskit Machine Learning 0.9.0. https://qiskit-community.github.io/qiskit-machine-learning/stubs/qiskit_machine_learning.algorithms.QSVC.html#qiskit_machine_learning.algorithms.QSVC. 
+Jha, R. K., et al. (2026). Comparative performance analysis of quantum feature maps for quantum kernel-based machine learning. Scientific Reports, 16(1), 8142. https://doi.org/10.1038/s41598-026-39392-9
 
-  
-  “Documentation.” IBM Quantum Documentation, https://qiskit.qotlabs.org/.
+Montalbán, I. (2025). Quantum computing handbook. https://iraitzm.github.io/qc-handbook/
 
-  Shan, Zheng, et al. “Demonstration of Breast Cancer Detection Using QSVM on IBM Quantum Processors.” 9 Mar. 2022. In Review, https://doi.org/10.21203/rs.3.rs-1434074/v1.
+Qiskit Machine Learning. (2025). QSVC - Qiskit Machine Learning 0.9.0. https://qiskit-community.github.io/qiskit-machine-learning/stubs/qiskit_machine_learning.algorithms.QSVC.html#qiskit_machine_learning.algorithms.QSVC
 
+Scikit-learn. (n.d.). 1.4. Support vector machines. https://scikit-learn/stable/modules/svm.html
 
-  Jha, Ravi Kumar, et al. “Comparative Performance Analysis of Quantum Feature Maps for Quantum Kernel-Based Machine Learning.” Scientific Reports, vol. 16, no. 1, Feb. 2026, p. 8142. DOI.org (Crossref), https://doi.org/10.1038/s41598-026-39392-9.
+Shan, Z., et al. (2022). Demonstration of breast cancer detection using QSVM on IBM quantum processors. In Review. https://doi.org/10.21203/rs.3.rs-1434074/v1
 
+Wolberg, W. et al. (1993). Breast Cancer Wisconsin (Diagnostic) (Dataset). UCI Machine Learning Repository. https://doi.org/10.24432/C5DW2B
 
-[Breast Cancer Dataset] (https://www.kaggle.com/datasets/yasserh/breast-cancer-dataset)
 
 ---
 
