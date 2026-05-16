@@ -100,6 +100,7 @@ However, the code showed no improvement in phase damping as we implemented it to
 At high noise levels (p > 0.4), a multiple of 2n errors is very common, meaning that the results became much less reliable.
 
 ![repetition code](rep_code.png)
+![Error_rate_after_error_correction_3_quantum_noise](Error_rate_after_error_correction_3_quantum_noise.png)
 
 #### Main takeaway for this section of the research:
 While it reduces the error rate for bit flip errors, the data transmitted is 3x more, and if there are 2n errors, it still fails.
@@ -124,7 +125,6 @@ Despite the working algorithm, due to hardware limitations, the real-world appli
 Due to the problematic nature of eavesdropping for quantum communication, it destroys the data that it reads. We decided to test how QBER is impacted by eavesdropping and whether the implemented repetition code could mitigate these effects.
 
 ![eve](eve.png)
-![Error_rate_after_error_correction_3_quantum_noise](Error_rate_after_error_correction_3_quantum_noise.png)
 
 The QBER increased linearly with Eve’s attack probability, matching our prediction of what the relationship should be in theory.
 
