@@ -124,6 +124,7 @@ Despite the working algorithm, due to hardware limitations, the real-world appli
 Due to the problematic nature of eavesdropping for quantum communication, it destroys the data that it reads. We decided to test how QBER is impacted by eavesdropping and whether the implemented repetition code could mitigate these effects.
 
 ![eve](eve.png)
+![eve](Errorrateaftererrorcorrection-3quantumnoise.png)
 
 The QBER increased linearly with Eve’s attack probability, matching our prediction of what the relationship should be in theory.
 
